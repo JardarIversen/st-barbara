@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+const baseUrl = process.env.SITE_URL ?? "http://127.0.0.1:3000";
 const paths = [
   "",
   "/om",
@@ -13,7 +14,7 @@ const paths = [
 ];
 for (const locale of ["nb", "en"]) {
   for (const path of paths) {
-    const url = "http://127.0.0.1:3000/" + locale + path;
+    const url = new URL("/" + locale + path, baseUrl).href;
     const response = await fetch(url);
     assert.equal(response.status, 200, url);
     const html = await response.text();
@@ -37,7 +38,7 @@ for (const locale of ["nb", "en"]) {
     console.log(response.status, locale + path);
   }
 }
-const redirect = await fetch("http://127.0.0.1:3000/om?test=1", {
+const redirect = await fetch(new URL("/om?test=1", baseUrl), {
   redirect: "manual",
 });
 assert.equal(redirect.status, 307);

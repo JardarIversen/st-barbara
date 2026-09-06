@@ -6,7 +6,7 @@
 - Språkvelgeren beholder sidesti, søkeparametere og anker. Norsk og engelsk bruker aldri Google Translate. Andre språk åpner engelsk først, og viser et varsel om automatisk oversettelse. Hvis Google ikke laster, beholdes engelsk med en feilmelding.
 - `web/src/i18n/en.json` inneholder den redigerte engelske UI-teksten. Nye tekstnøkler kontrolleres av testene.
 - Alle redaksjonelle innholdsoversettelser hentes fra `translations` på originaldokumentet i Sanity, med `sanity-plugin-internationalized-array`. Ingen dobbeltførte hendelser, datoer eller referanser. UI-ordboken i koden er bare for sidens faste tekster.
-- 6. september 2026 ble 226 engelske tekstfelt på 106 dokumenter flyttet til Sanity. Norsk innhold ble kontrollert uendret, og andre kjøring gjorde ingen endringer. Sikkerhetskopien ligger under `.local/sanity-backups/` (ikke i git). Koden og Studio er ikke deployet.
+- 6. september 2026 ble 226 engelske tekstfelt på 106 dokumenter flyttet til Sanity. Norsk innhold ble kontrollert uendret, og andre kjøring gjorde ingen endringer. Sikkerhetskopien ligger under `.local/sanity-backups/` (ikke i git). Nettsiden publiseres fra GitHub `main` via Vercel; Studio publiseres separat.
 - Nye og endrede tekster vedlikeholdes via `translations.en` i ukesmanifestet. `sourceHashes` genereres automatisk: foreldet engelsk vises ikke etter endring av originalen. Be agenten oppdatere oversettelsen ved endret norsk tekst; denne kontrollmetadataen skal ikke håndredigeres.
 - Den gamle innholdsordboken finnes bare som historisk migreringsgrunnlag i `studio-st.-barbara-church/scripts/migrations/2026-09-06-content.en.json`, aldri i nettkoden. `node scripts/migrate-content-translations.mjs` i Studio er tørrtest, `--commit` kreves for skriving. Eksisterende engelske tekster overskrives ikke.
 - Manglende oversettelse vises og merkes som norsk original med `lang="nb"` og `translate="no"`, ikke som en blandet engelsk/automatisk tekst. «Holy Mass» brukes når messe står alene på engelsk, for å unngå at Google tolker «Mass» som fysisk masse.
@@ -53,6 +53,9 @@ Originalene er bevart lokalt i `.local/image-originals/` (ikke i git). De nye we
 `web/scripts/prepare-consecration-photos.py` normaliserer EXIF-rotasjon, beskjærer forsiktig og lager WebP-filer med maks 2200 piksler på lengste side. IMG_9160 har EXIF-orientering 8; i tillegg til stående orientering er kameraets skjevhet rettet med 3,2 grader med klokken. Beskjæringen fjerner tomme kanter etter rettingen. Nytt filnavn hindrer at bildeoptimaliseringen viser en gammel, bufret versjon. Ingen personer eller dokumentariske detaljer er lagt til eller fjernet med generativ KI. Det eksisterende forsidebildet og hovedbildet på Om er beholdt.
 
 ## Kontroll
+
+- Test også produksjonsmodus (`npm run build`, deretter `npm run start -- --port 3001`). Sett `SITE_URL=http://localhost:3001` og kjør `node scripts/check-localized-routes.mjs`. Samme kontroll kan kjøres mot produksjonsdomenet. Utviklingsmodus alene oppdager ikke alle renderfeil.
+- Innleggssidene bruker request-basert språk og metadata. Ikke gjeninnfør `generateStaticParams` uten å endre hele språk-/metadataflyten: statisk fallback ga `DYNAMIC_SERVER_USAGE` og HTTP 500 i produksjon.
 
 - `cd web; npm run test`: kirkelig terminologi, ordbokdekning, dataintegritet på tvers av språk, Oslo-tid, kalenderfiltre og import-idempotens.
 - `npm run lint` og `npm run build` i web, `npm run build` i Studio.

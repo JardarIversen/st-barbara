@@ -51,6 +51,15 @@ test("language switching preserves page, query and anchor without duplicating lo
   assert.equal(isLocale("pl"), false);
 });
 
+test("request-localized articles do not opt into static fallback rendering", () => {
+  const page = readFileSync(
+    new URL("../src/app/[lang]/innlegg/[slug]/page.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.doesNotMatch(page, /export\s+(?:async\s+)?function\s+generateStaticParams/);
+  assert.doesNotMatch(page, /dynamic\s*=\s*["'](?:force-static|error)["']/);
+});
+
 test("all literal translation keys in pages/components have an English entry", () => {
   const dictionary = JSON.parse(
     readFileSync(new URL("../src/i18n/en.json", import.meta.url), "utf8"),

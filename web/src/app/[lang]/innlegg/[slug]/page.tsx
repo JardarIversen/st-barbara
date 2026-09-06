@@ -8,11 +8,10 @@ import PortableContent from "@/components/portable-content";
 import SanityImage from "@/components/sanity-image";
 import SourceBulletins from "@/components/source-bulletins";
 import { formatArticleDate } from "@/lib/calendar";
-import { getArticle, getArticleSlugs } from "@/sanity/data";
+import { getArticle } from "@/sanity/data";
 
-export async function generateStaticParams() {
-  return getArticleSlugs();
-}
+// Locale and canonical URLs depend on request headers, as on the other pages.
+// Do not opt this route into static fallback rendering with generateStaticParams.
 
 export async function generateMetadata({
   params,
