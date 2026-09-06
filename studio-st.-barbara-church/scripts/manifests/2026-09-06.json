@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-09-06",
+      "issueDate": "2026-09-06",
+      "publishedAt": "2026-09-06T08:00:00+02:00",
+      "coversFrom": "2026-09-06",
+      "coversUntil": "2026-09-13",
+      "pdfPath": "C:/Users/jarda/Downloads/23. søndag 2026.pdf"
+    }
+  ],
+  "places": [
+    {
+      "sourceKey": "place:tusenfryd",
+      "name": "Tusenfryd",
+      "slug": "tusenfryd",
+      "placeType": "venue"
+    }
+  ],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:mass-nativity-mary-kongsberg-2026-09-08",
+      "title": "Messe på Jomfru Marias fødsel",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-09-08T18:00:00+02:00",
+      "endsAt": "2026-09-08T19:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "language": "nb",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "event:priest-meeting-mariaholm-2026-09-07",
+      "title": "Prestemøte på Mariaholm",
+      "eventType": "other",
+      "status": "cancelled",
+      "startsAt": "2026-09-07T00:00:00+02:00",
+      "endsAt": "2026-09-11T23:59:00+02:00",
+      "placeKeys": [
+        "place:mariaholm"
+      ],
+      "summary": "Prestemøtet er avlyst på grunn av kong Haralds gravferd.",
+      "body": "Messene 8.–11. september går derfor som oppført i det nye søndagsbladet.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "event:tusenfryd-trip-2026-09-26",
+      "title": "Menighetstur til Tusenfryd",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-09-26T09:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:tusenfryd"
+      ],
+      "summary": "Barn og unge inviteres til Tusenfryd med felles buss fra St. Barbara etter messen kl. 09.00.",
+      "body": "Påmelding skjer via QR-koden på plakaten bak i kirken innen 20. september. Dagen begynner med messe i St. Barbara kl. 09.00, før felles busstransport til Tusenfryd.",
+      "registrationDeadline": "2026-09-20T23:59:00+02:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:confirmation-retreat-leaders-2026",
+      "title": "Vi trenger ledere til konfirmanthelg",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "lastMentionedAt": "2026-09-06T08:00:00+02:00",
+      "appliesUntil": "2026-10-16T17:00:00+02:00",
+      "summary": "St. Barbara trenger voksne hjelpere til konfirmanthelgen på Skogstad.",
+      "body": "16.–18. oktober arrangeres konfirmanthelg sammen med Hønefoss og Lillehammer. Det blir mange deltakere, og lederteamet trenger rundt 20 personer over 18 år fra de tre menighetene. Kontakt p. Trym ved interesse eller spørsmål.",
+      "placeKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "announcement:friday-confession-2026",
+      "title": "Skriftemål på fredager",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-08-09T08:00:00+02:00",
+      "lastMentionedAt": "2026-09-06T08:00:00+02:00",
+      "appliesFrom": "2026-08-14T17:00:00+02:00",
+      "summary": "Presten sitter som regel i skriftestolen fra kl. 17 på fredager.",
+      "body": "På fredager vil presten som regel høre skriftemål fra kl. 17. Skriftemål kan også avtales andre dager før eller etter messen.",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "announcement:parish-hall-feedback-2026",
+      "title": "Gi innspill om menighetssalen",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-09-06T08:00:00+02:00",
+      "summary": "Menigheten ønsker innspill til hvordan menighetssalen og kirkekaffen kan bli enda triveligere.",
+      "body": "Gi gjerne tilbakemelding på oppsettet i menighetssalen. Menigheten ønsker også forslag til hvordan rommet kan utnyttes bedre og kirkekaffen kan bli enda triveligere.",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "announcement:60-plus-group-interest-2026",
+      "title": "Interesse for 60+-gruppe",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-09-06T08:00:00+02:00",
+      "summary": "Menigheten vurderer å gjenetablere en 60+-gruppe med jevnlige samlinger.",
+      "body": "Ta kontakt med p. Trym dersom du er interessert i en 60+-gruppe med jevnlige samlinger.",
+      "placeKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "announcement:party-committee-volunteers-2026",
+      "title": "Frivillige til festkomité",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-09-06T08:00:00+02:00",
+      "summary": "Menigheten søker frivillige som vil hjelpe til med årets fester og arrangementer.",
+      "body": "Menigheten ønsker å opprette en festkomité som kan planlegge fester og arrangementer gjennom året. Ta kontakt med p. Trym dersom du vil bidra.",
+      "placeKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wed-en-2026-09-09",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-09",
+      "publicNote": "Den hellige Peter Claverius. Rosenkrans for herregruppen etter messen.",
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thu-nb-2026-09-10",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-10",
+      "publicNote": "Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-fri-nb-2026-09-11",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-11",
+      "publicNote": "Skriftemål fra kl. 17.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:notodden-sun-nb-2026-09-13",
+      "scheduleKey": "mass-schedule:notodden:sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-09-13",
+      "newStartsAt": "2026-09-13T17:00:00+02:00",
+      "newEndsAt": "2026-09-13T18:00:00+02:00",
+      "newPlaceKey": "place:heddal-stavkirke",
+      "titleOverride": "Messe i Heddal stavkirke",
+      "publicNote": "Messen feires i Heddal stavkirke i stedet for på Notodden.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-09-26",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-09-26",
+      "newStartsAt": "2026-09-26T09:00:00+02:00",
+      "newEndsAt": "2026-09-26T10:00:00+02:00",
+      "titleOverride": "Messe før menighetsturen",
+      "publicNote": "Etter messen går det felles buss til Tusenfryd.",
+      "relatedEventKey": "event:tusenfryd-trip-2026-09-26",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ]
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-09-06:kongsberg:nb:1100",
+      "title": "23. søndag i det alminnelige kirkeår",
+      "massDate": "2026-09-06",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-09-06",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Esek 33, 7–9"
+        },
+        {
+          "style": "normal",
+          "text": "Så sier Herren: Og du, menneske, jeg har satt deg til vokter for Israels ætt. Når du hører et ord fra min munn, skal du gi dem en advarsel fra meg. Hvis jeg sier til en ugudelig mann: «Du skal sannelig dø,» og du ikke advarer ham mot det liv han fører, da skal han dø fordi han har syndet. Men deg vil jeg kreve til ansvar for hans død. Men advarer du ham mot hans gudløse liv for at han skal vende om, og han likevel ikke vender om, da skal han dø på grunn av sin synd. Men du har berget ditt liv."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Lytt til Herrens røst i dag, forherd ikke deres hjerter. Kom, la oss juble for Herren, rope av glede for Gud vår frelse. La oss tre frem for hans åsyn med lovsang, synge hans pris med salmer. ℟ Kom, la oss tilbe og kaste oss ned, knele for Herrens, vår skapers åsyn. For han er vår Gud, vi er det folk han fører, den hjord han leder. ℟ Lytt til hans røst i dag, forherd ikke deres hjerter, som på fristelsens dag i ørkenen, da deres fedre satte meg på prøve, skjønt de hadde sett min gjerning. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 13, 8–10"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, la ingen ha noe annet krav på dere enn brorkjærlighet. For ved å elske vår neste, oppfyller vi Loven. Disse budene: «Du skal ikke bryte ekteskapet, du skal ikke slå i hjel, du skal ikke stjele, du skal ikke begjære,» – og hva andre bud der er, de kan jo alle sammenfattes i dette ene: «Du skal elske din neste som deg selv.» For kjærligheten gjør ingen urett mot nesten. Så er da hele Loven oppfylt i kjærligheten."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Allelúia. ℣ Gud som var nærværende i Kristus, har forsonet verden med seg gjennom ham og overlatt budskapet om forsoningen til oss. ℟ Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 18, 15–20"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til disiplene: «Dersom din bror synder, så gå til ham og forklar ham det på tomannshånd. Hører han på deg, har du vunnet din bror. Men hører han ikke, ta da enda en eller to med deg, slik at ‘saken kan bli gjort opp ut fra to eller tre vitners utsagn’. Vil han heller ikke høre på dem, så legg saken frem for kirken; og nekter han til og med å høre på kirken, da skal han for deg stå i samme stilling som en hedning, eller en tolloppkrever. La så dette stå fast: Alt hva dere binder på jorden, skal være bundet i himmelen; og alt hva dere løser på jorden, skal være løst i himmelen. Og likeså skal det stå fast, at såfremt to av dere blir enige om å be om noe, skal de få det av min Far i himlene, hva det enn er. For der hvor to eller tre er kommet sammen i mitt navn, der er jeg selv iblant dem.»"
+        }
+      ]
+    }
+  ],
+  "articles": []
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-08-23",
+      "issueDate": "2026-08-23",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "coversFrom": "2026-08-23",
+      "coversUntil": "2026-08-30",
+      "pdfPath": "C:/Users/jarda/Downloads/21. søndag 2026.pdf"
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [],
+  "announcements": [],
+  "massExceptions": [],
+  "massTexts": [],
+  "articles": []
+}

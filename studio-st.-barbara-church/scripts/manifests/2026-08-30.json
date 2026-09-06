@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-08-30",
+      "issueDate": "2026-08-30",
+      "publishedAt": "2026-08-30T08:00:00+02:00",
+      "coversFrom": "2026-08-30",
+      "coversUntil": "2026-09-06",
+      "pdfPath": "C:/Users/jarda/Downloads/22. søndag 2026.pdf"
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:mass-kongsberg-2026-08-31",
+      "title": "Messe i Kongsberg",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-08-31T18:30:00+02:00",
+      "endsAt": "2026-08-31T19:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "language": "nb",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "event:catechesis-confirmation-start-2026-09-04",
+      "title": "Oppstart for konfirmantkatekese",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-09-04T17:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "event:rjukan-mass-2026-09-06",
+      "title": "Messe på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-09-06T17:00:00+02:00",
+      "endsAt": "2026-09-06T18:00:00+02:00",
+      "placeKeys": [],
+      "language": "nb",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "event:priest-meeting-mariaholm-2026-09-07",
+      "title": "Prestemøte på Mariaholm",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-09-07T00:00:00+02:00",
+      "endsAt": "2026-09-11T23:59:00+02:00",
+      "placeKeys": [
+        "place:mariaholm"
+      ],
+      "summary": "P. Trym deltar på første del av prestemøtet, fra mandag til onsdag.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "event:catechesis-good-shepherd-start-2026-09-13",
+      "title": "Oppstart for Gode Hyrde-katekese",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-09-13T11:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "event:bishop-visitation-2026-10-08",
+      "title": "Bispevisitas",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-10-08T09:00:00+02:00",
+      "endsAt": "2026-10-11T18:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskop Fredrik visiterer menigheten 8.–11. oktober.",
+      "body": "Programmet for visitasen finnes på oppslagstavlen bak i kirken.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:confirmation-retreat-leaders-2026",
+      "title": "Vi trenger ledere til konfirmanthelg",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-30T08:00:00+02:00",
+      "appliesUntil": "2026-10-16T17:00:00+02:00",
+      "summary": "St. Barbara trenger voksne hjelpere til konfirmanthelgen på Skogstad.",
+      "body": "16.–18. oktober arrangeres konfirmanthelg sammen med Hønefoss og Lillehammer. Det trengs rundt 20 personer over 18 år i lederteamet. Kontakt p. Trym ved interesse eller spørsmål.",
+      "placeKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "announcement:catechesis-registration-2026-2027",
+      "title": "Påmelding til katekese er åpen",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-16T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-30T08:00:00+02:00",
+      "appliesUntil": "2026-09-13T23:59:00+02:00",
+      "summary": "Påmelding er åpen for katekeseåret 2026–2027.",
+      "body": "Oppstart er 4. september for konfirmanter, 5. september for 3–7-årsgruppen og 13. september for Gode Hyrde. Påmeldingslenkene finnes på menighetens katekese-side.",
+      "placeKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "announcement:bishop-visitation-2026",
+      "title": "Bispevisitas 8.–11. oktober",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-30T08:00:00+02:00",
+      "appliesFrom": "2026-10-08T00:00:00+02:00",
+      "appliesUntil": "2026-10-11T23:59:00+02:00",
+      "summary": "Biskop Fredrik kommer til menigheten 8.–11. oktober.",
+      "body": "Programmet for visitasen finnes på oppslagstavlen bak i kirken.",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [
+        "event:bishop-visitation-2026-10-08"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wed-en-2026-09-02",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-02",
+      "publicNote": "Rosenkrans for kvinnegruppen etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thu-nb-2026-09-03",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-03",
+      "publicNote": "Den hellige Gregor den store.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-en-2026-09-06",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-06",
+      "titleOverride": "Familiemesse i Kongsberg",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-wed-en-2026-09-09",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-09-09",
+      "publicNote": "Messen utgår fordi p. Trym deltar på prestemøtet på Mariaholm.",
+      "relatedEventKey": "event:priest-meeting-mariaholm-2026-09-07",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-30"
+      ]
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-08-30:kongsberg:nb:1100",
+      "title": "22. søndag i det alminnelige kirkeår",
+      "massDate": "2026-08-30",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-08-30",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Jer 20, 7–9"
+        },
+        {
+          "style": "normal",
+          "text": "Du lokket meg, Herre, og jeg lot meg lokke, du ble for sterk for meg og vant. Jeg er til latter hele dagen, alle spotter meg. Så ofte jeg taler, må jeg skrike og rope: «Vold og overfall!» For Herrens ord er dagen lang blitt til spott og skam for meg. Men sier jeg: «Jeg vil glemme ham og ikke lenger tale i hans navn,» da blir det som flammende ild i mitt indre, innestengt i mine ben. Jeg strever for å holde det tilbake, men jeg greier det ikke."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Min sjel tørster etter den levende Gud, når kan jeg tre frem for hans åsyn? Gud, du min Gud, deg søker jeg, min sjel tørster etter deg. Mitt kjød lengter etter deg som den uttørrede jord etter regn. ℟ Vis deg i din helligdom, at jeg kan se din makt og ære. For din miskunn er bedre enn livet, min munn skal synge din pris. ℟ Slik vil jeg love deg hele mitt liv, løfte mine hender og prise ditt navn. Min sjel mettes som av utsøkte retter når tungen jubler din pris. ℟ For du er min hjelp, jeg jubler i skyggen av dine vinger. Min sjel henger ved deg, din høyre holder meg fast. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 12, 1–2"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, jeg formaner dere ved Guds miskunn til å bringe deres legemer frem for Gud som levende offergaver, Gud viet og ham til behag, – det er den åndelige gudsdyrkelse som dere skylder ham. La dere ikke prege av denne verden, men la dere forvandle gjennom et nytt sinnelag, så dere lærer å skjelne hva Guds vilje er, hva som er godt, og hva han ser på med glede, – hva som er fullkomment."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Allelúia. ℣ Vår Herre Jesu Kristi Far la deres hjerters øyne fylles med lys, så dere kan forstå hvilket håp han har kalt oss til. ℟ Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 16, 21–27"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid begynte Jesus å gjøre det klart for sine disipler at han skulle dra til Jerusalem og få meget å lide av de eldste, av yppersteprestene og de lovkyndige; at han skulle bli slått i hjel og så bli oppvakt fra de døde tredje dagen etter. Da tok Peter ham til side og ville tale ham til rette: «Det Gud forby, herre! Noe slikt må ikke hende deg!» Men Jesus vendte seg og sa til Peter: «Bort fra meg, Satan, snare på min vei! For du tenker som et menneske, uten sans for Guds veier!» Derpå sa Jesus til sine disipler: «Den som vil slutte seg til meg, han må gi avkall på sitt eget, ta opp sitt kors, og følge meg. For den som søker å frelse sitt liv, han skal miste det, mens den som setter livet til for min skyld, han skal finne det igjen. Hva gagn har vel et menneske av å vinne hele verden, dersom prisen er hans eget liv? For hva skal en mann kunne gi i vederlag for sitt liv? Ja, Menneskesønnen skal komme i sin Fars herlighet og omgitt av sine engler, og da skal han ‘gjengjelde enhver etter hans verk’.»"
+        }
+      ]
+    }
+  ],
+  "articles": []
+}

@@ -1,0 +1,2491 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-03-08",
+      "issueDate": "2026-03-08",
+      "publishedAt": "2026-03-08T08:00:00+01:00",
+      "coversFrom": "2026-03-08",
+      "coversUntil": "2026-03-15",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\QIII 2026.pdf",
+      "filename": "QIII 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-03-15",
+      "issueDate": "2026-03-15",
+      "publishedAt": "2026-03-15T08:00:00+01:00",
+      "coversFrom": "2026-03-15",
+      "coversUntil": "2026-03-22",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\QIV 2026.pdf",
+      "filename": "QIV 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-03-22",
+      "issueDate": "2026-03-22",
+      "publishedAt": "2026-03-22T08:00:00+01:00",
+      "coversFrom": "2026-03-22",
+      "coversUntil": "2026-03-29",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\QV 2026.pdf",
+      "filename": "QV 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-03-29",
+      "issueDate": "2026-03-29",
+      "publishedAt": "2026-03-29T08:00:00+02:00",
+      "coversFrom": "2026-03-29",
+      "coversUntil": "2026-04-06",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\Stille Uke 2026.pdf",
+      "filename": "Stille Uke 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-04-12",
+      "issueDate": "2026-04-12",
+      "publishedAt": "2026-04-12T08:00:00+02:00",
+      "coversFrom": "2026-04-12",
+      "coversUntil": "2026-04-19",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PII 2026.pdf",
+      "filename": "PII 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-04-19",
+      "issueDate": "2026-04-19",
+      "publishedAt": "2026-04-19T08:00:00+02:00",
+      "coversFrom": "2026-04-19",
+      "coversUntil": "2026-04-26",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PIII 2026.pdf",
+      "filename": "PIII 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-04-26",
+      "issueDate": "2026-04-26",
+      "publishedAt": "2026-04-26T08:00:00+02:00",
+      "coversFrom": "2026-04-26",
+      "coversUntil": "2026-05-03",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PIV 2026.pdf",
+      "filename": "PIV 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-05-03",
+      "issueDate": "2026-05-03",
+      "publishedAt": "2026-05-03T08:00:00+02:00",
+      "coversFrom": "2026-05-03",
+      "coversUntil": "2026-05-10",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PV 2026.pdf",
+      "filename": "PV 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-05-10",
+      "issueDate": "2026-05-10",
+      "publishedAt": "2026-05-10T08:00:00+02:00",
+      "coversFrom": "2026-05-10",
+      "coversUntil": "2026-05-17",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PVI 2026.pdf",
+      "filename": "PVI 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-05-17",
+      "issueDate": "2026-05-17",
+      "publishedAt": "2026-05-17T08:00:00+02:00",
+      "coversFrom": "2026-05-17",
+      "coversUntil": "2026-05-24",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\PVII 2026.pdf",
+      "filename": "PVII 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-05-24",
+      "issueDate": "2026-05-24",
+      "publishedAt": "2026-05-24T08:00:00+02:00",
+      "coversFrom": "2026-05-24",
+      "coversUntil": "2026-05-31",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\Pinsedag 2026.pdf",
+      "filename": "Pinsedag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-05-31",
+      "issueDate": "2026-05-31",
+      "publishedAt": "2026-05-31T08:00:00+02:00",
+      "coversFrom": "2026-05-31",
+      "coversUntil": "2026-06-07",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\9. søndag, Trinitas 2026.pdf",
+      "filename": "9. søndag, Trinitas 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-06-07",
+      "issueDate": "2026-06-07",
+      "publishedAt": "2026-06-07T08:00:00+02:00",
+      "coversFrom": "2026-06-07",
+      "coversUntil": "2026-06-14",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\10. søndag, CC 2026 (1).pdf",
+      "filename": "10. søndag, CC 2026 (1).pdf",
+      "revisionNote": "Korrigert utgave: Notodden-messen 14. juni ble rettet fra kl. 11.00 til kl. 17.00.",
+      "previousVersions": [
+        {
+          "pdfPath": "C:\\Users\\jarda\\Downloads\\10. søndag, CC 2026.pdf",
+          "filename": "10. søndag, CC 2026.pdf",
+          "supersededAt": "2026-06-09T08:00:00+02:00",
+          "note": "Opprinnelig utgave, erstattet fordi tidspunktet for messen på Notodden var feil."
+        }
+      ]
+    },
+    {
+      "sourceKey": "bulletin:2026-06-14",
+      "issueDate": "2026-06-14",
+      "publishedAt": "2026-06-14T08:00:00+02:00",
+      "coversFrom": "2026-06-14",
+      "coversUntil": "2026-06-21",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\11. søndag 2026.pdf",
+      "filename": "11. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-06-21",
+      "issueDate": "2026-06-21",
+      "publishedAt": "2026-06-21T08:00:00+02:00",
+      "coversFrom": "2026-06-21",
+      "coversUntil": "2026-06-28",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\12. søndag 2026.pdf",
+      "filename": "12. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-06-28",
+      "issueDate": "2026-06-28",
+      "publishedAt": "2026-06-28T08:00:00+02:00",
+      "coversFrom": "2026-06-28",
+      "coversUntil": "2026-08-02",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\13. søndag 2026.pdf",
+      "filename": "13. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-08-02",
+      "issueDate": "2026-08-02",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "coversFrom": "2026-08-02",
+      "coversUntil": "2026-08-09",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\18. søndag 2026.pdf",
+      "filename": "18. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-08-09",
+      "issueDate": "2026-08-09",
+      "publishedAt": "2026-08-09T08:00:00+02:00",
+      "coversFrom": "2026-08-09",
+      "coversUntil": "2026-08-16",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\19. søndag 2026.pdf",
+      "filename": "19. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-08-16",
+      "issueDate": "2026-08-16",
+      "publishedAt": "2026-08-16T08:00:00+02:00",
+      "coversFrom": "2026-08-16",
+      "coversUntil": "2026-08-23",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\20. søndag 2026.pdf",
+      "filename": "20. søndag 2026.pdf"
+    },
+    {
+      "sourceKey": "bulletin:2026-08-23",
+      "issueDate": "2026-08-23",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "coversFrom": "2026-08-23",
+      "coversUntil": "2026-08-30",
+      "pdfPath": "C:\\Users\\jarda\\Downloads\\21. søndag 2026.pdf",
+      "filename": "21. søndag 2026.pdf"
+    }
+  ],
+  "places": [
+    {
+      "sourceKey": "place:kongsberg-st-barbara",
+      "name": "St. Barbara kirke",
+      "slug": "kongsberg-st-barbara",
+      "placeType": "church",
+      "streetAddress": "Rogstadbakken 2",
+      "postalCode": "3616",
+      "locality": "Kongsberg",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rogstadbakken+2%2C+3616+Kongsberg"
+    },
+    {
+      "sourceKey": "place:notodden",
+      "name": "Notodden",
+      "slug": "notodden",
+      "placeType": "venue",
+      "streetAddress": "Rådhusgata 1",
+      "postalCode": "3674",
+      "locality": "Notodden",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=R%C3%A5dhusgata+1%2C+3674+Notodden"
+    },
+    {
+      "sourceKey": "place:rjukan-st-johannes",
+      "name": "St. Johannes kapell",
+      "slug": "rjukan-st-johannes",
+      "placeType": "chapel",
+      "streetAddress": "Håndverkergata 10A",
+      "postalCode": "3660",
+      "locality": "Rjukan",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=H%C3%A5ndverkergata+10A%2C+3660+Rjukan"
+    },
+    {
+      "sourceKey": "place:mo-kirke",
+      "name": "Mo kirke",
+      "slug": "mo-kirke",
+      "placeType": "church",
+      "streetAddress": "Modalen 955A",
+      "postalCode": "3880",
+      "locality": "Dalen",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Modalen+955A%2C+3880+Dalen"
+    },
+    {
+      "sourceKey": "place:heddal-stavkirke",
+      "name": "Heddal stavkirke",
+      "placeType": "church",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Heddal+stavkirke"
+    },
+    {
+      "sourceKey": "place:hylland-munkelyd",
+      "name": "Hylland munkelyd",
+      "placeType": "venue",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hylland+munkelyd"
+    },
+    {
+      "sourceKey": "place:kirketorget-kongsberg",
+      "name": "Kirketorget",
+      "placeType": "meetingPoint",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kirketorget+Kongsberg"
+    },
+    {
+      "sourceKey": "place:madonnastatuen-sigdal",
+      "name": "Madonnastatuen i Sigdal",
+      "placeType": "venue",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Madonnastatuen+Sigdal"
+    },
+    {
+      "sourceKey": "place:st-frans-larvik",
+      "name": "St. Frans kirke",
+      "placeType": "church",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=St+Frans+katolske+kirke+Larvik"
+    },
+    {
+      "sourceKey": "place:vatnas-kirke",
+      "name": "Vatnås kirke",
+      "placeType": "church",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vatn%C3%A5s+kirke+Sigdal"
+    },
+    {
+      "sourceKey": "place:lekeland-drammen",
+      "name": "Lekeland i Drammen",
+      "placeType": "venue",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lekeland+Drammen"
+    },
+    {
+      "sourceKey": "place:mariaholm",
+      "name": "Mariaholm",
+      "placeType": "venue",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mariaholm+Spydeberg"
+    },
+    {
+      "sourceKey": "place:skogstad",
+      "name": "Skogstad leirsted",
+      "placeType": "venue",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Skogstad+leirsted"
+    },
+    {
+      "sourceKey": "place:st-olav-oslo",
+      "name": "St. Olav domkirke",
+      "placeType": "church",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=St+Olav+domkirke+Oslo"
+    }
+  ],
+  "massSchedules": [
+    {
+      "sourceKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "title": "Norsk søndagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "nb",
+      "anchorWeekday": "sunday",
+      "recurrenceType": "weekly",
+      "dayOffset": 0,
+      "startTime": "11:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08"
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "title": "Engelsk søndagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "en",
+      "anchorWeekday": "sunday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "13:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "title": "Engelsk onsdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "en",
+      "anchorWeekday": "wednesday",
+      "recurrenceType": "weekly",
+      "dayOffset": 0,
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "notes": "Etter messen ber vi rosenkransen sammen."
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "title": "Torsdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "nb",
+      "anchorWeekday": "thursday",
+      "recurrenceType": "weekly",
+      "dayOffset": 0,
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08"
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "title": "Fredagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "nb",
+      "anchorWeekday": "friday",
+      "recurrenceType": "weekly",
+      "dayOffset": 0,
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08"
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "title": "Lørdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "nb",
+      "anchorWeekday": "saturday",
+      "recurrenceType": "weekly",
+      "dayOffset": 0,
+      "startTime": "12:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08"
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "title": "Engelsk lørdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "en",
+      "anchorWeekday": "saturday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "16:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        3
+      ]
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:saturday:es:1600",
+      "title": "Spansk lørdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "es",
+      "anchorWeekday": "saturday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "16:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        4
+      ]
+    },
+    {
+      "sourceKey": "mass-schedule:kongsberg:saturday:pl:1800",
+      "title": "Polsk lørdagsmesse i Kongsberg",
+      "status": "active",
+      "placeKey": "place:kongsberg-st-barbara",
+      "language": "pl",
+      "anchorWeekday": "saturday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        1,
+        3
+      ]
+    },
+    {
+      "sourceKey": "mass-schedule:notodden:sunday:nb:1700",
+      "title": "Messe på Notodden",
+      "status": "active",
+      "placeKey": "place:notodden",
+      "language": "nb",
+      "anchorWeekday": "sunday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "17:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        2,
+        4
+      ]
+    },
+    {
+      "sourceKey": "mass-schedule:rjukan:sunday:nb:1700",
+      "title": "Messe på Rjukan",
+      "status": "inactive",
+      "placeKey": "place:rjukan-st-johannes",
+      "language": "nb",
+      "anchorWeekday": "sunday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": 0,
+      "startTime": "17:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        1
+      ],
+      "validUntil": "2026-06-07"
+    },
+    {
+      "sourceKey": "mass-schedule:mo:before-third-sunday:nb:1700",
+      "title": "Messe i Mo før tredje søndag",
+      "status": "active",
+      "placeKey": "place:mo-kirke",
+      "language": "nb",
+      "anchorWeekday": "sunday",
+      "recurrenceType": "monthlyWeeks",
+      "dayOffset": -1,
+      "startTime": "17:00",
+      "durationMinutes": 60,
+      "validFrom": "2026-03-08",
+      "weeksOfMonth": [
+        3
+      ]
+    }
+  ],
+  "events": [
+    {
+      "sourceKey": "event:lekeland-drammen-2026-04-19",
+      "title": "Utflukt for barna til Lekeland",
+      "eventType": "activity",
+      "startsAt": "2026-04-19T12:30:00+02:00",
+      "endsAt": "2026-04-19T16:00:00+02:00",
+      "placeKeys": [
+        "place:lekeland-drammen"
+      ],
+      "summary": "Utflukt for barna etter høymessen, med behov for hjelp til transport.",
+      "body": [
+        "Etter høymessen inviterer p. Trym barna til Lekeland i Drammen. Foreldre og andre med plass i bilen oppfordres til å hjelpe med transport."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-12",
+        "bulletin:2026-04-19"
+      ]
+    },
+    {
+      "sourceKey": "event:hylland-mass-2026-05-01",
+      "title": "Messe på Hylland munkelyd",
+      "eventType": "mass",
+      "language": "nb",
+      "startsAt": "2026-05-01T13:00:00+02:00",
+      "endsAt": "2026-05-01T14:00:00+02:00",
+      "placeKeys": [
+        "place:hylland-munkelyd"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-19",
+        "bulletin:2026-04-26"
+      ]
+    },
+    {
+      "sourceKey": "event:heddal-pilgrimage-2026-05-03",
+      "title": "Mariaprosesjon og messe i Heddal stavkirke",
+      "eventType": "pilgrimage",
+      "startsAt": "2026-05-03T16:00:00+02:00",
+      "endsAt": "2026-05-03T18:30:00+02:00",
+      "placeKeys": [
+        "place:heddal-stavkirke"
+      ],
+      "summary": "Menighetstur med Mariaprosesjon og messe i Heddal stavkirke.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-19",
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-03"
+      ]
+    },
+    {
+      "sourceKey": "event:heddal-mass-2026-05-03",
+      "title": "Messe i Heddal stavkirke",
+      "eventType": "mass",
+      "language": "nb",
+      "startsAt": "2026-05-03T17:00:00+02:00",
+      "endsAt": "2026-05-03T18:00:00+02:00",
+      "placeKeys": [
+        "place:heddal-stavkirke"
+      ],
+      "parentEventKey": "event:heddal-pilgrimage-2026-05-03",
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-19",
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-03"
+      ]
+    },
+    {
+      "sourceKey": "event:parish-council-2026-05-11",
+      "title": "Menighetsrådsmøte",
+      "eventType": "parishCouncil",
+      "startsAt": "2026-05-11T19:15:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Menighetsrådsmøte etter messen, som denne dagen begynner kl. 18.30.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10"
+      ]
+    },
+    {
+      "sourceKey": "event:ascension-english-mass-2026-05-14",
+      "title": "English Mass on Ascension Thursday",
+      "eventType": "mass",
+      "language": "en",
+      "startsAt": "2026-05-14T16:00:00+02:00",
+      "endsAt": "2026-05-14T17:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10"
+      ]
+    },
+    {
+      "sourceKey": "event:pentecost-ecumenical-service-2026-05-24",
+      "title": "Økumenisk pinsegudstjeneste",
+      "eventType": "other",
+      "startsAt": "2026-05-24T12:30:00+02:00",
+      "endsAt": "2026-05-24T13:15:00+02:00",
+      "placeKeys": [
+        "place:kirketorget-kongsberg"
+      ],
+      "summary": "Felles pinsegudstjeneste med nabokirkene og kirkekaffe på Kirketorget.",
+      "body": [
+        "Menigheten går samlet fra St. Barbara etter høymessen. Det serveres kaffe, kaker og iskrem på Kirketorget."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24"
+      ]
+    },
+    {
+      "sourceKey": "event:confirmation-mass-2026-05-30",
+      "title": "Konfirmasjonsmesse",
+      "eventType": "mass",
+      "language": "nb",
+      "startsAt": "2026-05-30T11:00:00+02:00",
+      "endsAt": "2026-05-30T12:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-24"
+      ]
+    },
+    {
+      "sourceKey": "event:corpus-christi-celebration-2026-06-07",
+      "title": "Corpus Christi-prosesjon og menighetsfest",
+      "eventType": "social",
+      "startsAt": "2026-06-07T12:00:00+02:00",
+      "endsAt": "2026-06-07T15:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Prosesjon i Kongsbergs gater etter fellesmessen, etterfulgt av menighetsfest.",
+      "body": [
+        "Etter fellesmessen kl. 11 blir det prosesjon i Kongsbergs gater og menighetsfest med grillmat og internasjonal mat, dersom været tillater det."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-12",
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-07"
+      ]
+    },
+    {
+      "sourceKey": "event:madonna-pilgrimage-2026-06-27",
+      "title": "Menighetstur til Madonnastatuen",
+      "eventType": "pilgrimage",
+      "startsAt": "2026-06-27T09:30:00+02:00",
+      "endsAt": "2026-06-27T16:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:madonnastatuen-sigdal"
+      ],
+      "summary": "Messe i St. Barbara før avreise til Madonnastatuen i Sigdal.",
+      "body": [
+        "Turen var opprinnelig planlagt 13. juni, men ble utsatt på grunn av dårlig vær. Ta med vann og mat for turen."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-19",
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    },
+    {
+      "sourceKey": "event:ukrainian-liturgy-2026-06-27",
+      "title": "Ortodoks messe på ukrainsk",
+      "eventType": "mass",
+      "language": "uk",
+      "startsAt": "2026-06-27T10:00:00+02:00",
+      "endsAt": "2026-06-27T11:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-14"
+      ]
+    },
+    {
+      "sourceKey": "event:rjukan-final-mass-2026-06-28",
+      "title": "Siste messe i St. Johannes kapell",
+      "eventType": "mass",
+      "language": "nb",
+      "startsAt": "2026-06-28T15:00:00+02:00",
+      "endsAt": "2026-06-28T16:30:00+02:00",
+      "placeKeys": [
+        "place:rjukan-st-johannes"
+      ],
+      "summary": "Messe med dåp og avslutning før eiendommen på Rjukan tømmes.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    },
+    {
+      "sourceKey": "event:olsok-mass-2026-07-29",
+      "title": "Olsokmesse og grilling",
+      "eventType": "social",
+      "startsAt": "2026-07-29T18:00:00+02:00",
+      "endsAt": "2026-07-29T21:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Messe på norsk etterfulgt av kirkekaffe og grilling.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "event:olavs-pilgrimage-vatnas-2026-08-01",
+      "title": "Olavsvalfart til Vatnås",
+      "eventType": "pilgrimage",
+      "startsAt": "2026-08-01T09:00:00+02:00",
+      "endsAt": "2026-08-01T17:00:00+02:00",
+      "placeKeys": [
+        "place:vatnas-kirke"
+      ],
+      "summary": "Menighetens Olavsvalfart til Vatnås.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-19",
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-06-28",
+        "bulletin:2026-08-02"
+      ]
+    },
+    {
+      "sourceKey": "event:larvik-pilgrimage-2026-08-22",
+      "title": "Menighetstur til St. Frans i Larvik",
+      "eventType": "pilgrimage",
+      "startsAt": "2026-08-22T09:00:00+02:00",
+      "endsAt": "2026-08-22T16:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:st-frans-larvik"
+      ],
+      "summary": "Avreise med biler fra St. Barbara, messe i St. Frans og lunsj i Larvik.",
+      "body": [
+        "Avreise fra St. Barbara kl. 09.00. Messe i St. Frans kl. 12.00, etterfulgt av lunsj."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16"
+      ]
+    },
+    {
+      "sourceKey": "event:larvik-mass-2026-08-22",
+      "title": "Messe i St. Frans",
+      "eventType": "mass",
+      "language": "nb",
+      "startsAt": "2026-08-22T12:00:00+02:00",
+      "endsAt": "2026-08-22T13:00:00+02:00",
+      "placeKeys": [
+        "place:st-frans-larvik"
+      ],
+      "parentEventKey": "event:larvik-pilgrimage-2026-08-22",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16"
+      ]
+    },
+    {
+      "sourceKey": "event:catechesis-confirmation-start-2026-09-04",
+      "title": "Oppstart for konfirmanter",
+      "eventType": "activity",
+      "startsAt": "2026-09-04T18:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "event:catechesis-good-shepherd-start-2026-09-13",
+      "title": "Oppstart for Gode Hyrde-katekese",
+      "eventType": "activity",
+      "startsAt": "2026-09-13T11:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "event:bishop-visitation-2026-10-08",
+      "title": "Bispevisitas",
+      "eventType": "other",
+      "startsAt": "2026-10-08T09:00:00+02:00",
+      "endsAt": "2026-10-11T18:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskop Fredrik visiterer menigheten 8.–11. oktober.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "event:confirmation-retreat-2026-10-16",
+      "title": "Konfirmanthelg på Skogstad",
+      "eventType": "activity",
+      "startsAt": "2026-10-16T17:00:00+02:00",
+      "endsAt": "2026-10-18T16:00:00+02:00",
+      "placeKeys": [
+        "place:skogstad"
+      ],
+      "summary": "Felles konfirmanthelg med Hønefoss og Lillehammer.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-23"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:communion-one-kind-sundays-2026",
+      "title": "Kommunionsutdeling på søndager fra august",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-04-12T08:00:00+02:00",
+      "lastMentionedAt": "2026-04-19T08:00:00+02:00",
+      "appliesFrom": "2026-08-01T00:00:00+02:00",
+      "summary": "På søndager deles kommunion normalt ut i én skikkelse fra august.",
+      "body": [
+        "Fra august deles kommunion i søndagsmessene normalt ut i én skikkelse, Kristi legeme. I hverdagsmessene fortsetter presten å dele ut kommunion ved intinksjon.",
+        "Selv når kommunion mottas i én skikkelse, mottas hele sakramentet. Endringen er gjort av praktiske hensyn og for en mer bærekraftig og forutsigbar praksis."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-12",
+        "bulletin:2026-04-19"
+      ]
+    },
+    {
+      "sourceKey": "announcement:summer-mass-program-2026",
+      "title": "Sommerprogram for messene",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-05-10T08:00:00+02:00",
+      "lastMentionedAt": "2026-06-21T08:00:00+02:00",
+      "appliesFrom": "2026-06-28T00:00:00+02:00",
+      "appliesUntil": "2026-07-27T23:59:00+02:00",
+      "summary": "I ferieperioden ble det kun feiret norsk messe søndager kl. 11 i St. Barbara.",
+      "body": [
+        "P. Trym var på retrett og ferie. Fra 28. juni til og med 26. juli var det kun norsk messe søndager kl. 11 og ingen ordinære hverdagsmesser i St. Barbara."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21",
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "announcement:catechesis-volunteers-2026",
+      "title": "Menigheten trenger flere kateketer",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-04-26T08:00:00+02:00",
+      "lastMentionedAt": "2026-05-24T08:00:00+02:00",
+      "summary": "Det trengs frivillige til Gode Hyrde-katekese, konfirmanter og tilbudene i Notodden og Mo.",
+      "body": [
+        "Menigheten trenger frivillige som kan hjelpe barn og ungdom i katekesen. Det er behov både i Kongsberg, Notodden og Mo."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24"
+      ]
+    },
+    {
+      "sourceKey": "announcement:friday-confession-2026",
+      "title": "Skriftemål på fredager",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-08-09T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-23T08:00:00+02:00",
+      "appliesFrom": "2026-08-14T17:00:00+02:00",
+      "summary": "Presten sitter som regel i skriftestolen fra kl. 17 på fredager.",
+      "body": [
+        "På fredager vil presten som regel høre skriftemål fra kl. 17. Det er også mulig å be rosenkransen på eget initiativ. Skriftemål kan avtales andre dager før eller etter messen."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "announcement:bishop-visitation-2026",
+      "title": "Bispevisitas 8.–11. oktober",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-23T08:00:00+02:00",
+      "appliesFrom": "2026-10-08T00:00:00+02:00",
+      "appliesUntil": "2026-10-11T23:59:00+02:00",
+      "summary": "Biskop Fredrik kommer til menigheten 8.–11. oktober.",
+      "body": [
+        "Programmet for visitasen finnes på oppslagstavlen bak i kirken."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [
+        "event:bishop-visitation-2026-10-08"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "announcement:larvik-trip-2026",
+      "title": "Menighetstur til Larvik",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-05-17T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-16T08:00:00+02:00",
+      "appliesFrom": "2026-08-22T09:00:00+02:00",
+      "appliesUntil": "2026-08-22T16:00:00+02:00",
+      "summary": "Avreise fra St. Barbara kl. 09, messe i St. Frans kl. 12 og lunsj.",
+      "body": [
+        "Menigheten kjører biler fra St. Barbara til Larvik. Etter messen i St. Frans blir det lunsj."
+      ],
+      "relatedEventKeys": [
+        "event:larvik-pilgrimage-2026-08-22"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16"
+      ]
+    },
+    {
+      "sourceKey": "announcement:nuk-no-masses-2026",
+      "title": "Ingen messer 28. og 29. august",
+      "status": "active",
+      "priority": "urgent",
+      "publishedAt": "2026-08-16T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-23T08:00:00+02:00",
+      "appliesFrom": "2026-08-28T00:00:00+02:00",
+      "appliesUntil": "2026-08-29T23:59:00+02:00",
+      "summary": "P. Trym deltar på NUKs landsmøte på Mariaholm, og messene utgår.",
+      "body": [
+        "Det feires ikke messer i St. Barbara 28. og 29. august fordi p. Trym er på Mariaholm for Norges Unge Katolikkers landsmøte."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:mariaholm"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "announcement:catechesis-registration-2026-2027",
+      "title": "Påmelding til katekese er åpen",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-16T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-23T08:00:00+02:00",
+      "appliesUntil": "2026-09-13T23:59:00+02:00",
+      "summary": "Alle må melde seg på, også barn og ungdom som tidligere har deltatt.",
+      "body": [
+        "Oppstart er 4. september for konfirmanter og 13. september for Gode Hyrde. Påmeldingslenkene finnes på menighetens katekese-side."
+      ],
+      "relatedEventKeys": [
+        "event:catechesis-confirmation-start-2026-09-04",
+        "event:catechesis-good-shepherd-start-2026-09-13"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "announcement:confirmation-retreat-leaders-2026",
+      "title": "Vi trenger ledere til konfirmanthelg",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "appliesUntil": "2026-10-16T17:00:00+02:00",
+      "summary": "St. Barbara trenger voksne hjelpere til konfirmanthelgen på Skogstad.",
+      "body": [
+        "16.–18. oktober arrangeres konfirmanthelg sammen med Hønefoss og Lillehammer. Det trengs rundt 20 personer over 18 år i lederteamet. Kontakt p. Trym ved interesse eller spørsmål."
+      ],
+      "relatedEventKeys": [
+        "event:confirmation-retreat-2026-10-16"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-23"
+      ]
+    },
+    {
+      "sourceKey": "announcement:rjukan-property-transition-2026",
+      "title": "Endringer for kapellet på Rjukan",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-06-14T08:00:00+02:00",
+      "summary": "Eiendommen på Rjukan er solgt; nytt messested blir kunngjort før oppstarten høsten 2026.",
+      "body": [
+        "Siste messe i St. Johannes kapell ble feiret 28. juni kl. 15. Inventar og øvrige rom skulle tømmes i forbindelse med salget av eiendommen."
+      ],
+      "placeKeys": [
+        "place:rjukan-st-johannes"
+      ],
+      "relatedEventKeys": [
+        "event:rjukan-final-mass-2026-06-28"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    },
+    {
+      "sourceKey": "announcement:english-mass-2026-08-15-cancelled",
+      "title": "Engelsk messe 15. august utgår",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-08-09T08:00:00+02:00",
+      "appliesFrom": "2026-08-15T16:00:00+02:00",
+      "appliesUntil": "2026-08-15T17:00:00+02:00",
+      "body": [
+        "P. Johan var ikke tilgjengelig, og den engelske messen kl. 16 ble avlyst."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-09"
+      ]
+    },
+    {
+      "sourceKey": "announcement:corpus-christi-volunteers-2026",
+      "title": "Frivillige til Corpus Christi",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-04-12T08:00:00+02:00",
+      "lastMentionedAt": "2026-05-31T08:00:00+02:00",
+      "appliesUntil": "2026-06-07T15:00:00+02:00",
+      "body": [
+        "Menigheten trengte frivillige til prosesjonen og menighetsfesten etter fellesmessen 7. juni."
+      ],
+      "relatedEventKeys": [
+        "event:corpus-christi-celebration-2026-06-07"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-12",
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31"
+      ]
+    },
+    {
+      "sourceKey": "announcement:olavs-pilgrimage-registration-2026",
+      "title": "Påmelding til Olavsvalfarten",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-05-10T08:00:00+02:00",
+      "lastMentionedAt": "2026-05-24T08:00:00+02:00",
+      "appliesUntil": "2026-08-01T09:00:00+02:00",
+      "body": [
+        "Påmelding skjedde via QR-koden på plakatene. På grunn av begrenset parkering ble deltakerne oppfordret til samkjøring."
+      ],
+      "relatedEventKeys": [
+        "event:olavs-pilgrimage-vatnas-2026-08-01"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24"
+      ]
+    },
+    {
+      "sourceKey": "announcement:olsok-thanks-2026",
+      "title": "Takk for Olsokfeiringen",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "body": [
+        "Takk til alle som deltok og hjalp til i St. Barbara og på Vatnås. Menigheten oppfordret samtidig alle til å sette av Olsok 2027."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-nb-2026-03-29",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "sourceBulletinKeys": [
+        "bulletin:2026-03-22",
+        "bulletin:2026-03-29"
+      ],
+      "occurrenceDate": "2026-03-29",
+      "titleOverride": "Palmesøndag – høymesse med velsignelse av palmegrener"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-nb-2026-04-05",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "sourceBulletinKeys": [
+        "bulletin:2026-03-29"
+      ],
+      "occurrenceDate": "2026-04-05",
+      "titleOverride": "Høymesse påskedag"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-05-23",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-17"
+      ],
+      "occurrenceDate": "2026-05-23",
+      "titleOverride": "Førstekommunionsmesse"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-nb-2026-05-17",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-04-26",
+        "bulletin:2026-05-03",
+        "bulletin:2026-05-10"
+      ],
+      "occurrenceDate": "2026-05-17",
+      "newStartsAt": "2026-05-17T18:00:00+02:00",
+      "newEndsAt": "2026-05-17T19:00:00+02:00",
+      "titleOverride": "Høymesse på nasjonaldagen",
+      "publicNote": "Høymessen ble flyttet fra kl. 11 til kl. 18."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-nb-2026-05-24",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24"
+      ],
+      "occurrenceDate": "2026-05-24",
+      "titleOverride": "Høymesse på pinsedag",
+      "relatedEventKey": "event:pentecost-ecumenical-service-2026-05-24"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-en-2026-05-24",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24"
+      ],
+      "occurrenceDate": "2026-05-24",
+      "publicNote": "Messen utgikk på grunn av den økumeniske pinsegudstjenesten."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-nb-2026-06-07",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-07"
+      ],
+      "occurrenceDate": "2026-06-07",
+      "titleOverride": "Fellesmesse for Corpus Christi",
+      "relatedEventKey": "event:corpus-christi-celebration-2026-06-07"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sun-en-2026-06-07",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-07"
+      ],
+      "occurrenceDate": "2026-06-07",
+      "publicNote": "Kun én fellesmesse denne dagen."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-06-13",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-07"
+      ],
+      "occurrenceDate": "2026-06-13",
+      "newStartsAt": "2026-06-13T09:30:00+02:00",
+      "newEndsAt": "2026-06-13T10:30:00+02:00",
+      "titleOverride": "Messe før valfarten",
+      "publicNote": "Turen ble senere utsatt på grunn av dårlig vær."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-en-2026-06-20",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-14"
+      ],
+      "occurrenceDate": "2026-06-20",
+      "publicNote": "P. Johan hadde ikke anledning til å komme."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-06-27",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-21"
+      ],
+      "occurrenceDate": "2026-06-27",
+      "newStartsAt": "2026-06-27T09:30:00+02:00",
+      "newEndsAt": "2026-06-27T10:30:00+02:00",
+      "titleOverride": "Messe før menighetsturen",
+      "relatedEventKey": "event:madonna-pilgrimage-2026-06-27"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-en-2026-08-15",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-09"
+      ],
+      "occurrenceDate": "2026-08-15",
+      "publicNote": "P. Johan var ikke tilgjengelig."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-08-22",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16"
+      ],
+      "occurrenceDate": "2026-08-22",
+      "publicNote": "Menigheten feiret messe under turen til St. Frans i Larvik.",
+      "relatedEventKey": "event:larvik-pilgrimage-2026-08-22"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-fri-nb-2026-08-28",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ],
+      "occurrenceDate": "2026-08-28",
+      "publicNote": "Ingen messe på grunn av NUKs landsmøte."
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-08-29",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ],
+      "occurrenceDate": "2026-08-29",
+      "publicNote": "Ingen messe på grunn av NUKs landsmøte."
+    },
+    {
+      "sourceKey": "mass-exception:wed-en-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "rangeStart": "2026-06-28",
+      "rangeEnd": "2026-07-27",
+      "changeType": "cancelled",
+      "publicNote": "Ingen ordinære hverdagsmesser i ferieperioden.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21",
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:thu-nb-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "rangeStart": "2026-06-28",
+      "rangeEnd": "2026-07-27",
+      "changeType": "cancelled",
+      "publicNote": "Ingen ordinære hverdagsmesser i ferieperioden.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21",
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:fri-nb-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "rangeStart": "2026-06-28",
+      "rangeEnd": "2026-07-27",
+      "changeType": "cancelled",
+      "publicNote": "Ingen ordinære hverdagsmesser i ferieperioden.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21",
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:sat-nb-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "rangeStart": "2026-06-28",
+      "rangeEnd": "2026-08-01",
+      "changeType": "cancelled",
+      "publicNote": "Kun norsk søndagsmesse i ferieperioden; 1. august var menigheten på Olavsvalfart.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21",
+        "bulletin:2026-06-28"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:sun-en-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "rangeStart": "2026-06-15",
+      "rangeEnd": "2026-08-08",
+      "changeType": "cancelled",
+      "publicNote": "Engelske messer hadde sommerpause.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:sat-en-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "rangeStart": "2026-06-21",
+      "rangeEnd": "2026-08-14",
+      "changeType": "cancelled",
+      "publicNote": "Engelske messer hadde sommerpause.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:sat-pl-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:pl:1800",
+      "rangeStart": "2026-06-21",
+      "rangeEnd": "2026-08-14",
+      "changeType": "cancelled",
+      "publicNote": "Polske messer hadde sommerpause.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:notodden-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:notodden:sunday:nb:1700",
+      "rangeStart": "2026-06-15",
+      "rangeEnd": "2026-08-08",
+      "changeType": "cancelled",
+      "publicNote": "Messene startet opp igjen 9. august.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-31",
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    },
+    {
+      "sourceKey": "mass-exception:mo-summer:2026",
+      "scope": "dateRange",
+      "scheduleKey": "mass-schedule:mo:before-third-sunday:nb:1700",
+      "rangeStart": "2026-05-17",
+      "rangeEnd": "2026-08-14",
+      "changeType": "cancelled",
+      "publicNote": "Messene startet opp igjen 15. august.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-05-10",
+        "bulletin:2026-05-17",
+        "bulletin:2026-05-24",
+        "bulletin:2026-05-31"
+      ]
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-03-08:kongsberg:nb:1100",
+      "title": "3. søndag i fastetiden",
+      "massDate": "2026-03-08",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-03-08",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning 2 Mos 17, 3-7"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager tørstet folket etter vann i ørkenen. De knurret mot Moses og sa: «Hvorfor har du ført oss opp fra Egypt? Vil du at vi og barna våre og feet vårt skal dø av tørst?» Da ropte Moses til Herren og sa: «Hva skal jeg gjøre med dette folket? Det er ikke lenge før de stener meg!» Herren sa til Moses: «Gå foran folket sammen med noen av Israels eldste! Ta med deg den stav du slo på elven med, og gå! Da skal du få se at jeg står foran deg på berget ved Horeb. Når du slår på berget, skal det strømme frem vann, så folket får drikke.» Moses gjorde som Herren sa, mens Israels eldste så på. Dette stedet kalte de siden Massa og Meriba. For der trettet israelittene med Moses, og der satte de Herren på prøve da de sa: «Er Herren iblant oss eller ikke?»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Lytt til Herrens røst i dag. Forherd ikke deres hjerter. Kom, la oss juble for Herren, rope av glede for Gud, vår frelse. La oss tre frem for hans åsyn med lovsang, synge hans pris med salmer. ℟ Kom, la oss tilbe og kaste oss ned, knele for Herrens, vår skapers åsyn. For han er vår Gud. Vi er det folk han fører, den hjord han leder. ℟ Lytt til hans røst i dag, forherd ikke deres hjerter som på fristelsens dag i ørkenen, da deres fedre satte meg på prøve, skjønt de hadde sett min gjerning. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 5,1-2. 5-8"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, siden vi da er rettferdiggjort gjennom troen, har vi fred med Gud ved vår Herre Jesus Kristus. Ved ham var det vi fikk adgang til den nådestand som vi nå befinner oss i, og vi priser oss lykkelige over vårt håp om Guds herlighet Og håpet skuffer ikke, for Guds kjærlighet er blitt utgydt i våre hjerter, ved Den Hellige Ånd som vi har mottatt. For vi var ennå hjelpeløse den gang Kristus, til den fastsatte tid, gikk i døden for synderne. Knapt ville vel ellers noen gå i døden, selv for en rettferdig mann – jo, for et godt menneske ville kanskje enkelte manne seg opp til å dø. Men Kristus døde for oss mens vi ennå var syndere; slik gir Gud oss bevis på sin kjærlighet."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℣ Herre, du er i sannhet verdens Frelser; gi meg det levende vann, så jeg ikke mer blir tørst."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 4, 5–42"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid kom Jesus til en by i Samaria som heter Sykar, i nærheten av det jordstykket som Jakob gav sin sønn Josef, og hvor også Jakobs brønn var. Trett av vandringen satte Jesus seg ved brønnen. Det var ved middagstid. En samaritankvinne kommer for å øse opp vann; og Jesus sier til henne: «Gi meg litt å drikke.» Hans disipler var gått inn til byen for å kjøpe mat. Samaritankvinnen svarer: «Hva? Du som er jøde, ber du meg, en samaritankvinne, om noe å drikke?» (Jødene har nemlig ikke noe samkvem med samaritaner.) Jesus svarte henne: «Dersom du kjente Guds gave, og dersom du visste hvem det er som ber deg om vann, – da ville det være du som bad ham; og han skulle gi deg vann fra levende kilder.» Hun sier: «Herre, ikke har du noe å øse med, og brønnen er dyp; hvor vil du så få kildevann fra? Du er vel ikke større enn vår far, Jakob, han som gav oss brønnen? Selv drakk han av den, og det samme gjorde sønnene hans og kveget?» Jesus svarte: «Hver eneste én av dem som drikker av vannet her, blir tørst igjen; men den som drikker av det vannet jeg vil gi ham, han kommer aldri i evighet til å tørste mer. For det vann jeg vil gi ham, det skal velle frem i hans indre som en evig livgivende kilde.» Kvinnen sier da til ham: «Herre, gi meg da dette vannet, så jeg ikke blir tørst mer og kan slippe å komme hit for å øse opp.» Han svarer: «Gå og hent din mann, og kom så tilbake hit.» Kvinnen svarte: «Jeg har ikke noen mann.» Jesus sier til henne: «At du ikke har noen mann, det har du rett i, for fem menn har du hatt, og han du lever med nå, er ikke din mann; der talte du sant.» Kvinnen sier til ham: «Å Herre, jeg ser at du er en profet! – Våre fedre tilbad Gud på fjellet der; men dere sier at Jerusalem er det stedet hvor man skal tilbe?» Jesus sier: «Tro du meg, kvinne; det kommer en tid da det hverken er på dette fjellet eller i Jerusalem at dere skal tilbe Faderen. Dere tilber det dere ikke kjenner; vi tilber det vi kjenner; for det er fra jødene at frelsen kommer. Men den time skal komme, ja, den er alt inne, da de sanne tilbedere skal tilbe Faderen i ånd og sannhet. For slike tilbedere er det Faderen vil ha. Gud er ånd, og de som tilber, må gjøre det i ånd og sannhet.» Kvinnen sier til ham: «Jeg vet at Messias skal komme. (Messias, det vil si Kristus.) Når han kommer, skal han forklare oss alt.» Jesus sier da til henne: «Det er meg – jeg som taler med deg.» I det samme kom hans disipler tilbake. De undret seg over at han talte med en kvinne; allikevel var det ingen som spurte hva han ville henne eller hvorfor han talte med henne. Men kvinnen lot vannkrukken stå og gikk inn til byen, og sa til folk: «Kom og se en mann som har fortalt meg alt det jeg har gjort. Han skulle vel ikke være Messias?» Folk drog da ut av byen og kom bortover mot ham. I mellomtiden nødet disiplene ham og sa: «Rabbi, få deg noe å spise!» Men han svarte dem: «Jeg har mat å spise som dere ikke vet om». Disiplene sa da til hverandre: «Kanskje noen har bragt ham mat?» Men Jesus sier til dem: «Min mat, det er å gjøre hans vilje som har sendt meg, og utføre hans verk. Er det ikke så dere sier: ‘Ennå fire måneder, så er høsttiden inne’? Men da sier jeg dere: Løft blikket og se utover markene – se, de står alt hvite, ferdige til å høstes! Så er den som høster, alt i ferd med å få sin lønn, han samler grøde inn til det evige liv, og slik kan den som sår, glede seg med den som høster. For så vidt sier ordtaket sant, når det heter at ‘én sår, en annen høster’: Jeg har sendt dere ut for å høste hva dere ikke har hatt noe arbeid med; andre har gjort arbeidet, og dere overtar etter dem.» Mange av samaritanene der fra byen var kommet til tro på ham [på grunn av det kvinnen hadde sagt, da hun erklærte at han hadde fortalt henne alt hun hadde gjort]. Og da de nå kom hen til ham, bad de ham bli over hos dem. Så ble han der i to dager. Enda mange flere kom til tro på ham etter å ha hørt ham selv tale; og de sa til kvinnen: «Nå tror vi ikke lenger bare på grunn av det du sa, nå har vi selv hørt ham og forstått at han virkelig er verdens Frelser.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-03-15:kongsberg:nb:1100",
+      "title": "4. søndag i fastetiden",
+      "massDate": "2026-03-15",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-03-15",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning 1 Sam 16, 6-7. 10-13a"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager sa Herren til Samuel: «Fyll hornet ditt med olje og gå! Jeg sender deg til Isai i Betlehem, for jeg har utsett meg en av hans sønner til å være konge.» Da Samuel kom til Betlehem og fikk se Eliab, Isais sønn, tenkte han: «Her står den Herren vil salve, foran Herren.» Men Herren sa til Samuel: «Se ikke på hans utseende og høye vekst, for jeg har forkastet ham. Gud ser ikke på det som menneskene ser på. Menneskene ser på det ytre, men Herren ser på hjertet.» Isai lot de syv sønnene sine gå frem for Samuel, men Samuel sa til Isai: «Herren har ikke utvalgt noen av disse.» Da spurte Samuel: «Var dette alle guttene dine?» «Nei,» svarte Isai, «det er enda en igjen, den yngste. Han er ute og gjeter småfeet.» «Send bud etter ham!» sa Samuel. «Vi setter oss ikke til bords før han kommer.» Så sendte Isai bud etter ham. Han var rødkinnet, hadde vakre øyne og fagert utseende. Herren sa: «Reis deg og salv ham, for han er det!» Da tok Samuel oljehornet og salvet ham der han stod blant sine brødre. Fra den dag av kom Herrens Ånd over David og var med ham siden."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Herren skal være deres hyrde og føre dem til livets kilde. Herren er min hyrde, i hans hånd er overflod. Han lar meg ligge på grønne enger. Han fører meg til vann der jeg får hvile og gir meg nye krefter. ℟ Han leder meg på rette stier, så jeg kan ære hans navn. Selv om jeg går i dødsskyggens dal, det onde skremmer meg ikke. For, Herre, du er med meg, din kjepp og din stav de trøster meg. ℟ Du dekker mitt bord for fiendens øyne og salver mitt hode med olje, mitt beger er fylt til randen. ℟ Bare miskunn og det som godt er, skal følge meg alle dager, og jeg skal bo i Herrens hus gjennom lange tider."
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Ef 5,8-14"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, engang var dere selv mørke, men nå er dere lys, i Herren. Lev da også som barn av lyset, for det får godhet, rettferd og sannhet til å spire; og lær å forstå hva som er Herren kjært. Ta ingen del i mørkets golde gjerninger, men gjør klart for alle hva de er verd! For en skammer seg bare ved å snakke om det som disse menneskene driver med i det skjulte. Men når alt dette blir kalt ved sitt rette navn, da kommer det også frem i lyset; og alt som lyset får skinne på, blir lys. Derfor heter det også: Våkn opp, du som sover, stå opp fra de døde, så skal Kristus lyse for deg!"
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℣ Jeg er verdens lys, sier Herren. Den som følger meg, har det lys som fører ham til livet."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 9, 1–41"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid fikk Jesus øye på en mann som var blind fra fødselen av. Hans disipler spurte ham da: «Rabbi, når han er født blind, hvem er det da som har syndet, – han selv eller hans foreldre?» Jesus svarte: «Hverken han selv eller hans foreldre har syndet; han ble født slik for at Gud skulle få vise sin gjerning gjennom ham. Så lenge det er dag, må jeg arbeide for ham som har sendt meg, og utføre hans verk. Natten kommer; da kan ingen mer arbeide. Men så lenge jeg er i verden, er jeg dens lys.» Så med disse ord spyttet han på jorden, laget en søledeig med spyttet, og smurte deigen på hans øyne. Så sa han: «Gå og vask deg i Sjiloah-dammen.» (Sjiloah betyr «utsendt».) Han gikk da av sted og vasket seg, og kom seende tilbake. Naboene og de som hittil hadde vært vant til å se ham som tigger, sa da: «Er ikke dette han som satt og tigget?» Noen mente at det var ham; andre sa: «Nei, det er bare en som ligner ham.» Da sa han selv: «Jo, det er meg.» Så spurte de ham: «Hvordan gikk det til at dine øyne ble åpnet?» Han svarte: «Den mannen de kaller Jesus laget en deig av søle, som han smurte på øynene mine, og så sa han at jeg skulle gå ned i Sjiloah og vaske meg. Jeg gikk dit, og da jeg vasket meg, fikk jeg synet igjen.» «Og hvor er han nå?» spurte de. Han svarte: «Det vet jeg ikke.» De tok ham da med til fariseerne, han som tidligere hadde vært blind. Det var en sabbat, den dagen da Jesus hadde laget deigen og åpnet hans øyne. Fariseerne spurte ham nå i sin tur hvordan han hadde fått synet igjen. Og han svarte: «Han smurte en søledeig på øynene mine, og så vasket jeg meg – og nå ser jeg.» Noen av fariseerne sa da: «Denne mannen kommer ikke fra Gud; han overholder jo ikke sabbaten.» Men andre sa: «Hvordan skulle en synder kunne gjøre slike jærtegn?» og slik begynte de å strides. Men så vender de seg igjen til den blinde: «Hva er din mening om ham, siden han har åpnet øynene dine?» Han svarte: «Han er en profet.» Men jødene ville ikke tro at han hadde vært blind og fått synet igjen, før de hadde fått tilkalt hans foreldre og spurt dem: «Dette er altså deres sønn, som dere påstår er født blind? Hvordan kan det da ha seg at han nå ser?» Hans foreldre svarte: «Det vi vet, det er at dette er vår sønn, som ble født blind. Men hvordan det er gått til at han nå ser, eller hvem som har åpnet øynene hans, det vet ikke vi noe om. Spør ham selv; han er gammel nok til å kunne svare for seg!» Det var av frykt for jødene at hans foreldre sa dette; jødene hadde nemlig allerede besluttet at den som anerkjente Jesus som Messias, skulle utstøtes av synagogen. Og derfor var det altså at foreldrene sa: «Han er gammel nok, spør ham selv.» De kalte da til seg for annen gang ham som hadde vært blind, og sa til ham: «Krenk ikke Gud, men si sannheten! Husk, vi vet at denne mannen er en synder!» Han svarte: «Om han er en synder, det vet jeg ingenting om; jeg vet bare én ting, nemlig at før var jeg blind, og nå ser jeg.» De sa da: «Hva var det han gjorde med deg? Hvordan var det han åpnet dine øyne?» Han svarte: «Det har jeg alt sagt, men dere ville ikke høre på det. Hvorfor vil dere nå høre det om igjen? Dere har da vel ikke tenkt å bli hans disipler, dere også?» Da skjelte de ham ut: «Du kan være hans disippel,» sa de, «men vi er Mose disipler. At Gud talte til Moses, det vet vi, men hvor denne her kommer fra, det vet vi ikke!» Mannen svarte: «Det er nettopp det som er så underlig: Meg har han åpnet øynene på, og enda vet dere ikke hvor han kommer fra! Men vi vet jo at Gud ikke bønnhører syndere, mens han hører den som er gudfryktig og gjør hans vilje. Aldri siden verden ble til har man hørt at noen har åpnet øynene på en blindfødt. Hvis denne mannen ikke var fra Gud, da kunne han ingenting gjøre.» Da svarte de: «I synd er du født, helt igjennom, og så vil du lære oss!» og dermed kastet de ham ut. Jesus fikk høre at de hadde kastet ham ut. Og da han møtte ham, spurte han ham: «Tror du på Menneskesønnen?» Den annen svarte: «Skal jeg kunne tro på ham, Herre, må du si meg hvem han er?» Jesus sa: «Du har alt sett ham: Det er han som taler med deg nå.» Og den annen sa: «Jeg tror, Herre» – og kastet seg ned for å hylle ham. Jesus sa: «Det er til en dom jeg er kommet til denne verden: For at de som ikke så, skal se, og for at de seende skal bli blinde.» Noen fariseere som var sammen med ham, hørte det og spurte: «Skal kanskje vi også være blinde?» Jesus svarte: «Var dere blinde, var dere også uten skyld; men nå sier dere: Vi ser. Og så lenge forblir dere skyldige.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-03-22:kongsberg:nb:1100",
+      "title": "5. søndag i fastetiden",
+      "massDate": "2026-03-22",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-03-22",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Esek 37, 12b-14"
+        },
+        {
+          "style": "normal",
+          "text": "Så sier Herren Gud: Se, mitt folk, jeg åpner gravene deres og lar dere stige opp av dem. Så fører jeg dere til Israels land. Dere skal sanne at jeg er Herren, når jeg åpner gravene deres, mitt folk, og lar dere stige opp av dem. Jeg gir dere min Ånd så dere blir levende, og lar dere bo i deres eget land. Da skal dere sanne at jeg, Herren, har talt og setter det i verk, lyder ordet fra Herren."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Hos Herren er barmhjertighet, og hos ham er forløsningens fylde. Fra dypet kaller jeg på deg, Herre, Herre, hør min røst. Gjør ditt hjerte lydhørt for mitt tryglende rop. ℟ Om du gjemte på misgjerninger, Herre, Herre, hvem kunne da bli stående? Men hos deg er tilgivelsen, så vi med ærefrykt skal tjene deg. ℟ Jeg setter min lit til Herren, min sjel håper på hans ord. Min sjel lenges etter Herren mer enn vekteren lenges etter morgenrøden. Mer enn vekteren etter morgenrøden lenges Israel etter Herren. ℟ For hos Herren er barmhjertighet, og hos ham er forløsningens fylde. Og han skal forløse Israel fra all dets syndeskyld."
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 8,8-11"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, de som følger den syndige natur, kan ikke være etter Guds sinn. Men dere lever ikke naturens liv, men Åndens, så sant Guds Ånd bor i dere. Den som ikke eier Kristi Ånd, hører ikke ham til; men dersom Kristus bor i dere, vil legemet nok være døden undergitt på grunn av synden, men ånden levende i kraft av rettferdigheten. Og så sant hans Ånd, som oppreiste Jesus fra de døde, bor i dere, da skal han som oppreiste fra de døde Kristus Jesus, også gi deres dødelige legemer liv ved sin Ånd som bor i dere."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℣ Jeg er oppstandelsen og livet, sier Herren. Den som tror på meg, skal aldri i evighet dø."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 11, 1–45"
+        },
+        {
+          "style": "normal",
+          "text": "En mann som het Lasarus, var syk; han var fra Betania, den landsbyen hvor Maria og hennes søster Marta bodde. Det var Maria som salvet Herren med salve og tørret hans føtter med sitt hår. Og Lasarus, som var syk, var hennes bror. Søstrene sendte da bud etter ham og lot si: «Herre, din venn er syk.» Da Jesus hørte det, sa han: «Denne sykdommen ender ikke med døden, men med å fremme Guds ære; for gjennom den skal guddomsglansen skinne om Guds sønn.» Jesus holdt meget av både Marta og hennes søster og Lasarus. Etter at han hadde hørt om sykdommen, ble han værende hvor han var i to dager til; først da sa han til disiplene: «La oss gå tilbake til Judea.» Disiplene svarer: «Rabbi, nylig prøvde jødene å stene deg, og enda vil du gå tilbake dit?» Jesus svarte: «Har ikke dagen tolv timer? Og den som går om dagen, snubler ikke, takket være dagslyset som lar ham se; men den som er ute og går om natten, han snubler, for da er lyset borte.» Og derpå lar han til: «Lasarus, vår venn, har lagt seg til hvile; jeg går for å vekke ham.» Hans disipler sa da til ham: «Herre, dersom han hviler, blir han nok frisk igjen.» Men Jesus hadde talt om hans død; de derimot trodde at det var søvnens hvile han mente. Da sa Jesus like ut: «Lasarus er død, og for deres skyld er jeg glad jeg ikke var der, så dere kan lære å tro. Men la oss nå gå til ham!» Thomas (han som kalles Didymos) sier da til de andre disiplene: «La oss gå med, vi også, så dør vi sammen med ham!» Da Jesus kom frem, fant han at Lasarus allerede hadde ligget fire dager i graven. [Betania ligger bare omkring femten stadier fra Jerusalem, og mange av jødene var kommet til Marta og Maria for å trøste dem i sorgen over deres bror.] Da Marta hørte at Jesus nærmet seg, gikk hun ham i møte; Maria satt hjemme i huset. Og så sier Marta til Jesus: «Herre, dersom du hadde vært her, da ville min bror ikke vært død! – Men fremdeles vet jeg, at alt du ber Gud om, det gir han deg …» Jesus svarer: «Din bror skal oppstå.» Og Marta sier: «Jeg vet at han skal oppstå: Ved oppstandelsen på den ytterste dag.» Jesus svarer på ny: «Jeg er oppstandelsen og livet. Den som tror på meg, skal leve, om han enn er død. Og enhver som lever og tror på meg, skal aldri i evighet dø. Tror du dette?» Hun sier: «Ja, herre; jeg er fullt forvisset om at du er Messias, Guds Sønn, han som skulle komme til verden.» Og med disse ord gikk hun av sted, kalte på sin søster Maria og hvisket til henne: «Mesteren er her; han spør etter deg.» Straks Maria hørte det, reiste hun seg skyndsomt og gikk ut til ham. Jesus var ennå ikke kommet inn i landsbyen, han befant seg fremdeles der hvor Marta var kommet ham i møte. Jødene som var sammen med Maria inne i huset for å trøste henne, så at hun reiste seg så plutselig og gikk ut; de fulgte da etter, for de tenkte at hun gikk bort til graven for å gråte der. Da Maria nå kom frem dit Jesus var og fikk se ham, kastet hun seg ned for hans føtter og sa: «Å herre, dersom du hadde vært her, da ville min bror ikke vært død!» Jesus så hvordan hun gråt, både hun og jødene som var kommet i følge med henne. Beveget og rystet i sin sjels innerste spurte han da: «Hvor har dere lagt ham?» De svarer: «Kom skal du se, herre.» Jesus gråt. Og jødene sa: «Se hvor han holdt av ham!» Men noen av dem sa også: «Han som åpnet den blindes øyne, kunne han ikke gjort slik at denne mannen ikke døde?» Atter heftig beveget kommer da Jesus frem til graven. Det var en hulegrav, med en stor sten over. Jesus sier: «Ta stenen bort!» Marta, den dødes søster, innvender: «Herre, han stinker sikkert allerede; det er nå alt på fjerde dagen.» Men Jesus svarer: «Sa jeg deg ikke, at dersom du tror, skal du få se Guds herlighet lyse?» De tok da stenen vekk. Og Jesus vendte sitt blikk mot det høye, og sa: «Far, jeg takker deg fordi du har hørt meg. Jeg visste at du alltid hører meg; men dette sier jeg, for at hele denne mengden som står her omkring, skal tro at du har sendt meg.» Og som han hadde sagt dette, ropte han med kraftig stemme: «Lasarus, kom ut!» Da kom den døde ut, med hender og føtter omviklet av linnetstrimler, og med en svetteduk bundet over ansiktet. Jesus sier til dem: «Hjelp ham løs, og la ham gå.» Mange av jødene som var kommet ut til Maria og hadde sett hva han gjorde, kom da til troen på ham."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-03-29:kongsberg:nb:1100",
+      "title": "Palmesøndag",
+      "massDate": "2026-03-29",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-03-29",
+      "body": [
+        {
+          "style": "h2",
+          "text": "Evangelium Mat 21, 1–11"
+        },
+        {
+          "style": "normal",
+          "text": "De nærmet seg nå Jerusalem. Og like før de kom til Betfage på Olivenberget, sendte Jesus to disipler avsted med den beskjed: «Gå inn i landsbyen foran dere; der finner dere straks et esel som står bundet, med en fole ved siden av. Løs dem og før dem hit. Og dersom noen kommer med spørsmål, så si: ‘Herren har bruk for dem, men han sender dem straks tilbake.’» Og dette skjedde for at profetens ord skulle gå i oppfyllelse. Det heter jo: «Si til Sions datter: Se, din konge kommer til deg, ydmyk, ridende på et esel, på lastedyrets fole.» Disiplene gjorde da som Jesus hadde sagt; de førte frem eslet og folen, la kappene sine over dem, og han satte seg opp. En stor mengde av folket bredte kappene sine utover veien, mens andre skar grener av trærne og strødde veien med dem. Så gikk det én flokk foran ham, andre kom baketter, og alle ropte: «Hosanna! Davids sønn! Velsignet er han som kommer i Herrens navn! Hosanna i det høye!» Da han drog inn i Jerusalem, kom hele byen i røre. «Hvem er dette?» ble det spurt. Og mengden svarte: «Det er profeten Jesus, fra Nasaret i Galilea.»"
+        },
+        {
+          "style": "h2",
+          "text": "1. lesning Jes 50, 4-7"
+        },
+        {
+          "style": "normal",
+          "text": "Herren min Gud har gitt meg en disippels tunge, så jeg med mitt ord kan styrke den trette. Hver morgen vekker han mitt øre, så jeg kan høre på disiplers vis. Herren min Gud har åpnet mitt øre. Jeg satte meg ikke imot og trakk meg ikke tilbake. Min rygg bød jeg frem til dem som slo, mitt kinn til dem som drog meg i skjegget. Jeg gjemte ikke ansiktet for dem som hånte meg og spyttet på meg. Herren min Gud kommer meg til hjelp, derfor skammer jeg meg ikke. Derfor gjør jeg ansiktet hardt som flint, jeg vet at jeg ikke skal bli til skamme."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Min Gud, min Gud, hvorfor har du forlatt meg? Alle som ser meg, håner meg, de gjør grimaser og ryster på hodet. «Han har forlatt seg på Herren, han frelse ham. Han frir ham, for han har ham kjær.» ℟ Hunder står omkring meg, flokker av onde omringer meg. De har gjennomboret mine hender og føtter, jeg kan telle alle mine ben. ℟ Mine klær delte de mellom seg og kastet lodd om min kjortel. Men du, Herre, vær ikke fjern, min redning, kom meg til hjelp. ℟ Jeg vil forkynne ditt navn for mine brødre, i forsamlingen synge din pris. Du som frykter Herren, lov ham. Pris ham, hele Jakobs ætt, frykt ham, hele Israel."
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Fil 2,6-11"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, la Kristi Jesu sinnelag prege deres ferd, han som, skjønt av guddoms rang dog ikke voktet skinnsykt over sin stilling som Guds like! Nei, han oppgav alt sitt eget, gikk inn i slavens kår og ble et menneske som vi. Å se til som et menneske i all sin ferd, bøyde han seg, underkastet og lydig til døden – ja, døden på et kors! Derfor er det Gud har hevet ham så høyt og skjenket ham det navn som står over alle andre – så høyt, at alle ting i Jesu navn skal bøye kne – i himmelen, på jorden og i dypet – og hver en tunge skal forkynne: «Jesus Kristus er Herre!» – til Gud Faderens ære."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-04-12:kongsberg:nb:1100",
+      "title": "2. søndag i påsketiden",
+      "massDate": "2026-04-12",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-04-12",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 2, 42-47"
+        },
+        {
+          "style": "normal",
+          "text": "Brødrene fortsatte trofast å følge apostlenes undervisning, og trofast tok de også del i fellesskapet, i brødsbrytelsen og i bønnene. Hver og en ble grepet av age, så mange under og jærtegn som apostlene gjorde. De troende hadde alt felles; sitt gods og sine eiendommer solgte de og delte ut til alle, etter hver enkelts behov. Dag ut, dag inn samlet de seg i sluttet flokk i templet, og rundt om i hjemmene brøt de brødet og holdt måltid sammen, i enkel og inderlig glede. De lovsang Gud og hadde hele folkets velvilje. Og for hver dag økte Herren deres krets med nye frelste."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Lovpris Herren, for han er god, evig er hans kjærlighet."
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 1,3-9"
+        },
+        {
+          "style": "normal",
+          "text": "Lovet være Gud, vår Herre Jesu Kristi Far, som i sin store miskunn har gjenfødt oss til et levende håp ved Jesu Kristi oppstandelse fra de døde – til en uforgjengelig arv, som aldri plettes til og aldri svinner bort. Og den forvares for dere i himlene – for ved troen er dere beskyttet av Guds kraft inntil frelsen kommer; den er alt rede til å tre frem i dagen i de siste tider. I alt dette finner dere grunn til jublende glede, selv om dere nå for en liten stund må gjennomgå smertelige prøvelser av alle slag. For selv forgjengelig gull blir prøvet i ild; og langt mer verd er en tro som har stått sin prøve. Og slik skal dens ekthet vise seg, og bli dere til lov og pris og ære, den dag Jesus Kristus åpenbarer seg. Ham elsker dere, uten å ha sett ham; fremdeles ser dere ikke, men i tro på ham lever dere i en gledesjubel, som i sin herlighet er større enn hva ord kan romme, fordi dere er i ferd med å nå frem til troens mål: sjelens frelse."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Fordi du fikk se meg, tror du, sier Herren; ℟ salige er de som kommer til troen uten å se. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 20, 19–31"
+        },
+        {
+          "style": "normal",
+          "text": "Om aftenen samme dag, den første dag i uken, hadde disiplene stengt dørene der hvor de holdt til, av frykt for jødene. Da trådte Jesus inn i kretsen og sa: «Fred være med dere!» Og i det samme viste han dem sine hender og sin side. Ved synet av Herren ble disiplene inderlig glade. Atter sa da Jesus til dem: «Fred være med dere. Som Faderen har sendt meg, sender jeg dere.» Som han sa dette, åndet han på dem, og la til: «Motta Den Hellige Ånd. Om dere tilgir noen deres synder, er de tilgitt. Om dere holder syndene fast for noen, er de fastholdt.» Thomas (også kalt Didymos), en av de tolv, hadde ikke vært sammen med dem da Jesus kom. Da nå de andre disiplene fortalte ham at de hadde sett Herren, svarte han dem: «Får jeg ikke se merkene etter naglene i hans hender og legge min finger i dem, og får jeg ikke legge hånden i hans side – da kan jeg umulig tro det.» Åtte dager etter var disiplene atter sammen innendørs, og Thomas var til stede. Dørene var stengt, men Jesus kommer og trer inn i kretsen, og sier: «Fred være med dere.» Og så sier han til Thomas: «Kom hit med din finger, her er mine hender, se selv; kom hit med din hånd, og legg den i min side. Og vær ikke lenger vantro, men troende.» Da utbrøt Thomas: «Min Herre og min Gud!» Jesus sier: «Ja, nå tror du, fordi du fikk se; salige er de som kommer til troen uten å se.» Også mange andre jærtegn gjorde Jesus for sine disiplers øyne, ting som ikke er nevnt i denne bok. Men det som her er fortalt, er skrevet ned for at dere skal tro at Jesus er Messias, Guds Sønn, og så ved troen eie livet i hans navn."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-04-19:kongsberg:nb:1100",
+      "title": "3. søndag i påsketiden",
+      "massDate": "2026-04-19",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-04-19",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 2, 14. 22-33"
+        },
+        {
+          "style": "normal",
+          "text": "På pinsedagen stod Peter frem sammen med de elleve, og erklærte med kraft: «Menn av Juda! Og alle dere andre her fra Jerusalem! Jeg har noe å si dere – så hør godt etter! – Menn av Israel! Lytt til mine ord! Jesus Nasoreeren, denne mann som Gud selv utpekte for dere gjennom mektige gjerninger, under og jærtegn – ja, dere vet selv hva for store ting Gud gjorde blant dere gjennom ham – han ble gitt i deres vold, slik som Gud også hadde fastsatt det i sin plan og forut visste det; og dere drepte ham ved å la hedningene klynge ham opp. Men Gud lot ham oppstå og løste ham av dødens ve; det var jo ikke mulig at den skulle kunne holde ham fast. For så heter det om ham hos David: ‘Jeg har alltid Herren for mine øyne; for han er ved min høyre, så jeg ikke skal vakle. Derfor gleder mitt hjerte seg, og min tunge jubler. Selv min kropp skal leve i håpet, for du vil ikke overlate min sjel i dødsrikets vold, ikke la din Hellige møte oppløsningen. Du har lært meg veien til livet å kjenne, og du skal fylle meg med glede ved ditt nærvær.’»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Du lærer meg livets vei, gir meg gledens fylde for ditt åsyn."
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 1,17-21"
+        },
+        {
+          "style": "normal",
+          "text": "Kjæreste venner, er det så at dere i bønnen sier «Far» til ham som uten persons anseelse dømmer enhver etter sine gjerninger, så lev i ærefrykt for ham den tid dere ferdes her i fremmed land. Dere vet at det ikke var forgjengelige verdier, sølv eller gull, som fikk dere frikjøpt fra det fåfengte liv deres fedre gav dere i arv; prisen var blod av et lyteløst og plettfritt offerlam – Kristi kostbare blod. Til dette var han bestemt fra før verdens grunnvoll ble lagt, og for deres skyld har han nå trådt frem, i disse siste tider. Det er takket være ham dere tror på Gud, som oppvakte ham fra de døde og gav ham hans herlighet, slik at dere skulle sette deres tro og deres håp til Gud."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Herre Jesus, forklar Skriftene for oss, ℟ gjør våre hjerter brennende når du taler. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Luk 24, 13–35"
+        },
+        {
+          "style": "normal",
+          "text": "To av disiplene var på vei til en landsby som het Emmaus, seksti stadier fra Jerusalem, og de talte sammen om alt det som var skjedd. Og mens de snakket og diskuterte, kom Jesus og slo følge med dem; men det var noe som bandt for øynene deres, så de ikke kjente ham igjen. Han sa da til dem: «Hva er det dere går og taler sammen om?» De stanset og så bedrøvet opp, og den ene, som het Kleopas, svarte: «Du er visst den eneste i hele Jerusalem som ikke vet hva som er hendt der i disse dager?» Han spurte: «Hva da?» Og de svarte ham igjen: «Det med Jesus fra Nasaret! Han var en profet, og virket og talte med makt og myndighet, for Gud og hele folket. Men yppersteprestene og rådet lot ham dømme til døden og korsfeste, – mens vi hadde håpet at han var den som skulle befri Israel. Og dertil er det nå alt tredje dagen siden det hendte. I dag har riktignok noen av våre kvinner skaket oss opp: De gikk til graven i morges, men fant ham ikke; i stedet kom de tilbake og fortalte oss at de hadde sett et syn av engler, som sa at han levde. Da gikk noen av våre til graven og fant alt som kvinnene hadde sagt, men ham selv så de ikke.» Da sa han til dem: «Hvor uforstandige dere er, og så trege til å tro hva profetene har sagt! Skulle ikke Messias nettopp gjennomgå alt dette, for på den måten å gå inn til sin herlighet?» Og så begynte han å forklare dem, helt fra Mosebøkene av og frem gjennom alle profetene, alt hva Skriften lærte om ham. De nærmet seg nå landsbyen de skulle til. Han lot som han ville gå videre, men de bad ham innstendig om å bli, og sa: «Bli hos oss, for det lir mot kveld, dagen heller allerede!» Så gikk han med inn og ble hos dem. Og mens han satt til bords med dem, tok han brødet, velsignet det, brøt det og gav dem. Da fikk de sine øyne åpnet, og de kjente ham igjen, – men så var han borte for øynene på dem. Da sa de til hverandre: «Brant det ikke i hjertene våre, da han gikk der og talte til oss på veien og forklarte Skriftene for oss?» Og i samme stund brøt de opp og vendte tilbake til Jerusalem, hvor de fant de elleve og vennene deres samlet, og disse kunne fortelle dem at Herren virkelig var oppstanden og hadde vist seg for Simon. Selv fortalte de da om det som hadde hendt på veien og hvordan de hadde kjent ham igjen da han brøt brødet."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-04-26:kongsberg:nb:1100",
+      "title": "4. søndag i påsketiden – Kallssøndag",
+      "massDate": "2026-04-26",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-04-26",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 2, 14a. 36-41"
+        },
+        {
+          "style": "normal",
+          "text": "På pinsedagen stod Peter frem sammen med de elleve, og erklærte med kraft: «Hele Israel skal vite for visst: at denne Jesus, som dere korsfestet, ham har Gud gjort til ‘Herre’ – til sin Salvede.» Som de stod og hørte på alt dette, rammet det dem i hjertet, og de spurte Peter og de andre apostlene: «Men hva skal vi gjøre, brødre?» Peter svarte: «Vend om og la dere døpe, hver og én i Jesu Kristi navn, så dere kan få tilgivelse for deres synder. Da skal dere også få Den Hellige Ånds gave! For løftet gjelder dere og deres barn – og også ‘alle i det fjerne’, i så stort tall som Herren vår Gud vil kalle dem.» Også mange andre ting la han dem inntrengende på hjerte, mens han innstendig bad dem: «La dere frelse fra dette villfarne folk!» Og de tok imot hans budskap og lot seg døpe; det var omkring tre tusen sjeler som den dagen sluttet seg til."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Herren skal være deres hyrde og føre dem til livets kilde. Herren er min hyrde, i hans hånd er overflod. Han lar meg ligge på grønne enger. Han fører meg til vann der jeg får hvile og gir meg nye krefter. ℟ Han leder meg på rette stier, så jeg kan ære hans navn. Selv om jeg går i dødsskyggens dal, det onde skremmer meg ikke. For, Herre, du er med meg, din kjepp og din stav de trøster meg. ℟ Du dekker mitt bord for fiendens øyne og salver mitt hode med olje, mitt beger er fylt til randen. ℟ Bare miskunn og det som godt er skal følge meg alle dager, og jeg skal bo i Herrens hus gjennom lange tider. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 2,20b-25"
+        },
+        {
+          "style": "normal",
+          "text": "Mine kjære: Dersom dere har handlet vel og så får vondt å lide, men allikevel bærer det tålmodig, da er det en vakker ting i Guds øyne. Og det er dette dere er kalt til. For Kristus led for dere, og etterlot dere dermed et eksempel, så dere kunne følge i hans fotspor. Han «gjorde ingen synd, og svik fantes ikke i hans munn», han ble hånet uten å svare igjen, han led uten å true, men betrodde sin sak til Ham som dømmer rettferdig; på sin egen kropp bar han våre synder opp på marterpælen, for at vi skulle dø fra våre synder og leve et liv i rettferd. «Ved hans sår er dere blitt leget.» Det er jo sant, dere var «som villfarne får»; men nå er dere vendt tilbake til ham som er hyrde og vokter for deres sjeler."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Jeg er den gode hyrde, sier Herren. ℟ Jeg kjenner mine, og mine kjenner meg. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Luk 10, 1–10"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus: «Sann mitt ord! Den som ikke kommer inn gjennom porten i fårekveen, men stiger over muren et annet sted, han er en tyv og en røver. Men gjennom porten kommer fårehyrden selv. For ham lukker dørvokteren opp, og fårene hører hans stemme; så kaller han hvert av sine ved navn og leder dem ut. Når han har alle sine utenfor, går han i spissen for dem, og fårene følger ham fordi de kjenner ham på stemmen. Men en fremmed vil de flykte for istedenfor å følge, siden de ikke kjenner hans stemme.» Slik talte Jesus til dem i bilder; men de forstod ikke hva det var han ville si dem. Da tok Jesus på ny til orde: «Sann mitt ord! Det er jeg som er porten for fårene. Alle som er kommet før meg, er tyver og røvere, og fårene hørte heller ikke på dem. Det er jeg som er porten; den som går inn gjennom meg, er i sikkerhet; og han skal kunne gå inn og ut og beite fritt. Tyven kommer ikke for annet enn å stjele og myrde og ødelegge; jeg er kommet for at de skal ha liv, og det i overflod.» I dag er kallssøndag, og all kollekt i dag går til St. Eystein presteseminar"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-05-03:kongsberg:nb:1100",
+      "title": "5. søndag i påsketiden",
+      "massDate": "2026-05-03",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-05-03",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 6, 1-7"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager økte tallet på disipler stadig. På denne tid begynte imidlertid de gresktalende å klage over at deres egne enker ble tilsidesatt ved den daglige utdelingen, til fordel for de jødisktalende. Da sammenkalte de tolv hele disippelflokken og sa: «Det ville ikke være rett av oss å forsømme forkynnelsen av Guds ord for å gjøre tjeneste ved bordene. Nei, brødre: Velg heller ut syv mann, folk med godt rykte, åndsfylte og forstandige, så skal vi sette dem til dette vervet. Selv skal vi derimot fortsatt stå for bønnen og forkynnelsen av Ordet.» Dette forslaget syntes hele forsamlingen vel om, og så valgte de Stefanos, en mann fylt av tro og av Hellig Ånd, og videre Filip, Prokhoros, Nikanor, Timon, Parmenas og Nikolaos, en proselytt fra Antiokia. Disse førte de frem for apostlene, som under bønn la hendene på dem. Guds ord vant stadig fremgang. Tallet på disipler i Jerusalem vokste kraftig; også en hel mengde av prestene gav seg inn under troen."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Herre, la din miskunn hvile over oss, for vi setter vår lit til deg. Rettferdige, juble i Herren; oppriktige av hjerte, syng hans pris. Lov Herren med sitar, lovsyng ham til tistrenget harpe. ℟ For Herrens ord er sannhet, han er trofast i all sin gjerning. Han elsker rett og rettferd, jorden er full av Herrens miskunn. ℟ Herrens øye hviler over dem som frykter ham, som bier på hans miskunn, for å fri deres sjel fra døden, holde dem i live på nødens dag. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 2,4-9"
+        },
+        {
+          "style": "normal",
+          "text": "Kjæreste venner! Kom til ham, den levende sten – forkastet av menneskene, men i Guds øyne utvalgt og kostelig, og gå selv inn som levende stener i et åndelig byggverk; bli et hellig presteskap, til å frembære åndelige ofre, slike som Gud med glede kan motta gjennom Jesus Kristus. For det heter i Skriften: «Se, jeg setter i Sion en hjørnesten, utvalgt og kostelig, og han som setter sin lit til den, skal ikke bli stående til skamme.» Kostelig – det gjelder dere som tror. Men for de vantro gjelder det at «den sten som byggmestrene vraket», den er nok blitt «hjørnesten» – men også «en sten til å snuble i, en klippeblokk til å falle over». Fordi de er ulydige mot Ordet, snubler de, slik det også var bestemt. Dere derimot er et utvalgt folk, et kongelig presteskap, et hellig folk, et folk som Gud kan kalle sitt eget – og skal forkynne storheten hos ham som har kalt dere fra mørket inn i sitt overveldende lys."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Jeg er veien, sannheten og livet, sier Herren. ℟ Ingen kommer til Faderen uten gjennom meg. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 14, 1–12"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til sine disipler: «La ikke angst og uro ta motet fra dere. Tro på Gud, og tro på meg! I min Fars hus er det mange boliger. Var det ikke så, hadde jeg sagt dere det. Jeg går jo dit for å gjøre plass i stand for dere. Og når jeg er gått hen og har gjort alt i stand, kommer jeg tilbake og tar dere med meg, for at også dere skal være der hvor jeg er. Og dit jeg går, kjenner dere veien.» Thomas sier til ham: «Herre, vi vet ikke hvor du går hen. Hvordan skal vi da kunne vite veien?» Jesus svarer: «Jeg er veien, sannheten og livet. Ingen kommer til Faderen uten gjennom meg. Kjenner dere meg, skal dere også lære å kjenne min Far. Dere kjenner ham jo alt, og har sett ham.» Filip sier: «Herre, la oss få se Faderen, så er det nok for oss!» Jesus svarer: «Så lenge har jeg vært hos dere, Filip, og enda kjenner du meg ikke? Den som har sett meg, har sett Faderen. Hvordan kan du si: ‘La oss få se Faderen?’ Tror du da ikke at jeg er i Faderen, og Faderen i meg? Det jeg sier dere, er ikke noe jeg har fra meg selv; det er Faderen som bor i meg, som utfører sitt verk. Tro meg når jeg sier at jeg er i Faderen og Faderen i meg. Eller, om ikke annet, tro gjerningene selv! Og sann mine ord: Den som tror på meg, skal selv få gjøre de verk jeg gjør, ja større verk enda: for jeg går til Faderen.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-05-10:kongsberg:nb:1100",
+      "title": "6. søndag i påsketiden",
+      "massDate": "2026-05-10",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-05-10",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 8, 5-8. 14-17"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager drog Filip ned til en by i Samaria, og forkynte Kristus der. Og alle som én ble folk grepet av det budskap han forkynte og de jærtegn han gjorde: Mange ble befridd fra vanhellige ånder, som fór ut av dem under høye skrik, og mange lamme og vanføre ble helbredet. Så gleden var stor i byen. Apostlene i Jerusalem fikk imidlertid vite at Samaria hadde tatt imot Guds ord. De lot da Peter og Johannes reise ned som sine utsendinger; og de to kom og bad for de nydøpte, for at de skulle få Den Hellige Ånd. (Ånden var nemlig ikke falt over noen av dem ennå, de hadde bare mottatt dåpen til Herren Jesu navn.) Så la apostlene sine hender på dem, og de fikk Den Hellige Ånd."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Juble for Herren, all jorden. Juble for Herren, all jorden, lovsyng hans store navn. Gi Gud den ære som tilkommer ham, pris ham og si: «Hvor du er stor!» ℟ All jorden kaster seg ned for deg, lovsynger deg og priser ditt navn. Kom og se hva Herren har gjort. Han øvde storverk for menneskers øyne. ℟ Han forvandlet hav til land, tørrskodd gikk de over elven. La oss juble og glede oss i ham. I sin velde hersker han til evig tid. ℟ Kom og hør, dere som frykter Gud, jeg vil fortelle hva han har gjort for meg. Lovet være Gud som ikke forkastet min bønn, og ikke tok sin kjærlighet fra meg. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 3,15-18"
+        },
+        {
+          "style": "normal",
+          "text": "Kjæreste venner! Hold Herren Kristus høyt i ære i deres hjerter. Vær alltid rede til å svare for dere, når dere blir krevd til regnskap for det håp som bor i dere. Men gjør det stillferdig og med all respekt. Og hold deres samvittighet ren, slik at de som håner deres gode kristne livsførsel, kan bli gjort til skamme nettopp gjennom den. Det er uten tvil bedre å lide for det gode en gjør, om så er Guds vilje, enn for det onde. For Kristus led, den ene gang, for våre synders skyld; rettferdig døde han for de urettferdige, for å føre oss frem for Gud. Legemlig ble han drept, men i kraft av sin Ånd ble han oppreist til nytt liv."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Om noen elsker meg, akter han på mitt ord, sier Herren; ℟ så vil min Far elske ham, og vi vil komme og ta bolig hos ham. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 14, 15–21"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til sine disipler: «Dersom dere virkelig holder av meg, da holder dere også mine bud. Og jeg vil be min Far, så skal han gi dere en annen Talsmann, som skal være hos dere for alltid. Det er den Sannhetens Ånd, som verden ikke kan få, fordi den hverken ser eller kjenner ham. Men dere kjenner ham, for han bor blant dere og lever i dere. Jeg lar dere ikke farløse tilbake. Jeg kommer til dere igjen. Ennå en liten stund – så ser verden meg ikke mer, men dere skal se meg, fordi jeg lever, og dere også skal leve. På den dag skal dere forstå at jeg er i min Far, og at dere er i meg, og jeg i dere. Den som kjenner mine bud og holder dem, han er den som har meg kjær. Og den som holder av meg, ham skal min Far ha kjær. Og også jeg vil ha ham kjær og gi meg til kjenne for ham.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-05-17:kongsberg:nb:1100",
+      "title": "7. søndag i påsketiden",
+      "massDate": "2026-05-17",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-05-17",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 1, 12-14"
+        },
+        {
+          "style": "normal",
+          "text": "Da Jesus var blitt tatt opp til himmelen, gikk apostlene ned fra Olivenberget og vendte tilbake til Jerusalem; berget ligger bare en sabbatsvandring fra byen. Der gikk de opp på den salen hvor de vanligvis holdt til. Det var Peter, Johannes, Jakob, Andreas, Filip og Thomas, Bartolomeus og Matteus, Jakob sønn av Alfeus, Simon som kaltes den nidkjære og Judas, sønn av Jakob. Alle som én fortsatte de trofast å komme sammen for å be, sammen med noen kvinner – blant dem Maria, Jesu mor – og dertil Jesu brødre."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Jeg tror at jeg skal få se Herrens godhet i de levendes land. Herren er mitt lys og min frelse, for hvem skal jeg frykte? Herren verner mitt liv, for hvem skal jeg være redd? ℟ Ett lengter jeg etter, det ber jeg om: Alltid å bo i Herrens hus, å skue Herrens herlighet, tre inn i hans hellige tempel. ℟ Herre, hør mitt rop. Vær nådig og gi meg svar. Mitt hjerte taler til deg. Mine øyne søker ditt åsyn. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Pet 4,13-16"
+        },
+        {
+          "style": "normal",
+          "text": "Kjæreste venner! Gled dere bare, i samme mål som dere får del i Kristi lidelser, for da skal dere også kunne motta ham med jubel, den dag han trer frem i sin herlighet. Og blir dere forhånet for Kristi navns skyld, så regn dere for lykkelige, for da hviler hans herlighet, ja Guds egen Ånd, over dere. Bare må det ikke skje at noen av dere får lide straff som morder, som tyv eller illgjerningsmann, eller fordi han går andres rett for nær; men får han å lide fordi han er kristen, da må han ikke holde det for noen vanære, men tvertimot prise Gud for kristennavnets skyld."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Jeg lar dere ikke farløse tilbake, sier Herren. ℟ Jeg går herfra og kommer tilbake til dere, og deres glede skal være full og hel. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 17, 1–11a"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid løftet Jesus blikket mot himmelen og sa: «Far, timen er kommet. La herligheten lyse om din Sønn, for at din Sønn kan kaste glans over deg: Du har gjort ham til Herre over hele menneskeslekten, for at han skal gi evig liv til alle dem som du har gitt ham. Og det evige liv, det er å kjenne deg, den ene, sanne Gud og Ham du har utsendt, Jesus Kristus. Jeg har kastet glans over deg på jorden, ved å fullføre det verk du gav meg å gjøre. Så gi meg nå, Far, den herlighet hos deg, som jeg hadde før verden var til! Jeg har åpenbart ditt navn for de mennesker du tok ut fra verden og gav meg. De var dine, og du har gitt dem til meg; og ditt bud har de holdt. Nå vet de at alt du har gitt meg, virkelig er fra deg. Jeg har gitt videre til dem alt hva du har sagt meg, og de har tatt imot det. Og de har erkjent for visst at jeg er kommet fra deg, de har trodd at du har utsendt meg. For dem ber jeg – ikke for verden, men for dem som du har gitt meg, fordi de er dine. Alt mitt er ditt, som ditt er mitt, og min herlighet lyser i dem. Nå er jeg ikke lenger i verden, men de er i verden; jeg er på vei til deg.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-05-24:kongsberg:nb:1100",
+      "title": "Pinsedag",
+      "massDate": "2026-05-24",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-05-24",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Apg 2, 1-11"
+        },
+        {
+          "style": "normal",
+          "text": "Da dagen for pinsefesten opprant, var de samlet alle som én. Da hørtes plutselig et brus i luften, lik et veldig uvær som nærmet seg. Det fylte hele huset de befant seg i, og noe som lignet tunger av ild kom til syne, de delte seg og senket seg over hver enkelt av dem. I samme øyeblikk ble de alle fylt av Den Hellige Ånd, og de begynte å tale i andre tungemål, alt etter hva Ånden gav dem å forkynne. På denne tid fantes der i Jerusalem mange innflyttede jøder, fromme mennesker, som kom fra folkeslag under alle himmelstrøk. Og da folk hørte denne støyen, strømmet de sammen i mengder. Men da hver enkelt hørte dem tale sitt eget språk, skjønte de hverken ut eller inn, og spurte, helt rystet og forvirret: «Er de ikke galileere, alle disse som taler? Hvordan kan det da gå til, at hver enkelt av oss som hører dem, hører sitt eget morsmål? Om vi er partere, medere, elamitter, om vi er fra Mesopotamia, Judea eller Kappadokia, Pontos eller Asia, Frygia eller Pamfylia, Egypt eller Lybia Kyrenaika, om vi er innflyttere fra Roma – jøder eller proselytter – eller vi er kretere eller arabere – så hører vi dem forkynne Guds storverk på vårt eget språk!»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Send din Ånd, Herre, og du fornyer jordens åsyn. Lov Herren, min sjel, Herre, min Gud, hvor du er stor! Herre, hvor mange dine gjerninger er. Jorden er full av det du har skapt. ℟ Du tar livsånden fra dem, da dør de og vender tilbake til støvet. Du sender din Ånd og de skapes på ny. Du fornyer jordens åsyn. ℟ Herrens ære varer evig! Herren gleder seg over sitt verk! Min sang finne nåde hos Herren, så jeg alltid kan gledes i ham. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning I Kor 12,3b-7. 12-13"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, ingen kan si: «Jesus er Herre,» uten ved Den Hellige Ånd. Vel er der forskjellige nådegaver, men Ånden er den samme; og vel er der forskjellige tjenester, men Herren er den samme; og der er forskjellige kraftytringer – men det er den samme Gud som virker alt i alle. Og hos hver enkelt ytrer Ånden seg på en måte som tjener til det felles beste. For legemet er ett og har likevel mange lemmer. Og omvendt: om der enn er mange lemmer, utgjør de sammen bare ett eneste legeme. Og slik er det også med Kristus. For vi ble alle døpt i én Ånd, til å være ett legeme, enten vi så er jøder eller hellenere, slaver eller fribårne, som det også er den ene og samme Ånd vi har fått å drikke av."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Kom, Hellige Ånd, fyll dine troendes hjerter ℟ og tenn i dem din kjærlighets ild. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 20, 19–23"
+        },
+        {
+          "style": "normal",
+          "text": "Om aftenen samme dag, altså den første dag i uken, hadde disiplene stengt dørene der hvor de holdt til, av frykt for jødene. Da trådte Jesus inn i kretsen og sa: «Fred være med dere!» Og i det samme viste han dem sine hender og sin side. Ved synet av Herren ble disiplene inderlig glade. Atter sa da Jesus til dem: «Fred være med dere. Som Faderen har sendt meg, sender jeg dere.» Som han sa dette, åndet han på dem, og la til: «Motta Den Hellige Ånd. Om dere tilgir noen deres synder, er de tilgitt. Om dere holder syndene fast for noen, er de fastholdt.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-05-31:kongsberg:nb:1100",
+      "title": "Den hellige treenighet",
+      "massDate": "2026-05-31",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-05-31",
+      "body": [
+        {
+          "style": "normal",
+          "text": "I felleskap med hele Kirken feirer menigheten Festen for Kristi Legeme og Blod neste søndag 7. juni. Det feires kun høymesse denne søndagen for å fremheve at menigheten også er Kristi Legeme. Rett etter messen blir det prosesjon med det aller helligste Sakramentet i byens gater gjennom gamlebyen. Hensikten med prosesjonen er å gi vitnesbyrd om Kristi Legemes sentrale plass i vår tro. Samtidig er Kristus verdens lys som betyr at vi bærer det frelsende Lyset ut til andre mennesker som ennå ikke kjenner ham. Alle oppfordres til å ta del i denne høytidelige feiringen for å synliggjøre vårt katolske fellesskap, både her i byen og med den universelle Kirken."
+        },
+        {
+          "style": "h2",
+          "text": "1. lesning 2 Mos 34, 4b-6. 8-9"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager stod Moses tidlig opp og gikk opp på Sinai-fjellet, som Herren hadde sagt, og han hadde begge stentavlene med seg. Da steg Herren ned i en sky og gikk bort til ham. Og han ropte Herrens navn. Herren gikk forbi rett for øynene på ham og ropte: «Herren, Herren er en barmhjertig og nådig Gud, langmodig og rik på miskunn og sannhet!» Da falt Moses straks på kne, bøyde seg til jorden og tilbad. Han sa: «Herre, dersom jeg har funnet nåde hos deg, så gå med oss, Herre! Dette er nok et stivnakket folk, men du vil tilgi vår misgjerning og synd og gjøre oss til din eiendom.»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Opphøyet og priset i evighet! Lovet være Herren, våre fedres Gud. Lovet være ditt hellige og herlige navn. ℟ Lovet være du i din herlighets tempel. Lovet være du på din kongetrone. ℟ Lovet være du som gransker dypene og troner over kjeruber. Lovet være du over himmelens hvelv. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning II Kor 13,11-13"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, vær glade, arbeid på å bli fullkomne, la dere vise til rette. Lev i enighet og fred med hverandre, så skal kjærlighetens og fredens Gud være med dere. Hils hverandre med et hellig kyss. Alle de hellige hilser dere. Vår Herre Jesu Kristi nåde, Guds kjærlighet og Den Hellige Ånds samfunn være med dere alle."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Ære være Faderen og Sønnen og Den Hellige Ånd, ℟ Gud som er og som var og som kommer. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Joh 3, 16–18"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til Nikodemus: «Så høyt elsket Gud verden, at han gav sin enbårne Sønn til pris – for å frelse fra undergang alle som tror på ham, og gi dem det evige liv i eie. Gud sendte jo sin Sønn til verden, ikke for å fordømme den, men for at verden skulle bli frelst ved ham. Den som tror på ham, blir ikke dømt; men den som ikke tror, er allerede dømt, fordi han ikke har villet tro på Guds enbårne Sønns navn.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-06-14:kongsberg:nb:1100",
+      "title": "11. søndag i det alminnelige kirkeår",
+      "massDate": "2026-06-14",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-06-14",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning 2 Mos 19,2–6a"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager kom israelittene til Sinai-ørkenen og slo leir der i villmarken. Israelittene leiret seg rett imot fjellet, mens Moses steg opp til Gud. Da ropte Herren til ham fra fjellet: «Dette skal du si til Jakobs ætt og gjøre kjent for Israels folk: Dere har sett hva jeg gjorde med egypterne, og hvordan jeg løftet dere på ørnevinger og førte dere hit til meg. Dersom dere nå vil lytte til mine ord og holde min pakt, så skal dere være min eiendom fremfor alle andre folk; for hele jorden er min. Dere skal være et kongerike av prester og et hellig folk for meg.»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Vi er hans folk, den hjord han vokter Juble for Herren, all jorden, tjen Herren med glede! Tre frem for hans åsyn med hjertet fylt av lovsang. ℟ Vit at Herren er Gud. Han har skapt oss, og vi er hans. Vi er hans folk, den hjord han vokter. ℟ Ja, Herren er god, hans kjærlighet varer evig, hans trofasthet varer fra slekt til slekt. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 5,6–11"
+        },
+        {
+          "style": "normal",
+          "text": "For vi var ennå hjelpeløse den gang Kristus, til den fastsatte tid, gikk i døden for synderne. Knapt ville vel ellers noen gå i døden, selv for en rettferdig mann – jo, for et godt menneske ville kanskje enkelte manne seg opp til å dø. Men Kristus døde for oss mens vi ennå var syndere; slik gir Gud oss beviset på sin kjærlighet, og desto sikrere kan vi da være på å bli frelst fra Guds vredes dom ved ham, nå som vi er rettferdiggjort ved hans blod. Ble vi forsonet med Gud ved hans Sønns død, den gang vi var hans fiender, langt større grunn er det da til at vi skal bli frelst ved hans liv, nå da vi er forsonet – ja, ikke bare forsonet, men også fulle av glad tillit til Gud ved vår Herre Jesus Kristus, ved hvem vi nå har mottatt forsoningen."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Guds rike er nær. ℟ Vend om og tro på Evangeliet. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 9,36–10,8"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid så Jesus utover folkemengdene og ble grepet av en hjertens medynk med dem, for de var like forkomne og hjelpeløse som en fåreflokk uten hyrde. Og så sier han til sine disipler: «Avlingen er rik, men høstfolkene få; be derfor ham som er herre over avlingen, at han sender arbeidere ut for å høste den.» Så kalte han til seg sine tolv disipler og gav dem makt til å drive ut vanhellige ånder og til å helbrede alle slags sykdommer og skrøpeligheter. Og dette er navnene på de tolv apostler: Den første er Simon, han som kalles Peter; så hans bror Andreas, så Jakob, sønn av Sebedeus, og hans bror Johannes, så Filip og Bartolomeus, Thomas og Matteus, tolloppkreveren, Jakob, sønn av Alfeus, og Taddeus, Simon den nidkjære, og Judas Iskariot, han som forrådte ham. Disse tolv sendte Jesus ut, mens han la dem følgende på hjerte: «Unngå de veier som fører til hedningene, og hold dere borte fra samaritanernes byer; gå i stedet til Israels bortkomne får. Og hvor dere kommer, skal dere forkynne at himlenes rike er nær. Helbred syke, oppvekk døde, rens spedalske, driv ut demoner. Som gave har dere fått det, som gave skal dere gi det videre.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-06-21:kongsberg:nb:1100",
+      "title": "12. søndag i det alminnelige kirkeår",
+      "massDate": "2026-06-21",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-06-21",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Jer 20, 10–13"
+        },
+        {
+          "style": "normal",
+          "text": "Jeremia sa: «Ja, jeg har hørt mange som hvisker, det er noe som skremmer på alle kanter: ‘Meld ham! Vi skal melde ham.’ Alle som jeg hadde fred med, venter bare på at jeg skal falle: ‘Kanskje lar han seg lokke, så vi kan få ham i vår makt og hevne oss på ham.’ Men Herren er med meg som en veldig helt. Derfor skal de som forfølger meg, snuble og ikke vinne over meg. De skal stå der med stor skam fordi de ikke hadde lykken med seg – en vanære som aldri blir glemt. Herre, Hærskarenes Gud, du som prøver den rettferdige, som ser både hjerter og nyrer, la meg få se at du tar hevn over dem, for jeg har overlatt min sak til deg. Syng for Herren, lovpris Herren, for han berger den fattiges liv og frir ham fra ugjerningsmenn.»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Hør meg, Herre, i din store miskunn! For din skyld tåler jeg spott, mitt åsyn dekkes av skjendsel. Fremmed er jeg for mine brødre, for min mors sønner en ukjent. Nidkjærhet for ditt hus har fortært meg, forakten for deg faller over meg. ℟ Jeg retter min bønn til deg, se, nå er nådens tid. Gud, i din store miskunn, hør meg ved din frelsende troskap. Herre, svar meg i din nådes godhet, vend deg til meg i din store miskunn! ℟ De fattige se det og glede seg, søk Gud, og din sjel skal leve. For Herren har hørt de armes bønn og ikke forsmådd sine fangne venner. Lovpris ham, himmel og jord, havet og alt det som rører seg der! ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 5, 12–15"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, synden kom inn i verden ved ett menneske, og med synden også døden. Og slik nådde døden alle mennesker, siden de alle syndet. For også før Loven var synden i verden; bare blir det ikke holdt regning med den der hvor det ikke er noen lov. Allikevel hersket døden, helt fra Adam av og frem til Moses, også over dem som ikke hadde begått noen synd tilsvarende det lovbrudd Adam begikk. Men Adam står også som et bilde på ham som skulle komme. Bare kan ikke det som skjedde etter fallet, sammenlignes med Guds nådes gave. For om de mange måtte dø fordi den ene hadde falt, blir dette langt overgått av Guds nåde, av nådegaven fra det ene menneske Jesus Kristus, som blir alle andre til del i så rikt mål."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Sannhetens Ånd skal vitne om meg, sier Herren, ℟ og dere også skal vitne. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 10, 26–33"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til sine apostler: «Vær ikke redde for menneskene! Intet er så skjult at det ikke kommer for en dag, intet så hemmelig at det ikke skal bli kjent. Hva jeg sier dere i mørke, det skal dere si videre i dagslys, og hva dere får hvisket i øret, det skal dere selv forkynne ut over hustakene. Frykt ikke dem som nok slår legemet i hjel, men som ikke er i stand til å drepe sjelen. Frykt heller ham som kan la både legeme og sjel gå under i Gehenna! Selges ikke et par spurver for en skilling? Men ikke én av dem faller til jorden uten Faderens samtykke! Og hva dere selv angår, holder han regnskap med hvert hår dere har på hodet. Så vær da ikke engstelige; dere er mer verd enn mange spurver! Altså: Enhver som bekjenner meg overfor menneskene, ham skal også jeg kjennes ved overfor min Far i himlene. Men den som fornekter meg overfor menneskene, ham kommer også jeg til å fornekte overfor min Far i himlene.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-06-28:kongsberg:nb:1100",
+      "title": "13. søndag i det alminnelige kirkeår",
+      "massDate": "2026-06-28",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-06-28",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning 2 Kong 4, 8–11.14–16a"
+        },
+        {
+          "style": "normal",
+          "text": "En dag gikk Elisja over til Sjunem. Der var det en velstående kvinne som bad ham inntrengende om å spise hos henne. Og siden ble det slik at han tok inn der og fikk mat hver gang han drog forbi. En gang sa hun til sin mann: «Hør her! Jeg vet at han som stadig kommer innom oss, er en hellig Guds mann. La oss nå bygge et lite takkammer til ham og sette inn en seng, et bord, en stol og en lysestake. Så kan han ta inn der når han kommer til oss.» Da så profeten kom dit en dag, tok han inn i takkammeret og la seg der. Så sa han til Gehasi, sin tjener: «Hva kan jeg gjøre for denne kvinnen?» Gehasi svarte: «Jo, hun har ingen sønn, og mannen hennes er gammel.» Da sa Elisja: «Be henne komme!» Han ropte på henne, og hun kom og ble stående i døråpningen. Profeten sa: «Neste år på denne tiden skal du ha en sønn i dine armer.»"
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Om Herrens nådegjerninger vil jeg synge til evig tid, fra slekt til slekt vil jeg prise ham. Om Herrens nådegjerninger vil jeg synge til evig tid, forkynne din trofasthet fra slekt til slekt. Jeg sier: Din miskunn bygges opp til evig tid, i himmelen grunnfester du din troskap. ℟ Salig det folk som kan synge din lov. De skal vandre i ditt åsyns lys. I ditt navn skal de juble hele dagen. De roser seg av din rettferd. ℟ For du er deres styrke og pryd. Ved din godhet øker du vår kraft. Til Herren er viet vårt skjold, vår konge til Israels Hellige. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 6, 3-4. 8–11"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, vi som er blitt viet til Kristus gjennom dåpen, vi har fått del i hans død gjennom den. Ved dåpen er vi altså døde og blitt begravet, sammen med ham, for at også vi skal leve og ferdes i en ny tilværelse, på samme måte som Kristus ved Faderens herlighet ble oppreist fra de døde. Men om vi er døde sammen med Kristus, så er det vår tro at vi også skal leve sammen med ham. Vi vet at Kristus, oppstanden fra de døde, ikke mer kan dø, at døden ikke har noe herredømme over ham mer. Den død han led, var en død bort fra synden, og det én gang for alle; og det liv han lever, lever han for Gud. Slik skal også dere anse dere for døde for synden og levende for Gud, i Kristus Jesus."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Allelúia. ℣ Dere er et utvalgt folk, et kongelig presteskap, et hellig folk; dere skal forkynne storheten hos ham som har kalt dere fra mørket inn i sitt overveldende lys. ℟ Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 10, 37–42"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid sa Jesus til disiplene: «Den som velger far eller mor fremfor meg, er meg ikke verd. Den som velger sønn eller datter fremfor meg, er meg ikke verd. Og den som ikke vil ta sitt kors og slutte opp bak meg, er meg ikke verd. Den som har berget sitt liv, skal miste det, mens den som har satt livet til for min skyld, han skal finne det igjen. Den som tar imot dere, tar imot meg; og den som tar imot meg, tar imot ham som har sendt meg. Den som tar imot en profet, fordi han er profet, skal selv få en profets lønn; og den som tar imot en rettferdig mann, fordi han er rettferdig, skal selv få en rettferdig manns lønn. Og den som gir, om så bare et beger kaldt vann, til en av disse små, fordi han hører til mitt følge – det lover jeg dere, at han skal ikke gå glipp av sin lønn.»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-08-02:kongsberg:nb:1100",
+      "title": "18. søndag i det alminnelige kirkeår",
+      "massDate": "2026-08-02",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-08-02",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Jes 55, 1–3"
+        },
+        {
+          "style": "normal",
+          "text": "Så sier Herren: Hør, alle som tørster, kom hit og få vann! Kom bare, dere som ikke har penger! Kjøp korn, så dere kan spise, ja, kom og kjøp uten penger, uten betaling vin og melk! Hvorfor bruker dere penger til det som ikke er brød, og lønnen for deres arbeide til slikt som ikke metter? Hør, ja hør bare på meg, så skal dere få spise det som godt er, og fryde dere over fete retter. Vend øret hit og kom til meg, hør, så skal dere få leve. Jeg vil slutte en evig pakt med dere og vise dere varig troskap, slik jeg gjorde mot David."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Du åpner din hånd, og metter alt som lever med gode gaver Nådig og barmhjertig er Herren, langmodig og rik på miskunn. Herren er god mot alle, hans miskunn favner hele hans verk. ℟ Alles øyne ser hen til Herren, han gir alle føde i rette tid. Han åpner sin hånd, og metter alt som lever, med gode gaver. ℟ Herren er rettvis i all sin ferd, hellig i all sin gjerning. Herren er nær den som roper, som ærlig kaller på ham. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 8, 35. 37–39"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, hvem skal kunne skille oss fra Kristi kjærlighet? Trengsel, angst, forfølgelse, sult, nakenhet, fare, sverdet? Men midt i alt dette vinner vi en overveldende seier, ved ham som gav oss sin kjærlighet. Ja, jeg er overbevist om at hverken død eller liv, hverken engler eller «makter», hverken de ting som nå er eller de ting som skal komme, hverken sfærenes eller dypets «krefter», eller noen annen skapning, skal kunne skille oss fra Guds kjærlighet, slik som den har vist seg i Kristus Jesus, vår Herre."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Mennesket lever ikke av brød alene, ℟ det lever av de ord som lyder fra Guds munn. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 14, 13–21"
+        },
+        {
+          "style": "normal",
+          "text": "Da Jesus fikk høre om Johannes Døperens død, drog han i båt over til et ensomt sted, der han kunne være for seg selv. Men folket i byene der fikk høre det og fulgte etter til fots. Så da han gikk fra borde, var det en stor mengde folk å se. Grepet av en hjertens medynk gav han seg da til å lege de syke blant dem. Men da det var blitt aften, gikk disiplene til ham og sa: «Stedet her er øde, og det er for lengst på tide å spise kvelds. La nå folket dra avsted, så de kan komme seg hen i landsbyene og kjøpe seg mat.» Men Jesus svarte: «De behøver ikke gå herfra; dere kan selv gi dem mat.» Men de svarer: «Vi har ikke annet her enn fem brød og to fisker.» Han sier da: «Bring det hit til meg.» Så bød han mengden sette seg ned i gresset, tok de fem brødene og de to fiskene, og med blikket løftet mot himmelen fremsa han velsignelsen. Deretter brøt han brødene i stykker og gav dem til disiplene, som igjen delte dem ut til mengden. Alle fikk spise seg mette, og det som var til overs av stykkene samlet de inn, tolv fulle kurver. Da var det omkring fem tusen mann, foruten kvinner og barn, som hadde holdt måltid der."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-08-09:kongsberg:nb:1100",
+      "title": "19. søndag i det alminnelige kirkeår",
+      "massDate": "2026-08-09",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-08-09",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning 1 Kong 19, 9a. 11–13a"
+        },
+        {
+          "style": "normal",
+          "text": "I de dager da Elija kom til Guds fjell, Horeb, gikk han inn i en hule, som han ble i om natten. Da kom Herrens ord til ham, og det lød så: «Gå ut og still deg opp på fjellet for Herrens åsyn!» Og se, Herren gikk forbi. Foran ham fór en stor og sterk storm, som kløvde fjell og knuste knauser; men Herren var ikke i stormen. Etter stormen kom det et jordskjelv; men Herren var ikke i jordskjelvet. Etter jordskjelvet kom det en ild; men Herren var ikke i ilden. Etter ilden kom lyder av en svak susing. Da Elija hørte den, drog han kappen for ansiktet, gikk ut og stilte seg ved inngangen til hulen."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ La oss kjenne din miskunn, Herre, gi du oss din frelse! Jeg vil høre hva Herren sier, Guds tale er fred for hans folk, hans venner, for dem som vender sitt hjerte til ham. Hans frelse er nær den som frykter ham, hans herlighet skal bo i vårt land. ℟ Kjærlighet skal møte troskap, rettferd skal favne fred, troskap spire frem av jorden, rettferd bøye seg ned fra himmelen. ℟ Det er Herren som gir lykken, og jorden gir sin grøde. Rettferd går foran hans åsyn, hvor han går, følger fred i hans spor. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 9, 1–5"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, hva jeg her sier er sannhet i Kristus. Det er ingen løgn, og min samvittighet bekrefter det i Den Hellige Ånd: Mitt hjerte krymper seg i meg, det river og sliter uten stans i mitt indre, når jeg tenker på mine brødre, mine landsmenn i kjøtt og blod, – slik at jeg kunne ønske selv å være bannlyst og bortstøtt fra Kristus, om det bare kunne gagne dem. Det er jo de som er Israels etterkommere, dem tilhører barneretten og Guds herlighets nærvær, deres er paktene og Loven, gudstjenesten og løftene; patriarkene er deres fedre, og av deres kjøtt og blod var det Kristus ble født – han som råder som Gud over alle ting, høylovet i evighet, amen!"
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Håp på Herren, ℟ sett din lit til hans ord. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 14, 22–33"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid fikk Jesus disiplene til å gå i båten og dra i forveien over til den andre bredden, mens han selv fikk folket avsted. Og da folket var sendt av gårde, gikk han opp i fjellet for å være for seg selv og be. Om aftenen var han så alene der oppe. Båten var alt langt ute på sjøen, og kjempet hardt med bølgene, for vinden stod stikk imot. Da, ut på natten, i fjerde vakt, kom han hen mot dem, vandrende på sjøen. Da disiplene fikk se ham komme der på sjøen, ble de slått med redsel; de mente det måtte være et gjenferd de så, og skrek høyt. Men i det samme talte Jesus til dem: «Fatt mot,» sa han, «det er meg; vær ikke redde.» Da sa Peter: «Herre, er det virkelig deg, så si at jeg skal komme ut til deg på vannet.» Og Jesus svarte: «Kom!» Peter steg ut av båten og gikk på vannet bortover mot Jesus. Men da han så hvor det blåste, ble han redd og begynte å synke, og skrek: «Herre, redd meg!» Straks rakte Jesus hånden ut og grep fatt i ham. «Hvor lite tro du har!» sa han til ham, – «hvorfor tvilte du?» Og som de steg opp i båten, la vinden seg. Men de som var ombord, kastet seg ned for ham og sa: «I sannhet, du er Guds sønn!»"
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-08-16:kongsberg:nb:1100",
+      "title": "20. søndag i det alminnelige kirkeår",
+      "massDate": "2026-08-16",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-08-16",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Jes 56, 1. 6–7"
+        },
+        {
+          "style": "normal",
+          "text": "Så sier Herren: Hold lov og rett og gjør det som rett er! For min frelse er nær, den kommer, og min rettferdighet skal åpenbares. Og de fremmede som har sluttet seg til Herren, som vil tjene Herren og elske hans navn og være hans tjenere, alle som holder sabbaten og ikke vanhelliger den, men holder fast ved min pakt, dem fører jeg til mitt hellige fjell og lar dem glede seg i mitt hus der de kan be. Deres brennoffer og slaktoffer skal bli mottatt vel på mitt alter. For mitt hus skal kalles et bønnens hus for alle folk."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Lovsyng Herren, alle folk! Gud være oss nådig og velsigne oss, han la sitt åsyn lyse over oss. Dine veier skal kjennes på jorden, din frelse blant folkene. ℟ Måtte folkene juble og synge, for du dømmer jorden med rettferd. Du dømmer folkene med rettsinn, du styrer alle jordens folk. ℟ Måtte folkene takke deg, Gud, alle folkeslag love deg. Gud velsigne oss, all jorden frykte ham. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 11, 13-15. 29–32"
+        },
+        {
+          "style": "normal",
+          "text": "Brødre, jeg sier dere dette, hedningefødte: Jeg er hedningenes apostel, og jeg holder mitt embede høyt i ære, – men da også i håpet om å vekke mine egne blodsbrødres skinnsyke, og derved frelse noen av dem. For har allerede deres forkastelse betydd verdens forsoning, hva vil det da ikke bety når Gud mottar dem på ny? Det må bli en oppstandelse fra de døde! For Guds gaver og Guds kall tas ikke tilbake. Tidligere var dere opprørske mot Gud, men har nå funnet miskunn, takket være de andres opprør. Og på samme måte har nå også jødene gjort opprør, på grunn av den miskunn som Gud har vist dere, men bare for at også de selv skal bli gjenstand for hans miskunn. For om Gud har sperret alle inne i opprøret, var det for å slutte alle inn i sin miskunn."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Jesus forkynte det glade budskap om Riket ℟ og helbredet alle slags sykdommer blant folk. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 15, 21–28"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid drog Jesus ned mot landet omkring Tyros og Sidon. Da var det en kananeerkvinne der fra egnen, som nærmet seg og ropte: «Herre, du Davids sønn, ha miskunn med meg! Min datter er så ille plaget av demoner!» Men han svarte henne ikke med et ord. Da gikk disiplene til ham og bad: «Bli ferdig med henne, for hun fortsetter å rope etter oss!» Men Jesus svarte: «Jeg er ikke sendt til andre enn Israels bortkomne får.» Da kom hun og kastet seg ned for ham, og gjentok: «Herre, hjelp meg.» Han svarte: «Det er ikke rett å ta maten fra barna og kaste den for hvalpene.» «Ja, men herre,» sa hun da, «selv hvalpene får spise de smulene som faller fra deres herres bord.» Da svarte Jesus henne: «Kvinne, din tro er stor. Det skal bli som du vil.» Og datteren ble frisk i samme stund."
+        }
+      ]
+    },
+    {
+      "sourceKey": "mass-text:2026-08-23:kongsberg:nb:1100",
+      "title": "21. søndag i det alminnelige kirkeår",
+      "massDate": "2026-08-23",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-08-23",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning Jes 22, 19–23"
+        },
+        {
+          "style": "normal",
+          "text": "Så sier Herren til Sjebna, som stod for kongens hus: Jeg vil støte deg bort fra din stilling og rive deg ned fra din plass. Den dag vil jeg tilkalle min tjener Eljakim, Hilkias sønn. Jeg vil kle ham i din drakt, spenne ditt belte om ham og legge den myndighet du har hatt, i hans hånd. Han skal være en far for innbyggerne i Jerusalem og folket i Juda. Jeg legger nøkkelen til Davids hus på hans skulder. Når han åpner, skal ingen lukke, og når han lukker, skal ingen åpne. Jeg slår ham inn som en nagle på et sikkert sted. Han skal bli et æressete for sin fars ætt."
+        },
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "style": "normal",
+          "text": "℟ Herre, din miskunn er evig, forlat ikke dine henders verk Jeg vil prise deg, Herre, av hele mitt hjerte. Du lyttet til mine ord. For englenes åsyn vil jeg lovsynge deg, tilbe deg, vendt mot ditt hellige tempel. ℟ Jeg vil synge om din godhet, din trofasthet, for du har herliggjort ditt navn. Den dag jeg ropte, gav du meg svar. Min sjel fikk mot og styrke. ℟ Herren er opphøyet, han ser til de ydmyke i nåde. På avstand kjenner han de stolte. Herre, din miskunn er evig, forlat ikke dine henders verk. ℟"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning Rom 11, 33–36"
+        },
+        {
+          "style": "normal",
+          "text": "Hvor avgrunnsdyp er Guds godhet, hans visdom og hans viten! Hvor uransakelige er hans dommer, hvor umulige å spore, hans veier! «Hvem kjenner vel Herrens tanke, eller hvem har noen gang vært hans rådgiver?» – Eller «hvem har kunnet gi ham noe som krevde gjengjeld?» For alt kommer fra ham, alt er til ved ham, og til ham skal allting vende tilbake. Han være lovet i evighet. Amen."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "style": "normal",
+          "text": "℟ ℣ Allelúia. Du er Peter – Klippen – og på denne klippe vil jeg bygge min kirke. ℟ Og den skal dødsrikets porter aldri få i sin vold. Allelúia."
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium Matt 16, 13–20"
+        },
+        {
+          "style": "normal",
+          "text": "På den tid kom Jesus frem til bygdene i nærheten av Caesarea Philippi. Der spurte han sine disipler: «Hvem sier folk at Menneskesønnen er?» De svarte: «Noen sier Johannes Døperen, noen Elija, andre Jeremia eller en av profetene.» «Men dere,» spurte han da, «hvem sier dere at jeg er?» Da tok Simon Peter ordet, og svarte: «Du er Messias, sønn av den levende Gud.» Og Jesus svarte ham: «Salig er du, Simon Bar-Jona! Dette har ikke kjøtt og blod åpenbart for deg, men min Far i himlene. Og jeg sier deg, at du er Peter – Klippen – og på denne klippe vil jeg bygge min kirke. Og den skal dødsrikets porter aldri få i sin vold. Deg vil jeg gi nøklene til himlenes rike; det du binder på jorden, skal være bundet i himlene, og det du løser på jorden, skal være løst i himlene.» Så la han disiplene strengt på hjerte ikke å si til noen at han var Messias."
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "sourceKey": "article:pastoral-letter-confession-2026-03-22",
+      "title": "Hyrdebrev om skriftemålets sakrament",
+      "articleType": "pastoralLetter",
+      "publishedAt": "2026-03-22T08:00:00+01:00",
+      "summary": "Biskop Fredrik Hansens hyrdebrev til de troende i Oslo katolske bispedømme om skriftemålet, synden og Guds miskunn.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "Lovet være Jesus Kristus! Lovet være hans hellige navn!"
+        },
+        {
+          "style": "normal",
+          "text": "1. I årets fastemandat1 oppfordret jeg innstendig alle troende til å gå til skriftemål i løpet av disse hellige førti dager. For ytterligere å styrke skriftemålets plass i vår lokalkirke ønsker jeg i dette hyrdebrev å utlegge noen grunnleggende punkter om sakramentet, synden og Guds miskunn, samt gi noen konkrete råd."
+        },
+        {
+          "style": "h2",
+          "text": "Skriftemålet i Kirkens troslære"
+        },
+        {
+          "style": "normal",
+          "text": "2. Sakramentene hører til Kirkens liturgiske liv og skal tjene «til å hellige menneskene, til å bygge opp Kristi legeme, og ... til å gi Gud ... dyrkelse».2 De syv sakramenter – dåp, konfirmasjon, nattverd, sykesalving, skriftemål, ekteskap og ordinasjon – ble alle innstiftet av Vår Herre Jesus Kristus3 og er derfor på ingen måte tilfeldige. Sakramentene er villet av Gud og springer ut av Jesu frelsesgjerning."
+        },
+        {
+          "style": "normal",
+          "text": "3. Videre er sakramentene «virksomme tegn ... som kan fornemmes ved våre sanser».4 De er konkrete, sporbare og synlige. Samtidig som feiringen av sakramentene skjer, mottar vi nåde gjennom dem. Nåde er Guds gave til oss mennesker,5 en gave som støtter oss på vår «vei mot hellighet».6 Sakramentene omtales derfor med rette som nådemidler og frelsesmidler. I skriftemålets sakrament mottar vi tilgivelse for den krenkelse, den synd, vi har begått.7"
+        },
+        {
+          "style": "h2",
+          "text": "Synden og Guds miskunn"
+        },
+        {
+          "style": "normal",
+          "text": "4. For å forstå denne tilgivelsen må vi erkjenne hva synden er og gjør med oss. Vi bekjenner i hver messe at synd er «tanker, ord, gjerninger og forsømmelser»8 som strider mot Guds lov. Ved å synde forsøker vi å ta Guds plass og gjøre oss selv til dommere over godt og ondt, slik Adam og Eva gjorde i Edens hage.9"
+        },
+        {
+          "style": "normal",
+          "text": "5. Enhver synd skader vårt forhold og bånd til Gud, til Kirken og til våre medmennesker. Alvorlige synder,10 også kjent som dødssynder, bryter regelrett disse båndene. Svakhetssyndene bryter ikke båndene, men svekker dem.11 Bryter vi båndene til Gud, til Kirken og til våre medmennesker, blir vi stående igjen alene, likesom den bortkomne sønn i Jesu lignelse.12 Den hellige Paulus skriver rett og slett: «Syndens lønn er døden».13 Synd er derfor langt mer ødeleggende i våre liv enn vi kanskje ofte tror. 1 BISKOP FREDRIK HANSEN, Fastemandat 2026 for Oslo katolske bispedømme, 14. februar 2026. 2 DET ANDRE VATIKANKONSIL, Konstitusjon om liturgien, Sacrosanctum Concilium, 59. 3 Den katolske kirkes katekisme 1114. Se også TRIDENTINERKONSILET, Innledning til den syvende sesjon, 3. mars 1547. 4 Kompendium til den katolske kirkes katekisme 224. 5 Se Ef 2,6. 6 Kompendium til den katolske kirkes katekisme 231. 7 DEN ANDRE VATIKANKONSIL, Dogmatisk konstitusjon om Kirken, Lumen Gentium, 11. 8 Romersk missale, syndsbekjennelsen. 9 1Mos 3,1-7. 10 Den katolske kirkes katekisme 1855-1861. 11 Den katolske kirkes katekisme 1862-1863. 12 Luk 15,11-32. 13 Rom 6,23."
+        },
+        {
+          "style": "normal",
+          "text": "6. Opplyst av Jesu mektige ord lever vi imidlertid i håpet om at synden ikke må ha det siste ord i våre liv. I skriftemålet tilgir Gud oss i sin barmhjertighet, gjenoppretter det gudommelige liv i oss og fører oss tilbake til vennskap med ham og enhet med Kirken. Som vi leser i Johannes’ første brev: «dersom vi bekjenner våre synder, er [Gud] trofast og rettferdig, så han tilgir oss syndene og renser oss for all urett».14"
+        },
+        {
+          "style": "normal",
+          "text": "7. Å gå til skrifte gjør vi derfor ikke for å dvele ved våre feiltrinn, men for å møte Guds uransakelige miskunn og motta hans tilgivelse og fred. For er det noe vår tro tydelig forkynner, så er det at Gud er rik på miskunn og gleder seg ved hver eneste synder som omvender seg. Salmenes bok påpeker at så «høy som himmelen er over jorden, så veldig er [Guds] miskunn over dem som frykter [ham]»,15 og den hellige Lukas skriver at da den bortkomne og angrende sønn forliket seg med sin far, «begynte festen og gleden».16"
+        },
+        {
+          "style": "h2",
+          "text": "Å gå til skriftemål"
+        },
+        {
+          "style": "normal",
+          "text": "8. Veien til skriftemål skal derfor være kort og uten hindringer. Dette er en vei vi regelmessig bør gå, og som vi skal løpe hver eneste gang vi har begått alvorlige synder. Forblir vi i synden, utenfor nådens stand, blir vi stående alene. Det fører ofte til flere synder. Synden bør derfor heller fremkalle i oss en iver etter å skrifte våre synder og motta Guds tilgivelse. Kirken foreskriver også, og det bør gjentas her, at den som er seg bevisst en alvorlig synd, skal avstå fra å motta kommunion.17"
+        },
+        {
+          "style": "normal",
+          "text": "9. Enhver troende bør rutinemessig gå til skriftemål. Slik opplæres vi til å ransake våre liv for svakhetssynder, stadig mer inderlig forstå Guds lov og med iver søke den hellighet som Herren kaller oss til: «Vær da fullkomne, slik deres himmelske Far er fullkommen.»18 En god skriftevane betyr mer enn ett skriftemål i året. Jeg tillater meg derfor å oppfordre alle troende til å gå til skrifte minst tre ganger årlig: i fastetiden, om sommeren før olsok og i adventstiden."
+        },
+        {
+          "style": "normal",
+          "text": "10. Det er viktig å forberede seg godt til et skriftemål og dermed oppfylle sakramentets krav om at vi virkelig angrer våre synder, ydmykt bekjenner dem og trofast gjør vår bot.19 Dette begynner med at vi i stillhet og bønn reflekterer grundig over våre liv og slik utser hvilke synder som skal skriftes og hva vi konkret skal legge frem i skriftestolen. Som hjelp til denne selvransakelsen anbefales bruk av skriftespeil, de ti bud eller andre sentrale bibeltekster. Noen ord til de troende og til prestene"
+        },
+        {
+          "style": "normal",
+          "text": "11. Kjære troende! Mange opplever det vanskelig å gå til skriftemål. Kanskje er det veldig lenge siden sist. Kanskje er vi usikre på hva vi skal si, hvordan vi skal si det og hvordan presten vil reagere. Kanskje husker vi ikke hvordan vi skal begynne eller hvordan ritualet foregår. Kanskje bærer vi på synder som er så tyngende eller virker så utilgivelige at veien til skriftestolen føles som en uendelig oppoverbakke. Som biskop kjenner jeg meg forpliktet til å hjelpe troende som av slike eller andre grunner vegrer seg for å gå til skriftemål. Derfor ber jeg dere skrive til meg om det som gjør det vanskelig å gå til skriftemål, slik at vi sammen kan gjøre botens sakrament til en levende del av alle troendes liv."
+        },
+        {
+          "style": "normal",
+          "text": "12. Kjære medbrødre i den prestelige tjeneste! Vi vet hvor stort skriftemålets sakrament er og hvor viktig det er i våre egne og i de troendes liv. Derfor oppfordrer jeg dere, og meg selv, til å vise vei og selv regelmessig og trofast gå til skriftemål. La oss videre gjøre skriftemålet enda mer tilgjengelig, enda enklere å oppsøke, enda tryggere og i enda større grad til et levende møte med Guds uendelige miskunn. For å arbeide videre med dette vil jeg be Presterådet komme med 14 1Joh 1,9. 15 Sal 103,11. 16 Luk 15,24b. 17 Den kanoniske lovbok, kan. 916. 18 Matt 5,48. 19 Den katolske kirkes katekisme 1450-1460. konkrete forslag til hvordan vi kan styrke skriftemålet i vår lokalkirke i månedene og årene som kommer."
+        },
+        {
+          "style": "normal",
+          "text": "13. Én uke gjenstår til vi skal gå opp til Jerusalem sammen med Vår Herre. Fra påskens mysterier, ikke minst Jesu død på korsets tre for våre synder, lyser seieren over død og synd frem. Denne seier blir konkret i oss i skriftemålets sakrament. Måtte det stadig og stadig mer bli oss til hjelp i livet som Herrens disipler. Gitt i St. Olav domkirke i Oslo,"
+        },
+        {
+          "style": "normal",
+          "text": "5. søndag i fastetiden 2026 +Fredrik Hansen Biskop av Oslo"
+        }
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-03-22"
+      ]
+    },
+    {
+      "sourceKey": "article:rjukan-property-sale-2026-05-15",
+      "title": "Brev til de troende i og rundt Rjukan",
+      "articleType": "letter",
+      "publishedAt": "2026-05-15T12:00:00+02:00",
+      "summary": "Om salget av eiendommen i Håndverkergata 10A og hva det betyr for messefeiringen på Rjukan.",
+      "body": [
+        "Kjære kommunitet i Rjukan-området,",
+        "Oslo katolske bispedømme har inngått avtale om salg av eiendommen i Håndverkergata 10A. Bygget er ikke helsemessig forsvarlig å bruke, og en nødvendig totalrenovering ville blitt svært kostbar.",
+        "Salget skal ikke redusere den pastorale omsorgen eller messefeiringen. Menigheten vil kunngjøre nytt messested for høsten 2026. Messen og dåpen 28. juni kl. 15 gikk som planlagt i St. Johannes kapell.",
+        "Deres i Kristus, p. Trym Hellevig, sogneadministrator"
+      ],
+      "placeKeys": [
+        "place:rjukan-st-johannes"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-06-14",
+        "bulletin:2026-06-21"
+      ]
+    }
+  ]
+}

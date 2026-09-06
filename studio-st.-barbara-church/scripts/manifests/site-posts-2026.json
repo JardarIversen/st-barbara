@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [],
+  "places": [],
+  "massSchedules": [],
+  "events": [],
+  "announcements": [],
+  "massExceptions": [],
+  "massTexts": [],
+  "articles": [
+    {
+      "sourceKey": "article:catechesis-registration-2026-06-11",
+      "title": "Påmelding til katekese 2026–2027",
+      "articleType": "news",
+      "category": "Katekese",
+      "publishedAt": "2026-06-11T08:00:00+02:00",
+      "summary": "Velkommen til katekese! Nå kan du melde på barn og ungdom til Gode Hyrde-katekese, førstekommunion og konfirmantundervisning for det nye året.",
+      "body": [
+        "Velkommen til katekese! Meld på via lenkene nedenfor.",
+        "Vi tilbyr Gode Hyrde-katekese og førstekommunionsforberedelse for barn, og egen konfirmantundervisning for ungdom, for katekeseåret 2026–2027.",
+        "Påmelding skjer via menighetens digitale skjemaer. Ta kontakt med menigheten på kongsberg@katolsk.no om du har spørsmål om tilbudet, eller om hvilket opplegg som passer for ditt barn."
+      ],
+      "placeKeys": ["place:kongsberg-st-barbara"],
+      "relatedEventKeys": [
+        "event:catechesis-confirmation-start-2026-09-04",
+        "event:catechesis-good-shepherd-start-2026-09-13"
+      ],
+      "sourceBulletinKeys": []
+    },
+    {
+      "sourceKey": "article:confirmation-2026-05-31",
+      "title": "Gratulerer til denne helgens 8 konfirmanter",
+      "articleType": "news",
+      "category": "Livets gang",
+      "publishedAt": "2026-05-31T12:00:00+02:00",
+      "summary": "Gratulerer til de 8 som denne helgen ble konfirmert av biskop Fredrik!",
+      "body": ["Gratulerer til de 8 som denne helgen ble konfirmert av biskop Fredrik!"],
+      "imagePath": "C:/Users/jarda/Programming/prosjekter/st-barbara/web/public/images/konfirmasjon-2026.jpg",
+      "imageAlt": "Konfirmantene samlet med biskop Fredrik foran kirkedøren",
+      "placeKeys": ["place:kongsberg-st-barbara"],
+      "relatedEventKeys": ["event:confirmation-mass-2026-05-30"],
+      "sourceBulletinKeys": []
+    },
+    {
+      "sourceKey": "article:first-communion-2026-05-23",
+      "title": "5 barn mottok første kommunion",
+      "articleType": "news",
+      "category": "Livets gang",
+      "publishedAt": "2026-05-23T14:00:00+02:00",
+      "summary": "5 barn mottok på lørdag sin aller første kommunion. Gratulerer så mye til dem!",
+      "body": [
+        "5 barn mottok på lørdag sin aller første kommunion. Gratulerer så mye til dem, og vi takker alle som hjalp til å gjøre dette til en så flott dag, og for kateketene som har forberedt barna."
+      ],
+      "imagePath": "C:/Users/jarda/Programming/prosjekter/st-barbara/web/public/images/forstekommunion-2026.jpg",
+      "imageAlt": "Førstekommunionsbarna samlet på kirketrappen med prester og ministranter",
+      "placeKeys": ["place:kongsberg-st-barbara"],
+      "sourceBulletinKeys": ["bulletin:2026-05-17"]
+    },
+    {
+      "sourceKey": "article:rjukan-property-sale-2026-05-15",
+      "title": "Brev til de troende i og rundt Rjukan",
+      "articleType": "letter",
+      "category": "Kunngjøringer",
+      "publishedAt": "2026-05-15T12:00:00+02:00",
+      "summary": "Om salget av eiendommen i Håndverkergata 10A i Rjukan, og hva det betyr for messefeiringen fremover.",
+      "body": [
+        {"style": "h2", "text": "Salg av eiendom i Håndverkergata 10A"},
+        "Kjære kommunitet i Rjukan-området,",
+        "Jeg har tidligere informert dere om at Oslo katolske bispedømme lenge har forberedt seg på salg av deres eiendom i Håndverkergata 10A i Rjukan. Vi tenkte at dette var en prosess som fortsatt skulle komme til å ta litt tid, men dette gikk mye fortere enn planlagt. Jeg kan derfor meddele at en salgsavtale nå har blitt inngått, og eiendommen på Rjukan blir solgt til verditakst.",
+        "Jeg forstår at det er vemodig å gi fra seg dette bygget som vi har hatt i over 30 år, men dessverre var det egentlig ingen annen utvei. For det første er bygget helsemessig ikke forsvarlig å bruke. Spesielt befinner det seg asbest og betydelig oppbygging av soppinfeksjoner som faktisk er helseskadelig å puste inn. For det andre har totalrenovering av bygget vært nødvendig i mange år, noe som ville ha kostet såpass mye at bispedømmet ikke har kapasitet til å gjøre det i overskuelig fremtid. Da gir det lite mening å fortsette å betale høye driftsutgifter for å beholde bygget.",
+        "Jeg vil påpeke at dette ikke vil påvirke dere troende når det gjelder messefeiring og den pastorale omsorgen. Det eneste som vil bli annerledes, er stedet hvor messefeiringen vil ta plass. Jeg vil komme med informasjon om hvor vi skal feire messene fra september 2026 og utover.",
+        "Kapellet vil forbli uberørt inntil videre, og sakramentet vil fortsatt være der. Jeg forutser at kirkeinventaret fjernes etter sommeren. Messen og dåpen som er satt til 28. juni kl. 15.00 går som normalt i St. Johannes-kapellet.",
+        "Vennligst ta kontakt med meg om dere har spørsmål eller ønsker å snakke.",
+        "Deres i Kristus,",
+        "p. Trym Hellevig, sogneadministrator"
+      ],
+      "placeKeys": ["place:rjukan-st-johannes"],
+      "relatedEventKeys": ["event:rjukan-final-mass-2026-06-28"],
+      "sourceBulletinKeys": ["bulletin:2026-06-14", "bulletin:2026-06-21"]
+    }
+  ]
+}

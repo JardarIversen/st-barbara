@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #faf7f1;
+  --color-cream: #f2ecdf;
+  --color-ink: #23201b;
+  --color-stone: #756e60;
+  --color-line: #e4dbc8;
+  --color-burgundy: #6e2233;
+  --color-burgundy-deep: #561a28;
+  --color-gold: #a6884f;
+  --color-gold-light: #c8ae7c;
+  --color-night: #1f1b16;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-cormorant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf7f1;
+  color: #23201b;
+}
+
+::selection {
+  background: #6e2233;
+  color: #faf7f1;
+}
+
+/* Google Translate: hide the injected banner and widget chrome */
+.goog-te-banner-frame,
+.skiptranslate iframe,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+#google_translate_element {
+  display: none;
+}
+font[style] {
+  background: transparent !important;
+  box-shadow: none !important;
+}
