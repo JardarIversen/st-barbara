@@ -59,6 +59,22 @@ Tillatte verdier:
 - Messeavvik: `cancelled`, `rescheduled`, `changed`.
 - Artikkeltype: `pastoralLetter`, `letter`, `news`, `reference`, `other`.
 
+## Norsk og engelsk på nettsiden
+
+- Nettsiden har egne språkversjoner på `/nb` og `/en`. Begge bruker de samme datoene, stedene, avlysningene og Sanity-dokumentene.
+- Ved ny/oppdatert ukentlig import: legg inn kontrollerte engelske tekstfelt i `translations.en` på manifestoppføringen. Tillatte felt: `title`, `titleOverride`, `name`, `category`, `mainImageAlt`, `summary`, `notes`, `publicNote`, `body`, `details`, `links`. Oversett bare felter som faktisk finnes på oppføringen. `body` og `details` bruker samme Portable Text-format som norsk. `mainImageAlt` oversetter bildebeskrivelsen, ikke bildefilen.
+- Importeren lagrer oversettelsene i Sanitys internasjonaliserte liste (`language: "en"`), uten nye hendelsesdokumenter. Når norsk tekst endres, fjernes den tilhørende gamle oversettelsen hvis ny oversettelse ikke følger med.
+- Messe = **Holy Mass** når ordet står alene, ellers **Mass** i tydelig kirkelig sammenheng; messetider = **Mass times**, kirkevigsel = **consecration of the church**, skriftemål = **confession**, rosenkrans = **Rosary**. Ikke «fair» eller «church wedding» om kirkevigsel. Se `docs/translation-glossary.md`.
+- Hendelsens `language` er språket messen faktisk feires på, ikke språket nettsiden vises på. Ikke endre det under oversettelse.
+- `massTexts` og PDF-er beholdes på originalspråket. Ikke lag en uoffisiell engelsk liturgisk tekst eller knytt norsk tekst til engelske messer.
+- Andre språk oversettes automatisk fra den engelske siden. Egennavn og adresser skal ikke oversettes. Redaksjonell engelsk ligger i Sanity; ikke legg nytt innhold i migreringskatalogen eller UI-ordboken. Kildekontrollen (`sourceHashes`) genereres av importeren og hindrer foreldede oversettelser. Se `docs/languages-and-photos.md` for migrering og verifikasjon, og `docs/reading-sources.md` for vurderte lesningskilder.
+
+## Felles komponentdesign
+
+- Bruk tokens i `web/src/app/globals.css` for både sidene og shadcn-primitivene. Ikke opprett en separat fargepalett eller gjeninnfør shadcns standardavrunding.
+- Handlingsknapper bruker `Button`; navigasjonslenker med knapputseende bruker `buttonVariants`. Bruk variant og størrelse, ikke lokale utseendeoverstyringer. Kontroller bruker `rounded-sm` (4 px).
+- Se `docs/design-system.md` før du legger til eller endrer UI-primitiver.
+
 ## Kildekontroll
 
 - En nyere korrigert utgave med samme dato vinner, men tidligere PDF beholdes i revisjonshistorikken.

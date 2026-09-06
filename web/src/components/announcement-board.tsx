@@ -1,10 +1,17 @@
+"use client";
+
+import { useTranslations } from "@/i18n/client";
+
+import ContentLanguage from "./content-language";
 import type { Announcement } from "@/sanity/types";
 
 function announcementText(item: Announcement) {
   const body = item.body
     .flatMap((block) =>
       "children" in block
-        ? (block.children as Array<{ text?: string }>).map((child) => child.text ?? "")
+        ? (block.children as Array<{ text?: string }>).map(
+            (child) => child.text ?? "",
+          )
         : [],
     )
     .join(" ")
@@ -17,25 +24,61 @@ function announcementText(item: Announcement) {
 export default function AnnouncementBoard({
   items,
   limit,
+  layout = "grid",
 }: {
   items: Announcement[];
   limit?: number;
+  layout?: "grid" | "list";
 }) {
+  const { t } = useTranslations();
   if (!items.length) {
-    return <p className="border-t border-line py-5 text-sm text-stone">Ingen aktive oppslag nå.</p>;
+    return (
+      <p className="border-t border-border py-5 text-sm text-muted-foreground">
+        {t("Ingen aktive oppslag nå.")}
+      </p>
+    );
   }
 
   const visibleItems = limit === undefined ? items : items.slice(0, limit);
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
+    <div
+      className={
+        layout === "list"
+          ? "divide-y divide-border border-t border-border"
+          : "grid gap-x-10 gap-y-6 sm:grid-cols-2"
+      }
+    >
       {visibleItems.map((item) => {
         const text = announcementText(item);
 
         return (
-          <article key={item._id} className="rounded-sm border border-line bg-paper p-4">
-            <h3 className="font-display text-xl font-semibold leading-snug text-ink">{item.title}</h3>
-            {text && <p className="mt-3 text-sm leading-relaxed text-stone">{text}</p>}
+          <article
+            key={item._id}
+            className={
+              layout === "list"
+                ? "py-4 first:pt-3"
+                : "border-t border-border py-5"
+            }
+          >
+            <h3 className="font-display text-xl font-semibold leading-snug text-foreground">
+              <ContentLanguage
+                original={item.originalFields?.includes("title")}
+              >
+                {item.title}
+              </ContentLanguage>
+            </h3>
+            {text && (
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <ContentLanguage
+                  original={item.originalFields?.includes(
+                    item.body?.length ? "body" : "summary",
+                  )}
+                >
+                  {text}
+                </ContentLanguage>
+              </p>
+            )}
             {item.links?.length ? (
               <div className="mt-4 flex flex-wrap gap-3">
                 {item.links.map((link) => (
@@ -44,7 +87,7 @@ export default function AnnouncementBoard({
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-medium text-burgundy underline-offset-2 hover:underline"
+                    className="text-sm font-medium text-primary underline-offset-4 hover:underline"
                   >
                     {link.label}
                   </a>

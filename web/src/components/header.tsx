@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "@/i18n/client";
+
+import Link from "@/i18n/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import LanguageSwitcher, { LanguageFlags } from "./language-switcher";
+import LanguageSwitcher from "./language-switcher";
+import { Button, buttonVariants } from "./ui/button";
 
 const NAV = [
   { href: "/messetider", label: "Messetider" },
@@ -14,28 +17,34 @@ const NAV = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
+  const { t } = useTranslations();
+  const pathname = usePathname().replace(/^\/(nb|en)(?=\/|$)/, "") || "/";
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-4">
-        <Link href="/" className="group flex items-center gap-3">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-5 lg:h-[4.7rem] lg:gap-6">
+        <Link
+          href="/"
+          className="group flex min-w-0 items-center gap-2 lg:gap-3"
+        >
           <span
             aria-hidden
-            className="font-display text-3xl leading-none text-gold transition-colors group-hover:text-burgundy"
+            className="font-display text-3xl leading-none text-brand transition-colors group-hover:text-primary"
           >
             ✠
           </span>
           <span>
             <span
               translate="no"
-              className="notranslate block font-display text-[1.45rem] leading-tight font-semibold tracking-wide text-ink"
+              className="notranslate block font-display text-lg leading-tight font-semibold tracking-wide text-foreground sm:text-[1.45rem]"
             >
-              St. Barbara menighet
+              {" "}
+              {t("St. Barbara menighet")}{" "}
             </span>
-            <span className="block text-[0.6rem] font-medium uppercase tracking-[0.28em] text-stone">
-              Den katolske kirke i Kongsberg
+            <span className="hidden text-[0.6rem] font-medium uppercase tracking-[0.28em] text-muted-foreground sm:block">
+              {" "}
+              {t("Den katolske kirke i Kongsberg")}{" "}
             </span>
           </span>
         </Link>
@@ -51,39 +60,38 @@ export default function Header() {
                   href={item.href}
                   className={`text-[0.95rem] transition-colors ${
                     active
-                      ? "font-medium text-burgundy"
-                      : "text-ink/75 hover:text-burgundy"
+                      ? "font-medium text-primary"
+                      : "text-foreground/75 hover:text-primary"
                   }`}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
               );
             })}
           </nav>
           <LanguageSwitcher />
-          <Link
-            href="/donasjoner"
-            className="rounded-sm bg-burgundy px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-burgundy-deep"
-          >
-            Gi en gave
+          <Link href="/donasjoner" className={buttonVariants({ size: "sm" })}>
+            {" "}
+            {t("Gi en gave")}{" "}
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex shrink-0 items-center gap-1 lg:hidden">
           <LanguageSwitcher />
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             type="button"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
-            aria-label="Meny"
-            className="flex size-10 items-center justify-center text-ink"
+            aria-label={t("Meny")}
           >
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
-              className="size-6"
+              data-icon="inline-start"
             >
               {open ? (
                 <path d="M6 6l12 12M18 6L6 18" />
@@ -91,31 +99,31 @@ export default function Header() {
                 <path d="M4 7h16M4 12h16M4 17h16" />
               )}
             </svg>
-          </button>
+          </Button>
         </div>
       </div>
 
       {open && (
-        <nav className="border-t border-line px-5 pb-6 pt-2 lg:hidden">
+        <nav className="border-t border-border px-5 pb-6 pt-2 lg:hidden">
           {NAV.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-line/70 py-3 font-display text-xl text-ink"
+              className="block border-b border-border/70 py-3 font-display text-xl text-foreground"
             >
-              {item.label}
+              {t(item.label)}
             </Link>
           ))}
           <div className="mt-5 flex items-center justify-between gap-4">
             <Link
               href="/donasjoner"
               onClick={() => setOpen(false)}
-              className="rounded-sm bg-burgundy px-5 py-2.5 text-sm font-medium text-paper"
+              className={buttonVariants()}
             >
-              Gi en gave
+              {" "}
+              {t("Gi en gave")}{" "}
             </Link>
-            <LanguageFlags />
           </div>
         </nav>
       )}

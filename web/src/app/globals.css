@@ -1,35 +1,127 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* One parish palette for page layouts and shadcn primitives. */
+:root {
+  --background: #faf7f1;
+  --foreground: #23201b;
+  --muted: #f2ecdf;
+  --muted-foreground: #756e60;
+  --border: #e4dbc8;
+  --primary: #6e2233;
+  --primary-hover: #561a28;
+  --primary-foreground: var(--background);
+  --brand: #a6884f;
+  --brand-soft: #c8ae7c;
+  --inverse: #1f1b16;
+  --inverse-foreground: var(--background);
+
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --secondary: var(--muted);
+  --secondary-foreground: var(--foreground);
+  --accent: var(--muted);
+  --accent-foreground: var(--primary);
+  --destructive: #b42318;
+  --destructive-foreground: var(--background);
+  --input: var(--border);
+  --ring: var(--primary);
+  --overlay: var(--inverse);
+
+  /* Same restrained 4px corners as the original parish buttons. */
+  --radius: 0.25rem;
+  --focus-width: 2px;
+  --focus-offset: 3px;
+  --popover-shadow: 0 4px 14px
+    color-mix(in srgb, var(--foreground) 10%, transparent);
+}
 
 @theme inline {
-  --color-paper: #faf7f1;
-  --color-cream: #f2ecdf;
-  --color-ink: #23201b;
-  --color-stone: #756e60;
-  --color-line: #e4dbc8;
-  --color-burgundy: #6e2233;
-  --color-burgundy-deep: #561a28;
-  --color-gold: #a6884f;
-  --color-gold-light: #c8ae7c;
-  --color-night: #1f1b16;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-overlay: var(--overlay);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-inverse: var(--inverse);
+  --color-inverse-foreground: var(--inverse-foreground);
+
   --font-sans: var(--font-inter);
   --font-display: var(--font-cormorant);
+  --font-heading: var(--font-display);
+
+  --radius-xs: calc(var(--radius) / 2);
+  --radius-sm: var(--radius);
+  --radius-md: calc(var(--radius) + 0.125rem);
+  --radius-lg: calc(var(--radius) + 0.25rem);
+  --radius-xl: calc(var(--radius) + 0.5rem);
+  --radius-2xl: calc(var(--radius) + 0.75rem);
+  --radius-3xl: calc(var(--radius) + 1.25rem);
+  --radius-4xl: calc(var(--radius) + 1.75rem);
+
+  --spacing-control-xs: 1.75rem;
+  --spacing-control-sm: 2.25rem;
+  --spacing-control: 2.5rem;
+  --spacing-control-lg: 2.75rem;
+  --shadow-popover: var(--popover-shadow);
 }
 
-html {
-  scroll-behavior: smooth;
+@utility focus-ring {
+  &:focus-visible {
+    outline: var(--focus-width) solid var(--ring);
+    outline-offset: var(--focus-offset);
+  }
 }
 
-body {
-  background: #faf7f1;
-  color: #23201b;
+@utility focus-within-ring {
+  &:has(:focus-visible) {
+    outline: var(--focus-width) solid var(--ring);
+    outline-offset: var(--focus-offset);
+  }
 }
 
-::selection {
-  background: #6e2233;
-  color: #faf7f1;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  :focus-visible {
+    outline: var(--focus-width) solid var(--ring);
+    outline-offset: var(--focus-offset);
+  }
 }
 
-/* Google Translate: hide the injected banner and widget chrome */
+/* Google Translate: hide injected banner and widget chrome. */
 .goog-te-banner-frame,
 .skiptranslate iframe,
 #goog-gt-tt,

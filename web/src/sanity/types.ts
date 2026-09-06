@@ -30,6 +30,7 @@ export type Bulletin = {
 };
 
 export type MassSchedule = {
+  originalFields?: string[];
   _id: string;
   sourceKey: string;
   title: string;
@@ -48,6 +49,7 @@ export type MassSchedule = {
 };
 
 export type MassException = {
+  originalFields?: string[];
   _id: string;
   sourceKey: string;
   scope: "singleOccurrence" | "dateRange";
@@ -67,11 +69,13 @@ export type MassException = {
 };
 
 export type ParishEvent = {
+  originalFields?: string[];
   _id: string;
   sourceKey: string;
   title: string;
   slug: string;
-  eventType: "mass" | "parishCouncil" | "pilgrimage" | "activity" | "social" | "other";
+  eventType:
+    "mass" | "parishCouncil" | "pilgrimage" | "activity" | "social" | "other";
   status: "scheduled" | "cancelled" | "postponed";
   startsAt: string;
   endsAt?: string;
@@ -93,6 +97,7 @@ export type CalendarData = {
 };
 
 export type Announcement = {
+  originalFields?: string[];
   _id: string;
   sourceKey: string;
   title: string;
@@ -112,6 +117,7 @@ export type Announcement = {
 };
 
 export type ArticleCard = {
+  originalFields?: string[];
   _id: string;
   sourceKey: string;
   title: string;

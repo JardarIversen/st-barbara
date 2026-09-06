@@ -1,9 +1,20 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import type { CalendarListItem } from "@/lib/calendar";
-import { placeFilterKey } from "@/lib/calendar";
-import TimelineList from "./timeline-list";
+import { Button } from "./ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+
+import { useTranslations } from "@/i18n/client";
+
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { calendarDayGroups, type CalendarListItem } from "@/lib/calendar";
+import AgendaList from "./agenda-list";
 
 const FILTERS = [
   ["all", "Alle steder"],
@@ -12,170 +23,341 @@ const FILTERS = [
   ["rjukan", "Rjukan"],
   ["mo", "Mo"],
 ] as const;
-
-const monthFormatter = new Intl.DateTimeFormat("nb-NO", {
-  timeZone: "Europe/Oslo",
-  month: "long",
-  year: "numeric",
-});
-
-function monthKey(iso: string) {
-  return iso.slice(0, 7);
+function monthLabel(key: string, locale: "nb" | "en") {
+  const label = new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "nb-NO", {
+    timeZone: "Europe/Oslo",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(`${key}-15T12:00:00Z`));
+  return label.charAt(0).toLocaleUpperCase(locale) + label.slice(1);
 }
-
-function monthLabel(key: string) {
-  return monthFormatter.format(new Date(`${key}-15T12:00:00Z`));
+function topOffset(toolbar: HTMLElement | null) {
+  return (
+    (document.querySelector("header")?.getBoundingClientRect().height ?? 76) +
+    (toolbar?.offsetHeight ?? 120) +
+    20
+  );
+}
+function scrollTo(
+  element: HTMLElement | null,
+  toolbar: HTMLElement | null,
+  offset = 0,
+) {
+  if (element)
+    window.scrollTo({
+      top:
+        window.scrollY +
+        element.getBoundingClientRect().top -
+        topOffset(toolbar) -
+        offset,
+      behavior: "instant",
+    });
+}
+function goToDate(
+  root: HTMLElement | null,
+  toolbar: HTMLElement | null,
+  date: string,
+  offset = 0,
+) {
+  const days = [
+    ...(root?.querySelectorAll<HTMLElement>("[data-agenda-date]") ?? []),
+  ];
+  const target = days.find(
+    (day) =>
+      day.dataset.agendaDate! >= date &&
+      day.dataset.agendaDate!.slice(0, 7) === date.slice(0, 7),
+  );
+  scrollTo(
+    target ?? document.getElementById(`month-${date.slice(0, 7)}`),
+    toolbar,
+    offset,
+  );
 }
 
 export default function CalendarExplorer({
   items,
   today,
+  startDate,
 }: {
   items: CalendarListItem[];
   today: string;
+  startDate: string;
 }) {
+  const { locale, t } = useTranslations();
   const [place, setPlace] = useState("all");
+  const [activeMonth, setActiveMonth] = useState(today.slice(0, 7));
+  const [extraMonth, setExtraMonth] = useState<string | null>(null);
+  const toolbar = useRef<HTMLDivElement>(null);
+  const root = useRef<HTMLDivElement>(null);
+  const pendingAnchor = useRef<{ date: string; offset: number } | null>(null);
+  const pendingMonth = useRef<string | null>(null);
+  const navigationPosition = useRef<{ month: string; top: number } | null>(
+    null,
+  );
   const filtered = useMemo(
     () =>
-      place === "all"
-        ? items
-        : items.filter((item) => item.places.some((value) => placeFilterKey(value) === place)),
+      items.filter(
+        (item) => place === "all" || item.regionKeys.includes(place),
+      ),
     [items, place],
   );
-  const months = useMemo(() => {
+  const months = useMemo(
+    () => [
+      ...new Set(
+        calendarDayGroups(items, startDate).map(([date]) => date.slice(0, 7)),
+      ),
+    ],
+    [items, startDate],
+  );
+  const grouped = useMemo(() => {
     const groups = new Map<string, CalendarListItem[]>();
     for (const item of filtered) {
-      const key = monthKey(item.startsAt);
-      groups.set(key, [...(groups.get(key) ?? []), item]);
+      const key = (item.dateKey < startDate ? startDate : item.dateKey).slice(
+        0,
+        7,
+      );
+      const group = groups.get(key) ?? [];
+      group.push(item);
+      groups.set(key, group);
     }
-    return [...groups.entries()];
-  }, [filtered]);
-  const anchorItemId = filtered.find((item) => item.dateKey >= today)?.id ?? filtered.at(-1)?.id;
-  const [activeMonth, setActiveMonth] = useState("");
-  const displayedMonth = months.some(([key]) => key === activeMonth)
-    ? activeMonth
-    : (months[0]?.[0] ?? "");
+    return groups;
+  }, [filtered, startDate]);
+  const monthOptions = months.map((value) => ({
+    value,
+    label: monthLabel(value, locale),
+  }));
+  const visibleMonths = useMemo(
+    () =>
+      months.filter(
+        (key) =>
+          grouped.has(key) || key === extraMonth || key === today.slice(0, 7),
+      ),
+    [months, grouped, extraMonth, today],
+  );
+
+  useLayoutEffect(() => {
+    // Anchor once, after Next's route positioning. Never rerun on a filter change.
+    let second = 0;
+    const first = requestAnimationFrame(() => {
+      second = requestAnimationFrame(() => {
+        goToDate(root.current, toolbar.current, today);
+        navigationPosition.current = {
+          month: today.slice(0, 7),
+          top: window.scrollY,
+        };
+      });
+    });
+    return () => {
+      cancelAnimationFrame(first);
+      cancelAnimationFrame(second);
+    };
+  }, [today]);
+
+  useLayoutEffect(() => {
+    if (pendingAnchor.current) {
+      goToDate(
+        root.current,
+        toolbar.current,
+        pendingAnchor.current.date,
+        pendingAnchor.current.offset,
+      );
+      navigationPosition.current = {
+        month: pendingAnchor.current.date.slice(0, 7),
+        top: window.scrollY,
+      };
+      pendingAnchor.current = null;
+    }
+  }, [place]);
+
+  useLayoutEffect(() => {
+    if (pendingMonth.current) {
+      scrollTo(
+        document.getElementById(`month-${pendingMonth.current}`),
+        toolbar.current,
+      );
+      navigationPosition.current = {
+        month: pendingMonth.current,
+        top: window.scrollY,
+      };
+      pendingMonth.current = null;
+    }
+  }, [extraMonth]);
 
   useEffect(() => {
     let frame = 0;
-
-    function updateActiveMonth() {
-      const marker = Math.min(220, window.innerHeight * 0.25);
-      let nextMonth = months[0]?.[0] ?? "";
-
-      for (const [key] of months) {
-        const element = document.getElementById(`month-${key}`);
-        if (!element || element.getBoundingClientRect().top > marker) break;
-        nextMonth = key;
+    function update() {
+      // Near the bottom, the browser cannot align a short month to the top.
+      // Keep the explicitly selected month until the visitor scrolls again.
+      if (
+        navigationPosition.current &&
+        Math.abs(window.scrollY - navigationPosition.current.top) < 1
+      ) {
+        setActiveMonth(navigationPosition.current.month);
+        return;
       }
-
-      setActiveMonth(nextMonth);
+      navigationPosition.current = null;
+      const marker = topOffset(toolbar.current) + 40;
+      let month = visibleMonths[0] ?? today.slice(0, 7);
+      for (const key of visibleMonths) {
+        if (
+          (document.getElementById(`month-${key}`)?.getBoundingClientRect()
+            .top ?? Infinity) > marker
+        )
+          break;
+        month = key;
+      }
+      setActiveMonth(month);
     }
-
-    function handleScroll() {
+    function onScroll() {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
-        updateActiveMonth();
+        update();
       });
     }
-
-    updateActiveMonth();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frame);
     };
-  }, [months]);
+  }, [visibleMonths, today]);
 
-  useEffect(() => {
-    if (!anchorItemId) return;
-    requestAnimationFrame(() => {
-      document.getElementById(`calendar-item-${anchorItemId}`)?.scrollIntoView({
-        behavior: "auto",
-        block: "center",
-      });
-    });
-  }, [anchorItemId]);
+  function changePlace(value: string) {
+    if (value === place) return;
+    const marker = topOffset(toolbar.current);
+    const days = [
+      ...(root.current?.querySelectorAll<HTMLElement>("[data-agenda-date]") ??
+        []),
+    ];
+    const visible = days.find(
+      (day) =>
+        day.dataset.agendaDate!.slice(0, 7) === activeMonth &&
+        day.getBoundingClientRect().bottom > marker,
+    );
+    pendingAnchor.current = {
+      date: visible?.dataset.agendaDate ?? `${activeMonth}-01`,
+      offset: visible ? visible.getBoundingClientRect().top - marker : 0,
+    };
+    setExtraMonth(pendingAnchor.current.date.slice(0, 7));
+    setPlace(value);
+  }
 
-  function goToMonth(key: string) {
-    document.getElementById(`month-${key}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  function changeMonth(value: string) {
+    setActiveMonth(value);
+    if (value === extraMonth) {
+      scrollTo(document.getElementById(`month-${value}`), toolbar.current);
+      navigationPosition.current = { month: value, top: window.scrollY };
+      return;
+    }
+    pendingMonth.current = value;
+    setExtraMonth(value);
   }
 
   return (
-    <div>
-      <div className="sticky top-[4.7rem] z-30 -mx-5 border-y border-line bg-paper/95 px-5 py-3 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto">
-          {FILTERS.map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              onClick={() => setPlace(value)}
-              aria-pressed={place === value}
-              className={`shrink-0 rounded-full border px-4 py-2 text-sm transition ${
-                place === value
-                  ? "border-burgundy bg-burgundy text-paper"
-                  : "border-line bg-paper text-ink hover:border-gold"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {months.length ? (
-        <div className="mt-6 grid gap-6 md:grid-cols-[8.5rem_minmax(0,1fr)] lg:grid-cols-[10rem_minmax(0,1fr)]">
-          <aside className="sticky top-36 hidden h-[65vh] self-start md:block" aria-label="Spol i tid">
-            <div className="absolute bottom-1 left-4 top-1 w-px bg-line" aria-hidden />
-            <ol className="flex h-full flex-col justify-between">
-              {months.map(([key]) => (
-                <li key={key} className="relative">
-                  <button
-                    type="button"
-                    onClick={() => goToMonth(key)}
-                    className={`group flex w-full items-center gap-3 text-left text-xs capitalize transition ${
-                      displayedMonth === key ? "font-semibold text-burgundy" : "text-stone hover:text-ink"
-                    }`}
-                  >
-                    <span
-                      className={`relative z-10 block h-px bg-current transition-all ${displayedMonth === key ? "w-8" : "w-4 group-hover:w-6"}`}
-                    />
-                    <span>{monthLabel(key)}</span>
-                  </button>
-                </li>
-              ))}
-            </ol>
-          </aside>
-
-          <div>
-            <label className="mb-7 block md:hidden">
-              <span className="sr-only">Spol til måned</span>
-              <select
-                value={displayedMonth}
-                onChange={(event) => goToMonth(event.target.value)}
-                className="w-full rounded-sm border border-line bg-paper px-4 py-3 text-sm text-ink"
+    <div ref={root}>
+      <div
+        ref={toolbar}
+        className="sticky top-16 z-30 -mx-5 border-y border-border bg-background/95 px-5 py-3 backdrop-blur lg:top-[4.7rem]"
+      >
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+          <div
+            role="group"
+            aria-label={t("Velg sted")}
+            className="flex flex-wrap gap-1.5"
+          >
+            {FILTERS.map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                aria-pressed={place === value}
+                onClick={() => changePlace(value)}
+                className={`rounded-full px-3 py-2.5 text-sm font-medium transition-colors ${place === value ? "bg-primary text-background" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
               >
-                {months.map(([key]) => (
-                  <option key={key} value={key}>{monthLabel(key)}</option>
-                ))}
-              </select>
-            </label>
-            <div className="space-y-10">
-              {months.map(([key, monthItems]) => (
-                <section key={key} id={`month-${key}`} className="scroll-mt-40">
-                  <h2 className="mb-4 border-b border-line pb-2 font-display text-2xl font-semibold capitalize text-ink">
-                    {monthLabel(key)}
-                  </h2>
-                  <TimelineList items={monthItems} anchorItemId={anchorItemId} />
-                </section>
-              ))}
+                {value === "all" ? (
+                  t(label)
+                ) : (
+                  <span translate="no" className="notranslate">
+                    {label}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+          <div className="flex w-full items-center gap-2 border-t border-border pt-3 sm:w-auto sm:border-0 sm:pt-0">
+            <div className="min-w-0 flex-1 sm:w-48">
+              <Select
+                items={monthOptions}
+                modal={false}
+                disabled={!months.length}
+                value={
+                  months.includes(activeMonth)
+                    ? activeMonth
+                    : (months[0] ?? null)
+                }
+                onValueChange={(value) => {
+                  if (value) changeMonth(value);
+                }}
+              >
+                <SelectTrigger aria-label={t("Velg måned")} className="w-full">
+                  <SelectValue placeholder={t("Velg måned")} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    {monthOptions.map(({ value, label }) => (
+                      <SelectItem key={value} value={value}>
+                        {label}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
             </div>
+            <Button
+              variant="outline"
+              type="button"
+              onClick={() => {
+                goToDate(root.current, toolbar.current, today);
+                navigationPosition.current = {
+                  month: today.slice(0, 7),
+                  top: window.scrollY,
+                };
+                setActiveMonth(today.slice(0, 7));
+              }}
+            >
+              {t("I dag")}
+            </Button>
           </div>
         </div>
-      ) : (
-        <p className="py-16 text-center text-stone">Ingen messer eller hendelser for dette stedet i perioden.</p>
-      )}
+      </div>
+      <p className="sr-only" role="status">
+        {filtered.length} {t("messer og arrangementer for")}{" "}
+        {t(FILTERS.find(([key]) => key === place)?.[1] ?? "").toLowerCase()}.
+      </p>
+      <div className="space-y-10 py-6">
+        {visibleMonths.map((key) => (
+          <section key={key} id={`month-${key}`}>
+            <h2 className="mb-6 font-display text-3xl font-semibold capitalize text-foreground">
+              {monthLabel(key, locale)}
+            </h2>
+            {grouped.get(key)?.length ? (
+              <AgendaList
+                items={grouped.get(key)!}
+                today={today}
+                from={startDate}
+              />
+            ) : (
+              <p className="border-b border-border pb-6 text-sm text-muted-foreground">
+                {t("Ingen oppføringer for dette stedet denne måneden.")}
+              </p>
+            )}
+          </section>
+        ))}
+        {!months.length && (
+          <p className="py-10 text-muted-foreground">
+            {t("Ingen messer eller arrangementer i perioden.")}
+          </p>
+        )}
+      </div>
     </div>
   );
 }

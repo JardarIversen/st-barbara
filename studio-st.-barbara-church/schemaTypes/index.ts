@@ -9,11 +9,13 @@ import {massException} from './documents/massException'
 import {massText} from './documents/massText'
 import {place} from './documents/place'
 import {recurringMassSchedule} from './documents/recurringMassSchedule'
+import {translatedCopy, translationsField} from './objects/translatedCopy'
 
 export const schemaTypes = [
   actionLink,
   bulletinRevision,
   richText,
+  translatedCopy,
   place,
   bulletin,
   article,
@@ -22,4 +24,6 @@ export const schemaTypes = [
   recurringMassSchedule,
   massException,
   massText,
-]
+].map((schema) => 'fields' in schema && ['place', 'article', 'event', 'announcement', 'recurringMassSchedule', 'massException'].includes(schema.name)
+  ? {...schema, fields: [...schema.fields, translationsField]}
+  : schema)

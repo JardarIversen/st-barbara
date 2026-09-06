@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import {getSanityClient} from './lib/sanity-client.mjs'
+import {prepareTranslations, translationErrors} from './lib/translations.mjs'
 import {
   readManifest,
   resolveFilePath,
@@ -10,6 +11,7 @@ import {
   toPortableText,
   uniqueReferences,
   validateManifest,
+  allManifestItems,
 } from './lib/manifest-utils.mjs'
 
 const args = process.argv.slice(2)
@@ -23,6 +25,9 @@ if (!manifestPath) {
 
 const {manifest, absolutePath, baseDirectory} = readManifest(manifestPath)
 const validationErrors = validateManifest(manifest, baseDirectory)
+for (const {type, item} of allManifestItems(manifest)) {
+  validationErrors.push(...translationErrors(item.translations, type).map(error => `${item.sourceKey}: ${error}`))
+}
 
 if (validationErrors.length) {
   console.error('Manifestet er ugyldig:')
@@ -87,6 +92,9 @@ async function findBySourceKey(type, sourceKey) {
 
 async function upsert(type, sourceKey, fields) {
   const existing = await findBySourceKey(type, sourceKey)
+  const incoming = allManifestItems(manifest).find(entry => entry.type === type && entry.item.sourceKey === sourceKey)?.item.translations
+  const translations = prepareTranslations(existing, fields, incoming, sourceKey)
+  if (translations !== undefined) fields = {...fields, translations}
   const fieldsToUnset = Object.entries(fields)
     .filter(([, value]) => value === null)
     .map(([field]) => field)

@@ -3,6 +3,7 @@ import { defineQuery } from "next-sanity";
 const placeProjection = /* groq */ `{
   _id,
   sourceKey,
+    translations,
   name,
   "slug": slug.current,
   placeType,
@@ -38,6 +39,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
     ] | order(startTime asc) {
       _id,
       sourceKey,
+    translations,
       title,
       status,
       place->${placeProjection},
@@ -61,6 +63,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
     ] {
       _id,
       sourceKey,
+    translations,
       scope,
       "scheduleKey": schedule->sourceKey,
       occurrenceDate,
@@ -78,11 +81,12 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
     },
     "events": *[
       _type == "event" &&
-      startsAt <= $end &&
+      startsAt < $end &&
       coalesce(endsAt, startsAt) >= $start
     ] | order(startsAt asc) {
       _id,
       sourceKey,
+    translations,
       title,
       "slug": slug.current,
       eventType,
@@ -90,7 +94,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
       startsAt,
       endsAt,
       places[]->${placeProjection},
-      parentEvent->{title, "slug": slug.current},
+      parentEvent->{title, translations, "slug": slug.current},
       summary,
       body,
       language,
@@ -126,6 +130,7 @@ export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
   ] | order(lastMentionedAt desc, publishedAt desc) {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     status,
@@ -137,7 +142,7 @@ export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
     summary,
     body,
     places[]->${placeProjection},
-    relatedEvents[]->{title, "slug": slug.current},
+    relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},
     sourceBulletins[]->${bulletinProjection}
   }
@@ -150,6 +155,7 @@ export const ANNOUNCEMENTS_BY_BULLETINS_QUERY = defineQuery(/* groq */ `
   ] | order(priority desc, publishedAt desc) {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     status,
@@ -161,7 +167,7 @@ export const ANNOUNCEMENTS_BY_BULLETINS_QUERY = defineQuery(/* groq */ `
     summary,
     body,
     places[]->${placeProjection},
-    relatedEvents[]->{title, "slug": slug.current},
+    relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},
     sourceBulletins[]->${bulletinProjection}
   }
@@ -176,6 +182,7 @@ export const LATEST_ARTICLES_QUERY = defineQuery(/* groq */ `
   | order(publishedAt desc)[0...4] {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     articleType,
@@ -190,6 +197,7 @@ export const ALL_ARTICLES_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && defined(slug.current)] | order(publishedAt desc) {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     articleType,
@@ -208,6 +216,7 @@ export const ARTICLE_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && slug.current == $slug][0] {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     articleType,
@@ -217,7 +226,7 @@ export const ARTICLE_QUERY = defineQuery(/* groq */ `
     mainImage ${imageProjection},
     body,
     places[]->${placeProjection},
-    relatedEvents[]->{title, "slug": slug.current},
+    relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},
     sourceBulletins[]->${bulletinProjection}
   }
@@ -227,6 +236,7 @@ export const EVENT_QUERY = defineQuery(/* groq */ `
   *[_type == "event" && slug.current == $slug][0] {
     _id,
     sourceKey,
+    translations,
     title,
     "slug": slug.current,
     eventType,
@@ -234,7 +244,7 @@ export const EVENT_QUERY = defineQuery(/* groq */ `
     startsAt,
     endsAt,
     places[]->${placeProjection},
-    parentEvent->{title, "slug": slug.current},
+    parentEvent->{title, translations, "slug": slug.current},
     summary,
     body,
     language,
