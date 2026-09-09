@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "sourceKey": "event:tusenfryd-trip-2026-09-26",
+      "title": "Menighetstur til Tusenfryd",
+      "slug": "menighetstur-til-tusenfryd-2026-09-26t09-00-00-02-00",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-09-26T09:00:00+02:00",
+      "endsAt": "2026-09-26T18:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:tusenfryd"
+      ],
+      "summary": "Pater Trym inviterer barn i menigheten og deres venner til TusenFryd. Felles buss fra Kongsberg og påmelding innen 20. september.",
+      "body": [
+        "Pater Trym inviterer barn i menigheten og deres venner til en hyggelig dag på TusenFryd lørdag 26. september 2026.",
+        {
+          "style": "h2",
+          "text": "Program"
+        },
+        "Kl. 09.00: Messe i St. Barbara kirke.",
+        "Kl. 09.30: Avreise fra Kongsberg med felles buss.",
+        "Kl. 11.00: Mulighet for å møte gruppen på TusenFryd.",
+        "Kl. 18.30: Tilbake i Kongsberg.",
+        "TusenFryd er åpent kl. 11.00–17.00.",
+        {
+          "style": "h2",
+          "text": "Praktisk informasjon"
+        },
+        "Ta med egen mat og drikke for hele dagen, og husk klær etter vær.",
+        {
+          "style": "h2",
+          "text": "Påmelding"
+        },
+        "Påmeldingsfrist: 20. september. Bruk påmeldingslenken nedenfor."
+      ],
+      "registrationDeadline": "2026-09-20T23:59:00+02:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ],
+      "links": [
+        {
+          "label": "Meld deg på turen",
+          "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUQ1BIREhMV0lZMUkyWUNFSFM0Q01WWkxITy4u&origin=QRCode"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Parish trip to Tusenfryd",
+          "summary": "Fr. Trym invites children in the parish and their friends to TusenFryd. Shared bus transport from Kongsberg; register by 20 September.",
+          "body": [
+            "Fr. Trym invites children in the parish and their friends to a day at TusenFryd on Saturday 26 September 2026.",
+            {
+              "style": "h2",
+              "text": "Programme"
+            },
+            "09:00: Mass at St. Barbara Church.",
+            "09:30: Departure from Kongsberg by shared bus.",
+            "11:00: You can also meet the group at TusenFryd.",
+            "18:30: Return to Kongsberg.",
+            "TusenFryd is open from 11:00 to 17:00.",
+            {
+              "style": "h2",
+              "text": "What to bring"
+            },
+            "Bring your own food and drinks for the whole day, and dress for the weather.",
+            {
+              "style": "h2",
+              "text": "Registration"
+            },
+            "Registration deadline: 20 September. Use the registration link below."
+          ],
+          "links": [
+            {
+              "label": "Register for the trip",
+              "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUQ1BIREhMV0lZMUkyWUNFSFM0Q01WWkxITy4u&origin=QRCode"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
