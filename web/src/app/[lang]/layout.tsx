@@ -44,7 +44,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: t(
       "St. Barbara katolske menighet i Kongsberg. Messetider for Kongsberg, Notodden, Rjukan og Mo, katekese, sakramenter og menighetsliv.",
     ),
-    openGraph: { locale: locale === "en" ? "en_GB" : "nb_NO" },
+    openGraph: {
+      locale: locale === "en" ? "en_GB" : "nb_NO",
+      images: [{ url: "/parish-share.png", width: 1200, height: 630, alt: "St. Barbara menighet, Kongsberg" }],
+    },
+    twitter: { card: "summary_large_image", images: ["/parish-share.png"] },
   };
 }
 
