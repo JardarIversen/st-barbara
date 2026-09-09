@@ -218,7 +218,7 @@ export default async function Home() {
               {t("Alle innlegg →")}
             </Link>
           </div>
-          <div className="mt-7 grid gap-x-7 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-7 grid items-start gap-x-10 gap-y-7 md:grid-cols-2">
             {articles.map((article) => (
               <ArticleCard key={article._id} article={article} />
             ))}
