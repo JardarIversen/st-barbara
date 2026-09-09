@@ -23,7 +23,7 @@ Denne ordlisten styrer agentens redaksjonelle oversettelser, ikke en automatisk 
 | evangelium | Gospel |
 | kunngjøringer | notices |
 | kirkekaffe | coffee after Mass |
-| p. Trym | Fr Trym |
+| p. (prestetittel foran navn) | Fr |
 
 Behold personnavn, stedsnavn, adresser, datoer, tidspunkter, betalingsinformasjon og lenkemål. Ikke legg til presiseringer som kilden ikke støtter. Kontrollér kirkelige titler, avlysninger og frister særskilt. «Mass» skal aldri bli «fair», og kirkevigsel er ikke en bryllupsfeiring.
 

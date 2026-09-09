@@ -18,7 +18,7 @@ Kilde: [USCCBs RSS og bruksvilkår](https://www.usccb.org/subscribe/rss).
 
 ## Anbefalt neste avgrensning
 
-1. Bekreft med p. Trym hvilken engelsk leksjonaroversettelse menigheten bruker. En vanlig bibel-API er ikke nok til å fastslå den liturgiske teksten, responsene eller valg av utdrag.
+1. Bekreft med menighetens liturgisk ansvarlige hvilken engelsk leksjonaroversettelse menigheten bruker. En vanlig bibel-API er ikke nok til å fastslå den liturgiske teksten, responsene eller valg av utdrag.
 2. Prøv Universalis for dagens/neste søndags lesninger dersom oversettelsen passer. Sammenlign bibelhenvisningene med søndagsbladet; dato alene er ikke nok. Norge står ikke som egen kalender i den publiserte [kalenderlisten](https://universalis.com/n-link.htm).
 3. Bruk en kontrollert ekstern lenke som reserve ved manglende samsvar, gammel dato eller leverandørfeil. Ikke vis dagens tekst på en gammel messe.
 4. Før eventuell lagring i Sanity: avklar gjenbruksrettigheter og utvid datamodellen til å skille norsk kilde fra engelsk lesning, oversettelsesutgave, henvisninger, kilde-URL og kontrollstatus. Ingen kobling til andre messer skal antas.

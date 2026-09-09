@@ -1,6 +1,6 @@
 # Videre arbeid
 
-Forslag og oppgaver som prioriteres sammen med Jardar.
+Forslag og oppgaver for videre utvikling og drift.
 
 ## Innhold
 

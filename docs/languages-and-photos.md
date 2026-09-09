@@ -59,7 +59,7 @@ Originalene er bevart lokalt i `.local/image-originals/` (ikke i git). Webfilene
 - `npm run lint` og `npm run build` i web, `npm run build` i Studio.
 - `node scripts/audit-translations.mjs` i web kontrollerer manglende og foreldede publiserte Sanity-oversettelser.
 - Visuell kontroll på desktop og 390 px mobil: språkvelger, kalender, filter, detaljside og vigselsbilder.
-- Publisering av Studio/kode gjøres først etter godkjenning. Ukentlig PDF-import følger fortsatt den særskilt autoriserte arbeidsflyten i AGENTS.md.
+- Publiseringsrutinen for ukentlig PDF-import er beskrevet i AGENTS.md.
 
 
 Lokalt må nettadressen være tillatt som Sanity Live-origin for at automatisk oppdatering skal fungere. Kontroller tillatte domener og live-oppdatering ved endringer i hostingoppsettet.

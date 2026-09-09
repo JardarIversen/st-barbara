@@ -1,9 +1,9 @@
-# Sanity Clean Content Studio
+# St. Barbara – Sanity Studio
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+Selvstendig innholdsredigering for Sanity-prosjekt `2jd536j2`, datasett `production`.
 
-Now you can do the following things:
+Kjør `npm install` og `npm run dev` i denne mappen for å åpne Studio lokalt.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the Sanity community](https://www.sanity.io/community/join?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+Skjemaene ligger i `schemaTypes/`. Importverktøy og manifester ligger i `scripts/`.
+
+Se [prosjektdokumentasjonen](../README.md) og [arbeidsflyten for søndagsblad](../AGENTS.md) for innholdsmodell, oversettelser og publisering.
