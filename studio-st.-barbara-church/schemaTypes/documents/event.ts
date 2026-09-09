@@ -156,6 +156,26 @@ export const event = defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'promotionFrom',
+      title: 'Fremhev fra',
+      description: 'Valgfri periode under Kunngjøringer. Uten periode vises hendelser med påmeldingsfrist automatisk frem til fristen.',
+      type: 'datetime',
+      validation: (rule) => rule.custom((value, context) =>
+        context.document?.promotionUntil && !value ? 'Velg start for fremhevingen.' : true),
+    }),
+    defineField({
+      name: 'promotionUntil',
+      title: 'Fremhev til',
+      description: 'Perioden erstatter automatisk fremheving. Avlyste, utsatte og avsluttede hendelser vises ikke.',
+      type: 'datetime',
+      validation: (rule) => rule.custom((value, context) => {
+        const from = context.document?.promotionFrom
+        if (from && !value) return 'Velg slutt for fremhevingen.'
+        if (typeof from === 'string' && typeof value === 'string' && new Date(value) <= new Date(from)) return 'Slutt må være etter start.'
+        return true
+      }),
+    }),
+    defineField({
       name: 'links',
       title: 'Lenker',
       type: 'array',

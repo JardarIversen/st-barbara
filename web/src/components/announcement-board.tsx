@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "@/i18n/client";
+import Link from "@/i18n/link";
 
 import ContentLanguage from "./content-language";
 import type { Announcement } from "@/sanity/types";
@@ -30,7 +31,10 @@ export default function AnnouncementBoard({
   limit?: number;
   layout?: "grid" | "list";
 }) {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
+  const formatDate = (value: string) => new Intl.DateTimeFormat(locale, {
+    day: "numeric", month: "long", timeZone: "Europe/Oslo",
+  }).format(new Date(value));
   if (!items.length) {
     return (
       <p className="border-t border-border py-5 text-sm text-muted-foreground">
@@ -65,9 +69,19 @@ export default function AnnouncementBoard({
               <ContentLanguage
                 original={item.originalFields?.includes("title")}
               >
-                {item.title}
+                {item.eventSlug ? (
+                  <Link href={`/messetider/${item.eventSlug}`} className="underline-offset-4 hover:underline">
+                    {item.title}
+                  </Link>
+                ) : item.title}
               </ContentLanguage>
             </h3>
+            {item.eventStartsAt && (
+              <p className="mt-2 text-sm text-primary">
+                {formatDate(item.eventStartsAt)}
+                {item.registrationDeadline && <> · {t("Påmeldingsfrist")}: {formatDate(item.registrationDeadline)}</>}
+              </p>
+            )}
             {text && (
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 <ContentLanguage

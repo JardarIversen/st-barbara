@@ -108,6 +108,9 @@ export type Announcement = {
   lastMentionedAt?: string;
   appliesFrom?: string;
   appliesUntil?: string;
+  eventStartsAt?: string;
+  eventSlug?: string;
+  registrationDeadline?: string;
   summary?: string;
   body: PortableTextBlock[];
   places?: Place[];

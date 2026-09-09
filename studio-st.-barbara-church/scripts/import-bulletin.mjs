@@ -263,6 +263,8 @@ for (const item of manifest.events ?? []) {
     body: toPortableText(item.body, item.sourceKey),
     language: item.language,
     registrationDeadline: item.registrationDeadline,
+    promotionFrom: item.promotionFrom,
+    promotionUntil: item.promotionUntil,
     links: toLinks(item.links, item.sourceKey),
     sourceBulletins: await sourceBulletinReferences(
       existing,

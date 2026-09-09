@@ -823,7 +823,8 @@
     {
       "sourceKey": "announcement:communion-one-kind-sundays-2026",
       "title": "Kommunionsutdeling på søndager fra august",
-      "status": "active",
+      "status": "resolved",
+      "appliesUntil": "2026-08-31T23:59:59+02:00",
       "priority": "important",
       "publishedAt": "2026-04-12T08:00:00+02:00",
       "lastMentionedAt": "2026-04-19T08:00:00+02:00",
@@ -1021,7 +1022,7 @@
     {
       "sourceKey": "announcement:rjukan-property-transition-2026",
       "title": "Endringer for kapellet på Rjukan",
-      "status": "active",
+      "status": "resolved",
       "priority": "important",
       "publishedAt": "2026-06-14T08:00:00+02:00",
       "summary": "Eiendommen på Rjukan er solgt; nytt messested blir kunngjort før oppstarten høsten 2026.",

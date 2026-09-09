@@ -124,9 +124,14 @@ export const PARISH_PLACES_QUERY = defineQuery(/* groq */ `
 
 export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
   *[
-    _type == "announcement" &&
-    status == "active" &&
-    (!defined(appliesUntil) || appliesUntil >= $now)
+    (_type == "announcement" &&
+      status == "active" &&
+      (!defined(appliesUntil) || appliesUntil >= $now)) ||
+    (_type == "event" && status == "scheduled" && defined(slug.current) &&
+      coalesce(endsAt, startsAt) >= $now && (
+        (!defined(promotionFrom) && !defined(promotionUntil) && registrationDeadline >= $now) ||
+        (promotionFrom <= $now && promotionUntil >= $now)
+      ))
   ] | order(lastMentionedAt desc, publishedAt desc) {
     _id,
     sourceKey,
@@ -139,8 +144,18 @@ export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
     lastMentionedAt,
     appliesFrom,
     appliesUntil,
+    _type == "event" => {
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": coalesce((sourceBulletins[]-> | order(issueDate asc))[0].publishedAt, _createdAt),
+      "lastMentionedAt": coalesce((sourceBulletins[]-> | order(issueDate desc))[0].publishedAt, _createdAt),
+      "appliesUntil": coalesce(promotionUntil, registrationDeadline),
+      "registrationDeadline": registrationDeadline,
+      "eventStartsAt": startsAt,
+      "eventSlug": slug.current
+    },
     summary,
-    body,
+    "body": coalesce(body, []),
     places[]->${placeProjection},
     relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},

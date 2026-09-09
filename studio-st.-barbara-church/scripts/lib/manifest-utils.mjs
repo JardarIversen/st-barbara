@@ -88,6 +88,13 @@ export function validateManifest(manifest, baseDirectory) {
   }
 
   for (const event of manifest.events ?? []) {
+    if (event.promotionFrom || event.promotionUntil) {
+      const from = Date.parse(event.promotionFrom)
+      const until = Date.parse(event.promotionUntil)
+      if (!Number.isFinite(from) || !Number.isFinite(until) || until <= from) {
+        errors.push(`Hendelsen ${event.sourceKey} må ha gyldig start og slutt for fremheving.`)
+      }
+    }
     if (!event.title || !event.startsAt)
       errors.push(`Hendelsen ${event.sourceKey} mangler tittel/start.`)
     if (event.endsAt && event.endsAt < event.startsAt) {

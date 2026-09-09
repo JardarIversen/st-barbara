@@ -1,60 +1,32 @@
-# St. Barbara menighet – nettside
+# St. Barbara menighet
 
-Ny nettside for St. Barbara katolske menighet i Kongsberg (erstatter
-WordPress-siden på kongsberg.katolsk.no).
+Nettside for St. Barbara katolske menighet i Kongsberg, Notodden, Rjukan og Mo.
 
 ## Kjøre lokalt
 
-```bash
-cd web
-npm install
-npm run dev
-```
+Kjør `npm install` og `npm run dev` i `web/`. Åpne http://localhost:3000.
+Sanity Studio kjøres separat med de samme kommandoene i `studio-st.-barbara-church/`.
 
-Åpne [http://localhost:3000](http://localhost:3000).
+## Innhold og struktur
 
-Sanity Studio kjøres separat:
+- `web/`: Next.js-nettsiden med norske og engelske sider.
+- `studio-st.-barbara-church/`: Sanity Studio, skjemaer og importverktøy.
+- Sanity-prosjekt `2jd536j2`, datasett `production`: steder, messeplaner, avvik, hendelser, kunngjøringer, innlegg, messetekster og søndagsblader.
+- `web/public/images/`: bilder til sidene.
+- `AGENTS.md`: arbeidsflyt for ukentlig PDF-import, kildekontroll og oversettelser.
 
-```bash
-cd studio-st.-barbara-church
-npm install
-npm run dev
-```
+Kalenderen beregner messer fra faste planer. Søndagsbladet er autoriteten for datoene det dekker; avvik lagres separat. Hendelser med påmeldingsfrist vises også under Kunngjøringer frem til fristen. En valgfri fremhevingsperiode på hendelsen overstyrer denne automatikken. Begge visningene bruker samme dokument.
 
-## Struktur
+## Språk og design
 
-- `web/` – Next.js-nettsiden
-- `studio-st.-barbara-church/` – standalone Sanity Studio
-- `ROADMAP.md` – innhold, migrering og lansering
+Norsk (`/nb`) og kontrollert engelsk (`/en`) deler Sanity-dokumenter. Redaksjonelle oversettelser ligger i Sanity; faste grensesnitttekster ligger i `web/src/i18n/en.json`. Språkvelgeren har 30 språk med flagg og søk. Øvrige språk oversettes fra engelsk med Google Translate.
 
-## Hvor innholdet bor
+Felles designtokens ligger i `web/src/app/globals.css`. Se [designsystemet](docs/design-system.md), [språk og bilder](docs/languages-and-photos.md) og [lesningskilder](docs/reading-sources.md).
 
-Sanity Studio er opprettet, men innholdsmodellen er ikke definert ennå. Dagens
-innhold redigeres fortsatt i Next.js-koden:
+## Kontroll og publisering
 
-- `web/src/lib/parish.ts` – kontaktinfo, messetider for alle fire steder,
-  prester, søndagsblad-lenker
-- `web/src/lib/posts.ts` – innlegg/nyheter (legg til et nytt objekt i
-  `posts`-arrayet for å publisere)
-- `web/public/images/` – bilder (hentet fra menighetens egen mediebank)
-- Sidene ligger i `web/src/app/` (messetider, om, katekese, innlegg,
-  donasjoner, kontakt)
+Kjør `npm run test`, `npm run lint` og `npm run build` i `web/`. Studio har `npm run lint`, `npm run typecheck` og `npm run build`.
 
-## Designsystem
+GitHub-grenen `main` publiseres automatisk til Vercel. Studio publiseres separat med `npm run deploy`. Sanity-innhold publiseres direkte; ved forsinket visning kontrolleres nettsidens hurtigbuffer.
 
-- Skrift: Cormorant Garamond (display) + Inter (brødtekst), via `next/font`
-- Farger: definert i `web/src/app/globals.css` (`@theme`-blokken) – papir/krem,
-  blekksvart, burgunder og gull
-- Gjenkjennelig motiv: buede bilderammer (`rounded-t-full`) som ekko av
-  kirkens gotiske vinduer
-
-## Språk
-
-Språkvelgeren i toppen bruker Google Translate (cookie-basert, uten
-banner). Norsk er kildespråket; EN/PL/ES/VI/UK oversettes maskinelt.
-
-## Status
-
-Dette er en forhåndsvisning («preview for p. Trym»). Alt som er bevisst
-utsatt – innhold, migrering, lansering og drift – står prioritert i
-[ROADMAP.md](ROADMAP.md).
+Se [veikartet](ROADMAP.md) for videre arbeid.
