@@ -80,5 +80,5 @@ Tillatte verdier:
 - En nyere korrigert utgave med samme dato vinner, men tidligere PDF beholdes i revisjonshistorikken.
 - Ved konflikt mellom fast plan og søndagsblad: behold planen og lag `massException` med bladet som kilde.
 - Gjengi navn, klokkeslett, steder, språk, frister og avlysninger nøyaktig. Ikke anta at tekst til norsk kl. 11-messe gjelder andre messer.
-- Lag kort tidslinjetekst i `summary`, full offentlig forklaring i `body`, og behold alltid PDF-en som etterprøvbar kilde.
+- Lag kort forhåndsvisning i `summary`: 1–2 korte setninger, anbefalt 20–40 ord, også på engelsk. Fortell hvem saken gjelder og hvorfor den er relevant. Ikke gjenta dato eller påmeldingsfrist som vises separat, og ikke legg program, pakkeliste eller hele innholdet her. Hendelser under Kunngjøringer bruker `summary`; full offentlig forklaring og program hører til `body` på hendelsessiden. Selvstendige kunngjøringer uten detaljside må fortsatt ha nok informasjon til å forstå og handle på saken. Behold alltid PDF-en som etterprøvbar kilde når innholdet kommer fra et søndagsblad.
 - Før ferdigmelding: sjekk visuelt PDF mot de importerte datoene, kjør verifikasjon, og oppgi hva som ble opprettet, oppdatert eller avklart.
