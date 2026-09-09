@@ -137,12 +137,11 @@ export default async function CalendarDetailPage({
               ? item.places.map((place) => (
                   <span
                     key={place._id}
-                    translate="no"
-                    className="notranslate block"
+                    className="mb-3 flex flex-col gap-1 last:mb-0"
                   >
-                    {place.name}
+                    <span translate="no" className="notranslate font-display text-xl font-semibold leading-snug">{place.name}</span>
                     {place.streetAddress && (
-                      <span className="block text-muted-foreground">
+                      <span translate="no" className="notranslate block text-muted-foreground">
                         {place.streetAddress}
                         {place.locality
                           ? `, ${place.postalCode ?? ""} ${place.locality}`
@@ -154,7 +153,7 @@ export default async function CalendarDetailPage({
                         href={place.mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary underline-offset-2 hover:underline"
+                        className="focus-ring mt-1 w-fit rounded-sm font-sans text-sm text-primary underline-offset-2 hover:underline"
                       >
                         {t("Vis kart")}
                       </a>

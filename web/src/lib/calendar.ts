@@ -313,7 +313,8 @@ function massItem(
   const slug = occurrenceSlug(schedule.sourceKey, occurrenceDate);
   const changedTime =
     new Date(startsAt).getTime() !== new Date(originalStartsAt).getTime();
-  const changedPlace = place?._id !== schedule.place?._id;
+  const changedPlace = place?._id !== schedule.place?._id &&
+    placeFilterKey(place) !== placeFilterKey(schedule.place);
 
   return {
     id: `${schedule.sourceKey}:${occurrenceDate}`,

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:notodden-sun-nb-2026-09-13",
+      "scheduleKey": "mass-schedule:notodden:sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-09-13",
+      "newStartsAt": "2026-09-13T17:00:00+02:00",
+      "newEndsAt": "2026-09-13T18:00:00+02:00",
+      "newPlaceKey": "place:heddal-stavkirke",
+      "titleOverride": "Messe i Heddal stavkirke",
+      "publicNote": "Denne søndagen feires messen i Heddal stavkirke i Notodden.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-06"
+      ],
+      "translations": {
+        "en": {
+          "titleOverride": "Mass at Heddal Stave Church",
+          "publicNote": "This Sunday, Mass is celebrated at Heddal Stave Church in Notodden."
+        }
+      }
+    }
+  ]
+}

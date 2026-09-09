@@ -21,7 +21,7 @@ test("a moved mass keeps its parish filter, shows its actual venue, and stays a 
   assert.equal(items.length, 2);
   assert.equal(moved.place._id, "heddal");
   assert.ok(moved.regionKeys.includes("notodden"));
-  assert.equal(moved.changeLabel, "Annet sted");
+  assert.equal(moved.changeLabel, undefined);
   assert.equal(calendarTitle(moved), "Messe");
   assert.equal(moved.dateKey, "2026-09-13");
 });
