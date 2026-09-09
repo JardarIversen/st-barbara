@@ -9,6 +9,7 @@ import SanityImage from "@/components/sanity-image";
 import SourceBulletins from "@/components/source-bulletins";
 import { formatArticleDate } from "@/lib/calendar";
 import { getArticle } from "@/sanity/data";
+import { isArticlePdf } from "@/lib/article-pdf";
 
 // Locale and canonical URLs depend on request headers, as on the other pages.
 // Do not opt this route into static fallback rendering with generateStaticParams.
@@ -98,11 +99,24 @@ export default async function ArticlePage({
               rel="noopener noreferrer"
               className={buttonVariants()}
             >
-              {link.label}
+              {isArticlePdf(link.url) ? t("Åpne PDF i ny fane") : link.label}
             </a>
           ))}
         </div>
       ) : null}
+
+      {article.links?.filter((link) => isArticlePdf(link.url)).map((link) => (
+        <section key={link._key} aria-label={link.label} className="mt-6">
+          <iframe
+            src={`${link.url.split("#")[0]}#view=FitH&navpanes=0`}
+            title={`${article.title} – PDF`}
+            className="h-[75svh] min-h-96 w-full rounded-sm border border-border bg-muted"
+          />
+          <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+            {t("Hvis PDF-en ikke vises i nettleseren din, bruk knappen over for å åpne den i en ny fane.")}
+          </p>
+        </section>
+      ))}
 
       <SourceBulletins bulletins={article.sourceBulletins} />
       <div className="mt-14 border-t border-border pt-6">
