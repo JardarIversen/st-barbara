@@ -18,6 +18,12 @@ export const article = defineType({
   fields: [
     sourceKeyField,
     defineField({
+      name: 'pagePath', title: 'Vis på egen side', type: 'string',
+      description: 'Når innlegget har en egen informasjonsside, lenker alle oversikter direkte dit.',
+      options: {list: [{title: 'Katekese', value: '/katekese'}]},
+    }),
+    defineField({name: 'catechesis', title: 'Katekese', type: 'catechesisProgram', hidden: ({document}) => document?.pagePath !== '/katekese'}),
+    defineField({
       name: 'title',
       title: 'Tittel',
       type: 'string',

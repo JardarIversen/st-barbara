@@ -6,13 +6,13 @@ import { toPlainText } from "next-sanity";
 import ContentLanguage from "@/components/content-language";
 import PortableContent from "@/components/portable-content";
 import { splitPortableSections } from "@/lib/portable-sections";
-import { getArticleBySourceKey } from "@/sanity/data";
-
-const CONTENT_KEY = "article:catechesis-registration-2026-06-11";
+import { getArticleByPagePath } from "@/sanity/data";
+import CatechesisProgram from "@/components/catechesis-program";
+import { connection } from "next/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
-  const content = await getArticleBySourceKey(CONTENT_KEY);
+  const content = await getArticleByPagePath("/katekese");
   return {
     title: content?.title ?? t("Katekese"),
     description: content?.summary,
@@ -20,16 +20,17 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function KatekesePage() {
+  await connection();
   const { t } = await getTranslations();
-  const content = await getArticleBySourceKey(CONTENT_KEY);
+  const content = await getArticleByPagePath("/katekese");
   if (!content) notFound();
   const { introduction, sections } = splitPortableSections(content.body);
   const originalBody = content.originalFields?.includes("body");
 
   return (
     <>
-      <div className="mx-auto max-w-6xl px-5 py-16 lg:py-20">
-        <h1 className="font-display text-5xl font-medium leading-tight text-foreground">
+      <div className="mx-auto max-w-6xl px-5 py-10 lg:py-12">
+        <h1 className="font-display text-4xl font-medium leading-tight text-foreground sm:text-5xl">
           <ContentLanguage original={content.originalFields?.includes("title")}>
             {content.title}
           </ContentLanguage>
@@ -38,20 +39,27 @@ export default async function KatekesePage() {
           <PortableContent value={introduction} original={originalBody} />
         </div>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2">
-          {sections.map(({ heading, body }) => (
-            <section key={heading._key} className="min-w-0 bg-background p-6 [overflow-wrap:anywhere] sm:p-8">
-              <h2 className="font-display text-2xl font-semibold text-foreground">
-                <ContentLanguage original={originalBody}>
-                  {toPlainText([heading])}
-                </ContentLanguage>
-              </h2>
-              <div className="mt-4 text-sm">
-                <PortableContent value={body} original={originalBody} />
-              </div>
-            </section>
-          ))}
-        </div>
+        {content.catechesis ? (
+          <CatechesisProgram program={content.catechesis} />
+        ) : (
+          <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2">
+            {sections.map(({ heading, body }) => (
+              <section
+                key={heading._key}
+                className="min-w-0 bg-background p-6 [overflow-wrap:anywhere] sm:p-8"
+              >
+                <h2 className="font-display text-2xl font-semibold text-foreground">
+                  <ContentLanguage original={originalBody}>
+                    {toPlainText([heading])}
+                  </ContentLanguage>
+                </h2>
+                <div className="mt-4 text-sm">
+                  <PortableContent value={body} original={originalBody} />
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
       </div>
 
       <section className="border-t border-border bg-muted">

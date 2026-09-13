@@ -1,4 +1,5 @@
 import {getSanityClient} from './lib/sanity-client.mjs'
+import {catechesisErrors} from './lib/catechesis-validation.mjs'
 import {allManifestItems, readManifest, resolveFilePath, sha256File} from './lib/manifest-utils.mjs'
 
 const manifestPath = process.argv.slice(2).find((argument) => !argument.startsWith('--'))
@@ -22,6 +23,7 @@ const counts = Object.fromEntries(types.map((type) => [type, 0]))
 const sourceKeys = new Map()
 
 for (const document of documents) {
+  if (document._type === 'article' && document.catechesis) errors.push(...catechesisErrors(document.catechesis).map(error => `${document.sourceKey}: ${error}`))
   counts[document._type] += 1
   if (!document.sourceKey) {
     warnings.push(`${document._type}/${document._id} mangler sourceKey.`)

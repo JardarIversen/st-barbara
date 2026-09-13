@@ -10,12 +10,17 @@ import {massText} from './documents/massText'
 import {place} from './documents/place'
 import {recurringMassSchedule} from './documents/recurringMassSchedule'
 import {translatedCopy, translationsField} from './objects/translatedCopy'
+import {catechesisProgram, catechesisGroup, catechesisSession, catechesisOffering} from './objects/catechesisProgram'
 
 export const schemaTypes = [
   actionLink,
   bulletinRevision,
   richText,
   translatedCopy,
+  catechesisProgram,
+  catechesisGroup,
+  catechesisSession,
+  catechesisOffering,
   place,
   bulletin,
   article,

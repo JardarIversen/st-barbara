@@ -7,7 +7,7 @@ import ContentLanguage from "./content-language";
 import type { ArticleCard as ArticleCardType } from "@/sanity/types";
 import { formatArticleDate } from "@/lib/calendar";
 import SanityImage from "./sanity-image";
-import { articleListTitle } from "@/lib/article-list";
+import { articleHref, articleListTitle } from "@/lib/article-list";
 
 export default function ArticleCard({ article }: { article: ArticleCardType }) {
   const { locale, t } = useTranslations();
@@ -20,7 +20,7 @@ export default function ArticleCard({ article }: { article: ArticleCardType }) {
       </p>
       <h3 className="mt-1.5 font-display text-2xl font-semibold leading-snug text-foreground">
         <Link
-          href={`/innlegg/${article.slug}`}
+          href={articleHref(article)}
           className="focus-ring rounded-sm underline-offset-4 hover:text-primary hover:underline"
         >
           <ContentLanguage original={article.originalFields?.includes("title")}>

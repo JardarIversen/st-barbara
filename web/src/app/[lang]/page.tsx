@@ -35,6 +35,7 @@ const SACRAMENTS = [
   {
     title: "Første kommunion",
     text: "Barna forberedes gjennom katekesen og mottar kommunionen om våren.",
+    href: "/katekese",
   },
   {
     title: "Konfirmasjon",
@@ -267,7 +268,16 @@ export default async function Home() {
                   className="border-t border-border pt-4"
                 >
                   <dt className="font-display text-xl font-semibold text-foreground">
-                    {t(sacrament.title)}
+                    {sacrament.href ? (
+                      <Link
+                        href={sacrament.href}
+                        className="focus-ring rounded-sm text-primary underline underline-offset-4 hover:text-primary-hover"
+                      >
+                        {t(sacrament.title)} <span aria-hidden>→</span>
+                      </Link>
+                    ) : (
+                      t(sacrament.title)
+                    )}
                   </dt>
                   <dd className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                     {t(sacrament.text)}

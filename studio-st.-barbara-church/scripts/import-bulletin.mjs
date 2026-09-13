@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import {getSanityClient} from './lib/sanity-client.mjs'
 import {prepareTranslations, translationErrors} from './lib/translations.mjs'
 import {patchChangesDocument} from './lib/patch-changes.mjs'
+import {prepareCatechesis} from './lib/catechesis.mjs'
 import {
   readManifest,
   resolveFilePath,
@@ -28,6 +29,10 @@ const {manifest, absolutePath, baseDirectory} = readManifest(manifestPath)
 const validationErrors = validateManifest(manifest, baseDirectory)
 for (const {type, item} of allManifestItems(manifest)) {
   validationErrors.push(...translationErrors(item.translations, type).map(error => `${item.sourceKey}: ${error}`))
+  if (type === 'article' && item.catechesis) {
+    try {prepareCatechesis(item.catechesis, undefined, item.sourceKey)}
+    catch (error) {validationErrors.push(error.message)}
+  }
 }
 
 if (validationErrors.length) {
@@ -367,6 +372,8 @@ for (const item of manifest.articles ?? []) {
     mainImage = null
   }
   await upsert('article', item.sourceKey, {
+    pagePath: item.pagePath,
+    catechesis: prepareCatechesis(item.catechesis, existing?.catechesis, item.sourceKey),
     title: item.title,
     slug: {_type: 'slug', current: item.slug ?? slugify(item.title)},
     articleType: item.articleType ?? 'other',

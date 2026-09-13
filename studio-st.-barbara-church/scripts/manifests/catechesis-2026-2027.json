@@ -10,136 +10,7 @@
       "publishedAt": "2026-06-11T08:00:00+02:00",
       "summary": "Grupper, tider og samlingsdatoer for barn fra 3 til 12 år. Det er fortsatt mulig å spørre om sen påmelding hos kontaktpersonen for barnets aldersgruppe.",
       "body": [
-        "St. Barbara menighet inviterer barn fra 3 til 12 år til katekese.",
-        {
-          "style": "h2",
-          "text": "Barn 3–7 år"
-        },
-        "Katekesen foregår som hovedregel hver lørdag kl. 12.00–14.00 og på onsdager kl. 16.30–17.45, før messen kl. 18.00.",
-        "Familiene deltar så ofte det passer, og bekrefter barnets deltakelse fra gang til gang på Spond.",
-        {
-          "style": "h2",
-          "text": "Barn 7–12 år"
-        },
-        {
-          "style": "h3",
-          "text": "Gruppe 1 – førkommunion og etterkommunion"
-        },
-        "Kl. 11.00–13.30, med messe kl. 11.00. Førkommunionsgruppen forbereder seg til første kommunion i 2028.",
-        {
-          "style": "h3",
-          "text": "Gruppe 2 – kommunion og etterkommunion"
-        },
-        "Kl. 13.00–16.00, med messe kl. 13.00. Første kommunion er planlagt til 29. mai 2027.",
-        {
-          "style": "h2",
-          "text": "Søndager med katekese for 7–12 år"
-        },
-        {
-          "style": "h3",
-          "text": "2026"
-        },
-        "13. og 27. september · 4. oktober · 1., 8. og 22. november · 6. og 13. desember.",
-        {
-          "style": "h3",
-          "text": "2027"
-        },
-        "10. og 24. januar · 7. og 14. februar · 14. mars · 11. og 25. april · 9. og 23. mai.",
-        "Dere får en invitasjon på e-post før samlingene. Bekreft barnets deltakelse når dere blir bedt om det.",
-        {
-          "style": "h2",
-          "text": "Påmelding og kontakt"
-        },
-        "Det er fortsatt mulig å spørre om sen påmelding, men gruppene og antall tilgjengelige plasser er fastsatt. Ta kontakt med den ansvarlige for barnets aldersgruppe.",
-        {
-          "_type": "block",
-          "_key": "karine-contact",
-          "style": "normal",
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "karine-contact-mail",
-              "href": "mailto:Karine.Gallot-Lavallee@katolsk.no"
-            }
-          ],
-          "children": [
-            {
-              "_type": "span",
-              "_key": "karine-contact-label",
-              "text": "Kontakt for barn 3–7 år: Karine Gallot-Lavallée – ",
-              "marks": []
-            },
-            {
-              "_type": "span",
-              "_key": "karine-contact-email",
-              "text": "Karine.Gallot-Lavallee@katolsk.no",
-              "marks": [
-                "karine-contact-mail"
-              ]
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "_key": "katarzyna-contact",
-          "style": "normal",
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "katarzyna-contact-mail",
-              "href": "mailto:Katarzyna.Jachimowicz@katolsk.no"
-            }
-          ],
-          "children": [
-            {
-              "_type": "span",
-              "_key": "katarzyna-contact-label",
-              "text": "Kateketkoordinator og kontakt for barn 7–12 år: Katarzyna Jachimowicz – ",
-              "marks": []
-            },
-            {
-              "_type": "span",
-              "_key": "katarzyna-contact-email",
-              "text": "Katarzyna.Jachimowicz@katolsk.no",
-              "marks": [
-                "katarzyna-contact-mail"
-              ]
-            }
-          ]
-        },
-        {
-          "_type": "block",
-          "_key": "regional-contact",
-          "style": "normal",
-          "markDefs": [
-            {
-              "_type": "link",
-              "_key": "regional-contact-mail",
-              "href": "mailto:Kongsberg@katolsk.no"
-            }
-          ],
-          "children": [
-            {
-              "_type": "span",
-              "_key": "regional-contact-label",
-              "text": "For katekese i Notodden og Rjukan, kontakt pater Trym via ",
-              "marks": []
-            },
-            {
-              "_type": "span",
-              "_key": "regional-contact-email",
-              "text": "Kongsberg@katolsk.no",
-              "marks": [
-                "regional-contact-mail"
-              ]
-            }
-          ]
-        },
-        {
-          "style": "h3",
-          "text": "Voksne – Sycamore"
-        },
-        "Sycamore er ikke aktivt nå. Ta kontakt med menigheten hvis du er interessert i en ny gruppe."
+        "St. Barbara menighet inviterer barn fra 3 til 12 år til katekese."
       ],
       "placeKeys": [
         "place:kongsberg-st-barbara"
@@ -156,139 +27,155 @@
           "category": "Catechesis",
           "summary": "Groups, times and session dates for children aged 3–12. You can still enquire about late registration with the contact for your child's age group.",
           "body": [
-            "St. Barbara Parish welcomes children aged 3–12 to catechesis.",
-            {
-              "style": "h2",
-              "text": "Children aged 3–7"
-            },
-            "Sessions normally take place every Saturday from 12:00 to 14:00 and on Wednesdays from 16:30 to 17:45, before Mass at 18:00.",
-            "Families attend as often as suits them and confirm their child's attendance for each session on Spond.",
-            {
-              "style": "h2",
-              "text": "Children aged 7–12"
-            },
-            {
-              "style": "h3",
-              "text": "Group 1 – before and after First Communion"
-            },
-            "11:00–13:30, beginning with Mass at 11:00. The pre-Communion group is preparing for First Holy Communion in 2028.",
-            {
-              "style": "h3",
-              "text": "Group 2 – First Communion and post-Communion"
-            },
-            "13:00–16:00, beginning with Mass at 13:00. First Holy Communion is planned for 29 May 2027.",
-            {
-              "style": "h2",
-              "text": "Sunday sessions for ages 7–12"
-            },
-            {
-              "style": "h3",
-              "text": "2026"
-            },
-            "13 and 27 September · 4 October · 1, 8 and 22 November · 6 and 13 December.",
-            {
-              "style": "h3",
-              "text": "2027"
-            },
-            "10 and 24 January · 7 and 14 February · 14 March · 11 and 25 April · 9 and 23 May.",
-            "You will receive an email invitation before each session. Please confirm your child's attendance when asked.",
-            {
-              "style": "h2",
-              "text": "Registration and contacts"
-            },
-            "You can still enquire about late registration, but the groups and the number of available places have been set. Please contact the person responsible for your child's age group.",
-            {
-              "_type": "block",
-              "_key": "karine-contact-en",
-              "style": "normal",
-              "markDefs": [
-                {
-                  "_type": "link",
-                  "_key": "karine-contact-en-mail",
-                  "href": "mailto:Karine.Gallot-Lavallee@katolsk.no"
-                }
-              ],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "karine-contact-en-label",
-                  "text": "Contact for ages 3–7: Karine Gallot-Lavallée – ",
-                  "marks": []
-                },
-                {
-                  "_type": "span",
-                  "_key": "karine-contact-en-email",
-                  "text": "Karine.Gallot-Lavallee@katolsk.no",
-                  "marks": [
-                    "karine-contact-en-mail"
-                  ]
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "katarzyna-contact-en",
-              "style": "normal",
-              "markDefs": [
-                {
-                  "_type": "link",
-                  "_key": "katarzyna-contact-en-mail",
-                  "href": "mailto:Katarzyna.Jachimowicz@katolsk.no"
-                }
-              ],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "katarzyna-contact-en-label",
-                  "text": "Catechesis coordinator and contact for ages 7–12: Katarzyna Jachimowicz – ",
-                  "marks": []
-                },
-                {
-                  "_type": "span",
-                  "_key": "katarzyna-contact-en-email",
-                  "text": "Katarzyna.Jachimowicz@katolsk.no",
-                  "marks": [
-                    "katarzyna-contact-en-mail"
-                  ]
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "regional-contact-en",
-              "style": "normal",
-              "markDefs": [
-                {
-                  "_type": "link",
-                  "_key": "regional-contact-en-mail",
-                  "href": "mailto:Kongsberg@katolsk.no"
-                }
-              ],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "regional-contact-en-label",
-                  "text": "For catechesis in Notodden and Rjukan, contact Fr. Trym at ",
-                  "marks": []
-                },
-                {
-                  "_type": "span",
-                  "_key": "regional-contact-en-email",
-                  "text": "Kongsberg@katolsk.no",
-                  "marks": [
-                    "regional-contact-en-mail"
-                  ]
-                }
-              ]
-            },
-            {
-              "style": "h3",
-              "text": "Adults – Sycamore"
-            },
-            "Sycamore is not currently running. Please contact the parish if you are interested in a new group."
+            "St. Barbara Parish welcomes children aged 3–12 to catechesis."
           ],
           "links": []
         }
+      },
+      "pagePath": "/katekese",
+      "catechesis": {
+        "summary": "Det er fortsatt mulig å spørre om sen påmelding, men gruppene og antall tilgjengelige plasser er fastsatt. Ta kontakt med den ansvarlige for barnets aldersgruppe.",
+        "translations": {
+          "en": {
+            "summary": "You can still enquire about late registration, but the groups and the number of available places have been set. Please contact the person responsible for your child's age group."
+          }
+        },
+        "groups": [
+          {
+            "_key": "children-3-7",
+            "title": "Barn 3–7 år",
+            "summary": "Som hovedregel hver uke.",
+            "body": "Familiene deltar så ofte det passer, og bekrefter barnets deltakelse fra gang til gang på Spond.",
+            "translations": {
+              "en": {
+                "title": "Children aged 3–7",
+                "summary": "Normally every week.",
+                "body": "Families attend as often as suits them and confirm their child's attendance for each session on Spond."
+              }
+            },
+            "sessions": [
+              {
+                "_key": "saturday",
+                "title": "Lørdager",
+                "startTime": "12:00",
+                "endTime": "14:00",
+                "translations": {
+                  "en": {
+                    "title": "Saturdays"
+                  }
+                }
+              },
+              {
+                "_key": "wednesday",
+                "title": "Onsdager",
+                "startTime": "16:30",
+                "endTime": "17:45",
+                "massTime": "18:00",
+                "translations": {
+                  "en": {
+                    "title": "Wednesdays"
+                  }
+                }
+              }
+            ],
+            "contact": {
+              "name": "Karine Gallot-Lavallée",
+              "email": "Karine.Gallot-Lavallee@katolsk.no"
+            }
+          },
+          {
+            "_key": "children-7-12",
+            "title": "Barn 7–12 år",
+            "summary": "Samlinger på søndager. Etterkommunionsbarn kan velge mellom de to gruppene.",
+            "body": "Dere får en invitasjon på e-post før samlingene. Bekreft barnets deltakelse når dere blir bedt om det.",
+            "translations": {
+              "en": {
+                "title": "Children aged 7–12",
+                "summary": "Sessions take place on Sundays. Children who have received First Communion can choose either group.",
+                "body": "You will receive an email invitation before each session. Please confirm your child's attendance when asked."
+              }
+            },
+            "sessions": [
+              {
+                "_key": "pre-communion",
+                "title": "Førkommunion",
+                "startTime": "11:00",
+                "endTime": "13:30",
+                "massTime": "11:00",
+                "communionYear": 2028,
+                "translations": {
+                  "en": {
+                    "title": "Pre-Communion"
+                  }
+                }
+              },
+              {
+                "_key": "communion",
+                "title": "Kommunion",
+                "startTime": "13:00",
+                "endTime": "16:00",
+                "massTime": "13:00",
+                "communionDate": "2027-05-29",
+                "translations": {
+                  "en": {
+                    "title": "First Communion"
+                  }
+                }
+              }
+            ],
+            "sessionDates": [
+              "2026-09-13",
+              "2026-09-27",
+              "2026-10-04",
+              "2026-11-01",
+              "2026-11-08",
+              "2026-11-22",
+              "2026-12-06",
+              "2026-12-13",
+              "2027-01-10",
+              "2027-01-24",
+              "2027-02-07",
+              "2027-02-14",
+              "2027-03-14",
+              "2027-04-11",
+              "2027-04-25",
+              "2027-05-09",
+              "2027-05-23"
+            ],
+            "contact": {
+              "name": "Katarzyna Jachimowicz",
+              "email": "Katarzyna.Jachimowicz@katolsk.no"
+            }
+          }
+        ],
+        "otherOfferings": [
+          {
+            "_key": "other-places",
+            "title": "Notodden og Rjukan",
+            "body": "For katekese i Notodden og Rjukan, kontakt pater Trym.",
+            "contact": {
+              "name": "Pater Trym",
+              "email": "Kongsberg@katolsk.no"
+            },
+            "translations": {
+              "en": {
+                "title": "Notodden and Rjukan",
+                "body": "For catechesis in Notodden and Rjukan, contact Fr. Trym."
+              }
+            }
+          },
+          {
+            "_key": "sycamore",
+            "title": "Voksne – Sycamore",
+            "body": "Sycamore er ikke aktivt nå. Ta kontakt med menigheten hvis du er interessert i en ny gruppe.",
+            "translations": {
+              "en": {
+                "title": "Adults – Sycamore",
+                "body": "Sycamore is not currently running. Please contact the parish if you are interested in a new group."
+              }
+            }
+          }
+        ]
       }
     }
   ],

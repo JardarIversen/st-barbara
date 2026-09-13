@@ -196,6 +196,7 @@ export const LATEST_ARTICLES_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && defined(slug.current)]
   | order(publishedAt desc)[0...4] {
     _id,
+    pagePath,
     sourceKey,
     translations,
     title,
@@ -211,6 +212,7 @@ export const LATEST_ARTICLES_QUERY = defineQuery(/* groq */ `
 export const ALL_ARTICLES_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && defined(slug.current)] | order(publishedAt desc) {
     _id,
+    pagePath,
     sourceKey,
     translations,
     title,
@@ -229,6 +231,8 @@ export const ARTICLE_SLUGS_QUERY = defineQuery(/* groq */ `
 
 const articleProjection = /* groq */ `{
     _id,
+    pagePath,
+    catechesis,
     sourceKey,
     translations,
     title,
@@ -249,8 +253,8 @@ export const ARTICLE_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && slug.current == $slug][0] ${articleProjection}
 `);
 
-export const ARTICLE_BY_SOURCE_KEY_QUERY = defineQuery(/* groq */ `
-  *[_type == "article" && sourceKey == $sourceKey][0] ${articleProjection}
+export const ARTICLE_BY_PAGE_PATH_QUERY = defineQuery(/* groq */ `
+  *[_type == "article" && pagePath == $pagePath] | order(publishedAt desc)[0] ${articleProjection}
 `);
 
 export const EVENT_QUERY = defineQuery(/* groq */ `

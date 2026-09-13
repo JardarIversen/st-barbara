@@ -1,4 +1,5 @@
 import type { PortableTextBlock } from "next-sanity";
+import type { CatechesisProgram } from "@/lib/catechesis";
 
 export type SanityImageValue = {
   assetRef: string;
@@ -120,6 +121,7 @@ export type Announcement = {
 };
 
 export type ArticleCard = {
+  pagePath?: string;
   originalFields?: string[];
   _id: string;
   sourceKey: string;
@@ -133,6 +135,7 @@ export type ArticleCard = {
 };
 
 export type Article = ArticleCard & {
+  catechesis?: CatechesisProgram;
   body: PortableTextBlock[];
   places?: Place[];
   relatedEvents?: Array<{ title: string; slug: string }>;

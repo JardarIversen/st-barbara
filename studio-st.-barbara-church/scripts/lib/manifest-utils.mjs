@@ -1,6 +1,7 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
+import {catechesisErrors} from './catechesis-validation.mjs'
 
 const COLLECTIONS = [
   ['bulletins', 'bulletin'],
@@ -152,6 +153,8 @@ export function validateManifest(manifest, baseDirectory) {
   }
 
   for (const article of manifest.articles ?? []) {
+    errors.push(...catechesisErrors(article.catechesis).map(error => `${article.sourceKey}: ${error}`))
+    if (article.pagePath != null && article.pagePath !== '/katekese') errors.push('pagePath må være /katekese eller utelatt.')
     if (!article.title || !article.publishedAt || !article.body) {
       errors.push(`Artikkelen ${article.sourceKey} mangler tittel, publiseringsdato eller innhold.`)
     }

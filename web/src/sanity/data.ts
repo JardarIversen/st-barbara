@@ -8,7 +8,7 @@ import {
   ANNOUNCEMENTS_BY_BULLETINS_QUERY,
   ALL_ARTICLES_QUERY,
   ARTICLE_QUERY,
-  ARTICLE_BY_SOURCE_KEY_QUERY,
+  ARTICLE_BY_PAGE_PATH_QUERY,
   ARTICLE_SLUGS_QUERY,
   CALENDAR_DATA_QUERY,
   EVENT_QUERY,
@@ -114,11 +114,11 @@ export const getArticle = cache(async (slug: string) => {
   return localizeContent(data, await getLocale()) as Article | null;
 });
 
-export const getArticleBySourceKey = cache(async (sourceKey: string) => {
+export const getArticleByPagePath = cache(async (pagePath: string) => {
   const { data } = await sanityFetch({
     ...published,
-    query: ARTICLE_BY_SOURCE_KEY_QUERY,
-    params: { sourceKey },
+    query: ARTICLE_BY_PAGE_PATH_QUERY,
+    params: { pagePath },
   });
   return localizeContent(data, await getLocale()) as Article | null;
 });

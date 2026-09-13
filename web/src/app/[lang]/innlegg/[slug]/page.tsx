@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Link from "@/i18n/link";
 import { buttonVariants } from "@/components/ui/button";
 import ContentLanguage from "@/components/content-language";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
+import { articlePagePath } from "@/lib/article-list";
+import { localizedPath } from "@/i18n/config";
 import PortableContent from "@/components/portable-content";
 import SanityImage from "@/components/sanity-image";
 import SourceBulletins from "@/components/source-bulletins";
@@ -32,6 +34,8 @@ export default async function ArticlePage({
   const { locale, t } = await getTranslations();
   const article = await getArticle((await params).slug);
   if (!article) notFound();
+  const pagePath = articlePagePath(article);
+  if (pagePath) permanentRedirect(localizedPath(pagePath, locale));
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
