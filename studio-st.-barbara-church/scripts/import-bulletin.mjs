@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import {getSanityClient} from './lib/sanity-client.mjs'
 import {prepareTranslations, translationErrors} from './lib/translations.mjs'
+import {patchChangesDocument} from './lib/patch-changes.mjs'
 import {
   readManifest,
   resolveFilePath,
@@ -102,8 +103,10 @@ async function upsert(type, sourceKey, fields) {
     Object.fromEntries(Object.entries(fields).filter(([, value]) => value !== null)),
   )
   let document
-  if (existing) {
-    let patch = client.patch(existing._id).set(cleanFields)
+  if (existing && !patchChangesDocument(existing, cleanFields, fieldsToUnset)) {
+    document = existing
+  } else if (existing) {
+    let patch = client.patch(existing._id).ifRevisionId(existing._rev).set(cleanFields)
     if (fieldsToUnset.length) patch = patch.unset(fieldsToUnset)
     document = await patch.commit({autoGenerateArrayKeys: true})
   } else {

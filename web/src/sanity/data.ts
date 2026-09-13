@@ -8,6 +8,7 @@ import {
   ANNOUNCEMENTS_BY_BULLETINS_QUERY,
   ALL_ARTICLES_QUERY,
   ARTICLE_QUERY,
+  ARTICLE_BY_SOURCE_KEY_QUERY,
   ARTICLE_SLUGS_QUERY,
   CALENDAR_DATA_QUERY,
   EVENT_QUERY,
@@ -109,6 +110,15 @@ export const getArticle = cache(async (slug: string) => {
     ...published,
     query: ARTICLE_QUERY,
     params: { slug },
+  });
+  return localizeContent(data, await getLocale()) as Article | null;
+});
+
+export const getArticleBySourceKey = cache(async (sourceKey: string) => {
+  const { data } = await sanityFetch({
+    ...published,
+    query: ARTICLE_BY_SOURCE_KEY_QUERY,
+    params: { sourceKey },
   });
   return localizeContent(data, await getLocale()) as Article | null;
 });

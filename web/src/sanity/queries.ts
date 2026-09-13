@@ -227,8 +227,7 @@ export const ARTICLE_SLUGS_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && defined(slug.current)]{"slug": slug.current}
 `);
 
-export const ARTICLE_QUERY = defineQuery(/* groq */ `
-  *[_type == "article" && slug.current == $slug][0] {
+const articleProjection = /* groq */ `{
     _id,
     sourceKey,
     translations,
@@ -244,7 +243,14 @@ export const ARTICLE_QUERY = defineQuery(/* groq */ `
     relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},
     sourceBulletins[]->${bulletinProjection}
-  }
+  }`;
+
+export const ARTICLE_QUERY = defineQuery(/* groq */ `
+  *[_type == "article" && slug.current == $slug][0] ${articleProjection}
+`);
+
+export const ARTICLE_BY_SOURCE_KEY_QUERY = defineQuery(/* groq */ `
+  *[_type == "article" && sourceKey == $sourceKey][0] ${articleProjection}
 `);
 
 export const EVENT_QUERY = defineQuery(/* groq */ `
