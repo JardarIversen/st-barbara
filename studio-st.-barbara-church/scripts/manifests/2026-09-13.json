@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-09-13",
+      "issueDate": "2026-09-13",
+      "publishedAt": "2026-09-11T12:20:39+02:00",
+      "coversFrom": "2026-09-13",
+      "coversUntil": "2026-09-20",
+      "pdfPath": "../../../.local/bulletin-2026-09-13/source.pdf"
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [],
+  "announcements": [
+    {
+      "sourceKey": "announcement:nuk-no-masses-2026",
+      "title": "Ingen messer 28. og 29. august",
+      "status": "resolved",
+      "priority": "urgent",
+      "publishedAt": "2026-08-16T08:00:00+02:00",
+      "lastMentionedAt": "2026-08-23T08:00:00+02:00",
+      "appliesUntil": "2026-08-29T23:59:00+02:00",
+      "body": [
+        "Det feires ikke messer i St. Barbara 28. og 29. august fordi p. Trym er på Mariaholm for Norges Unge Katolikkers landsmøte."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:mariaholm"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23"
+      ],
+      "translations": {
+        "en": {
+          "title": "No Masses on 28 and 29 August",
+          "body": "There are no Masses at St. Barbara on 28 and 29 August because Fr. Trym is attending the Norwegian Catholic Youth national meeting at Mariaholm."
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-09-16",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-16",
+      "publicNote": "De hellige Kornelius og Kyprian. Rosenkrans for kvinnegruppen etter messen.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-13"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saints Cornelius and Cyprian. Women's group Rosary after Mass.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-09-17",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-17",
+      "publicNote": "Den hellige Robert Bellarmin. Tilbedelse og skriftemål fra kl. 17.15.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-13"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Robert Bellarmine. Adoration and confession from 17:15.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-09-18",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-18",
+      "publicNote": "Skriftemål fra kl. 17.00.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-13"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Confession from 17:00.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-09-19",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-19",
+      "publicNote": "Messe med dåp.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-13"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass with baptism.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-09-13:kongsberg:nb:1100",
+      "title": "24. søndag i det alminnelige kirkeår",
+      "massDate": "2026-09-13",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-09-13",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Sir 27, 30 – 28, 7"
+        },
+        "Hevntørst og vrede hater jeg, bare synderen holder fast ved dem. Den som hevner seg, skal møte Herrens hevn; hans synder skal ikke bli glemt. Tilgi din neste den urett han har gjort, så skal dine synder bli tilgitt når du ber. Hvordan kan du vente legedom fra Herren dersom du holder fast på vreden mot din neste? Hvordan kan du be om tilgivelse for dine egne synder dersom du ikke viser barmhjertighet mot et menneske som er lik deg selv? Når en som selv er dødelig ikke vil oppgi hevnen, hvem skal da skaffe ham soning for hans synder? Tenk på din siste stund og la fiendskapet fare, tenk på forgjengelighet og død og hold budene. Tenk på budene og bær ikke nag til din neste, tenk på den Høyestes pakt og bær over med andres feil.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        "℟ Nådig og barmhjertig er Herren, langmodig og rik på miskunn Min sjel, min sjel, lov Herren, og alt hva i meg er, love hans hellige navn. Min sjel, min sjel, lov Herren, glem ikke alle hans velgjerninger, ℟ han som forlater alle dine synder, som leger alle dine sår, han som løser ditt liv fra graven, som kroner deg med miskunn og barmhjertighet. ℟ Han går ikke i rette for alltid og er ikke evig harm. Han gjør ikke med oss etter våre synder og gjengjelder ikke våre misgjerninger. ℟ Så høy som himmelen er over jorden, så stor er hans nåde mot dem som frykter ham. Så langt som østen er fra vesten, skiller han oss fra våre synder. ℟",
+        {
+          "style": "h2",
+          "text": "2. lesning – Rom 14, 7–9"
+        },
+        "Brødre, ingen av oss lever for seg selv alene, som heller ingen er alene med sin død. Lever vi, så lever vi for Herren, og dør vi, dør vi for Herren; i livet som i døden hører vi altså Herren til. Derfor var det Kristus døde og fikk liv på ny, for å være både de levendes og de dødes Herre.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        "℟ Allelúia. ℣ Et nytt bud gir jeg dere, sier Herren. Dere skal elske hverandre som jeg har elsket dere. ℟ Allelúia.",
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 18, 21–35"
+        },
+        "På den tid kom Peter bort til Jesus og spurte: «Herre, hvor mange ganger er jeg forpliktet til å tilgi en bror som krenker meg? Like til syv ganger?» Jesus sier: «Til det svarer jeg: Ikke syv, men syvogsytti. Og således kan himlenes rike lignes med en konge, som ville gjøre opp sitt regnskap med sine embedsmenn. Oppgjøret begynte, og en som skyldte ham ti tusen talenter, ble ført frem. Han hadde ikke noe å betale med, og derfor befalte hans herre at han skulle selges, med kone og barn og alt han eide, så gjelden kunne bli betalt. Da kastet embedsmannen seg i støvet for ham og bad: ‘Gi meg bare henstand, så skal jeg betale deg alt sammen.’ Hans herre syntes synd på ham og lot ham gå, og ettergav ham til og med gjelden. Men idet embedsmannen gikk ut, kom han over en kollega, som skyldte ham hundre denarer. Dermed grep han ham i strupen og sa: ‘Betal det du skylder!’ Den annen falt ned for ham og bønnfalt ham: ‘Gi meg bare henstand, så skal jeg betale deg!’ Men han ville ikke; tvert imot, han drog av gårde til fengslet med ham, og der skulle han sitte inntil han hadde betalt det han skyldte. Da hans kolleger så hva som gikk for seg, ble de opprørt og gikk og fortalte sin herre det hele. Og hans herre lot ham kalle til seg og sa til ham: ‘Du slyngel! Alt det du skyldte, ettergav jeg deg fordi du bad meg om det. Jeg viste deg barmhjertighet; burde ikke da også du ha vist barmhjertighet mot din kollega?’ Og full av vrede lot han bøddelknektene ta seg av ham, inntil han hadde betalt alt han skyldte. – Og slik kommer min himmelske Far til å gjøre med dere, dersom ikke hver enkelt av hjertet tilgir sin bror.»"
+      ]
+    }
+  ],
+  "articles": []
+}
