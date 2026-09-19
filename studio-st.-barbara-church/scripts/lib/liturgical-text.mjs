@@ -45,9 +45,14 @@ export function liturgicalParagraph(item) {
     ]}
   }
   if (item?.type === 'acclamation') {
-    const verse = `℣ ${item.lines.join('\n')}`
-    const text = item.response ? `℟ ${item.response} ${verse} ℟ ${item.response}` : verse
-    return {style: 'acclamation', spans: [{text, marks: ['strong', 'em']}]}
+    const cue = text => ({text, marks: ['strong', 'em']})
+    const text = text => ({text, marks: ['em']})
+    return {style: 'acclamation', spans: [
+      ...(item.response ? [cue('℟'), text(` ${item.response} `)] : []),
+      cue('℣'),
+      text(` ${item.lines.join('\n')}`),
+      ...(item.response ? [text(' '), cue('℟'), text(` ${item.response}`)] : []),
+    ]}
   }
 }
 

@@ -38,15 +38,20 @@ test('psalm renders a bold italic refrain and one bold response on a new line pe
   assert.equal((html.match(/℟/gu) ?? []).length, 3);
 });
 
-test('gospel acclamation is centered, bold italic, with source line breaks and automatic cues', () => {
+test('gospel acclamation is centered and italic with only the automatic cues in bold', () => {
   const html = render([{ type: 'acclamation', response: 'Allelúia.', lines: [
     'Herre, gjør våre hjerter åpne', 'for din Sønns ord.',
   ] }]);
-  assert.match(html, /<p class="text-center [^"]*"><strong><em>℟ Allelúia\. ℣ Herre, gjør våre hjerter åpne<br\/>for din Sønns ord\. ℟ Allelúia\.<\/em><\/strong><\/p>/);
+  assert.match(html, /<p class="text-center /);
+  assert.match(html, /<em>/);
+  const boldTexts = html => [...html.matchAll(/<strong>(.*?)<\/strong>/gu)].map(match => match[1].replace(/<[^>]*>/gu, ''));
+  assert.deepEqual(boldTexts(html), ['℟', '℣', '℟']);
+  assert.match(html.replace(/<\/?(?:strong|em)>/gu, ''), /℟ Allelúia\. ℣ Herre, gjør våre hjerter åpne<br\/>for din Sønns ord\. ℟ Allelúia\./);
   const withoutResponse = render([{ type: 'acclamation', lines: ['Et vers uten omkved.'] }]);
   assert.ok(!withoutResponse.includes('℟'));
   assert.ok(!withoutResponse.includes('Allelúia'));
-  assert.match(withoutResponse, /℣ Et vers uten omkved\./);
+  assert.deepEqual(boldTexts(withoutResponse), ['℣']);
+  assert.match(withoutResponse.replace(/<\/?(?:strong|em)>/gu, ''), /℣ Et vers uten omkved\./);
 });
 
 test('dry-run validation rejects malformed stanzas and manually entered cues', () => {
@@ -76,7 +81,8 @@ test('legacy content stays unchanged and repeated imports preserve revisions', (
   const input = [{ type: 'verse', lines: ['En', 'To'] }, { type: 'acclamation', response: 'Lovet være du.', lines: ['Vers'] }];
   const body = toPortableText(input, 'test');
   assert.equal(patchChangesDocument({ body }, { body: toPortableText(input, 'test') }), false);
-  assert.equal(new Set(body.flatMap(b => [b._key, ...b.children.map(s => s._key)])).size, 5);
+  const keys = body.flatMap(b => [b._key, ...b.children.map(s => s._key)]);
+  assert.equal(new Set(keys).size, keys.length);
 });
 
 test('current bulletin and example use structured psalm and gospel text without warnings', () => {
@@ -84,7 +90,7 @@ test('current bulletin and example use structured psalm and gospel text without 
     const manifest = JSON.parse(fs.readFileSync(new URL(`../../studio-st.-barbara-church/scripts/${path}`, import.meta.url)));
     assert.deepEqual(massTextFormattingWarnings(manifest), []);
     const html = render(manifest.massTexts[0].body);
-    assert.equal((html.match(/<strong>℟<\/strong>/gu) ?? []).length, 3);
+    assert.equal((html.match(/<strong>℟<\/strong>/gu) ?? []).length, 5);
     assert.match(html, /text-center/);
   }
   assert.equal(massTextFormattingWarnings({ massTexts: [{ sourceKey: 'legacy', body: ['℟ Omkved. Vers. ℟'] }] }).length, 1);

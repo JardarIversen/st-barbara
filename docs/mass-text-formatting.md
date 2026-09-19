@@ -35,7 +35,8 @@ en fet ℟ på egen linje etter siste verslinje. Agenten skal ikke legge inn teg
 ```
 
 Dette gir «℟ Allelúia. ℣ Herre, gjør våre hjerter åpne», linjeskift,
-og «for din Sønns ord. ℟ Allelúia.» Hele avsnittet er sentrert i fet kursiv.
+og «for din Sønns ord. ℟ Allelúia.» Hele avsnittet er sentrert i kursiv;
+bare tegnene ℟ og ℣ er fete, ikke ordene i omkvedet eller verset.
 Nettsiden kan bryte lange linjer videre på smale skjermer.
 
 `response` kopieres fra kilden, ikke fra en antagelse om kirkeårstiden.
