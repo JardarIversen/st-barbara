@@ -1,6 +1,8 @@
 import {getSanityClient} from './lib/sanity-client.mjs'
 import {catechesisErrors} from './lib/catechesis-validation.mjs'
-import {allManifestItems, readManifest, resolveFilePath, sha256File} from './lib/manifest-utils.mjs'
+import {allManifestItems, readManifest, resolveFilePath, sha256File, toPortableText} from './lib/manifest-utils.mjs'
+import {massTextFormattingWarnings} from './lib/liturgical-text.mjs'
+import {patchChangesDocument} from './lib/patch-changes.mjs'
 
 const manifestPath = process.argv.slice(2).find((argument) => !argument.startsWith('--'))
 const manifestContext = manifestPath ? readManifest(manifestPath) : undefined
@@ -69,6 +71,18 @@ for (const document of documents) {
 }
 
 if (manifest) {
+  warnings.push(...massTextFormattingWarnings(manifest))
+  for (const item of manifest.massTexts ?? []) {
+    const document = sourceKeys.get(`massText:${item.sourceKey}`)
+    if (!document) continue
+    try {
+      if (patchChangesDocument(document, {body: toPortableText(item.body, item.sourceKey)})) {
+        errors.push(`${item.sourceKey}: tekst eller formatering i Sanity avviker fra manifestet.`)
+      }
+    } catch (error) {
+      errors.push(error.message)
+    }
+  }
   for (const {type, item} of allManifestItems(manifest)) {
     if (!sourceKeys.has(`${type}:${item.sourceKey}`)) {
       errors.push(`Manifestinnhold mangler i Sanity: ${type}:${item.sourceKey}`)

@@ -3,6 +3,7 @@ import {getSanityClient} from './lib/sanity-client.mjs'
 import {prepareTranslations, translationErrors} from './lib/translations.mjs'
 import {patchChangesDocument} from './lib/patch-changes.mjs'
 import {prepareCatechesis} from './lib/catechesis.mjs'
+import {massTextFormattingWarnings} from './lib/liturgical-text.mjs'
 import {
   readManifest,
   resolveFilePath,
@@ -40,6 +41,8 @@ if (validationErrors.length) {
   for (const error of validationErrors) console.error(`- ${error}`)
   process.exit(1)
 }
+
+for (const warning of massTextFormattingWarnings(manifest)) console.warn(`ADVARSEL: ${warning}`)
 
 const counts = Object.fromEntries(
   [

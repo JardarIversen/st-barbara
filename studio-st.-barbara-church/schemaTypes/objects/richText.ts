@@ -14,6 +14,7 @@ export const richText = defineType({
         {title: 'Overskrift 2', value: 'h2'},
         {title: 'Overskrift 3', value: 'h3'},
         {title: 'Sitat', value: 'blockquote'},
+        {title: 'Evangelievers', value: 'acclamation'},
       ],
       lists: [
         {title: 'Punktliste', value: 'bullet'},

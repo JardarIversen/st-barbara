@@ -3,6 +3,11 @@ import type { PortableTextBlock } from "next-sanity";
 
 const components: PortableTextComponents = {
   block: {
+    acclamation: ({ children }) => (
+      <p className="text-center leading-relaxed text-foreground/80">
+        {children}
+      </p>
+    ),
     normal: ({ children }) => (
       <p className="leading-relaxed text-foreground/80">{children}</p>
     ),

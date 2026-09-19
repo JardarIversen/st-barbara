@@ -2,6 +2,7 @@ import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import {catechesisErrors} from './catechesis-validation.mjs'
+import {liturgicalTextErrors, liturgicalParagraph} from './liturgical-text.mjs'
 
 const COLLECTIONS = [
   ['bulletins', 'bulletin'],
@@ -147,6 +148,7 @@ export function validateManifest(manifest, baseDirectory) {
   }
 
   for (const massText of manifest.massTexts ?? []) {
+    errors.push(...liturgicalTextErrors(massText.body).map(error => `${massText.sourceKey}: ${error}`))
     if (!massText.massDate || !massText.scheduleKey || !massText.bulletinKey || !massText.body) {
       errors.push(`Messeteksten ${massText.sourceKey} mangler dato, messe, kilde eller tekst.`)
     }
@@ -199,10 +201,27 @@ export function slugify(value) {
 
 export function toPortableText(value, sourceKey) {
   if (!value) return undefined
+  const errors = liturgicalTextErrors(value)
+  if (errors.length) throw new Error(`${sourceKey}: ${errors.join(' ')}`)
   const items = Array.isArray(value) ? value : [value]
 
   return items.map((item, index) => {
     if (item && typeof item === 'object' && item._type === 'block') return item
+
+    const liturgical = liturgicalParagraph(item)
+    if (liturgical) {
+      return {
+        _type: 'block',
+        _key: stableKey(sourceKey, index, item.type, JSON.stringify(liturgical)),
+        style: liturgical.style,
+        markDefs: [],
+        children: liturgical.spans.map((span, spanIndex) => ({
+          _type: 'span',
+          _key: stableKey(sourceKey, index, 'span', spanIndex, span.text),
+          ...span,
+        })),
+      }
+    }
 
     const text = typeof item === 'string' ? item : String(item.text ?? '')
     const style = typeof item === 'object' && item.style ? item.style : 'normal'

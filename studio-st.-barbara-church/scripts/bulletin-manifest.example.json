@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "bulletins": [
     {
-      "sourceKey": "bulletin:2026-08-23",
-      "issueDate": "2026-08-23",
-      "publishedAt": "2026-08-23T08:00:00+02:00",
-      "coversFrom": "2026-08-23",
-      "coversUntil": "2026-08-30",
-      "pdfPath": "C:/Users/jarda/Downloads/21. søndag 2026.pdf"
+      "sourceKey": "bulletin:2026-09-20",
+      "issueDate": "2026-09-20",
+      "publishedAt": "2026-09-20T08:00:00+02:00",
+      "coversFrom": "2026-09-20",
+      "coversUntil": "2026-09-27",
+      "pdfPath": "/tmp/25-sondag-2026.pdf"
     }
   ],
   "places": [],
@@ -15,6 +15,78 @@
   "events": [],
   "announcements": [],
   "massExceptions": [],
-  "massTexts": [],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-09-20:kongsberg:nb:1100",
+      "title": "25. søndag i det alminnelige kirkeår",
+      "massDate": "2026-09-20",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-09-20",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Jes 55, 6–9"
+        },
+        "Søk Herren mens han er å finne, kall på ham den stund han er nær! Den ugudelige skal forlate sin vei og ugjerningsmannen oppgi sine tanker og vende om til Herren, så vil han vise barmhjertighet, til vår Gud, for han vil gjerne tilgi. For mine tanker er ikke deres tanker, og deres veier er ikke mine veier, lyder ordet fra Herren. Som himmelen er høyere enn jorden, er mine veier høyere enn deres veier og mine tanker høyere enn deres tanker.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Herren er nær den som roper, som ærlig kaller på ham"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Fra dag til dag vil jeg love deg,",
+            "evig og alltid prise ditt navn.",
+            "Herren er stor og høylovet,",
+            "hans storhet kan ingen lodde."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Nådig og barmhjertig er Herren,",
+            "langmodig og rik på miskunn.",
+            "Herren er god mot alle,",
+            "hans miskunn favner hele hans verk."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren er rettvis i all sin ferd,",
+            "hellig i all sin gjerning.",
+            "Herren er nær den som roper,",
+            "som ærlig kaller på ham."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – Fil 1, 20c–24. 27a"
+        },
+        "Brødre, jeg ærer Kristus gjennom mitt legeme – hva enten det blir ved mitt liv eller gjennom min død. For meg er livet Kristus, og døden en vinning. Men dersom et fortsatt liv på jorden betyr et fruktbart virke, da vet jeg ikke hva jeg skal velge: Jeg føler meg trukket til begge kanter. Vel har jeg lyst til å bryte opp herfra og være hos Kristus, så meget bedre som det ville være; men for deres skyld er det nok mer nødvendig at jeg blir på denne jord! Så gjelder det bare at dere lever et liv som er Kristi Evangelium verdig.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Herre, gjør våre hjerter åpne",
+            "for din Sønns ord."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 20, 1–16"
+        },
+        "På den tid fortalte Jesus denne lignelsen til sine disipler: «Himlenes rike kan lignes med en husbond som gikk ut ved daggry for å hyre folk til å arbeide i en vinmark han eide. Han kom overens med dem om en denar om dagen, og sendte dem så ut i vinmarken. Midt på formiddagen gikk han ut igjen, og fikk se noen andre, som stod arbeidsløse på torvet; han sa da til dem: ‘Gå dere også bort i vinmarken min, – og en rimelig betaling skal dere få.’ Og de gikk. Også ved middagstid og på ny ut på ettermiddagen gikk han ut og gjorde likedan. En time før solnedgang gikk han enda en gang ut, og fremdeles var det noen som stod der. Han spurte dem: ‘Hvorfor står dere her hele dagen uten å bestille noe?’ De svarer: ‘Fordi ingen har gitt oss arbeide.’ Han sier da: ‘Så gå dere også bort i vinmarken.’ Da det nå var blitt kvelden, sier husbonden til forvalteren: ‘Rop inn arbeidsfolkene og gi dem lønnen, men begynn med de siste og gå så videre til de første!’ De som var kommet sent på ettermiddagen, kom frem og fikk hver en denar. Så da de første kom, tenkte de at de skulle få mer, men også de fikk en denar hver. Da de så det, begynte de å mukke høylydt mot husbonden: ‘De som kom sist, har ikke arbeidet mer enn en time, og så setter du dem likt med oss, som har slitt i solsteken hele dagen!’ Da vendte husbonden seg til en av dem og svarte: ‘Min venn, jeg gjør deg ikke noen urett. Var det ikke en denar vi kom overens om? Så ta det som tilkommer deg, og gå hjem. Men om jeg ønsker å gi sistemann her likeså meget som deg, – har jeg ikke lov til å gjøre hva jeg vil med det som er mitt? Eller skal min godhet gjøre deg ond?’ – Og det er slik de siste skal bli de første, og de første de siste.»"
+      ]
+    }
+  ],
   "articles": []
 }

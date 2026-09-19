@@ -820,7 +820,37 @@
           "style": "h2",
           "text": "Responsoriesalme"
         },
-        "℟ Herren er nær den som roper, som ærlig kaller på ham Fra dag til dag vil jeg love deg, evig og alltid prise ditt navn. Herren er stor og høylovet, hans storhet kan ingen lodde. ℟ Nådig og barmhjertig er Herren, langmodig og rik på miskunn. Herren er god mot alle, hans miskunn favner hele hans verk. ℟ Herren er rettvis i all sin ferd, hellig i all sin gjerning. Herren er nær den som roper, som ærlig kaller på ham. ℟",
+        {
+          "type": "refrain",
+          "text": "Herren er nær den som roper, som ærlig kaller på ham"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Fra dag til dag vil jeg love deg,",
+            "evig og alltid prise ditt navn.",
+            "Herren er stor og høylovet,",
+            "hans storhet kan ingen lodde."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Nådig og barmhjertig er Herren,",
+            "langmodig og rik på miskunn.",
+            "Herren er god mot alle,",
+            "hans miskunn favner hele hans verk."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren er rettvis i all sin ferd,",
+            "hellig i all sin gjerning.",
+            "Herren er nær den som roper,",
+            "som ærlig kaller på ham."
+          ]
+        },
         {
           "style": "h2",
           "text": "2. lesning – Fil 1, 20c–24. 27a"
@@ -830,7 +860,14 @@
           "style": "h2",
           "text": "Evangelievers"
         },
-        "℟ Allelúia. ℣ Herre, gjør våre hjerter åpne for din Sønns ord. ℟ Allelúia.",
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Herre, gjør våre hjerter åpne",
+            "for din Sønns ord."
+          ]
+        },
         {
           "style": "h2",
           "text": "Evangelium – Matt 20, 1–16"
