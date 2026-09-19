@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "@/i18n/client";
+import { unlocalizedPath } from "@/i18n/config";
 
 import Link from "@/i18n/link";
 import { usePathname } from "next/navigation";
@@ -18,7 +19,7 @@ const NAV = [
 
 export default function Header() {
   const { t } = useTranslations();
-  const pathname = usePathname().replace(/^\/(nb|en)(?=\/|$)/, "") || "/";
+  const pathname = unlocalizedPath(usePathname());
   const [open, setOpen] = useState(false);
 
   return (

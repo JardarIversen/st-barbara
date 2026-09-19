@@ -2,7 +2,15 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync, readdirSync } from "node:fs";
 import { getTranslator } from "../src/i18n/translate.ts";
-import { localizedPath, isLocale } from "../src/i18n/config.ts";
+import {
+  localizedPath,
+  isLocale,
+  contentLocale,
+  languageFromPath,
+  unlocalizedPath,
+  languageRedirect,
+  languagePreferenceCookie,
+} from "../src/i18n/config.ts";
 import { localizeContent } from "../src/i18n/content.ts";
 import {
   buildCalendarItems,
@@ -20,7 +28,6 @@ import {
   LANGUAGES,
   PRIMARY_LANGUAGES,
   languageCode,
-  translationLanguage,
   languageSearchText,
 } from "../src/i18n/languages.ts";
 import { LANGUAGE_FLAGS } from "../src/i18n/language-flags.ts";
@@ -56,7 +63,10 @@ test("request-localized articles do not opt into static fallback rendering", () 
     new URL("../src/app/[lang]/innlegg/[slug]/page.tsx", import.meta.url),
     "utf8",
   );
-  assert.doesNotMatch(page, /export\s+(?:async\s+)?function\s+generateStaticParams/);
+  assert.doesNotMatch(
+    page,
+    /export\s+(?:async\s+)?function\s+generateStaticParams/,
+  );
   assert.doesNotMatch(page, /dynamic\s*=\s*["'](?:force-static|error)["']/);
 });
 
@@ -337,12 +347,68 @@ test("language picker contains exactly 30 curated languages with searchable name
     assert.ok(polish.includes(name));
 });
 
-test("automatic language selection handles script and region codes safely", () => {
-  assert.equal(translationLanguage("?translate=zh-Hans", ""), "zh-CN");
-  assert.equal(translationLanguage("", "some=1; googtrans=/en/mni-Mtei"), null);
-  assert.equal(translationLanguage("?translate=zh-TW", ""), null);
-  assert.equal(translationLanguage("?translate=ar", "googtrans=/en/pl"), "ar");
-  assert.equal(translationLanguage("?translate=invalid", ""), null);
-  assert.equal(translationLanguage("?translate=en", ""), null);
-  assert.equal(translationLanguage("?translate=nb", ""), null);
+test("all supported language URLs preserve the page, query and anchor", () => {
+  for (const { code } of LANGUAGES) {
+    const route = code === "no" ? "nb" : code;
+    const path = localizedPath("/pl/messetider/mass?place=mo#readings", code);
+    assert.equal(path, `/${route}/messetider/mass?place=mo#readings`);
+    assert.equal(languageFromPath(path), route);
+    assert.equal(unlocalizedPath(path), "/messetider/mass?place=mo#readings");
+    assert.equal(contentLocale(route), route === "nb" ? "nb" : "en");
+  }
+  assert.equal(localizedPath("/om", "pl"), "/pl/om");
+  assert.equal(localizedPath("/pl?test=1#top", "en"), "/en?test=1#top");
+  assert.equal(localizedPath("/pl/om", "made-up"), "/pl/om");
+  assert.equal(languageFromPath("//pl/om"), null);
+  assert.equal(languageFromPath("/please"), null);
+});
+
+test("language-neutral visits remember a validated preference; explicit URLs win", () => {
+  const redirect = (path, preference) =>
+    languageRedirect(new URL(path, "https://parish.test"), preference);
+  assert.equal(redirect("/", "pl").pathname, "/pl");
+  assert.equal(redirect("/", "en").pathname, "/en");
+  assert.equal(redirect("/").pathname, "/nb");
+  assert.equal(redirect("/", "//evil.test").pathname, "/nb");
+  assert.equal(
+    redirect("/om?test=1#top", "pl").href,
+    "https://parish.test/pl/om?test=1#top",
+  );
+  for (const language of ["nb", "en", "pl", "ar", "zh-CN"]) {
+    assert.equal(redirect(`/${language}/om`, "es"), null);
+  }
+  assert.equal(redirect("/no/om", "pl").pathname, "/nb/om");
+  assert.equal(redirect("/zh-Hans/om").pathname, "/zh-CN/om");
+});
+
+test("old translation links migrate once without letting cookies override URLs", () => {
+  for (const [before, after] of [
+    ["/en/om?translate=pl&test=1#top", "/pl/om?test=1#top"],
+    ["/en?translate=zh-Hans", "/zh-CN"],
+    ["/en?translate=invalid", "/en"],
+    ["/en?translate=nb", "/nb"],
+    ["/nb?translate=pl", "/nb"],
+    ["/ar?translate=pl", "/ar"],
+  ]) {
+    const result = languageRedirect(
+      new URL(before, "https://parish.test"),
+      "es",
+    );
+    assert.equal(result.href, `https://parish.test${after}`);
+    assert.equal(languageRedirect(result, "es"), null);
+  }
+});
+
+test("explicit preferences last a year and use a secure first-party cookie", () => {
+  for (const [input, expected] of [
+    ["no", "nb"],
+    ["en", "en"],
+    ["pl", "pl"],
+  ]) {
+    assert.equal(
+      languagePreferenceCookie(input),
+      `site_language=${expected};Max-Age=31536000;Path=/;SameSite=Lax;Secure`,
+    );
+  }
+  assert.equal(languagePreferenceCookie("pl;Domain=evil.test"), null);
 });

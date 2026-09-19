@@ -67,16 +67,6 @@ export function languageCode(value: string | null | undefined): string | null {
   return known.has(code) ? code : null;
 }
 
-export function translationLanguage(
-  search: string,
-  cookie: string,
-): string | null {
-  const requested = new URLSearchParams(search).get("translate");
-  const saved = cookie.match(/(?:^|;\s*)googtrans=\/en\/([^;\s]+)/)?.[1];
-  const code = languageCode(requested ?? saved);
-  return code && !PRIMARY_LANGUAGES.includes(code) ? code : null;
-}
-
 export function languageSearchText(language: SiteLanguage): string {
   return [
     language.code,

@@ -4,10 +4,10 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { SanityLive } from "@/sanity/live";
 import { notFound } from "next/navigation";
-import { isLocale } from "@/i18n/config";
+import { contentLocale, isLocale, routeLanguage } from "@/i18n/config";
 import { localizedPath } from "@/i18n/config";
 import { headers } from "next/headers";
-import { getTranslations } from "@/i18n/server";
+import { getSiteLanguage, getTranslations } from "@/i18n/server";
 import { LocaleProvider } from "@/i18n/client";
 import { AutomaticTranslation } from "@/components/language-switcher";
 import "../globals.css";
@@ -27,16 +27,18 @@ const inter = Inter({
 export async function generateMetadata(): Promise<Metadata> {
   const { t, locale } = await getTranslations();
   const path = (await headers()).get("x-site-path") ?? `/${locale}`;
+  const automatic = !isLocale(await getSiteLanguage());
   return {
     metadataBase: new URL("https://kongsberg.katolsk.no"),
     alternates: {
-      canonical: path,
+      canonical: automatic ? localizedPath(path, "en") : path,
       languages: {
         nb: localizedPath(path, "nb"),
         en: localizedPath(path, "en"),
         "x-default": localizedPath(path, "nb"),
       },
     },
+    robots: automatic ? { index: false, follow: true } : undefined,
     title: {
       default: t("St. Barbara menighet – Den katolske kirke i Kongsberg"),
       template: t("%s – St. Barbara menighet"),
@@ -60,14 +62,16 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  if (!isLocale(lang)) notFound();
+  if (routeLanguage(lang) !== lang) notFound();
+  const locale = contentLocale(lang);
   return (
     <html
-      lang={lang}
+      lang={locale}
+      suppressHydrationWarning
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
-        <LocaleProvider locale={lang}>
+        <LocaleProvider locale={locale} language={lang}>
           <AutomaticTranslation />
           <Header />
           <main className="flex-1">{children}</main>

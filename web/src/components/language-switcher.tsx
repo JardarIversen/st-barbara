@@ -1,8 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "@/i18n/client";
-import { localizedPath } from "@/i18n/config";
+import { useSiteLanguage, useTranslations } from "@/i18n/client";
+import {
+  isLocale,
+  languagePreferenceCookie,
+  localizedPath,
+} from "@/i18n/config";
 import { ChevronDownIcon } from "lucide-react";
 import { LANGUAGE_FLAGS } from "@/i18n/language-flags";
 import { cn } from "@/lib/utils";
@@ -27,7 +31,6 @@ import {
   PRIMARY_LANGUAGES,
   languageCode,
   languageSearchText,
-  translationLanguage,
   type SiteLanguage,
 } from "@/i18n/languages";
 
@@ -68,62 +71,62 @@ export function Flag({
 }
 
 function clearTranslationCookie() {
-  const expiry = ";path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;SameSite=Lax";
-  document.cookie = "googtrans=" + expiry;
-  const parts = location.hostname.split(".");
-  for (let i = 0; i < parts.length - 1; i++) {
-    document.cookie =
-      "googtrans=" + expiry + ";domain=" + parts.slice(i).join(".");
+  try {
+    const expiry =
+      ";path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;SameSite=Lax;Secure";
+    document.cookie = "googtrans=" + expiry;
+    const parts = location.hostname.split(".");
+    for (let i = 0; i < parts.length - 1; i++) {
+      document.cookie =
+        "googtrans=" + expiry + ";domain=" + parts.slice(i).join(".");
+    }
+  } catch {
+    /* Cookies may be disabled; the URL still controls the language. */
   }
-}
-
-function automaticLanguage() {
-  return translationLanguage(location.search, document.cookie);
 }
 
 function applyLang(next: string) {
   if (!languageCode(next)) return;
   clearTranslationCookie();
-  const url = new URL(location.href);
-  url.pathname = localizedPath(url.pathname, next === "no" ? "nb" : "en");
-  url.searchParams.delete("translate");
-  if (!["no", "en"].includes(next)) {
-    document.cookie = `googtrans=/en/${next};path=/;SameSite=Lax`;
-    url.searchParams.set("translate", next);
+  const preference = languagePreferenceCookie(next);
+  // Explicit URLs still work if the browser disallows cookies.
+  try {
+    if (preference) document.cookie = preference;
+  } catch {
+    /* Navigation does not require browser storage. */
   }
+  const url = new URL(location.href);
+  url.pathname = localizedPath(url.pathname, next);
+  url.searchParams.delete("translate");
   // Reload so Google never translates an already translated React tree.
   location.assign(url.toString());
 }
 
 export function useCurrentLang() {
-  const { locale } = useTranslations();
-  const [automatic, setAutomatic] = useState<string | null>(null);
-  useEffect(() => {
-    // Only browser state can supply the optional machine-translation language.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setAutomatic(locale === "en" ? automaticLanguage() : null);
-  }, [locale]);
-  return automatic ?? (locale === "nb" ? "no" : "en");
+  return languageCode(useSiteLanguage()) ?? "no";
 }
 
 export function AutomaticTranslation() {
-  const { locale } = useTranslations();
+  const siteLanguage = useSiteLanguage();
+  const language = isLocale(siteLanguage) ? null : siteLanguage;
   const [status, setStatus] = useState<"off" | "loading" | "ready" | "failed">(
-    "off",
+    language ? "loading" : "off",
   );
   useEffect(() => {
-    const language = locale === "en" ? automaticLanguage() : null;
+    clearTranslationCookie();
     if (!language) {
-      clearTranslationCookie();
       return;
     }
-    clearTranslationCookie();
-    document.cookie = `googtrans=/en/${language};path=/;SameSite=Lax`;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setStatus("loading");
+    try {
+      document.cookie = `googtrans=/en/${language};path=/;SameSite=Lax;Secure`;
+    } catch {
+      /* The loading timeout will offer the English fallback. */
+    }
     const observer = new MutationObserver(() => {
-      if (/translated-(ltr|rtl)/.test(document.documentElement.className))
+      if (/translated-(ltr|rtl)/.test(document.documentElement.className)) {
+        document.documentElement.lang = language;
         setStatus("ready");
+      }
     });
     observer.observe(document.documentElement, {
       attributes: true,
@@ -156,13 +159,14 @@ export function AutomaticTranslation() {
       clearTimeout(timer);
       script.remove();
     };
-  }, [locale]);
+  }, [language]);
   return (
     <>
       <div id="google_translate_element" />
       {status !== "off" && (
         <div
           translate="no"
+          lang="en"
           className="notranslate border-b border-border bg-muted px-5 py-2 text-center text-xs text-muted-foreground"
           role="status"
         >
@@ -171,21 +175,23 @@ export function AutomaticTranslation() {
             : status === "failed"
               ? "Automatic translation is unavailable. The English version is shown."
               : "Automatically translated from English by Google. Translation may contain errors."}{" "}
-          <button
+          <Button
             type="button"
-            className="text-primary underline underline-offset-2"
+            variant="link"
+            size="xs"
             onClick={() => applyLang("en")}
           >
             English
-          </button>
+          </Button>
           {" · "}
-          <button
+          <Button
             type="button"
-            className="text-primary underline underline-offset-2"
+            variant="link"
+            size="xs"
             onClick={() => applyLang("no")}
           >
             Norsk
-          </button>
+          </Button>
         </div>
       )}
     </>
@@ -212,7 +218,7 @@ export default function LanguageSwitcher() {
         data-checked={lang === language.code}
         onSelect={() => {
           setOpen(false);
-          if (language.code !== lang) applyLang(language.code);
+          applyLang(language.code);
         }}
       >
         <span
@@ -238,6 +244,7 @@ export default function LanguageSwitcher() {
       <PopoverTrigger
         render={<Button variant="outline" size="sm" />}
         translate="no"
+        lang={locale}
         className="notranslate"
         aria-label={`${t("Velg språk")}: ${selected?.native ?? lang}`}
         title={selected?.native}

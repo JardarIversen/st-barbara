@@ -2,23 +2,32 @@
 
 import NextLink from "next/link";
 import type { ComponentProps } from "react";
-import { localizedPath } from "./config";
-import { useTranslations } from "./client";
+import { isLocale, languageFromPath, localizedPath } from "./config";
+import { useSiteLanguage } from "./client";
 
 export default function Link({
   href,
   ...props
 }: ComponentProps<typeof NextLink>) {
-  const { locale } = useTranslations();
+  const language = useSiteLanguage();
+  const localize = (path: string) =>
+    languageFromPath(path) ? path : localizedPath(path, language);
   const target =
     typeof href === "string"
-      ? localizedPath(href, locale)
-      : { ...href, pathname: localizedPath(href.pathname ?? "/", locale) };
+      ? localize(href)
+      : { ...href, pathname: localize(href.pathname ?? "/") };
+  const targetLanguage = languageFromPath(
+    typeof target === "string" ? target : target.pathname,
+  );
+  const fullNavigation =
+    !isLocale(language) ||
+    (targetLanguage !== null && !isLocale(targetLanguage));
   // Full navigation avoids Google Translate DOM mutations conflicting with React.
   return (
     <NextLink
       href={target}
       {...props}
+      prefetch={fullNavigation ? false : props.prefetch}
       onClick={(event) => {
         props.onClick?.(event);
         if (
@@ -28,7 +37,9 @@ export default function Link({
           !event.shiftKey &&
           !event.altKey &&
           event.button === 0 &&
-          /translated-(ltr|rtl)/.test(document.documentElement.className)
+          (!props.target || props.target === "_self") &&
+          !props.download &&
+          fullNavigation
         ) {
           event.preventDefault();
           window.location.assign(event.currentTarget.href);

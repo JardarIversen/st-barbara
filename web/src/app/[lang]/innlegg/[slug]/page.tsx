@@ -1,4 +1,4 @@
-import { getTranslations } from "@/i18n/server";
+import { getSiteLanguage, getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Link from "@/i18n/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -35,7 +35,7 @@ export default async function ArticlePage({
   const article = await getArticle((await params).slug);
   if (!article) notFound();
   const pagePath = articlePagePath(article);
-  if (pagePath) permanentRedirect(localizedPath(pagePath, locale));
+  if (pagePath) permanentRedirect(localizedPath(pagePath, await getSiteLanguage()));
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
