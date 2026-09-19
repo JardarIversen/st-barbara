@@ -1,0 +1,843 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-09-20",
+      "issueDate": "2026-09-20",
+      "publishedAt": "2026-09-18T13:44:14+02:00",
+      "coversFrom": "2026-09-20",
+      "coversUntil": "2026-09-27",
+      "pdfPath": "../../../.local/bulletin-2026-09-20/source.pdf",
+      "filename": "25. søndag 2026.pdf"
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:tusenfryd-trip-2026-09-26",
+      "title": "Menighetstur til Tusenfryd",
+      "status": "scheduled",
+      "eventType": "activity",
+      "startsAt": "2026-09-26T09:00:00+02:00",
+      "endsAt": "2026-09-26T18:30:00+02:00",
+      "summary": "Bli med på en hyggelig dag på TusenFryd! Turen er for barn i menigheten og deres venner, med felles buss fra Kongsberg.",
+      "body": [
+        {
+          "_key": "ef056b2c2c65",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "f334dbbf1a15",
+              "_type": "span",
+              "marks": [],
+              "text": "Pater Trym inviterer barn i menigheten og deres venner til en hyggelig dag på TusenFryd lørdag 26. september 2026."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "_key": "availability20260920",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "availabilitytext",
+              "marks": [],
+              "text": "Det er fortsatt ledige plasser. Se også plakaten bak i kirken."
+            }
+          ]
+        },
+        {
+          "_key": "808bd7201de6",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8b6ac44ad6b9",
+              "_type": "span",
+              "marks": [],
+              "text": "Program"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "f37310477568",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "bd24ab5520e1",
+              "_type": "span",
+              "marks": [],
+              "text": "Kl. 09.00: Messe i St. Barbara kirke."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "dee07a6c887c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "50c078cd64f2",
+              "_type": "span",
+              "marks": [],
+              "text": "Kl. 09.30: Avreise fra Kongsberg med felles buss."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "e7efe47a7497",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "f882923f765a",
+              "_type": "span",
+              "marks": [],
+              "text": "Kl. 11.00: Mulighet for å møte gruppen på TusenFryd."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ee228a5bf343",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5972a0e264a0",
+              "_type": "span",
+              "marks": [],
+              "text": "Kl. 18.30: Tilbake i Kongsberg."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7d76b4afa237",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e519fc7307ea",
+              "_type": "span",
+              "marks": [],
+              "text": "TusenFryd er åpent kl. 11.00–17.00."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c6b221bf49f5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "61c7c57ef394",
+              "_type": "span",
+              "marks": [],
+              "text": "Praktisk informasjon"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "7617f66e7f70",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5f53d6379d54",
+              "_type": "span",
+              "marks": [],
+              "text": "Ta med egen mat og drikke for hele dagen, og husk klær etter vær."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "3e4fc8f9eab9",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b9316ec4eb96",
+              "_type": "span",
+              "marks": [],
+              "text": "Påmelding"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "70d484dd685d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "f24349413e7a",
+              "_type": "span",
+              "marks": [],
+              "text": "Påmeldingsfrist: 20. september. Bruk påmeldingslenken nedenfor."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "registrationDeadline": "2026-09-20T23:59:00+02:00",
+      "slug": "menighetstur-til-tusenfryd-2026-09-26t09-00-00-02-00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:tusenfryd"
+      ],
+      "links": [
+        {
+          "label": "Meld deg på turen",
+          "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUQ1BIREhMV0lZMUkyWUNFSFM0Q01WWkxITy4u&origin=QRCode"
+        }
+      ],
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "bf298fde151d",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "53fc57fb618a",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Fr. Trym invites children in the parish and their friends to a day at TusenFryd on Saturday 26 September 2026."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            "Places are still available. See also the poster at the back of the church.",
+            {
+              "_key": "462ccde5afe9",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "adb910d6a2f2",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Programme"
+                }
+              ],
+              "markDefs": [],
+              "style": "h2"
+            },
+            {
+              "_key": "194b36bc487a",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "4f2006999b0e",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "09:00: Mass at St. Barbara Church."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "281e55408d63",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "335d3bae34c8",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "09:30: Departure from Kongsberg by shared bus."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "7d8395b74b1d",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "4d84fc015a2b",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "11:00: You can also meet the group at TusenFryd."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "b5162b939034",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "9824f352262e",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "18:30: Return to Kongsberg."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "afb3bbab5f06",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "927bc9812fb4",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "TusenFryd is open from 11:00 to 17:00."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "82d0013399af",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "5f680550503b",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "What to bring"
+                }
+              ],
+              "markDefs": [],
+              "style": "h2"
+            },
+            {
+              "_key": "8359f7f2c012",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "e5423ab33576",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Bring your own food and drinks for the whole day, and dress for the weather."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "990b8633baf0",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "de5c30ace524",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Registration"
+                }
+              ],
+              "markDefs": [],
+              "style": "h2"
+            },
+            {
+              "_key": "a1bead18ceff",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "1d5737f2551b",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Registration deadline: 20 September. Use the registration link below."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "links": [
+            {
+              "_key": "ac40841fb040",
+              "_type": "actionLink",
+              "label": "Register for the trip",
+              "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUQ1BIREhMV0lZMUkyWUNFSFM0Q01WWkxITy4u&origin=QRCode"
+            }
+          ],
+          "summary": "Join us for a day at TusenFryd! The trip is for children in the parish and their friends, with shared bus transport from Kongsberg.",
+          "title": "Parish trip to Tusenfryd"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ]
+    },
+    {
+      "sourceKey": "event:bishop-visitation-2026-10-08",
+      "title": "Bispevisitas",
+      "status": "scheduled",
+      "eventType": "other",
+      "startsAt": "2026-10-08T09:00:00+02:00",
+      "endsAt": "2026-10-11T18:00:00+02:00",
+      "summary": "Biskopen besøker menigheten og feirer messer. Til pontifikalmessen med stor kirkekaffe ønsker menigheten ekstra mye mat; se programmet og bidra gjerne.",
+      "body": [
+        "Biskopen vil høre skriftemål torsdag og fredag 8. og 9. oktober og feire messene disse dagene.",
+        "Søndag 11. oktober blir det pontifikalmesse med stor kirkekaffe etterpå. Til dette trenger menigheten ekstra mye mat.",
+        "Programmet for visitasen finnes på oppslagstavlen bak i kirken."
+      ],
+      "slug": "bispevisitas-2026-10-08t09-00-00-02-00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "body": [
+            "The bishop will hear confessions on Thursday and Friday, 8 and 9 October, and celebrate Mass on both days.",
+            "On Sunday 11 October there will be a Pontifical Mass followed by a large coffee gathering. The parish needs extra food for the gathering.",
+            "The programme for the visitation is posted on the noticeboard at the back of the church."
+          ],
+          "links": [],
+          "summary": "The bishop will visit the parish and celebrate Mass. Please help provide extra food for the coffee gathering after the Pontifical Mass.",
+          "title": "Bishop's visitation"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "promotionFrom": "2026-09-18T13:44:14+02:00",
+      "promotionUntil": "2026-10-11T11:00:00+02:00"
+    },
+    {
+      "sourceKey": "event:confirmation-retreat-2026-10-16",
+      "title": "Konfirmanthelg på Skogstad",
+      "status": "scheduled",
+      "eventType": "activity",
+      "startsAt": "2026-10-16T17:00:00+02:00",
+      "endsAt": "2026-10-18T16:00:00+02:00",
+      "summary": "Felles konfirmanthelg med Hønefoss og Lillehammer.",
+      "slug": "konfirmanthelg-pa-skogstad-2026-10-16t17-00-00-02-00",
+      "placeKeys": [
+        "place:skogstad"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "links": [],
+          "summary": "A joint Confirmation retreat with Hønefoss and Lillehammer.",
+          "title": "Confirmation retreat at Skogstad"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ]
+    },
+    {
+      "sourceKey": "event:church-consecration-anniversary:2026-09-23",
+      "title": "Kirkevigselsfest",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-09-23T18:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Menigheten feirer treårsdagen for vigslingen av St. Barbara kirke med messe, kaker og mat. Alle inviteres til feiringen og til å bidra med mat søndagen etter.",
+      "body": [
+        "Onsdag 23. september er det tre år siden St. Barbara kirke ble vigslet. Feiringen begynner med messe kl. 18.00, etterfulgt av kaker og mat i menighetssalen.",
+        "Feiringen videreføres søndag 27. september. Ta gjerne med litt ekstra mat også denne søndagen."
+      ],
+      "promotionFrom": "2026-09-18T13:44:14+02:00",
+      "promotionUntil": "2026-09-23T18:00:00+02:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "title": "Anniversary of the consecration of the church",
+          "summary": "The parish marks the third anniversary of the consecration of St. Barbara Church with Mass, cakes and food. Please also bring extra food the following Sunday.",
+          "body": [
+            "Wednesday 23 September marks three years since St. Barbara Church was consecrated. The celebration begins with Mass at 18:00, followed by cakes and food in the parish hall.",
+            "The celebration continues on Sunday 27 September. Please bring some extra food that Sunday too."
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "event:confirmation-catechesis:2026-09-25",
+      "title": "Konfirmantkatekese",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-09-25T17:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Konfirmantene samles til katekese i St. Barbara. Det feires messe i kirken etter katekesen.",
+      "body": "Konfirmantkatekese fredag 25. september kl. 17.00. Messe kl. 18.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "title": "Confirmation catechesis",
+          "summary": "Confirmation candidates gather for catechesis at St. Barbara. Mass follows in the church.",
+          "body": "Confirmation catechesis on Friday 25 September at 17:00. Mass at 18:00."
+        }
+      }
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:confirmation-retreat-leaders-2026",
+      "title": "Vi trenger ledere til konfirmanthelg",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "lastMentionedAt": "2026-09-18T13:44:14+02:00",
+      "appliesUntil": "2026-10-16T17:00:00+02:00",
+      "summary": "St. Barbara trenger voksne hjelpere til konfirmanthelgen på Skogstad sammen med Hønefoss og Lillehammer. Kontakt p. Trym dersom du vil bidra eller har spørsmål.",
+      "body": [
+        "16.–18. oktober arrangeres konfirmanthelg på Skogstad sammen med Hønefoss og Lillehammer. Det blir mange deltakere, og lederteamet trenger rundt 20 personer over 18 år fra de tre menighetene. St. Barbara bør også bidra med noen personer.",
+        "Kontakt p. Trym dersom du er interessert eller har spørsmål. Planleggingshelgen er 18.–19. september."
+      ],
+      "slug": "vi-trenger-ledere-til-konfirmanthelg",
+      "placeKeys": [],
+      "relatedEventKeys": [
+        "event:confirmation-retreat-2026-10-16"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "body": [
+            "A joint Confirmation retreat with Hønefoss and Lillehammer takes place at Skogstad on 16–18 October. With many participants expected, the leadership team needs around 20 volunteers over the age of 18 from the three parishes. St. Barbara should also contribute some volunteers.",
+            "Contact Fr. Trym if you are interested or have questions. The planning weekend is 18–19 September."
+          ],
+          "links": [],
+          "summary": "St. Barbara needs adult volunteers for the Confirmation retreat at Skogstad with Hønefoss and Lillehammer. Contact Fr. Trym to help or ask questions.",
+          "title": "Leaders needed for the Confirmation retreat"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ]
+    },
+    {
+      "sourceKey": "announcement:60-plus-group-interest-2026",
+      "title": "Interesse for 60+-gruppe",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-09-06T08:00:00+02:00",
+      "summary": "Menigheten vurderer å gjenetablere en 60+-gruppe med jevnlige samlinger.",
+      "body": [
+        {
+          "_key": "5a5d658a58c2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b35bf04a1351",
+              "_type": "span",
+              "marks": [],
+              "text": "Ta kontakt med p. Trym dersom du er interessert i en 60+-gruppe med jevnlige samlinger."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "slug": "interesse-for-60-gruppe",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "5a5d658a58c2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "b35bf04a1351",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Please contact Fr. Trym if you are interested in joining a group for the over-60s with regular gatherings."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "links": [],
+          "summary": "The parish is considering restarting a group for the over-60s with regular gatherings.",
+          "title": "Interested in a group for the over-60s?"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "lastMentionedAt": "2026-09-18T13:44:14+02:00"
+    },
+    {
+      "sourceKey": "announcement:friday-confession-2026",
+      "title": "Skriftemål på fredager",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-08-09T08:00:00+02:00",
+      "lastMentionedAt": "2026-09-06T08:00:00+02:00",
+      "appliesFrom": "2026-08-14T17:00:00+02:00",
+      "summary": "Presten sitter som regel i skriftestolen fra kl. 17 på fredager.",
+      "body": [
+        {
+          "_key": "b676e5bcd254",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "250e8952a7ca",
+              "_type": "span",
+              "marks": [],
+              "text": "På fredager vil presten som regel høre skriftemål fra kl. 17. Skriftemål kan også avtales andre dager før eller etter messen."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "slug": "skriftemal-pa-fredager",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "b676e5bcd254",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "250e8952a7ca",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "The priest is usually available for confessions from 17:00 on Fridays. Confession can also be arranged on other days, before or after Mass."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "links": [],
+          "summary": "The priest is usually available for confessions from 17:00 on Fridays.",
+          "title": "Confessions on Fridays"
+        }
+      }
+    },
+    {
+      "sourceKey": "announcement:st-barbara-building-project-2026",
+      "title": "Byggeprosjekt i St. Barbara",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-09-18T13:44:14+02:00",
+      "lastMentionedAt": "2026-09-18T13:44:14+02:00",
+      "summary": "St. Barbara planlegger å forbedre uteområdet og lage flere parkeringsplasser. Befaringsrapport og foreløpig situasjonsplan kan leses i menighetssalen.",
+      "body": [
+        "Det kommer snart informasjon om en innsamlingsaksjon i regi av bispedømmet. Menighetene vil øremerke egne prosjekter som får tildelt deler av midlene.",
+        "St. Barbara sitt prosjekt er å utbedre uteområdet for å skape mer plass og gjøre det finere, samt utforme flere parkeringsplasser.",
+        "Befaringsrapport og foreløpig situasjonsplan ligger tilgjengelig i menighetssalen."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "title": "Building project at St. Barbara",
+          "summary": "St. Barbara plans to improve the outdoor area and provide more parking spaces. The site inspection report and preliminary site plan are available in the parish hall.",
+          "body": [
+            "Information about a diocesan fundraising campaign will be released soon. Parishes will identify their own projects to receive a share of the funds.",
+            "St. Barbara plans to improve the outdoor area to create more space and make it more attractive, and to provide more parking spaces.",
+            "The site inspection report and preliminary site plan are available to read in the parish hall."
+          ]
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-09-23",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-23",
+      "publicNote": "Kirkevigselsfest. Kaker og mat i menighetssalen etter messen.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Anniversary of the consecration of the church. Cakes and food in the parish hall after Mass.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      },
+      "relatedEventKey": "event:church-consecration-anniversary:2026-09-23"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-09-24",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-24",
+      "publicNote": "Tilbedelse og skriftemål fra kl. 17.15.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Adoration and confession from 17:15.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sat-nb-2026-09-26",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-09-26",
+      "publicNote": "De hellige Kosmas og Damian. Etter messen går det felles buss til Tusenfryd.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saints Cosmas and Damian. Shared bus transport to Tusenfryd after Mass.",
+          "details": "The priest is also available for confession before Mass.",
+          "titleOverride": "Mass before the parish trip"
+        }
+      },
+      "newStartsAt": "2026-09-26T09:00:00+02:00",
+      "newEndsAt": null,
+      "titleOverride": "Messe før menighetsturen",
+      "relatedEventKey": "event:tusenfryd-trip-2026-09-26"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-09-27",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-27",
+      "publicNote": "Feiringen av kirkens vigslingsdag videreføres. Ta gjerne med litt ekstra mat.",
+      "details": "Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The celebration of the anniversary of the consecration of the church continues. Please bring some extra food.",
+          "details": "The priest is also available for confession before Mass."
+        }
+      },
+      "relatedEventKey": "event:church-consecration-anniversary:2026-09-23"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-08",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-08",
+      "publicNote": "Bispevisitas. Biskopen hører skriftemål og feirer messen denne dagen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. The bishop hears confessions and celebrates Mass on this day."
+        }
+      },
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-09",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-09",
+      "publicNote": "Bispevisitas. Biskopen hører skriftemål og feirer messen denne dagen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. The bishop hears confessions and celebrates Mass on this day."
+        }
+      },
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-10-11",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-11",
+      "publicNote": "Bispevisitas. Stor kirkekaffe etter pontifikalmessen; menigheten trenger ekstra mye mat.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. A large coffee gathering follows the Pontifical Mass; the parish needs extra food.",
+          "titleOverride": "Pontifical Mass"
+        }
+      },
+      "titleOverride": "Pontifikalmesse",
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-09-20:kongsberg:nb:1100",
+      "title": "25. søndag i det alminnelige kirkeår",
+      "massDate": "2026-09-20",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-09-20",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Jes 55, 6–9"
+        },
+        "Søk Herren mens han er å finne, kall på ham den stund han er nær! Den ugudelige skal forlate sin vei og ugjerningsmannen oppgi sine tanker og vende om til Herren, så vil han vise barmhjertighet, til vår Gud, for han vil gjerne tilgi. For mine tanker er ikke deres tanker, og deres veier er ikke mine veier, lyder ordet fra Herren. Som himmelen er høyere enn jorden, er mine veier høyere enn deres veier og mine tanker høyere enn deres tanker.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        "℟ Herren er nær den som roper, som ærlig kaller på ham Fra dag til dag vil jeg love deg, evig og alltid prise ditt navn. Herren er stor og høylovet, hans storhet kan ingen lodde. ℟ Nådig og barmhjertig er Herren, langmodig og rik på miskunn. Herren er god mot alle, hans miskunn favner hele hans verk. ℟ Herren er rettvis i all sin ferd, hellig i all sin gjerning. Herren er nær den som roper, som ærlig kaller på ham. ℟",
+        {
+          "style": "h2",
+          "text": "2. lesning – Fil 1, 20c–24. 27a"
+        },
+        "Brødre, jeg ærer Kristus gjennom mitt legeme – hva enten det blir ved mitt liv eller gjennom min død. For meg er livet Kristus, og døden en vinning. Men dersom et fortsatt liv på jorden betyr et fruktbart virke, da vet jeg ikke hva jeg skal velge: Jeg føler meg trukket til begge kanter. Vel har jeg lyst til å bryte opp herfra og være hos Kristus, så meget bedre som det ville være; men for deres skyld er det nok mer nødvendig at jeg blir på denne jord! Så gjelder det bare at dere lever et liv som er Kristi Evangelium verdig.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        "℟ Allelúia. ℣ Herre, gjør våre hjerter åpne for din Sønns ord. ℟ Allelúia.",
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 20, 1–16"
+        },
+        "På den tid fortalte Jesus denne lignelsen til sine disipler: «Himlenes rike kan lignes med en husbond som gikk ut ved daggry for å hyre folk til å arbeide i en vinmark han eide. Han kom overens med dem om en denar om dagen, og sendte dem så ut i vinmarken. Midt på formiddagen gikk han ut igjen, og fikk se noen andre, som stod arbeidsløse på torvet; han sa da til dem: ‘Gå dere også bort i vinmarken min, – og en rimelig betaling skal dere få.’ Og de gikk. Også ved middagstid og på ny ut på ettermiddagen gikk han ut og gjorde likedan. En time før solnedgang gikk han enda en gang ut, og fremdeles var det noen som stod der. Han spurte dem: ‘Hvorfor står dere her hele dagen uten å bestille noe?’ De svarer: ‘Fordi ingen har gitt oss arbeide.’ Han sier da: ‘Så gå dere også bort i vinmarken.’ Da det nå var blitt kvelden, sier husbonden til forvalteren: ‘Rop inn arbeidsfolkene og gi dem lønnen, men begynn med de siste og gå så videre til de første!’ De som var kommet sent på ettermiddagen, kom frem og fikk hver en denar. Så da de første kom, tenkte de at de skulle få mer, men også de fikk en denar hver. Da de så det, begynte de å mukke høylydt mot husbonden: ‘De som kom sist, har ikke arbeidet mer enn en time, og så setter du dem likt med oss, som har slitt i solsteken hele dagen!’ Da vendte husbonden seg til en av dem og svarte: ‘Min venn, jeg gjør deg ikke noen urett. Var det ikke en denar vi kom overens om? Så ta det som tilkommer deg, og gå hjem. Men om jeg ønsker å gi sistemann her likeså meget som deg, – har jeg ikke lov til å gjøre hva jeg vil med det som er mitt? Eller skal min godhet gjøre deg ond?’ – Og det er slik de siste skal bli de første, og de første de siste.»"
+      ]
+    }
+  ],
+  "articles": []
+}
