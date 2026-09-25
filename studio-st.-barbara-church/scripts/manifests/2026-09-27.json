@@ -1,0 +1,1012 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-09-27",
+      "issueDate": "2026-09-27",
+      "publishedAt": "2026-09-25T11:52:21+02:00",
+      "coversFrom": "2026-09-27",
+      "coversUntil": "2026-10-04",
+      "pdfPath": "../../../.local/bulletin-2026-09-27/source.pdf",
+      "filename": "26. søndag 2026.pdf"
+    }
+  ],
+  "places": [
+    {
+      "sourceKey": "place:rjukan-kirke",
+      "name": "Rjukan kirke",
+      "placeType": "church",
+      "streetAddress": "Kirkebakken 1",
+      "postalCode": "3660",
+      "locality": "Rjukan",
+      "country": "Norge",
+      "details": "Katolske messer på Rjukan feires nå her, etter leieavtale med Den norske kirke. Messene feires ikke lenger i Håndverkergata.",
+      "translations": {
+        "en": {
+          "name": "Rjukan Church",
+          "details": "Catholic Masses in Rjukan are now celebrated here under a rental agreement with the Church of Norway. Masses are no longer held in Håndverkergata."
+        }
+      }
+    }
+  ],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:kongsberg-mass:2026-09-28",
+      "title": "Messe – den hellige Lorenzo Ruiz og ledsagere",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-09-28T18:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Ekstra mandagsmesse i forbindelse med menighetsrådsmøtet. Messeprogrammet denne uken er endret på grunn av Ministrant-NM.",
+      "body": "Messe mandag 28. september kl. 18.30. Den hellige Lorenzo Ruiz og ledsagere. Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "title": "Mass – Saint Lorenzo Ruiz and companions",
+          "summary": "An additional Monday Mass on the day of the parish council meeting. This week’s Mass programme is changed because of the national altar servers’ championship.",
+          "body": "Mass on Monday 28 September at 18:30. Saint Lorenzo Ruiz and companions. The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:kongsberg-mass:2026-09-29",
+      "title": "Messe – de hellige erkeengler Mikael, Gabriel og Rafael",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-09-29T18:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Menigheten feirer erkeenglenes festdag med en ekstra tirsdagsmesse. De norske messene fredag og lørdag denne uken utgår.",
+      "body": "Messe tirsdag 29. september kl. 18.00 på festdagen for de hellige erkeengler Mikael, Gabriel og Rafael. Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "title": "Mass – Saints Michael, Gabriel and Raphael, Archangels",
+          "summary": "The parish celebrates the feast of the Archangels with an additional Tuesday Mass. The Norwegian Masses on Friday and Saturday this week are cancelled.",
+          "body": "Mass on Tuesday 29 September at 18:00 for the feast of Saints Michael, Gabriel and Raphael, Archangels. The priest is also available for confession before Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:rjukan-mass-2026-10-04",
+      "title": "Messe på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-10-04T17:00:00+02:00",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "summary": "Messen feires i Rjukan kirke. Menigheten har inngått leieavtale med Den norske kirke og bruker ikke lenger lokalet i Håndverkergata.",
+      "body": "Messe søndag 4. oktober kl. 17.00 i Rjukan kirke, Kirkebakken 1, 3660 Rjukan. Presten er også tilgjengelig for skriftemål før messene.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "title": "Mass in Rjukan",
+          "summary": "Mass is celebrated in Rjukan Church. The parish has a rental agreement with the Church of Norway and no longer uses the premises in Håndverkergata.",
+          "body": "Mass on Sunday 4 October at 17:00 in Rjukan Church, Kirkebakken 1, 3660 Rjukan. The priest is also available for confession before Mass."
+        }
+      },
+      "language": "nb"
+    },
+    {
+      "body": [
+        {
+          "_key": "8787a46cb122",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "68255eb2594f",
+              "_type": "span",
+              "marks": [],
+              "text": "Biskopen vil høre skriftemål torsdag og fredag 8. og 9. oktober og feire messene disse dagene."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "79964bf847cd",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d3a1b1624baf",
+              "_type": "span",
+              "marks": [],
+              "text": "Søndag 11. oktober blir det pontifikalmesse med stor kirkekaffe etterpå. Til dette trenger menigheten ekstra mye mat."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "25517733b7ef",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8d1a3f8492d0",
+              "_type": "span",
+              "marks": [],
+              "text": "Programmet for visitasen finnes på oppslagstavlen bak i kirken."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "endsAt": "2026-10-11T18:00:00+02:00",
+      "eventType": "other",
+      "links": [],
+      "promotionFrom": "2026-09-18T13:44:14+02:00",
+      "promotionUntil": "2026-10-11T11:00:00+02:00",
+      "slug": "bispevisitas-2026-10-08t09-00-00-02-00",
+      "sourceKey": "event:bishop-visitation-2026-10-08",
+      "startsAt": "2026-10-08T09:00:00+02:00",
+      "status": "scheduled",
+      "summary": "Biskopen besøker menigheten og feirer messer. Til pontifikalmessen med stor kirkekaffe ønsker menigheten ekstra mye mat; se programmet og bidra gjerne.",
+      "title": "Bispevisitas",
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "3257e0617e95",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "ca8d60935ffb",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "The bishop will hear confessions on Thursday and Friday, 8 and 9 October, and celebrate Mass on both days."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "479a73de32a0",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "3c5f48a2a452",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "On Sunday 11 October there will be a Pontifical Mass followed by a large coffee gathering. The parish needs extra food for the gathering."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "63ac4fa6970a",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "14d55bf246aa",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "The programme for the visitation is posted on the noticeboard at the back of the church."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "links": [],
+          "summary": "The bishop will visit the parish and celebrate Mass. Please help provide extra food for the coffee gathering after the Pontifical Mass.",
+          "title": "Bishop's visitation"
+        }
+      },
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23",
+        "bulletin:2026-08-30",
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "body": [
+        {
+          "_key": "51bc279e35a7",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "95a0ca35f56f",
+              "_type": "span",
+              "marks": [],
+              "text": "Det kommer snart informasjon om en innsamlingsaksjon i regi av bispedømmet. Menighetene vil øremerke egne prosjekter som får tildelt deler av midlene."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "4d9ceafdd549",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ebc10c2d8330",
+              "_type": "span",
+              "marks": [],
+              "text": "St. Barbara sitt prosjekt er å utbedre uteområdet for å skape mer plass og gjøre det finere, samt utforme flere parkeringsplasser."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "2ea4380f8cc8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b09e185cbf51",
+              "_type": "span",
+              "marks": [],
+              "text": "Befaringsrapport og foreløpig situasjonsplan ligger tilgjengelig i menighetssalen."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "lastMentionedAt": "2026-09-25T11:52:21+02:00",
+      "links": [],
+      "priority": "normal",
+      "publishedAt": "2026-09-18T13:44:14+02:00",
+      "slug": "byggeprosjekt-i-st-barbara",
+      "sourceKey": "announcement:st-barbara-building-project-2026",
+      "status": "active",
+      "summary": "St. Barbara planlegger å forbedre uteområdet og lage flere parkeringsplasser. Befaringsrapport og foreløpig situasjonsplan kan leses i menighetssalen.",
+      "title": "Byggeprosjekt i St. Barbara",
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "d5172ba44a9e",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "adbd910023cf",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Information about a diocesan fundraising campaign will be released soon. Parishes will identify their own projects to receive a share of the funds."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "d5effa44ed5f",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "12fcc9c9a849",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "St. Barbara plans to improve the outdoor area to create more space and make it more attractive, and to provide more parking spaces."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "8a25bb695a36",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "4903ec89019f",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "The site inspection report and preliminary site plan are available to read in the parish hall."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "summary": "St. Barbara plans to improve the outdoor area and provide more parking spaces. The site inspection report and preliminary site plan are available in the parish hall.",
+          "title": "Building project at St. Barbara"
+        }
+      },
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27"
+      ]
+    },
+    {
+      "sourceKey": "announcement:rjukan-new-mass-location-2026",
+      "title": "Nytt messested på Rjukan",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-09-25T11:52:21+02:00",
+      "lastMentionedAt": "2026-09-25T11:52:21+02:00",
+      "appliesUntil": "2026-10-04T17:00:00+02:00",
+      "summary": "Katolske messer på Rjukan feires nå i Rjukan kirke, Kirkebakken 1, 3660 Rjukan. Messene er flyttet fra Håndverkergata.",
+      "body": "Menigheten har inngått leieavtale med Den norske kirke. Neste messe i Rjukan kirke er søndag 4. oktober kl. 17.00.",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "title": "New Mass location in Rjukan",
+          "summary": "Catholic Masses in Rjukan are now celebrated at Rjukan Church, Kirkebakken 1, 3660 Rjukan. Masses have moved from Håndverkergata.",
+          "body": "The parish has entered into a rental agreement with the Church of Norway. The next Mass in Rjukan Church is Sunday 4 October at 17:00."
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-09-30",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-09-30",
+      "publicNote": "Den hellige Hieronymus. Rosenkrans for menn og kvinner etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Jerome. Rosary for men and women after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-01",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-01",
+      "publicNote": "Den hellige Terese av Lisieux. Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Thérèse of Lisieux. Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-02",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-10-02",
+      "publicNote": "Messen utgår på grunn av Ministrant-NM.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass is cancelled because of the national altar servers’ championship."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-10-03",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-10-03",
+      "publicNote": "Den norske messen utgår på grunn av Ministrant-NM. Messe på polsk kl. 18.00 feires som vanlig.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The Norwegian Mass is cancelled because of the national altar servers’ championship. Polish Mass at 18:00 takes place as usual."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-en-2026-10-04",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-04",
+      "publicNote": "Familiemesse.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-27"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Family Mass.",
+          "titleOverride": "Family Mass"
+        }
+      },
+      "titleOverride": "Familiemesse"
+    },
+    {
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-08",
+      "publicNote": "Bispevisitas. Biskopen hører skriftemål og feirer messen denne dagen.",
+      "scope": "singleOccurrence",
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-08",
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. The bishop hears confessions and celebrates Mass on this day."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27"
+      ],
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    },
+    {
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-09",
+      "publicNote": "Bispevisitas. Biskopen hører skriftemål og feirer messen denne dagen.",
+      "scope": "singleOccurrence",
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-09",
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. The bishop hears confessions and celebrates Mass on this day."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27"
+      ],
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    },
+    {
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-11",
+      "publicNote": "Bispevisitas. Stor kirkekaffe etter pontifikalmessen; menigheten trenger ekstra mye mat.",
+      "scope": "singleOccurrence",
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-10-11",
+      "titleOverride": "Pontifikalmesse",
+      "translations": {
+        "en": {
+          "publicNote": "Episcopal visitation. A large coffee gathering follows the Pontifical Mass; the parish needs extra food.",
+          "titleOverride": "Pontifical Mass"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27"
+      ],
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "relatedEventKey": "event:bishop-visitation-2026-10-08"
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-09-27:kongsberg:nb:1100",
+      "title": "26. søndag i det alminnelige kirkeår",
+      "massDate": "2026-09-27",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-09-27",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Esek 18, 25–28"
+        },
+        "Så sier Herren:",
+        "Nå vil dere kanskje si: «Herren går ikke frem på rett vis.» Hør da, Israels ætt! Går jeg ikke frem på rett vis? Det er dere som ikke gjør rett. Når en rettferdig mann vender seg bort fra sin rette ferd og gjør urett, skal han dø på grunn av dette. For den urett han har gjort, skal han dø.",
+        "Men når den ugudelige vender om fra sin ondskap og gjør det som er rett og rettferdig, da skal han berge livet. Han så alle synder han hadde gjort, og vendte om fra dem. Derfor skal han ikke dø, men leve.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Herre, kom din miskunn ihu, din pakt med våre fedre"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herre, vis meg dine veier",
+            "og lær meg dine stier.",
+            "La din sannhet lære og lede meg.",
+            "Du er min Frelser, hele dagen venter jeg på deg."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Kom ihu din godhet, din miskunn, Herre,",
+            "for den er fra evighet.",
+            "Glem min ungdoms synder,",
+            "se til meg, Herre, i din kjærlighet."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren er god og rettvis,",
+            "derfor viser han syndere veien.",
+            "Til sannhet leder han de små",
+            "og fører dem frem på sin vei."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – Fil 2, 1–11"
+        },
+        "Brødre, så sant Kristus er vår trøst, så sant kjærligheten gir oss mot, så sant vi eier et fellesskap i Ånden, så sant der fins noen miskunn og noen medlidenhet – så gjør min glede fullkommen: Vær ett i den samme kjærlighet, vær ett i sjel og sinn! Gjør ingenting av tom forfengelighet eller personlig ærgjerrighet; tvert imot bør hver enkelt i ydmykhet sette de andre høyere enn seg selv; heller ikke må noen sette egen velferd først, men tvert imot ha øye for de andre.",
+        "La Kristi Jesu sinnelag prege deres ferd – han som, skjønt av guddoms rang dog ikke voktet skinnsykt over sin stilling som Guds like! Nei, han oppgav alt sitt eget, gikk inn i slavens kår og ble et menneske som vi. Å se til som et menneske i all sin ferd, bøyde han seg, underkastet og lydig til døden – ja, døden på et kors! Derfor er det Gud har hevet ham så høyt og skjenket ham det navn som står over alle andre – så høyt, at alle ting i Jesu navn skal bøye kne – i himmelen, på jorden og i dypet – og hver en tunge skal forkynne: «Jesus Kristus er Herre!» – til Gud Faderens ære.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Mine får hører min stemme, sier Herren.",
+            "Jeg kjenner dem, og de følger meg."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 21, 28–32"
+        },
+        "På den tid sa Jesus til yppersteprestene og folkets eldste:",
+        "«Hva vil dere si til dette: En mann hadde to sønner, og han gikk til den ene og sa: ‘Gutten min, i dag får du gå bort og arbeide i vinmarken.’ Men han svarte: ‘Nei, jeg vil ikke.’ Men senere angret han det og gikk. Derpå vendte faren seg til den andre og sa det samme til ham. Og han svarte: ‘Ja vel, herre’ – men gikk ikke. Hvilken av de to var det nå som rettet seg etter farens vilje?»",
+        "De svarer: «Den første» – og Jesus sier:",
+        "«Ja, og derfor skal dere vite, at tolloppkrevere og skjøger kommer før inn i himlenes rike enn dere. Johannes viste dere rettferdighetens vei, og dere trodde ham ikke; skatteoppkrevere og skjøger derimot, de trodde ham. Men selv det fikk dere ikke på bedre tanker; dere tror fremdeles ikke på ham!»"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "articleType": "news",
+      "body": [
+        {
+          "_key": "c3531b2d3ecb",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b9232bc41c2a",
+              "_type": "span",
+              "marks": [],
+              "text": "St. Barbara menighet inviterer barn fra 3 til 12 år til katekese."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "_key": "registration-gode-hyrde",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "registration-gode-hyrde-link",
+              "href": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUN0ZFWFhXM1NONU1BTU5PNUlESFVPMEY0Mi4u"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "registration-gode-hyrde-text",
+              "text": "Påmelding til Gode Hyrde-katekese 2026–2027",
+              "marks": [
+                "registration-gode-hyrde-link"
+              ]
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "registration-konfirmant",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "registration-konfirmant-link",
+              "href": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUNUdCVzRDSkpCRVFXUTZKRkxBTklQMjNSSi4u"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "registration-konfirmant-text",
+              "text": "Påmelding til konfirmantkatekese 2026–2027",
+              "marks": [
+                "registration-konfirmant-link"
+              ]
+            }
+          ]
+        }
+      ],
+      "catechesis": {
+        "groups": [
+          {
+            "_key": "children-3-7",
+            "body": [
+              {
+                "_key": "94c95142a109",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "3ff6214be61d",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Familiene deltar så ofte det passer, og bekrefter barnets deltakelse fra gang til gang på Spond."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "contact": {
+              "email": "Karine.Gallot-Lavallee@katolsk.no",
+              "name": "Karine Gallot-Lavallée"
+            },
+            "sessions": [
+              {
+                "_key": "saturday",
+                "endTime": "14:00",
+                "startTime": "12:00",
+                "title": "Lørdager",
+                "translations": {
+                  "en": {
+                    "title": "Saturdays"
+                  }
+                },
+                "massTime": "12:00"
+              },
+              {
+                "_key": "wednesday",
+                "endTime": "18:30",
+                "massTime": "18:00",
+                "startTime": "16:30",
+                "title": "Onsdager",
+                "translations": {
+                  "en": {
+                    "title": "Wednesdays"
+                  }
+                }
+              }
+            ],
+            "summary": "Som hovedregel hver uke.",
+            "title": "Barn 3–7 år",
+            "translations": {
+              "en": {
+                "body": [
+                  {
+                    "_key": "f0cf8891f2f8",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "aa2ff3257f11",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "Families attend as often as suits them and confirm their child's attendance for each session on Spond."
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                  }
+                ],
+                "summary": "Normally every week.",
+                "title": "Children aged 3–7"
+              }
+            }
+          },
+          {
+            "_key": "children-7-12",
+            "body": [
+              {
+                "_key": "f74d95e63082",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "a807a2f173d4",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Dere får en invitasjon på e-post før samlingene. Bekreft barnets deltakelse når dere blir bedt om det."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "contact": {
+              "email": "Katarzyna.Jachimowicz@katolsk.no",
+              "name": "Katarzyna Jachimowicz"
+            },
+            "sessionDates": [
+              "2026-09-13",
+              "2026-09-27",
+              "2026-10-04",
+              "2026-11-01",
+              "2026-11-08",
+              "2026-11-22",
+              "2026-12-06",
+              "2026-12-13",
+              "2027-01-10",
+              "2027-01-24",
+              "2027-02-07",
+              "2027-02-14",
+              "2027-03-14",
+              "2027-04-11",
+              "2027-04-25",
+              "2027-05-09",
+              "2027-05-23"
+            ],
+            "sessions": [
+              {
+                "_key": "pre-communion",
+                "communionYear": 2028,
+                "endTime": "13:30",
+                "massTime": "11:00",
+                "startTime": "11:00",
+                "title": "Førkommunion",
+                "translations": {
+                  "en": {
+                    "title": "Pre-Communion"
+                  }
+                }
+              },
+              {
+                "_key": "communion",
+                "communionDate": "2027-05-29",
+                "endTime": "16:00",
+                "massTime": "13:00",
+                "startTime": "13:00",
+                "title": "Kommunion",
+                "translations": {
+                  "en": {
+                    "title": "First Communion"
+                  }
+                }
+              }
+            ],
+            "summary": "Samlinger på søndager. Etterkommunionsbarn kan velge mellom de to gruppene.",
+            "title": "Barn 7–12 år",
+            "translations": {
+              "en": {
+                "body": [
+                  {
+                    "_key": "db69eba58898",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "bb4eeb54377c",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "You will receive an email invitation before each session. Please confirm your child's attendance when asked."
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                  }
+                ],
+                "summary": "Sessions take place on Sundays. Children who have received First Communion can choose either group.",
+                "title": "Children aged 7–12"
+              }
+            }
+          }
+        ],
+        "otherOfferings": [
+          {
+            "_key": "other-places",
+            "body": [
+              {
+                "_key": "45aacebbd079",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "5812174786b5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "For katekese i Notodden og Rjukan, kontakt pater Trym."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "contact": {
+              "email": "Kongsberg@katolsk.no",
+              "name": "Pater Trym"
+            },
+            "title": "Notodden og Rjukan",
+            "translations": {
+              "en": {
+                "body": [
+                  {
+                    "_key": "194d05eb5a98",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "57a25e5fd0d3",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "For catechesis in Notodden and Rjukan, contact Fr. Trym."
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                  }
+                ],
+                "title": "Notodden and Rjukan"
+              }
+            }
+          },
+          {
+            "_key": "sycamore",
+            "body": [
+              {
+                "_key": "970c3bb07088",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "d7d53eb7bfcd",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Sycamore er ikke aktivt nå. Ta kontakt med menigheten hvis du er interessert i en ny gruppe."
+                  }
+                ],
+                "markDefs": [],
+                "style": "normal"
+              }
+            ],
+            "title": "Voksne – Sycamore",
+            "translations": {
+              "en": {
+                "body": [
+                  {
+                    "_key": "2888241e6e72",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "cd67e6b13698",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "Sycamore is not currently running. Please contact the parish if you are interested in a new group."
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                  }
+                ],
+                "title": "Adults – Sycamore"
+              }
+            }
+          }
+        ],
+        "summary": "Påmeldingen for 2026–2027 er fortsatt åpen. Bruk lenkene over. Kontakt den ansvarlige for barnets aldersgruppe dersom du har spørsmål.",
+        "translations": {
+          "en": {
+            "summary": "Registration for 2026–2027 is still open. Use the links above. Contact the person responsible for your child’s age group if you have questions."
+          }
+        }
+      },
+      "category": "Katekese",
+      "links": [
+        {
+          "label": "Påmelding til Gode Hyrde-katekese 2026–2027",
+          "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUN0ZFWFhXM1NONU1BTU5PNUlESFVPMEY0Mi4u"
+        },
+        {
+          "label": "Påmelding til konfirmantkatekese 2026–2027",
+          "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUNUdCVzRDSkpCRVFXUTZKRkxBTklQMjNSSi4u"
+        }
+      ],
+      "pagePath": "/katekese",
+      "publishedAt": "2026-06-11T08:00:00+02:00",
+      "slug": "pamelding-til-katekese-2026-2027",
+      "sourceKey": "article:catechesis-registration-2026-06-11",
+      "summary": "Grupper, tider og samlingsdatoer for barn fra 3 til 12 år, samt påmeldingslenker til Gode Hyrde-katekese og konfirmantkatekese. Påmeldingen er fortsatt åpen.",
+      "title": "Katekese 2026–2027",
+      "translations": {
+        "en": {
+          "body": [
+            {
+              "_key": "c00d9908410c",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "3942e2928c44",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "St. Barbara Parish welcomes children aged 3–12 to catechesis."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "_key": "registration-gode-hyrde-en",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "registration-gode-hyrde-en-link",
+                  "href": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUN0ZFWFhXM1NONU1BTU5PNUlESFVPMEY0Mi4u"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "registration-gode-hyrde-en-text",
+                  "text": "Register for Catechesis of the Good Shepherd 2026–2027",
+                  "marks": [
+                    "registration-gode-hyrde-en-link"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "registration-konfirmant-en",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "registration-konfirmant-en-link",
+                  "href": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUNUdCVzRDSkpCRVFXUTZKRkxBTklQMjNSSi4u"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "registration-konfirmant-en-text",
+                  "text": "Register for Confirmation catechesis 2026–2027",
+                  "marks": [
+                    "registration-konfirmant-en-link"
+                  ]
+                }
+              ]
+            }
+          ],
+          "category": "Catechesis",
+          "links": [
+            {
+              "label": "Register for Catechesis of the Good Shepherd 2026–2027",
+              "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUN0ZFWFhXM1NONU1BTU5PNUlESFVPMEY0Mi4u"
+            },
+            {
+              "label": "Register for Confirmation catechesis 2026–2027",
+              "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-v90rbsIDUiTmklrdgP0XaMJqWRVmq5LifcHkWyCmNhUNUdCVzRDSkpCRVFXUTZKRkxBTklQMjNSSi4u"
+            }
+          ],
+          "summary": "Groups, times and session dates for children aged 3–12, with registration links for Catechesis of the Good Shepherd and Confirmation catechesis. Registration is still open.",
+          "title": "Catechesis 2026–2027"
+        }
+      },
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [
+        "event:catechesis-confirmation-start-2026-09-04",
+        "event:catechesis-good-shepherd-start-2026-09-13"
+      ],
+      "sourceBulletinKeys": []
+    }
+  ]
+}
