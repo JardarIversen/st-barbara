@@ -74,13 +74,14 @@ katekesesiden har begge lenkene og riktige tider på norsk og engelsk. Kalendere
 avlysningene og familiemessen. Rjukan-messens detaljside viser Kirkebakken 1.
 Omkved, verslinjer, responstegn og evangelievers er visuelt kontrollert på stor skjerm.
 
-To begrensninger gjenstår:
+Oppfølging etter Jardars godkjenning av nødvendige kodeendringer:
+
+Den faste listen `PARISH_PLACES_QUERY` er endret fra `place:rjukan-st-johannes` til
+`place:rjukan-kirke`. Forsiden, kontaktsiden og bunnteksten henter dermed det nye messestedet
+fra Sanity. Den historiske kapelloppføringen og tidligere messehenvisninger er bevart.
+
+Én kontrollbegrensning gjenstår:
 
 - Nettleserens dokumenterte mobilbreddeinnstilling hadde ingen effekt: faktisk sidebredde forble
   1280 piksler etter innstilling til 390, også i ny fane. Visuell mobilkontroll kan derfor ikke
   bekreftes. Den midlertidige innstillingen er tilbakestilt.
-- Den faste listen `PARISH_PLACES_QUERY` velger fortsatt `place:rjukan-st-johannes` for forside,
-  kontaktside og bunntekst. Bytte av denne ene linjen til `place:rjukan-kirke` er klargjort,
-  men ikke utført mens brukerens svar om unntak fra AGENTS.md sin kodebegrensning avventes.
-  Messehendelsen og kunngjøringen bruker allerede riktig nytt sted. Den historiske kapelloppføringen
-  er ikke omdøpt eller flyttet for å omgå denne begrensningen.

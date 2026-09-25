@@ -116,7 +116,7 @@ export const PARISH_PLACES_QUERY = defineQuery(/* groq */ `
     sourceKey in [
       "place:kongsberg-st-barbara",
       "place:notodden",
-      "place:rjukan-st-johannes",
+      "place:rjukan-kirke",
       "place:mo-kirke"
     ]
   ] | order(sourceKey asc) ${placeProjection}
