@@ -64,3 +64,23 @@ Alle 182 ID-er og revisjoner er kontrollert mot Sanity etter publisering.
 Kalenderkontroll på norsk og engelsk bekrefter åtte annonserte messetidspunkter, begge avlysningene,
 Rjukan-adressen, at menighetsrådsmøtet er utelatt, samt at lesningene ikke arves til feil dato eller språk.
 De 45 eksisterende testene, lint og produksjonsbygg er bestått.
+
+## Kontroll av publisert nettsted
+
+Vercel-utrullingen av `1fdad34` er vellykket. Datamellomlageret beholdt eldre innhold etter utrullingen.
+Det ble tømt med Vercel CLI (`cache purge --type data --project st-barbara --scope jardars-projects --yes`),
+og publisert nettside ble deretter kontrollert på nytt. Forsiden har riktig PDF for 27. september;
+katekesesiden har begge lenkene og riktige tider på norsk og engelsk. Kalenderen viser de nye messene,
+avlysningene og familiemessen. Rjukan-messens detaljside viser Kirkebakken 1.
+Omkved, verslinjer, responstegn og evangelievers er visuelt kontrollert på stor skjerm.
+
+To begrensninger gjenstår:
+
+- Nettleserens dokumenterte mobilbreddeinnstilling hadde ingen effekt: faktisk sidebredde forble
+  1280 piksler etter innstilling til 390, også i ny fane. Visuell mobilkontroll kan derfor ikke
+  bekreftes. Den midlertidige innstillingen er tilbakestilt.
+- Den faste listen `PARISH_PLACES_QUERY` velger fortsatt `place:rjukan-st-johannes` for forside,
+  kontaktside og bunntekst. Bytte av denne ene linjen til `place:rjukan-kirke` er klargjort,
+  men ikke utført mens brukerens svar om unntak fra AGENTS.md sin kodebegrensning avventes.
+  Messehendelsen og kunngjøringen bruker allerede riktig nytt sted. Den historiske kapelloppføringen
+  er ikke omdøpt eller flyttet for å omgå denne begrensningen.
