@@ -19,10 +19,11 @@ import {
 
 const args = process.argv.slice(2)
 const commit = args.includes('--commit')
+const checkOnly = args.includes('--check')
 const manifestPath = args.find((argument) => !argument.startsWith('--'))
 
 if (!manifestPath) {
-  console.error('Bruk: npm run bulletin:import -- <manifest.json> [--commit]')
+  console.error('Bruk: npm run bulletin:import -- <manifest.json> [--commit | --check]')
   process.exit(1)
 }
 
@@ -58,10 +59,15 @@ const counts = Object.fromEntries(
 )
 
 console.log(`Manifest: ${absolutePath}`)
-console.log(`Modus: ${commit ? 'PUBLISERER' : 'TØRRKJØRING'}`)
+console.log(`Modus: ${checkOnly ? 'KONTROLLERER UTEN SKRIVING' : commit ? 'PUBLISERER' : 'TØRRKJØRING'}`)
 console.log(counts)
 
-if (!commit) {
+if (!commit && !checkOnly) {
+  if (manifest.sourceDocument?.pdfPath) {
+    const sourcePath = resolveFilePath(manifest.sourceDocument.pdfPath, baseDirectory)
+    console.log(`Program-PDF: ${sha256File(sourcePath)}`)
+  }
+  for (const key of manifest.unpublishEventKeys ?? []) console.log(`Avpubliserer samlet hendelse: ${key}`)
   for (const bulletin of manifest.bulletins ?? []) {
     const pdfPath = resolveFilePath(bulletin.pdfPath, baseDirectory)
     console.log(`- ${bulletin.sourceKey}: ${sha256File(pdfPath).slice(0, 12)}…`)
@@ -74,7 +80,15 @@ if (!commit) {
   process.exit(0)
 }
 
-const client = getSanityClient()
+const client = getSanityClient({readOnly: checkOnly})
+// The public client has no write credential. Fail explicitly at every mutation in check mode.
+if (checkOnly) {
+  const readOnly = () => {throw new Error('Kontrollen ville endret data. Kjør tørrtest og publiser endringen først.')}
+  client.patch = readOnly
+  client.create = readOnly
+  client.transaction = readOnly
+  client.assets.upload = readOnly
+}
 const cache = new Map()
 
 function withoutUndefined(value) {
@@ -114,10 +128,12 @@ async function upsert(type, sourceKey, fields) {
   if (existing && !patchChangesDocument(existing, cleanFields, fieldsToUnset)) {
     document = existing
   } else if (existing) {
+    if (checkOnly) throw new Error(`${sourceKey}: importen ville endret publisert innhold.`)
     let patch = client.patch(existing._id).ifRevisionId(existing._rev).set(cleanFields)
     if (fieldsToUnset.length) patch = patch.unset(fieldsToUnset)
     document = await patch.commit({autoGenerateArrayKeys: true})
   } else {
+    if (checkOnly) throw new Error(`${sourceKey}: dokumentet mangler.`)
     document = await client.create({_type: type, sourceKey, ...cleanFields})
   }
 
@@ -127,6 +143,7 @@ async function upsert(type, sourceKey, fields) {
 }
 
 async function resolveReference(type, sourceKey, required = true) {
+  if (sourceKey === null) return null
   if (!sourceKey) return undefined
   const document = await findBySourceKey(type, sourceKey)
   if (!document && required) throw new Error(`Fant ikke ${type} med sourceKey ${sourceKey}.`)
@@ -288,8 +305,34 @@ for (const item of manifest.events ?? []) {
 for (const item of (manifest.events ?? []).filter((event) => event.parentEventKey)) {
   const eventDocument = await findBySourceKey('event', item.sourceKey)
   const parentEvent = await resolveReference('event', item.parentEventKey)
-  const updated = await client.patch(eventDocument._id).set({parentEvent}).commit()
-  cache.set(`event:${item.sourceKey}`, updated)
+  if (patchChangesDocument(eventDocument, {parentEvent})) {
+    const updated = await client.patch(eventDocument._id).set({parentEvent}).commit()
+    cache.set(`event:${item.sourceKey}`, updated)
+  }
+}
+
+for (const item of manifest.massExceptions ?? []) {
+  const existing = await findBySourceKey('massException', item.sourceKey)
+  await upsert('massException', item.sourceKey, {
+    scope: item.scope ?? 'singleOccurrence',
+    schedule: await resolveReference('recurringMassSchedule', item.scheduleKey),
+    occurrenceDate: item.occurrenceDate,
+    rangeStart: item.rangeStart,
+    rangeEnd: item.rangeEnd,
+    changeType: item.changeType,
+    newStartsAt: item.newStartsAt,
+    newEndsAt: item.newEndsAt,
+    newPlace: await resolveReference('place', item.newPlaceKey, false),
+    relatedEvent: await resolveReference('event', item.relatedEventKey, false),
+    titleOverride: item.titleOverride,
+    publicNote: item.publicNote,
+    details: toPortableText(item.details, item.sourceKey),
+    sourceBulletins: await sourceBulletinReferences(
+      existing,
+      item.sourceBulletinKeys,
+      item.sourceKey,
+    ),
+  })
 }
 
 for (const item of manifest.announcements ?? []) {
@@ -309,37 +352,16 @@ for (const item of manifest.announcements ?? []) {
       ...reference,
       _key: stableKey(item.sourceKey, 'place', index, reference._ref),
     })),
-    relatedEvents: (await resolveReferences('event', item.relatedEventKeys)).map(
+    relatedEvents: [
+      ...await resolveReferences('event', item.relatedEventKeys),
+      ...await resolveReferences('massException', item.relatedMassExceptionKeys),
+    ].map(
       (reference, index) => ({
         ...reference,
         _key: stableKey(item.sourceKey, 'event', index, reference._ref),
       }),
     ),
     links: toLinks(item.links, item.sourceKey),
-    sourceBulletins: await sourceBulletinReferences(
-      existing,
-      item.sourceBulletinKeys,
-      item.sourceKey,
-    ),
-  })
-}
-
-for (const item of manifest.massExceptions ?? []) {
-  const existing = await findBySourceKey('massException', item.sourceKey)
-  await upsert('massException', item.sourceKey, {
-    scope: item.scope ?? 'singleOccurrence',
-    schedule: await resolveReference('recurringMassSchedule', item.scheduleKey),
-    occurrenceDate: item.occurrenceDate,
-    rangeStart: item.rangeStart,
-    rangeEnd: item.rangeEnd,
-    changeType: item.changeType,
-    newStartsAt: item.newStartsAt,
-    newEndsAt: item.newEndsAt,
-    newPlace: await resolveReference('place', item.newPlaceKey, false),
-    relatedEvent: await resolveReference('event', item.relatedEventKey, false),
-    titleOverride: item.titleOverride,
-    publicNote: item.publicNote,
-    details: toPortableText(item.details, item.sourceKey),
     sourceBulletins: await sourceBulletinReferences(
       existing,
       item.sourceBulletinKeys,
@@ -404,4 +426,18 @@ for (const item of manifest.articles ?? []) {
   })
 }
 
-console.log('Import fullført.')
+for (const sourceKey of manifest.unpublishEventKeys ?? []) {
+  const existing = await findBySourceKey('event', sourceKey)
+  if (existing) {
+    const references = await client.fetch('count(*[references($id)])', {id: existing._id})
+    if (references) throw new Error(`${sourceKey} har fortsatt ${references} referanser.`)
+    const {_rev, _createdAt, _updatedAt, ...fields} = existing
+    await client.transaction()
+      .createIfNotExists({...fields, _id: `drafts.${existing._id}`})
+      .delete(existing._id)
+      .commit()
+  }
+  console.log(`Oppdatert event: ${sourceKey} (avpublisert, bevart som utkast)`)
+}
+
+console.log(checkOnly ? 'Kontroll fullført: importen ville ikke endret dokumenter eller revisjoner.' : 'Import fullført.')

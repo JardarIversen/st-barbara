@@ -5,6 +5,7 @@ import { addDays, localDateTime } from "@/lib/calendar";
 import { sanityFetch } from "./live";
 import {
   ACTIVE_ANNOUNCEMENTS_QUERY,
+  ANNOUNCEMENT_QUERY,
   ANNOUNCEMENTS_BY_BULLETINS_QUERY,
   ALL_ARTICLES_QUERY,
   ARTICLE_QUERY,
@@ -130,6 +131,15 @@ export const getEvent = cache(async (slug: string) => {
     params: { slug },
   });
   return localizeContent(data, await getLocale()) as ParishEvent | null;
+});
+
+export const getAnnouncement = cache(async (slug: string) => {
+  const { data } = await sanityFetch({
+    ...published,
+    query: ANNOUNCEMENT_QUERY,
+    params: { slug },
+  });
+  return localizeContent(data, await getLocale()) as Announcement | null;
 });
 
 export const getMassText = cache(async (date: string, scheduleKey: string) => {

@@ -4,6 +4,7 @@ import { useTranslations } from "@/i18n/client";
 
 import Link from "@/i18n/link";
 import ContentLanguage from "./content-language";
+import AnnouncementTags from "./announcement-tags";
 import {
   LANGUAGE_LABELS,
   calendarDayGroups,
@@ -141,6 +142,11 @@ export default function AgendaList({
                       ›
                     </span>
                   </Link>
+                  {item.announcements?.length ? (
+                    <div className="pb-3 pl-[4.25rem] sm:pl-20">
+                      <AnnouncementTags items={item.announcements} />
+                    </div>
+                  ) : null}
                 </li>
               );
             })}

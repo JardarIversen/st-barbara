@@ -17,6 +17,8 @@ Sanity Studio kjøres separat med de samme kommandoene i `studio-st.-barbara-chu
 
 Kalenderen beregner messer fra faste planer. Søndagsbladet er autoriteten for datoene det dekker; avvik lagres separat. Hendelser med påmeldingsfrist vises også under Kunngjøringer frem til fristen. En valgfri fremhevingsperiode på hendelsen overstyrer denne automatikken. Begge visningene bruker samme dokument.
 
+Et samlet program kan ligge på en kunngjøringsside, med PDF og egne kalenderoppføringer for hvert relevant tidspunkt. Kunngjøringen kobles til hendelser og bestemte messeavvik. Kalenderen viser koblingen som en etikett, og detaljsidene deler programlenkene. Se `scripts/manifests/bispevisitas-2026.json` i Studio-mappen. Inspeksjon og verifikasjon leser offentlige publiserte data uten token; import krever fortsatt skrivetoken.
+
 ## Språk og design
 
 Norsk (`/nb`) og kontrollert engelsk (`/en`) deler Sanity-dokumenter. Redaksjonelle oversettelser ligger i Sanity; faste grensesnitttekster ligger i `web/src/i18n/en.json`. Språkvelgeren har 30 språk med flagg og søk. Øvrige språk oversettes fra engelsk med Google Translate.

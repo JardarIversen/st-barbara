@@ -7,6 +7,19 @@ const heddal = { _id: "heddal", sourceKey: "place:heddal-stavkirke", name: "Hedd
 const schedule = { _id: "schedule", sourceKey: "schedule:notodden", title: "Messe på Notodden", status: "active", place: notodden, language: "nb", anchorWeekday: "sunday", recurrenceType: "monthlyWeeks", weeksOfMonth: [2, 4], dayOffset: 0, startTime: "17:00", validFrom: "2026-01-01" };
 const data = { schedules: [schedule], exceptions: [], events: [], bulletins: [] };
 
+test("a programme links its individual appointments and mass without leaking to other Sundays", () => {
+  const programme = { title: "Bispevisitas", slug: "bispevisitas-8-11-oktober", links: [{_key: "pdf", label: "Program (PDF)", url: "https://example.org/program.pdf"}] };
+  const exception = { scope: "singleOccurrence", scheduleKey: schedule.sourceKey, occurrenceDate: "2026-10-11", changeType: "changed", announcements: [programme] };
+  const meeting = { _id: "meeting", title: "Møte med kirkelyden på Notodden", slug: "mote-notodden", eventType: "activity", status: "scheduled", startsAt: "2026-10-11T16:00:00+02:00", announcements: [programme] };
+  const items = buildCalendarItems({...data, exceptions: [exception], events: [meeting]}, "2026-10-01", "2026-10-31");
+  assert.equal(items.length, 3);
+  assert.equal(items[0].startsAt, meeting.startsAt);
+  assert.equal(items[1].startsAt, "2026-10-11T17:00:00+02:00");
+  assert.equal(items[2].announcements, undefined);
+  assert.deepEqual(toCalendarListItems(items).slice(0, 2).map(item => item.announcements), [[programme], [programme]]);
+  assert.equal(resolveScheduledMass({...data, exceptions: [exception]}, items[1].slug, "2026-10-11").announcements[0].links[0].url, programme.links[0].url);
+});
+
 test("history is one calendar month, including short months and leap years", () => {
   assert.equal(calendarHistoryStart("2026-09-06"), "2026-08-06");
   assert.equal(calendarHistoryStart("2026-03-31"), "2026-02-28");

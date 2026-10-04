@@ -51,12 +51,13 @@ export function loadToken() {
   return token
 }
 
-export function getSanityClient() {
+export function getSanityClient({readOnly = false} = {}) {
   return createClient({
     projectId: PROJECT_ID,
     dataset: DATASET,
     apiVersion: API_VERSION,
     useCdn: false,
-    token: loadToken(),
+    perspective: 'published',
+    ...(readOnly ? {} : {token: loadToken()}),
   })
 }

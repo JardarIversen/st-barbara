@@ -8,7 +8,7 @@ import type { Announcement } from "@/sanity/types";
 
 function announcementText(item: Announcement) {
   // Events have their own detail page; never flatten their programme into a teaser.
-  if (item.eventSlug) return item.summary || "";
+  if (item.eventSlug || item.hasDetailPage) return item.summary || "";
   const body = item.body
     .flatMap((block) =>
       "children" in block
@@ -75,6 +75,10 @@ export default function AnnouncementBoard({
                   <Link href={`/messetider/${item.eventSlug}`} className="underline-offset-4 hover:underline">
                     {item.title}
                   </Link>
+                ) : item.hasDetailPage ? (
+                  <Link href={`/kunngjoringer/${item.slug}`} className="underline-offset-4 hover:underline">
+                    {item.title}
+                  </Link>
                 ) : item.title}
               </ContentLanguage>
             </h3>
@@ -88,7 +92,7 @@ export default function AnnouncementBoard({
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 <ContentLanguage
                   original={item.originalFields?.includes(
-                    item.eventSlug || !item.body?.length ? "summary" : "body",
+                    item.eventSlug || item.hasDetailPage || !item.body?.length ? "summary" : "body",
                   )}
                 >
                   {text}

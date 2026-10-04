@@ -30,6 +30,15 @@ const imageProjection = /* groq */ `{
   "dimensions": asset->metadata.dimensions
 }`;
 
+const calendarAnnouncements = /* groq */ `
+  "announcements": *[_type == "announcement" && references(^._id)] | order(publishedAt desc) {
+    title,
+    translations,
+    "slug": slug.current,
+    links[]{_key, label, url}
+  }
+`;
+
 export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
   {
     "schedules": *[
@@ -77,6 +86,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
       titleOverride,
       publicNote,
       details,
+      ${calendarAnnouncements},
       sourceBulletins[]->${bulletinProjection}
     },
     "events": *[
@@ -95,6 +105,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
       endsAt,
       places[]->${placeProjection},
       parentEvent->{title, translations, "slug": slug.current},
+      ${calendarAnnouncements},
       summary,
       body,
       language,
@@ -139,6 +150,7 @@ export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
     title,
     "slug": slug.current,
     status,
+    "hasDetailPage": _type == "announcement" && count(relatedEvents) > 0,
     priority,
     publishedAt,
     lastMentionedAt,
@@ -166,6 +178,7 @@ export const ACTIVE_ANNOUNCEMENTS_QUERY = defineQuery(/* groq */ `
 export const ANNOUNCEMENTS_BY_BULLETINS_QUERY = defineQuery(/* groq */ `
   *[
     _type == "announcement" &&
+    !defined(relatedEvents[0]) &&
     count(sourceBulletins[@._ref in $bulletinIds]) > 0
   ] | order(priority desc, publishedAt desc) {
     _id,
@@ -184,6 +197,16 @@ export const ANNOUNCEMENTS_BY_BULLETINS_QUERY = defineQuery(/* groq */ `
     places[]->${placeProjection},
     relatedEvents[]->{title, translations, "slug": slug.current},
     links[]{_key, label, url},
+    sourceBulletins[]->${bulletinProjection}
+  }
+`);
+
+export const ANNOUNCEMENT_QUERY = defineQuery(/* groq */ `
+  *[_type == "announcement" && slug.current == $slug][0] {
+    _id, sourceKey, translations, title, "slug": slug.current,
+    status, priority, publishedAt, lastMentionedAt, appliesFrom, appliesUntil,
+    summary, body, links[]{_key, label, url},
+    places[]->${placeProjection},
     sourceBulletins[]->${bulletinProjection}
   }
 `);
@@ -270,6 +293,7 @@ export const EVENT_QUERY = defineQuery(/* groq */ `
     endsAt,
     places[]->${placeProjection},
     parentEvent->{title, translations, "slug": slug.current},
+    ${calendarAnnouncements},
     summary,
     body,
     language,

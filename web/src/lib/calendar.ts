@@ -1,6 +1,7 @@
 import type { PortableTextBlock } from "next-sanity";
 import type {
   Bulletin,
+  CalendarAnnouncement,
   CalendarData,
   MassException,
   MassSchedule,
@@ -38,6 +39,7 @@ export const EVENT_TYPE_LABELS: Record<string, string> = {
 };
 
 export type CalendarItem = {
+  announcements?: CalendarAnnouncement[];
   id: string;
   kind: "mass" | "event";
   title: string;
@@ -45,6 +47,7 @@ export type CalendarItem = {
   href: string;
   startsAt: string;
   endsAt?: string;
+  estimatedEndTime?: boolean;
   dateKey: string;
   status: "scheduled" | "cancelled" | "postponed";
   changeType?: "cancelled" | "rescheduled" | "changed";
@@ -92,6 +95,7 @@ export type CalendarListItem = Pick<
   | "changeLabel"
   | "titleOriginal"
   | "noteOriginal"
+  | "announcements"
 >;
 
 export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
@@ -116,6 +120,7 @@ export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
       changeLabel,
       titleOriginal,
       noteOriginal,
+      announcements,
     }) => ({
       id,
       kind,
@@ -136,6 +141,7 @@ export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
       changeLabel,
       titleOriginal,
       noteOriginal,
+      announcements,
     }),
   );
 }
@@ -332,6 +338,7 @@ function massItem(
     startsAt,
     endsAt,
     dateKey: todayInOslo(new Date(startsAt)),
+    estimatedEndTime: !exception?.newEndsAt,
     status: exception?.changeType === "cancelled" ? "cancelled" : "scheduled",
     changeType: exception?.changeType,
     changeLabel:
@@ -356,6 +363,7 @@ function massItem(
     scheduleKey: schedule.sourceKey,
     occurrenceDate,
     relatedEventSlug: exception?.relatedEventSlug,
+    announcements: exception?.announcements,
   };
 }
 
@@ -398,6 +406,7 @@ export function calendarItemFromEvent(event: ParishEvent): CalendarItem {
     links: event.links,
     sourceBulletins: event.sourceBulletins ?? [],
     parentEvent: event.parentEvent,
+    announcements: event.announcements,
   };
 }
 

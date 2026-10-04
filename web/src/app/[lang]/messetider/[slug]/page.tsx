@@ -6,6 +6,7 @@ import ContentLanguage from "@/components/content-language";
 import { notFound } from "next/navigation";
 import PortableContent from "@/components/portable-content";
 import SourceBulletins from "@/components/source-bulletins";
+import AnnouncementTags from "@/components/announcement-tags";
 import {
   EVENT_TYPE_LABELS,
   LANGUAGE_LABELS,
@@ -63,9 +64,11 @@ export default async function CalendarDetailPage({
     item.kind === "mass" && item.occurrenceDate && item.scheduleKey
       ? await getMassText(item.occurrenceDate, item.scheduleKey)
       : null;
-  const announcements = await getAnnouncementsByBulletins(
+  const announcements = item.announcements?.length ? [] : await getAnnouncementsByBulletins(
     item.sourceBulletins.map((bulletin) => bulletin._id),
   );
+  const programmeLinks = item.announcements?.flatMap((announcement) => announcement.links ?? []) ?? [];
+  const links = [...new Map([...programmeLinks, ...(item.links ?? [])].map((link) => [link.url, link])).values()];
   const cancelled = item.status === "cancelled";
   const multipleDays = Boolean(
     item.endsAt &&
@@ -95,6 +98,9 @@ export default async function CalendarDetailPage({
           {item.title}
         </ContentLanguage>
       </h1>
+      {item.announcements?.length ? (
+        <div className="mt-5"><AnnouncementTags items={item.announcements} /></div>
+      ) : null}
       {cancelled && (
         <p className="mt-4 inline-block rounded-sm bg-primary px-3 py-1.5 text-sm font-semibold text-background">
           {t("Avlyst")}
@@ -123,6 +129,7 @@ export default async function CalendarDetailPage({
                 {formatCalendarTime(item.startsAt, locale)}
                 {item.endsAt &&
                   !multipleDays &&
+                  !(item.estimatedEndTime && item.announcements?.length) &&
                   `–${formatCalendarTime(item.endsAt, locale)}`}
               </span>
             )}
@@ -212,9 +219,9 @@ export default async function CalendarDetailPage({
         </p>
       )}
 
-      {item.links?.length ? (
+      {links.length ? (
         <div className="mt-8 flex flex-wrap gap-3">
-          {item.links.map((link) => (
+          {links.map((link) => (
             <a
               key={link._key}
               href={link.url}

@@ -1,7 +1,7 @@
 import {getSanityClient} from './lib/sanity-client.mjs'
 
 const asJson = process.argv.includes('--json')
-const client = getSanityClient()
+const client = getSanityClient({readOnly: true})
 const documents = await client.fetch(`
   *[_type in [
     "bulletin",

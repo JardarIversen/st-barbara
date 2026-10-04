@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "sourceDocument": {
+    "pdfPath": "../../../web/public/documents/program-bispevisitas-2026.pdf",
+    "description": "Program fra Oslo katolske bispedømme, mottatt fra p. Trym. Tidspunktene i PDF-en er autoritative etter Jardars instruks 4. oktober 2026."
+  },
+  "places": [
+    {
+      "sourceKey": "place:notodden-kirke",
+      "name": "Notodden kirke",
+      "slug": "notodden-kirke",
+      "placeType": "church",
+      "locality": "Notodden",
+      "translations": {
+        "en": {
+          "name": "Notodden kirke"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "sourceKey": "event:visitation-adoration:2026-10-08",
+      "title": "Sakramentstilbedelse og skriftemål",
+      "slug": "bispevisitas-adoration-2026-10-08",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-08T17:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen hører skriftemål under sakramentstilbedelsen i St. Barbara.",
+      "body": "Biskopen hører skriftemål under sakramentstilbedelsen i St. Barbara.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Eucharistic adoration and confession",
+          "summary": "The bishop will hear confessions during Eucharistic adoration at St. Barbara.",
+          "body": "The bishop will hear confessions during Eucharistic adoration at St. Barbara."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-adoration:2026-10-09",
+      "title": "Sakramentstilbedelse og skriftemål",
+      "slug": "bispevisitas-adoration-2026-10-09",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-09T17:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen hører skriftemål under sakramentstilbedelsen i St. Barbara.",
+      "body": "Biskopen hører skriftemål under sakramentstilbedelsen i St. Barbara.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Eucharistic adoration and confession",
+          "summary": "The bishop will hear confessions during Eucharistic adoration at St. Barbara.",
+          "body": "The bishop will hear confessions during Eucharistic adoration at St. Barbara."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-finance-council:2026-10-09",
+      "title": "Møte med finansrådet",
+      "slug": "bispevisitas-finance-council-2026-10-09",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-10-09T18:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen møter finansrådet under bispevisitasen. Møtet gjelder finansrådets medlemmer.",
+      "body": "Biskopen møter finansrådet under bispevisitasen. Møtet gjelder finansrådets medlemmer.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the finance council",
+          "summary": "The bishop will meet the finance council during the visitation. This meeting is for members of the finance council.",
+          "body": "The bishop will meet the finance council during the visitation. This meeting is for members of the finance council."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-parish-council:2026-10-10",
+      "title": "Møte med menighetsrådet",
+      "slug": "bispevisitas-parish-council-2026-10-10",
+      "eventType": "parishCouncil",
+      "status": "scheduled",
+      "startsAt": "2026-10-10T13:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen møter menighetsrådet under bispevisitasen. Møtet gjelder menighetsrådets medlemmer.",
+      "body": "Biskopen møter menighetsrådet under bispevisitasen. Møtet gjelder menighetsrådets medlemmer.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the parish council",
+          "summary": "The bishop will meet the parish council during the visitation. This meeting is for members of the parish council.",
+          "body": "The bishop will meet the parish council during the visitation. This meeting is for members of the parish council."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-catechists:2026-10-10",
+      "title": "Møte med kateketer",
+      "slug": "bispevisitas-catechists-2026-10-10",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-10T15:00:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen møter menighetens kateketer under bispevisitasen.",
+      "body": "Biskopen møter menighetens kateketer under bispevisitasen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the catechists",
+          "summary": "The bishop will meet the parish catechists during the visitation.",
+          "body": "The bishop will meet the parish catechists during the visitation."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-polish-group:2026-10-10",
+      "title": "Møte med polsk gruppe",
+      "slug": "bispevisitas-polish-group-2026-10-10",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-10T16:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen møter den polske gruppen under bispevisitasen.",
+      "body": "Biskopen møter den polske gruppen under bispevisitasen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the Polish group",
+          "summary": "The bishop will meet the Polish group during the visitation.",
+          "body": "The bishop will meet the Polish group during the visitation."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-spanish-group:2026-10-10",
+      "title": "Møte med spansk gruppe",
+      "slug": "bispevisitas-spanish-group-2026-10-10",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-10T17:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Biskopen møter den spanske gruppen under bispevisitasen.",
+      "body": "Biskopen møter den spanske gruppen under bispevisitasen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the Spanish group",
+          "summary": "The bishop will meet the Spanish group during the visitation.",
+          "body": "The bishop will meet the Spanish group during the visitation."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-coffee-kongsberg:2026-10-11",
+      "title": "Kirkekaffe etter pontifikalmessen",
+      "slug": "bispevisitas-coffee-kongsberg-2026-10-11",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-10-11T12:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Menigheten samles til stor kirkekaffe etter pontifikalmessen i St. Barbara. Ta gjerne med ekstra mat.",
+      "body": "Menigheten samles til stor kirkekaffe etter pontifikalmessen i St. Barbara. Ta gjerne med ekstra mat.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Coffee gathering after the Pontifical Mass",
+          "summary": "The parish will gather for coffee after the Pontifical Mass at St. Barbara. Please bring extra food.",
+          "body": "The parish will gather for coffee after the Pontifical Mass at St. Barbara. Please bring extra food."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-notodden-congregation:2026-10-11",
+      "title": "Møte med kirkelyden på Notodden",
+      "slug": "bispevisitas-notodden-congregation-2026-10-11",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-10-11T16:00:00+02:00",
+      "placeKeys": [],
+      "summary": "Biskopen møter kirkelyden på Notodden under bispevisitasen. Programmet oppgir ikke nøyaktig møtested for samlingen.",
+      "body": "Biskopen møter kirkelyden på Notodden under bispevisitasen. Programmet oppgir ikke nøyaktig møtested for samlingen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Meeting with the congregation in Notodden",
+          "summary": "The bishop will meet the congregation in Notodden during the visitation. The programme does not specify the exact meeting venue.",
+          "body": "The bishop will meet the congregation in Notodden during the visitation. The programme does not specify the exact meeting venue."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:visitation-coffee-notodden:2026-10-11",
+      "title": "Kirkekaffe på Notodden",
+      "slug": "bispevisitas-coffee-notodden-2026-10-11",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-10-11T18:00:00+02:00",
+      "placeKeys": [],
+      "summary": "Kirkekaffe på Notodden etter messen med biskopen. Programmet oppgir ikke nøyaktig møtested for kirkekaffen.",
+      "body": "Kirkekaffe på Notodden etter messen med biskopen. Programmet oppgir ikke nøyaktig møtested for kirkekaffen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Coffee gathering in Notodden",
+          "summary": "Coffee gathering in Notodden after Mass with the bishop. The programme does not specify the exact venue for the gathering.",
+          "body": "Coffee gathering in Notodden after Mass with the bishop. The programme does not specify the exact venue for the gathering."
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-08",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-08",
+      "changeType": "changed",
+      "publicNote": "Biskopen feirer messen under bispevisitasen.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The bishop will celebrate Mass during the visitation.",
+          "details": null
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-09",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-09",
+      "changeType": "changed",
+      "publicNote": "Biskopen feirer messen under bispevisitasen.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The bishop will celebrate Mass during the visitation.",
+          "details": null
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-10-10",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-10",
+      "changeType": "changed",
+      "publicNote": "Messe under bispevisitasen.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass during the bishop's visitation.",
+          "details": null
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-10-11",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-11",
+      "changeType": "changed",
+      "publicNote": "Pontifikalmesse med biskopen. Kirkekaffe kl. 12.30; ta gjerne med ekstra mat. Ingen messe kl. 13.00.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Pontifical Mass with the bishop. Coffee gathering at 12:30; please bring extra food. No Mass at 13:00.",
+          "details": null,
+          "titleOverride": "Pontifical Mass in Kongsberg"
+        }
+      },
+      "titleOverride": "Pontifikalmesse i Kongsberg"
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-en-2026-10-11",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-11",
+      "changeType": "cancelled",
+      "publicNote": "Messen kl. 13.00 utgår under bispevisitasen. Pontifikalmesse kl. 11.00 med kirkekaffe kl. 12.30.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The Mass at 13:00 is cancelled during the bishop's visitation. Pontifical Mass at 11:00 and a coffee gathering at 12:30.",
+          "details": null
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:notodden-sunday-nb-2026-10-11",
+      "scheduleKey": "mass-schedule:notodden:sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "occurrenceDate": "2026-10-11",
+      "changeType": "changed",
+      "publicNote": "Biskopen feirer messen i Notodden kirke under bispevisitasen.",
+      "details": null,
+      "relatedEventKey": null,
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The bishop will celebrate Mass at Notodden kirke during the visitation.",
+          "details": null,
+          "titleOverride": "Mass at Notodden kirke"
+        }
+      },
+      "titleOverride": "Messe i Notodden kirke",
+      "newPlaceKey": "place:notodden-kirke"
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:bishop-visitation-2026",
+      "title": "Bispevisitas",
+      "slug": "bispevisitas-8-11-oktober",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "lastMentionedAt": "2026-10-04T16:04:21+02:00",
+      "appliesFrom": "2026-10-04T00:00:00+02:00",
+      "appliesUntil": "2026-10-11T20:00:00+02:00",
+      "summary": "Programmet for biskopens besøk i menigheten. Her finner du messer, tilbedelse, skriftemål og møter for de ulike gruppene, samt samlingene på Notodden.",
+      "body": [
+        "Biskopen besøker St. Barbara menighet 8.–11. oktober 2026. Her er hele programmet fra Oslo katolske bispedømme.",
+        {
+          "style": "h2",
+          "text": "Torsdag 8. oktober"
+        },
+        "15.00 – Biskopen ankommer menigheten.",
+        "15.15 – Møte med sogneadministrator.",
+        "16.00 – Gjennomgang av kirkebøkene, føringen av messestipendier og gjennomsyn av arkivet.",
+        "17.00 – Sakramentstilbedelse og skriftemål.",
+        "18.00 – Messe.",
+        "19.00 – Aftens.",
+        {
+          "style": "h2",
+          "text": "Fredag 9. oktober"
+        },
+        "10.00 – Sykebesøk på Notodden, med ankomst ca. kl. 11.00.",
+        "12.00 – Sykebesøk i Dalen. Fire timer inkludert kjøring.",
+        "17.00 – Sakramentstilbedelse og skriftemål.",
+        "18.00 – Messe.",
+        "18.30 – Møte med finansrådet.",
+        "20.00 – Aftens/middag.",
+        {
+          "style": "h2",
+          "text": "Lørdag 10. oktober"
+        },
+        "10.00 – Gjennomgang av sakristi og kirkerom.",
+        "11.00 – Gjennomgang av eiendomsmassen.",
+        "12.00 – Messe.",
+        "12.30 – Lunsj.",
+        "13.00 – Møte med menighetsrådet.",
+        "15.00 – Møte med kateketer.",
+        "16.30 – Møte med polsk gruppe.",
+        "17.30 – Møte med spansk gruppe.",
+        "19.00 – Aftens/middag.",
+        {
+          "style": "h2",
+          "text": "Søndag 11. oktober"
+        },
+        "11.00 – Pontifikalmesse i St. Barbara.",
+        "12.30 – Kirkekaffe.",
+        "15.00 – Avreise til Notodden.",
+        "16.00 – Møte med kirkelyden på Notodden.",
+        "17.00 – Messe i Notodden kirke.",
+        "18.00 – Kirkekaffe på Notodden.",
+        "20.00 – Avreise.",
+        {
+          "style": "h2",
+          "text": "Praktisk informasjon"
+        },
+        "Det er ingen messe kl. 13.00 søndag 11. oktober. Ta gjerne med ekstra mat til kirkekaffen i St. Barbara, slik søndagsbladet oppfordrer til."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:notodden-kirke"
+      ],
+      "relatedEventKeys": [
+        "event:visitation-adoration:2026-10-08",
+        "event:visitation-adoration:2026-10-09",
+        "event:visitation-finance-council:2026-10-09",
+        "event:visitation-parish-council:2026-10-10",
+        "event:visitation-catechists:2026-10-10",
+        "event:visitation-polish-group:2026-10-10",
+        "event:visitation-spanish-group:2026-10-10",
+        "event:visitation-coffee-kongsberg:2026-10-11",
+        "event:visitation-notodden-congregation:2026-10-11",
+        "event:visitation-coffee-notodden:2026-10-11"
+      ],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-thursday-nb-2026-10-08",
+        "mass-exception:kongsberg-friday-nb-2026-10-09",
+        "mass-exception:kongsberg-saturday-nb-2026-10-10",
+        "mass-exception:kongsberg-sunday-nb-2026-10-11",
+        "mass-exception:kongsberg-sunday-en-2026-10-11",
+        "mass-exception:notodden-sunday-nb-2026-10-11"
+      ],
+      "links": [
+        {
+          "label": "Hele visitasprogrammet (PDF)",
+          "url": "https://kongsberg.katolsk.no/documents/program-bispevisitas-2026.pdf"
+        }
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-08-02",
+        "bulletin:2026-08-09",
+        "bulletin:2026-08-16",
+        "bulletin:2026-08-23",
+        "bulletin:2026-08-30",
+        "bulletin:2026-09-20",
+        "bulletin:2026-09-27",
+        "bulletin:2026-10-04"
+      ],
+      "translations": {
+        "en": {
+          "title": "Bishop's visitation",
+          "summary": "The programme for the bishop's visit to the parish, with Masses, adoration, confession and meetings for the parish groups, as well as the gatherings in Notodden.",
+          "body": [
+            "The bishop will visit St. Barbara parish from 8 to 11 October 2026. Below is the complete programme from Oslo katolske bispedømme.",
+            {
+              "style": "h2",
+              "text": "Thursday 8 October"
+            },
+            "15:00 – The bishop arrives at the parish.",
+            "15:15 – Meeting with the parish administrator.",
+            "16:00 – Review of the parish registers, Mass stipend records and archives.",
+            "17:00 – Eucharistic adoration and confession.",
+            "18:00 – Holy Mass.",
+            "19:00 – Supper.",
+            {
+              "style": "h2",
+              "text": "Friday 9 October"
+            },
+            "10:00 – Visits to the sick in Notodden, arriving at approximately 11:00.",
+            "12:00 – Visits to the sick in Dalen. Four hours including travel.",
+            "17:00 – Eucharistic adoration and confession.",
+            "18:00 – Holy Mass.",
+            "18:30 – Meeting with the finance council.",
+            "20:00 – Supper/dinner.",
+            {
+              "style": "h2",
+              "text": "Saturday 10 October"
+            },
+            "10:00 – Inspection of the sacristy and church interior.",
+            "11:00 – Review of the parish properties.",
+            "12:00 – Holy Mass.",
+            "12:30 – Lunch.",
+            "13:00 – Meeting with the parish council.",
+            "15:00 – Meeting with the catechists.",
+            "16:30 – Meeting with the Polish group.",
+            "17:30 – Meeting with the Spanish group.",
+            "19:00 – Supper/dinner.",
+            {
+              "style": "h2",
+              "text": "Sunday 11 October"
+            },
+            "11:00 – Pontifical Mass at St. Barbara.",
+            "12:30 – Coffee gathering after Mass.",
+            "15:00 – Departure for Notodden.",
+            "16:00 – Meeting with the congregation in Notodden.",
+            "17:00 – Mass at Notodden kirke.",
+            "18:00 – Coffee gathering in Notodden.",
+            "20:00 – Departure.",
+            {
+              "style": "h2",
+              "text": "Practical information"
+            },
+            "There will be no Mass at 13:00 on Sunday 11 October. Please bring extra food for the coffee gathering at St. Barbara, as requested in the Sunday bulletin."
+          ],
+          "links": [
+            {
+              "label": "Full visitation programme (PDF)",
+              "url": "https://kongsberg.katolsk.no/documents/program-bispevisitas-2026.pdf"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "unpublishEventKeys": [
+    "event:bishop-visitation-2026-10-08"
+  ]
+}

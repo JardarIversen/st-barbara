@@ -109,9 +109,10 @@ export const announcement = defineType({
     }),
     defineField({
       name: 'relatedEvents',
-      title: 'Relaterte hendelser',
+      title: 'Relaterte kalenderoppføringer',
+      description: 'Viser en lenke til denne kunngjøringen på hendelsene og de aktuelle messene. Legg til et messeavvik for en bestemt messe.',
       type: 'array',
-      of: [defineArrayMember({type: 'reference', to: [{type: 'event'}]})],
+      of: [defineArrayMember({type: 'reference', to: [{type: 'event'}, {type: 'massException'}]})],
       validation: (rule) => rule.unique(),
     }),
     defineField({

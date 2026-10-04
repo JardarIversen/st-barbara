@@ -50,6 +50,7 @@ export type MassSchedule = {
 };
 
 export type MassException = {
+  announcements?: CalendarAnnouncement[];
   originalFields?: string[];
   _id: string;
   sourceKey: string;
@@ -70,6 +71,7 @@ export type MassException = {
 };
 
 export type ParishEvent = {
+  announcements?: CalendarAnnouncement[];
   originalFields?: string[];
   _id: string;
   sourceKey: string;
@@ -98,6 +100,7 @@ export type CalendarData = {
 };
 
 export type Announcement = {
+  hasDetailPage?: boolean;
   originalFields?: string[];
   _id: string;
   sourceKey: string;
@@ -119,6 +122,8 @@ export type Announcement = {
   links?: Array<{ _key: string; label: string; url: string }>;
   sourceBulletins?: Bulletin[];
 };
+
+export type CalendarAnnouncement = Pick<Announcement, "title" | "slug" | "links" | "originalFields">;
 
 export type ArticleCard = {
   pagePath?: string;

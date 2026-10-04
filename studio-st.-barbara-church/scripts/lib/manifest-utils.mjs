@@ -200,6 +200,7 @@ export function slugify(value) {
 }
 
 export function toPortableText(value, sourceKey) {
+  if (value === null) return null
   if (!value) return undefined
   const errors = liturgicalTextErrors(value)
   if (errors.length) throw new Error(`${sourceKey}: ${errors.join(' ')}`)

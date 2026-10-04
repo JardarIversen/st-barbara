@@ -7,7 +7,7 @@ import {patchChangesDocument} from './lib/patch-changes.mjs'
 const manifestPath = process.argv.slice(2).find((argument) => !argument.startsWith('--'))
 const manifestContext = manifestPath ? readManifest(manifestPath) : undefined
 const manifest = manifestContext?.manifest
-const client = getSanityClient()
+const client = getSanityClient({readOnly: true})
 const types = [
   'bulletin',
   'place',
@@ -71,6 +71,19 @@ for (const document of documents) {
 }
 
 if (manifest) {
+  for (const key of manifest.unpublishEventKeys ?? []) {
+    if (sourceKeys.has(`event:${key}`)) errors.push(`Hendelsen skal være avpublisert: ${key}`)
+  }
+  for (const item of manifest.announcements ?? []) {
+    const document = sourceKeys.get(`announcement:${item.sourceKey}`)
+    if (!document) continue
+    const expected = [
+      ...(item.relatedEventKeys ?? []).map(key => sourceKeys.get(`event:${key}`)?._id),
+      ...(item.relatedMassExceptionKeys ?? []).map(key => sourceKeys.get(`massException:${key}`)?._id),
+    ].sort()
+    const actual = (document.relatedEvents ?? []).map(ref => ref._ref).sort()
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) errors.push(`${item.sourceKey}: kalenderkoblingene avviker fra manifestet.`)
+  }
   warnings.push(...massTextFormattingWarnings(manifest))
   for (const item of manifest.massTexts ?? []) {
     const document = sourceKeys.get(`massText:${item.sourceKey}`)
