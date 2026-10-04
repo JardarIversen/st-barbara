@@ -12,6 +12,8 @@ const buttonVariants = cva(
           "border-border bg-background text-primary hover:border-primary hover:bg-accent aria-expanded:border-primary aria-expanded:bg-accent",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground",
+        tag:
+          "border-primary/15 bg-primary/5 text-primary hover:border-primary/30 hover:bg-primary/10",
         ghost:
           "text-foreground hover:bg-accent hover:text-accent-foreground aria-expanded:bg-accent aria-expanded:text-accent-foreground",
         destructive:

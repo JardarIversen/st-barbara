@@ -61,9 +61,8 @@ export default function AgendaList({
                 );
               return (
                 <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    className="group -mx-2 grid grid-cols-[3.5rem_minmax(0,1fr)_0.75rem] items-start gap-x-3 rounded-sm px-2 py-3 transition-colors hover:bg-muted/70 sm:grid-cols-[4rem_minmax(0,1fr)_auto_0.75rem] sm:gap-x-4"
+                  <div
+                    className="group relative -mx-2 grid grid-cols-[3.5rem_minmax(0,1fr)_0.75rem] items-start gap-x-3 rounded-sm px-2 py-3 transition-colors hover:bg-muted/70 sm:grid-cols-[4rem_minmax(0,1fr)_auto_0.75rem] sm:gap-x-4"
                   >
                     {isDateOnlyRange(item) ? (
                       <span className="pt-1 text-xs leading-5 text-muted-foreground">
@@ -78,12 +77,15 @@ export default function AgendaList({
                       </time>
                     )}
                     <div className="min-w-0">
-                      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                        <span className="text-[0.95rem] font-medium leading-7 text-foreground group-hover:text-primary">
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <Link
+                          href={item.href}
+                          className="text-[0.95rem] font-medium leading-7 text-foreground after:absolute after:inset-0 after:rounded-sm group-hover:text-primary"
+                        >
                           <ContentLanguage original={item.titleOriginal}>
                             {title}
                           </ContentLanguage>
-                        </span>
+                        </Link>
                         {item.language && item.eventType === "mass" && (
                           <span className="text-xs text-muted-foreground">
                             {t(LANGUAGE_LABELS[item.language])}
@@ -104,6 +106,7 @@ export default function AgendaList({
                             {t(item.changeLabel)}
                           </span>
                         )}
+                        <AnnouncementTags items={item.announcements} />
                       </div>
                       {multipleDays && (
                         <p className="text-xs leading-5 text-muted-foreground">
@@ -141,12 +144,7 @@ export default function AgendaList({
                     >
                       ›
                     </span>
-                  </Link>
-                  {item.announcements?.length ? (
-                    <div className="pb-3 pl-[4.25rem] sm:pl-20">
-                      <AnnouncementTags items={item.announcements} />
-                    </div>
-                  ) : null}
+                  </div>
                 </li>
               );
             })}
