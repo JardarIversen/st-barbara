@@ -26,7 +26,7 @@ Gjør hele denne arbeidsflyten uten å endre kode:
 6. Kontroller: `npm run bulletin:verify -- scripts/manifests/YYYY-MM-DD.json`. Resultatet skal ha 0 feil og 0 advarsler.
 7. Kjør publisering og kontroll én gang til. Dokumentantall og revisjoner skal være uendret. Importen skal bare si `Oppdatert`, aldri `Opprettet`, på andre runde.
 
-Hvis skjemaet ikke kan uttrykke informasjonen, ikke endre kode eller press den inn i feil datatype. Stopp og forklar nøyaktig hva som mangler. Spør også ved en reell, vesentlig og uløst motsetning om dato, klokkeslett, sted eller avlysning. Små språkfeil kan normaliseres uten spørsmål.
+Hvis skjemaet ikke kan uttrykke informasjonen, ikke endre kode eller press den inn i feil datatype. Stopp og forklar nøyaktig hva som mangler. Spør også ved en reell, vesentlig og uløst motsetning om dato, klokkeslett, sted eller avlysning innenfor den nyeste kilden. Motsetning mot et eldre blad er løst: det nyeste vinner (se Kildekontroll). Små språkfeil kan normaliseres uten spørsmål.
 
 ## Datamodell
 
@@ -91,6 +91,8 @@ Tillatte verdier:
 
 - En nyere korrigert utgave med samme dato vinner, men tidligere PDF beholdes i revisjonshistorikken.
 - Ved konflikt mellom fast plan og søndagsblad: behold planen og lag `massException` med bladet som kilde.
+- Nyeste kilde er autoritativ. Når et nyere søndagsblad motsier et tidligere importert blad om samme dato, vinner det nyeste uten ny avklaring. Rett de eksisterende dokumentene og behold nøklene, for eksempel et avlyst messeavvik til `changed` med merknad om at messen feires som vanlig. Legg den nye kilden til i `sourceBulletinKeys` og nevn rettelsen i ferdigmeldingen.
+- Alt som står i bladets messetabell skal med i kalenderen, også bisettelser og andre kirkelige handlinger som ikke er messer. Personvernreglene over gjelder fortsatt.
 - Gjengi navn, klokkeslett, steder, språk, frister og avlysninger nøyaktig. Ikke anta at tekst til norsk kl. 11-messe gjelder andre messer.
 - Lag kort forhåndsvisning i `summary`: 1–2 korte setninger, anbefalt 20–40 ord, også på engelsk. Fortell hvem saken gjelder og hvorfor den er relevant. Ikke gjenta dato eller påmeldingsfrist som vises separat, og ikke legg program, pakkeliste eller hele innholdet her. Hendelser under Kunngjøringer bruker `summary`; full offentlig forklaring og program hører til `body` på hendelsessiden. Selvstendige kunngjøringer uten detaljside må fortsatt ha nok informasjon til å forstå og handle på saken. Behold alltid PDF-en som etterprøvbar kilde når innholdet kommer fra et søndagsblad.
 - Før ferdigmelding: sjekk visuelt PDF mot de importerte datoene, kjør verifikasjon, og oppgi hva som ble opprettet, oppdatert eller avklart.

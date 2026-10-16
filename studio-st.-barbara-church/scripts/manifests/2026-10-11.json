@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-10-11",
+      "issueDate": "2026-10-11",
+      "publishedAt": "2026-10-07T11:05:12+02:00",
+      "coversFrom": "2026-10-11",
+      "coversUntil": "2026-10-18",
+      "pdfPath": "../../../.local/bulletin-2026-10-11/source.pdf",
+      "filename": "28. søndag 2026.pdf",
+      "internalNotes": "Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: 28. søndag er 11. oktober (Jes 25,6–10a; Sal 23; Fil 4,12–14.19–20; Matt 22,1–14). Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder 14.–18. oktober. Lesningene gjelder bare norsk kl. 11-messe 11. oktober. Bladets messetabell oppgir Mass in English kl. 16 og messe på polsk kl. 18 lørdag 17. oktober; dette erstatter den tidligere tolkningen av bladet 4. oktober om at ingen messer i St. Barbara feires den dagen. Norsk lørdagsmesse og fredagsmessen er fortsatt ikke oppført. publishedAt er PDF-ens opprettelsestidspunkt, fordi utsendelsestidspunktet ikke var tilgjengelig. Side 4 er bispedømmets plakat for seminaret om Sigrid Undset; påmeldingslenken er lest fra QR-koden."
+    }
+  ],
+  "places": [
+    {
+      "sourceKey": "place:mariagarden-oslo",
+      "name": "Mariagården",
+      "placeType": "venue",
+      "streetAddress": "Akersveien 16 C",
+      "postalCode": "0177",
+      "locality": "Oslo",
+      "country": "Norge",
+      "translations": {
+        "en": {
+          "name": "Mariagården"
+        }
+      }
+    }
+  ],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:kongsberg-funeral:2026-10-15",
+      "title": "Bisettelse",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-10-15T10:30:00+02:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Det er bisettelse i St. Barbara kirke denne formiddagen. Torsdagsmessen kl. 18.00 feires som vanlig.",
+      "body": "Bisettelse i kirken torsdag 15. oktober kl. 10.30.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "title": "Funeral",
+          "summary": "A funeral takes place in St. Barbara Church this morning. Thursday’s Mass at 18:00 is celebrated as usual.",
+          "body": "Funeral in the church on Thursday 15 October at 10:30."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:sigrid-undset-seminar:2026-10-31",
+      "title": "Seminar: Sigrid Undset – en troende i motvind",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-10-31T11:00:00+01:00",
+      "endsAt": "2026-10-31T16:00:00+01:00",
+      "placeKeys": [
+        "place:mariagarden-oslo"
+      ],
+      "registrationDeadline": "2026-10-25T23:59:00+01:00",
+      "summary": "Oslo katolske bispedømme inviterer til seminar om Sigrid Undset som troende katolikk, med foredrag om helgenkåring, den dominikanske tredjeordenen og katolsk tro i en antikatolsk tid, og en panelsamtale.",
+      "body": [
+        "Oslo katolske bispedømme inviterer til seminaret «Sigrid Undset – en troende i motvind» lørdag 31. oktober kl. 11–16 i Mariagårdens storsal, Akersveien 16 C, 0177 Oslo. Dørene åpnes kl. 10.30.",
+        {
+          "style": "h2",
+          "text": "Program"
+        },
+        "Sr. Anne Bente Hadland OP: Sigrid Undset – en norsk «helgeninne»?",
+        "Helgenkåring – hvem, hvorfor og hvordan?",
+        "Legdominikaner Jan Frederik Solem: Ordensnavn: Olave. Sigrid Undset og den dominikanske tredje-orden",
+        "Kristin Norseth: Katolikk i en antikatolsk tid",
+        "Bernt T. Oftestad: Frimodig tro forankret i thomisme og katolsk mystikk",
+        "Panelsamtale ledet av Kristine Dingstad, St. Olav forlag",
+        {
+          "style": "h2",
+          "text": "Pris og påmelding"
+        },
+        "Pris: 250 kr inkludert enkel bevertning. Studenter: 150 kr.",
+        "Påmelding innen 25. oktober kl. 23.59 via påmeldingslenken eller på e-post til maria.fongen@katolsk.no."
+      ],
+      "links": [
+        {
+          "label": "Påmelding",
+          "url": "https://event.checkin.no/230354"
+        }
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "title": "Seminar: Sigrid Undset – a believer facing headwinds",
+          "summary": "The Catholic Diocese of Oslo invites you to a seminar on Sigrid Undset as a Catholic believer, with talks on canonisation, the Dominican Third Order and Catholic faith in an anti-Catholic age, and a panel discussion.",
+          "body": [
+            "The Catholic Diocese of Oslo invites you to the seminar “Sigrid Undset – en troende i motvind” (a believer facing headwinds) on Saturday 31 October, 11:00–16:00, in the main hall of Mariagården, Akersveien 16 C, 0177 Oslo. Doors open at 10:30.",
+            {
+              "style": "h2",
+              "text": "Programme"
+            },
+            "Sr. Anne Bente Hadland OP: Sigrid Undset – a Norwegian “saint”?",
+            "Canonisation – who, why and how?",
+            "Lay Dominican Jan Frederik Solem: Religious name Olave. Sigrid Undset and the Dominican Third Order",
+            "Kristin Norseth: A Catholic in an anti-Catholic age",
+            "Bernt T. Oftestad: Bold faith rooted in Thomism and Catholic mysticism",
+            "Panel discussion chaired by Kristine Dingstad, St. Olav forlag",
+            {
+              "style": "h2",
+              "text": "Price and registration"
+            },
+            "Price: NOK 250 including light refreshments. Students: NOK 150.",
+            "Register by 25 October at 23:59 using the registration link or by email to maria.fongen@katolsk.no."
+          ],
+          "links": [
+            {
+              "label": "Register",
+              "url": "https://event.checkin.no/230354"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:rjukan-new-mass-location-2026",
+      "title": "Nytt messested på Rjukan",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-09-25T11:52:21+02:00",
+      "body": "Menigheten har inngått leieavtale med Den norske kirke. Neste messe i Rjukan kirke er søndag 4. oktober kl. 17.00.",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": []
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-10-14",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-14",
+      "publicNote": "Den hellige Callistus I. Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Callistus I. Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-15",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-15",
+      "publicNote": "Den hellige Teresa av Avila. Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Teresa of Avila. Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-10-17",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-10-17",
+      "publicNote": "Messen utgår på grunn av konfirmanthelg. Mass in English kl. 16.00 og messe på polsk kl. 18.00 feires som vanlig.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass is cancelled because of the Confirmation retreat. Mass in English at 16:00 and Polish Mass at 18:00 take place as usual."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-en-2026-10-17",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-17",
+      "publicNote": "Messen feires som vanlig under konfirmanthelgen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass is celebrated as usual during the Confirmation retreat."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-pl-2026-10-17",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:pl:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-17",
+      "publicNote": "Messen feires som vanlig under konfirmanthelgen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Mass is celebrated as usual during the Confirmation retreat."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:mo-before-third-sunday-nb-2026-10-17",
+      "scheduleKey": "mass-schedule:mo:before-third-sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-10-17",
+      "newStartsAt": "2026-10-18T17:00:00+02:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-11"
+      ]
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-10-11:kongsberg:nb:1100",
+      "title": "28. søndag i det alminnelige kirkeår",
+      "massDate": "2026-10-11",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-10-11",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Jes 25, 6–10a"
+        },
+        "Herren, Hærskarenes Gud, skal på dette fjell gjøre et gjestebud for alle folk, et gjestebud med fete retter, et gjestebud med gammel vin, med fete, margfulle retter og gammel, klaret vin. På dette fjell skal han fjerne sløret som tilhyller alle folk, dekket som er lagt over alle folkeslag.",
+        "Han skal oppsluke døden for evig. Herren vår Gud skal tørke tårene bort fra hvert ansikt. Fra hele jorden skal han ta bort den skjensel hans folk lider. For Herren har talt.",
+        "Den dagen skal de si: «Se, dette er vår Gud! Vi ventet på ham, og han frelste oss; dette er Herren som vi satte vårt håp til. La oss juble og glede oss over hans frelse!» For Herrens hånd skal hvile over dette fjell.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Jeg skal bo i Herrens hus gjennom lange tider"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – Fil 4, 12–14. 19–20"
+        },
+        "Brødre, jeg har erfaring både for å ha det trangt og å ha rikelig. Ja, jeg har vært igjennom det hele: Snart har jeg sultet, snart har jeg hatt rikelig, jeg har lært å kjenne både overflod og nød. Alt makter jeg i ham som gir meg styrke. Allikevel har dere gjort vel i å ta del i mine trengsler.",
+        "Så skal også min Gud, ut fra sin store rikdom, gi dere alt dere trenger, og det på fyrstelig vis – gjennom Kristus Jesus. Ham, vår Gud og Far, være ære i all evighet! Amen!",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Vår Herre Jesu Kristi Far la deres hjerters øyne fylles med lys,",
+            "så dere kan forstå hvilket håp han har kalt oss til."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 22, 1–14"
+        },
+        "På den tid gav Jesus seg på ny til å tale til yppersteprestene og fariseerne i lignelser:",
+        "«Himlenes rike kan lignes med en konge som holdt bryllup for sin sønn. Han sendte sine tjenere ut for å varsle alle som var innbudt til bryllupet; men de ville ikke komme.",
+        "Da sendte han ut andre tjenere med den beskjed: «Si til de innbudte: ‘Festmåltidet er stelt i stand, oksene og gjøfeet er slaktet, og alt er parat; kom nå til bryllupet.’» Men de brydde seg ikke om det og gikk sin vei, den ene ut på sin åker, den annen til sine forretninger; og andre igjen gikk løs på tjenerne, mishandlet dem og slo dem i hjel.",
+        "Da ble kongen harm og lot sine tropper rykke ut; de gjorde det av med morderne og satte deres by i brann.",
+        "Så sier han til sine tjenere: ‘Alt var nok klart til bryllupsfesten, men de jeg innbød, var det ikke verd. Vel, så gå ut og still dere ved veikryssene, og innby alle dere treffer til bryllupet.’ Og tjenerne gikk ut langs veiene og samlet alle de fant, onde og gode, så bryllupssalen fyltes med gjester.",
+        "Men da kongen kom for å ta gjestene i øyesyn, fikk han øye på en som ikke var kledd til bryllups. ‘Men min venn,’ sier han da til ham, ‘hvordan er du kommet inn her uten bryllupsklær?’ Men den annen bare tidde. Da sa kongen til dem som vartet opp: ‘Bind hender og føtter på ham, og kast ham ut i mørket, der de skal gråte og hulke bittert.’",
+        "– Mange er nok innbudt, men få er utvalgt.»"
+      ]
+    }
+  ],
+  "articles": []
+}
