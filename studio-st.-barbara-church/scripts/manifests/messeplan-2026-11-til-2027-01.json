@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "sourceDocument": {
+    "description": "«Messetid-avvik november 2026–januar 2027» (Messeplan.docx), sendt av p. Trym Hellevig på e-post 14. oktober 2026. Dokumentet lister bare avvik fra den faste messeplanen. Polske og spanske julemesser er varslet senere."
+  },
+  "events": [
+    {
+      "sourceKey": "event:rjukan-mass:2026-11-01",
+      "title": "Messe på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-01T17:00:00+01:00",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "language": "nb",
+      "summary": "Messe i Rjukan kirke med gravvelsignelse etter messen.",
+      "body": "Messe søndag 1. november kl. 17.00 i Rjukan kirke, Kirkebakken 1, 3660 Rjukan. Gravvelsignelse etter messen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Holy Mass in Rjukan",
+          "summary": "Holy Mass at Rjukan Church, with a blessing of the graves after Mass.",
+          "body": "Holy Mass on Sunday 1 November at 17:00 at Rjukan Church, Kirkebakken 1, 3660 Rjukan. Blessing of the graves after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-02",
+      "title": "Messe – Alle sjelers dag",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-02T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Messe på Alle sjelers dag, med gravvelsignelse etter messen.",
+      "body": "Messe mandag 2. november kl. 18.00. Gravvelsignelse etter messen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Holy Mass – All Souls’ Day",
+          "summary": "Holy Mass on All Souls’ Day, with a blessing of the graves after Mass.",
+          "body": "Holy Mass on Monday 2 November at 18:00. Blessing of the graves after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-09",
+      "title": "Messe",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-09T18:30:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Ekstra mandagsmesse før menighetsrådsmøtet.",
+      "body": "Messe mandag 9. november kl. 18.30. Menighetsrådsmøte etter messen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Holy Mass",
+          "summary": "An additional Monday Mass before the parish council meeting.",
+          "body": "Holy Mass on Monday 9 November at 18:30. Parish council meeting after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-16",
+      "title": "Messe",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-16T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Ekstra mandagsmesse med mange konselebranter.",
+      "body": "Messe mandag 16. november kl. 18.00 med mange konselebranter.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Holy Mass",
+          "summary": "An additional Monday Mass with many concelebrating priests.",
+          "body": "Holy Mass on Monday 16 November at 18:00 with many concelebrating priests."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:christmas-mass-en:2026-12-24",
+      "title": "Julemesse på engelsk",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-24T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "language": "en",
+      "summary": "Julemesse på engelsk julaften i St. Barbara kirke.",
+      "body": "Julemesse på engelsk torsdag 24. desember kl. 18.00. Midnattsmesse samme kveld kl. 23.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Christmas Mass in English",
+          "summary": "Christmas Mass in English on Christmas Eve at St. Barbara Church.",
+          "body": "Christmas Mass in English on Thursday 24 December at 18:00. Midnight Mass the same evening at 23:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:midnight-mass:2026-12-24",
+      "title": "Midnattsmesse",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-24T23:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Midnattsmesse julaften i St. Barbara kirke.",
+      "body": "Midnattsmesse torsdag 24. desember kl. 23.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Midnight Mass",
+          "summary": "Midnight Mass on Christmas Eve at St. Barbara Church.",
+          "body": "Midnight Mass on Thursday 24 December at 23:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:rjukan-christmas-mass:2026-12-25",
+      "title": "Julemesse på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-25T17:00:00+01:00",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "summary": "Julemesse på juledag i Rjukan kirke.",
+      "body": "Julemesse fredag 25. desember kl. 17.00 i Rjukan kirke, Kirkebakken 1, 3660 Rjukan.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Christmas Mass in Rjukan",
+          "summary": "Christmas Mass on Christmas Day at Rjukan Church.",
+          "body": "Christmas Mass on Friday 25 December at 17:00 at Rjukan Church, Kirkebakken 1, 3660 Rjukan."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:notodden-christmas-mass:2026-12-26",
+      "title": "Julemesse på Notodden",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-26T17:00:00+01:00",
+      "placeKeys": [
+        "place:notodden"
+      ],
+      "summary": "Julemesse på Notodden andre juledag.",
+      "body": "Julemesse lørdag 26. desember kl. 17.00 på Notodden.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Christmas Mass in Notodden",
+          "summary": "Christmas Mass in Notodden on Boxing Day.",
+          "body": "Christmas Mass on Saturday 26 December at 17:00 in Notodden."
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-12-04",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-12-04",
+      "titleOverride": "Høymesse – St. Barbara",
+      "publicNote": "Feiring av St. Barbara.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Mass for the feast of St. Barbara",
+          "publicNote": "Celebration of St. Barbara."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:mo-before-third-sunday-nb-2026-12-19",
+      "scheduleKey": "mass-schedule:mo:before-third-sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-12-19",
+      "publicNote": "Messen på Mo utgår.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "The Mass in Mo is cancelled."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-12-24",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-12-24",
+      "relatedEventKey": "event:christmas-mass-en:2026-12-24",
+      "publicNote": "Erstattes av julemesse på engelsk kl. 18.00 og midnattsmesse kl. 23.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "Replaced by Christmas Mass in English at 18:00 and Midnight Mass at 23:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-12-25",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-12-25",
+      "newStartsAt": "2026-12-25T11:00:00+01:00",
+      "titleOverride": "Julemesse",
+      "publicNote": "Juledag. Julemesse på Rjukan kl. 17.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Christmas Mass",
+          "publicNote": "Christmas Day. Christmas Mass in Rjukan at 17:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-12-26",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-12-26",
+      "newPlaceKey": "place:mo-kirke",
+      "titleOverride": "Julemesse på Mo",
+      "publicNote": "Lørdagsmessen kl. 12.00 feires som julemesse i Mo kirke. Julemesse på Notodden kl. 17.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Christmas Mass in Mo",
+          "publicNote": "The Saturday Mass at 12:00 is celebrated as a Christmas Mass at Mo Church. Christmas Mass in Notodden at 17:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:notodden-sunday-nb-2026-12-27",
+      "scheduleKey": "mass-schedule:notodden:sunday:nb:1700",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-12-27",
+      "publicNote": "Messen på Notodden utgår.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "The Mass in Notodden is cancelled."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-12-31",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-12-31",
+      "titleOverride": "Takksigelsesmesse",
+      "publicNote": "Nyttårsaften.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Mass of Thanksgiving",
+          "publicNote": "New Year’s Eve."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2027-01-01",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2027-01-01",
+      "newStartsAt": "2027-01-01T11:00:00+01:00",
+      "publicNote": "Nyttårsdag. Messen er flyttet til kl. 11.00.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "New Year’s Day. Mass is moved to 11:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2027-01-03",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2027-01-03",
+      "publicNote": "Julefest på Raumyr erstatter kirkekaffen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "A Christmas party at Raumyr replaces coffee after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-en-2027-01-03",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2027-01-03",
+      "titleOverride": "Familiemesse",
+      "publicNote": "Familiemessen kl. 13.00 utgår. Julefest på Raumyr erstatter kirkekaffen.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Family Mass",
+          "publicNote": "The Family Mass at 13:00 is cancelled. A Christmas party at Raumyr replaces coffee after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2027-01-06",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2027-01-06",
+      "publicNote": "Ingen messer 4.–7. januar.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "No Masses 4–7 January."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2027-01-07",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2027-01-07",
+      "publicNote": "Ingen messer 4.–7. januar.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "publicNote": "No Masses 4–7 January."
+        }
+      }
+    }
+  ]
+}
