@@ -1,7 +1,7 @@
 import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { municipalities, priests } from "@/lib/parish";
+import { municipalities, parishCouncil, priests } from "@/lib/parish";
 import PlaceText from "@/components/place-text";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -187,6 +187,34 @@ export default async function OmPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Parish council */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-5 py-16">
+          <h2 className="text-center font-display text-4xl font-medium text-foreground">
+            {t("Menighetsrådet")}
+          </h2>
+          <dl className="mx-auto mt-10 max-w-xl divide-y divide-border border-y border-border">
+            {parishCouncil.map((member) => (
+              <div
+                key={member.role}
+                className="grid gap-1 py-4 sm:grid-cols-[11rem_1fr] sm:gap-6"
+              >
+                <dt className="text-sm text-muted-foreground sm:pt-1">
+                  {t(member.role)}
+                </dt>
+                <dd className="font-display text-xl text-foreground">
+                  {member.names.map((name) => (
+                    <span key={name} className="block">
+                      {name}
+                    </span>
+                  ))}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </>

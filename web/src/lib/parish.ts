@@ -28,5 +28,16 @@ export const priests = [
   },
 ];
 
+export const parishCouncil = [
+  { role: "Sogneadministrator", names: ["P. Trym Hellevig"] },
+  { role: "Leder", names: ["Khai Quang Tran"] },
+  { role: "Nestleder", names: ["Karine Gallot-Lavallée"] },
+  { role: "Sekretær", names: ["Vegard Kristoffersen"] },
+  {
+    role: "Medlemmer",
+    names: ["Katarzyna Jachimowicz", "Izabela Mazur", "Lancy Lopes"],
+  },
+];
+
 export const municipalities =
   "Kongsberg, deler av Øvre Eiker, Modum, Sigdal, Flesberg, Rollag, Nore og Uvdal, Notodden, Hjartdal, Tinn, Vinje, Tokke, Seljord og Kviteseid";
