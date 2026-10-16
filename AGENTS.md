@@ -12,6 +12,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Sanity-prosjekt: `2jd536j2`, datasett: `production`, tidssone: `Europe/Oslo`.
 - Søndagsbladet er autoriteten for de datoene det dekker. Den faste messeplanen er bare grunnlaget som kalenderen beregnes fra.
 - Token lastes automatisk fra prosessmiljøet eller `web/.env.local` (`SANITY_API_KEY`). Aldri vis, kopier eller logg tokenverdien.
+- Nettsidens mellomlager tømmes automatisk: Sanity-webhooken «Oppdater nettsidens mellomlager» kaller `/api/revalidate` ved hver publisering, signert med `SANITY_REVALIDATE_SECRET` i Vercel. Viser nettsiden likevel gammelt innhold, sjekk webhookens forsøk (`npx sanity hook logs`) før du tømmer manuelt med `vercel cache purge --type data --project st-barbara --scope jardars-projects --yes`.
 - Alt publisert innhold skal tåle å være offentlig. Ikke publiser barns navn, private adresser, fødselsdata eller andre personopplysninger. Ikke dikt opp manglende informasjon.
 
 ## Når du bare får én ny PDF

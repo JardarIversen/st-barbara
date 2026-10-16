@@ -2,7 +2,7 @@ import { cache } from "react";
 import { getLocale } from "@/i18n/server";
 import { localizeContent } from "@/i18n/content";
 import { addDays, localDateTime } from "@/lib/calendar";
-import { sanityFetch } from "./live";
+import { SANITY_CACHE_TAG, sanityFetch } from "./live";
 import {
   ACTIVE_ANNOUNCEMENTS_QUERY,
   ANNOUNCEMENT_QUERY,
@@ -29,7 +29,12 @@ import type {
   Place,
 } from "./types";
 
-const published = { perspective: "published" as const, stega: false as const };
+// Every query shares one cache tag, so the Sanity webhook can expire all content at once.
+const published = {
+  perspective: "published" as const,
+  stega: false as const,
+  tags: [SANITY_CACHE_TAG],
+};
 
 export async function getCalendarData(startDate: string, endDate: string) {
   const { data } = await sanityFetch({
@@ -99,9 +104,8 @@ export async function getAllArticles() {
 
 export async function getArticleSlugs() {
   const { data } = await sanityFetch({
+    ...published,
     query: ARTICLE_SLUGS_QUERY,
-    perspective: "published",
-    stega: false,
   });
   return data as Array<{ slug: string }>;
 }
