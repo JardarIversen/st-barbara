@@ -8,6 +8,7 @@ import { articlePagePath } from "@/lib/article-list";
 import { localizedPath } from "@/i18n/config";
 import PortableContent from "@/components/portable-content";
 import SanityImage from "@/components/sanity-image";
+import { urlForImage } from "@/sanity/image";
 import SourceBulletins from "@/components/source-bulletins";
 import { formatArticleDate } from "@/lib/calendar";
 import { getArticle } from "@/sanity/data";
@@ -23,7 +24,32 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const article = await getArticle((await params).slug);
   if (!article) return {};
-  return { title: article.title, description: article.summary };
+  // Articles with a main image should share that image rather than the parish default.
+  // When there is no main image, inherit the site's default Open Graph/Twitter image.
+  if (!article.mainImage?.assetRef) {
+    return { title: article.title, description: article.summary };
+  }
+
+  const imageUrl = urlForImage(article.mainImage)
+    .width(1200)
+    .height(630)
+    .fit("crop")
+    .auto("format")
+    .url();
+
+  return {
+    title: article.title,
+    description: article.summary,
+    openGraph: {
+      title: article.title,
+      description: article.summary,
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: article.mainImage.alt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ArticlePage({
