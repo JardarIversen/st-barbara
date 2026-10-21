@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-10-18",
+      "issueDate": "2026-10-18",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "coversFrom": "2026-10-18",
+      "coversUntil": "2026-10-25",
+      "pdfPath": "../../../.local/bulletin-2026-10-18/source.pdf",
+      "filename": "29. søndag 2026.pdf",
+      "internalNotes": "Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: 29. søndag er 18. oktober (Jes 45,1.4–6; Sal 96; 1 Tess 1,1–5b; Matt 22,15–21). Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder 21.–25. oktober og stemmer med den faste planen (spansk messe fjerde lørdag, engelsk messe og Notodden fjerde søndag); bare onsdag–fredag har tillegg. Lesningene gjelder bare norsk kl. 11-messe 18. oktober. publishedAt er PDF-ens opprettelsestidspunkt, fordi utsendelsestidspunktet ikke var tilgjengelig. Kampanjen «Et hus bygget på fjell» er lagt inn som egen kunngjøring; bladet sier ikke at den er den varslede innsamlingsaksjonen for byggeprosjektet, så kunngjøringene er ikke slått sammen."
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-02",
+      "title": "Messe – Alle sjelers dag",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-02T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "På Alle sjelers dag minnes vi alle de avdøde i messen. Etter messen velsigner p. Trym gravene på Kongsberg gravlund.",
+      "body": [
+        "Mandag 2. november minnes vi alle de avdøde i messen kl. 18.00.",
+        "Etter messen velsigner p. Trym gravene på Kongsberg gravlund. De som er til stede på kirkegården, kan be om velsignelse av individuelle graver."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ],
+      "translations": {
+        "en": {
+          "title": "Holy Mass – All Souls’ Day",
+          "summary": "On All Souls’ Day we remember all the faithful departed at Holy Mass. After Mass, Fr. Trym will bless the graves at Kongsberg gravlund.",
+          "body": [
+            "On Monday 2 November we remember all the faithful departed at Holy Mass at 18:00.",
+            "After Mass, Fr. Trym will bless the graves at Kongsberg gravlund. Those present at the cemetery may ask for individual graves to be blessed."
+          ]
+        }
+      },
+      "promotionFrom": "2026-10-16T14:12:25+02:00",
+      "promotionUntil": "2026-11-02T18:00:00+01:00"
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:et-hus-bygget-pa-fjell-2026",
+      "title": "Kampanjen «Et hus bygget på fjell»",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "lastMentionedAt": "2026-10-16T14:12:25+02:00",
+      "summary": "Kampanjen «Et hus bygget på fjell» er i gang. Hyrdebrevet som ble lest opp i søndagens messe, og videoer om kampanjen ligger på katolsk.no.",
+      "body": [
+        "Kampanjen «Et hus bygget på fjell» er nå i gang. På katolsk.no ligger det videoer om kampanjen, og der kan du også lese hyrdebrevet som ble lest opp i søndagens messe.",
+        "Ta gjerne med deg en brosjyre hjem. Tusen takk til alle som bidrar til at vi sammen kan bygge vår Kirke."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [
+        {
+          "label": "katolsk.no",
+          "url": "https://www.katolsk.no"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "The campaign «Et hus bygget på fjell»",
+          "summary": "The campaign «Et hus bygget på fjell» (A House Built on Rock) is under way. The pastoral letter read at Sunday Mass and videos about the campaign are on katolsk.no.",
+          "body": [
+            "The campaign «Et hus bygget på fjell» (A House Built on Rock) is now under way. Videos about the campaign are available on katolsk.no, where you can also read the pastoral letter that was read at Sunday Mass.",
+            "Feel free to take a brochure home. Many thanks to everyone who helps us build our Church together."
+          ],
+          "links": [
+            {
+              "label": "katolsk.no",
+              "url": "https://www.katolsk.no"
+            }
+          ]
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ]
+    },
+    {
+      "sourceKey": "announcement:bishop-visitation-thanks-2026",
+      "title": "Takk for bispevisitasen",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "lastMentionedAt": "2026-10-16T14:12:25+02:00",
+      "appliesUntil": "2026-10-25T23:59:00+01:00",
+      "summary": "Takk til alle som hjalp til under bispevisitasen, med små og store bidrag, slik at biskopen ble godt tatt imot.",
+      "body": "Vi hadde fire veldig flotte dager under bispevisitasen. Tusen takk til alle som hjalp til, både med små og store bidrag, og som gjorde at biskopen ble vel tatt imot og gjorde dagene så fine.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Thank you for the bishop’s visitation",
+          "summary": "Thank you to everyone who helped during the bishop’s visitation, with small and large contributions, so that the bishop was warmly welcomed.",
+          "body": "We had four wonderful days during the bishop’s visitation. Many thanks to everyone who helped, with both small and large contributions, and who made sure the bishop was warmly welcomed and the days were so special."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ]
+    },
+    {
+      "sourceKey": "announcement:parish-council-input",
+      "title": "Send inn saker til menighetsrådet",
+      "slug": "send-inn-saker-til-menighetsradet",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-01T14:45:14+02:00",
+      "lastMentionedAt": "2026-10-16T14:12:25+02:00",
+      "summary": "Har du en sak menighetsrådet bør ta opp? Send den til p. Trym på kongsberg@katolsk.no, eller snakk med ham i kirken.",
+      "body": "Har du en sak du ønsker at menighetsrådet skal ta opp? Send den til p. Trym på kongsberg@katolsk.no, eller ta kontakt med ham personlig.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Submit matters to the parish council",
+          "summary": "Is there something you would like the parish council to discuss? Email Fr. Trym at kongsberg@katolsk.no or speak to him at church.",
+          "body": "Is there a matter you would like the parish council to discuss? Email Fr. Trym at kongsberg@katolsk.no or speak to him in person."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ]
+    },
+    {
+      "sourceKey": "announcement:bishop-visitation-2026",
+      "title": "Bispevisitas",
+      "slug": "bispevisitas-8-11-oktober",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-08-02T08:00:00+02:00",
+      "lastMentionedAt": "2026-10-04T16:04:21+02:00",
+      "appliesFrom": "2026-10-04T00:00:00+02:00",
+      "appliesUntil": "2026-10-11T20:00:00+02:00",
+      "summary": "Programmet for biskopens besøk i menigheten. Her finner du messer, tilbedelse, skriftemål og møter for de ulike gruppene, samt samlingene på Notodden.",
+      "body": [
+        "Biskopen besøker St. Barbara menighet 8.–11. oktober 2026. Her er hele programmet fra Oslo katolske bispedømme.",
+        {
+          "style": "h2",
+          "text": "Torsdag 8. oktober"
+        },
+        "15.00 – Biskopen ankommer menigheten.",
+        "15.15 – Møte med sogneadministrator.",
+        "16.00 – Gjennomgang av kirkebøkene, føringen av messestipendier og gjennomsyn av arkivet.",
+        "17.00 – Sakramentstilbedelse og skriftemål.",
+        "18.00 – Messe.",
+        "19.00 – Aftens.",
+        {
+          "style": "h2",
+          "text": "Fredag 9. oktober"
+        },
+        "10.00 – Sykebesøk på Notodden, med ankomst ca. kl. 11.00.",
+        "12.00 – Sykebesøk i Dalen. Fire timer inkludert kjøring.",
+        "17.00 – Sakramentstilbedelse og skriftemål.",
+        "18.00 – Messe.",
+        "18.30 – Møte med finansrådet.",
+        "20.00 – Aftens/middag.",
+        {
+          "style": "h2",
+          "text": "Lørdag 10. oktober"
+        },
+        "10.00 – Gjennomgang av sakristi og kirkerom.",
+        "11.00 – Gjennomgang av eiendomsmassen.",
+        "12.00 – Messe.",
+        "12.30 – Lunsj.",
+        "13.00 – Møte med menighetsrådet.",
+        "15.00 – Møte med kateketer.",
+        "16.30 – Møte med polsk gruppe.",
+        "17.30 – Møte med spansk gruppe.",
+        "19.00 – Aftens/middag.",
+        {
+          "style": "h2",
+          "text": "Søndag 11. oktober"
+        },
+        "11.00 – Pontifikalmesse i St. Barbara.",
+        "12.30 – Kirkekaffe.",
+        "15.00 – Avreise til Notodden.",
+        "16.00 – Møte med kirkelyden på Notodden.",
+        "17.00 – Messe i Notodden kirke.",
+        "18.00 – Kirkekaffe på Notodden.",
+        "20.00 – Avreise.",
+        {
+          "style": "h2",
+          "text": "Praktisk informasjon"
+        },
+        "Det er ingen messe kl. 13.00 søndag 11. oktober. Ta gjerne med ekstra mat til kirkekaffen i St. Barbara, slik søndagsbladet oppfordrer til."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara",
+        "place:notodden-kirke"
+      ],
+      "relatedEventKeys": [
+        "event:visitation-adoration:2026-10-08",
+        "event:visitation-adoration:2026-10-09",
+        "event:visitation-finance-council:2026-10-09",
+        "event:visitation-parish-council:2026-10-10",
+        "event:visitation-catechists:2026-10-10",
+        "event:visitation-polish-group:2026-10-10",
+        "event:visitation-spanish-group:2026-10-10",
+        "event:visitation-coffee-kongsberg:2026-10-11",
+        "event:visitation-notodden-congregation:2026-10-11",
+        "event:visitation-coffee-notodden:2026-10-11"
+      ],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-thursday-nb-2026-10-08",
+        "mass-exception:kongsberg-friday-nb-2026-10-09",
+        "mass-exception:kongsberg-saturday-nb-2026-10-10",
+        "mass-exception:kongsberg-sunday-nb-2026-10-11",
+        "mass-exception:kongsberg-sunday-en-2026-10-11",
+        "mass-exception:notodden-sunday-nb-2026-10-11"
+      ],
+      "links": [
+        {
+          "label": "Hele visitasprogrammet (PDF)",
+          "url": "https://kongsberg.katolsk.no/documents/program-bispevisitas-2026.pdf"
+        }
+      ],
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Bishop's visitation",
+          "summary": "The programme for the bishop's visit to the parish, with Masses, adoration, confession and meetings for the parish groups, as well as the gatherings in Notodden.",
+          "body": [
+            "The bishop will visit St. Barbara parish from 8 to 11 October 2026. Below is the complete programme from Oslo katolske bispedømme.",
+            {
+              "style": "h2",
+              "text": "Thursday 8 October"
+            },
+            "15:00 – The bishop arrives at the parish.",
+            "15:15 – Meeting with the parish administrator.",
+            "16:00 – Review of the parish registers, Mass stipend records and archives.",
+            "17:00 – Eucharistic adoration and confession.",
+            "18:00 – Holy Mass.",
+            "19:00 – Supper.",
+            {
+              "style": "h2",
+              "text": "Friday 9 October"
+            },
+            "10:00 – Visits to the sick in Notodden, arriving at approximately 11:00.",
+            "12:00 – Visits to the sick in Dalen. Four hours including travel.",
+            "17:00 – Eucharistic adoration and confession.",
+            "18:00 – Holy Mass.",
+            "18:30 – Meeting with the finance council.",
+            "20:00 – Supper/dinner.",
+            {
+              "style": "h2",
+              "text": "Saturday 10 October"
+            },
+            "10:00 – Inspection of the sacristy and church interior.",
+            "11:00 – Review of the parish properties.",
+            "12:00 – Holy Mass.",
+            "12:30 – Lunch.",
+            "13:00 – Meeting with the parish council.",
+            "15:00 – Meeting with the catechists.",
+            "16:30 – Meeting with the Polish group.",
+            "17:30 – Meeting with the Spanish group.",
+            "19:00 – Supper/dinner.",
+            {
+              "style": "h2",
+              "text": "Sunday 11 October"
+            },
+            "11:00 – Pontifical Mass at St. Barbara.",
+            "12:30 – Coffee gathering after Mass.",
+            "15:00 – Departure for Notodden.",
+            "16:00 – Meeting with the congregation in Notodden.",
+            "17:00 – Mass at Notodden kirke.",
+            "18:00 – Coffee gathering in Notodden.",
+            "20:00 – Departure.",
+            {
+              "style": "h2",
+              "text": "Practical information"
+            },
+            "There will be no Mass at 13:00 on Sunday 11 October. Please bring extra food for the coffee gathering at St. Barbara, as requested in the Sunday bulletin."
+          ],
+          "links": [
+            {
+              "label": "Full visitation programme (PDF)",
+              "url": "https://kongsberg.katolsk.no/documents/program-bispevisitas-2026.pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "announcement:confirmation-retreat-leaders-2026",
+      "title": "Vi trenger ledere til konfirmanthelg",
+      "slug": "vi-trenger-ledere-til-konfirmanthelg",
+      "status": "resolved",
+      "priority": "important",
+      "publishedAt": "2026-08-23T08:00:00+02:00",
+      "lastMentionedAt": "2026-09-18T13:44:14+02:00",
+      "appliesUntil": "2026-10-16T17:00:00+02:00",
+      "summary": "St. Barbara trenger voksne hjelpere til konfirmanthelgen på Skogstad sammen med Hønefoss og Lillehammer. Kontakt p. Trym dersom du vil bidra eller har spørsmål.",
+      "body": [
+        "16.–18. oktober arrangeres konfirmanthelg på Skogstad sammen med Hønefoss og Lillehammer. Det blir mange deltakere, og lederteamet trenger rundt 20 personer over 18 år fra de tre menighetene. St. Barbara bør også bidra med noen personer.",
+        "Kontakt p. Trym dersom du er interessert eller har spørsmål."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Leaders needed for the Confirmation retreat",
+          "summary": "St. Barbara needs adult volunteers for the Confirmation retreat at Skogstad with Hønefoss and Lillehammer. Contact Fr. Trym if you would like to help or have questions.",
+          "body": [
+            "The Confirmation retreat takes place at Skogstad from 16 to 18 October, together with Hønefoss and Lillehammer. With many participants expected, the leadership team needs around 20 adults over the age of 18 from the three parishes. St. Barbara should also contribute some volunteers.",
+            "Contact Fr. Trym if you are interested or have questions."
+          ],
+          "links": []
+        }
+      },
+      "sourceBulletinKeys": []
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-10-21",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-21",
+      "publicNote": "Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-22",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-22",
+      "publicNote": "Den hellige pave Johannes Paul II. Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint John Paul II, Pope. Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-23",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-23",
+      "publicNote": "Den hellige Johannes av Capestrano. Skriftemål fra kl. 17.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint John of Capistrano. Confession from 17:00."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-10-18:kongsberg:nb:1100",
+      "title": "29. søndag i det alminnelige kirkeår",
+      "massDate": "2026-10-18",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-10-18",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Jes 45, 1. 4–6"
+        },
+        "Så sier Herren til sin salvede, til Kyros, som jeg holder i hans høyre hånd for å tvinge folkeslag under ham, løse beltet om livet på konger og åpne dørene for ham, så ingen porter skal være stengt:",
+        "For min tjener Jakobs skyld, for Israel, som jeg har utvalgt, har jeg kalt deg og gitt deg et hedersnavn, enda du ikke kjente meg. Jeg er Herren, det er ingen annen, foruten meg er det ingen Gud. Jeg har spent beltet om livet på deg, enda du ikke kjente meg, for at folk skal få vite fra øst til vest at det ikke er noen ved siden av meg. Jeg er Herren, ingen annen.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Jeg vil lovsynge Herren, høyt er han opphøyet"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Syng en ny sang for Herren,",
+            "syng for Herren, all jorden!",
+            "Forkynn for hedninger hans ære,",
+            "hans under for alle folk."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren er stor og høylovet,",
+            "mer å frykte enn alle guder.",
+            "Folkenes guder er intet.",
+            "Herren er himmelens skaper."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Folkeslag og slekter,",
+            "gi Herren ære og pris.",
+            "Gi Herren den ære vi skylder hans navn,",
+            "kom til hans forgård med gaver."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Tilbe Herren i hellig skrud,",
+            "bev for hans åsyn, all jorden.",
+            "Si til folkene: Herren er konge.",
+            "Han dømmer folkene med rettferd."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – 1 Tess 1, 1–5b"
+        },
+        "Paulus, Silvanus og Timotheos, til kirken i Tessalonika, som lever i samfunn med Gud vår Far og vår Herre Jesus Kristus. Nåde og fred være med dere!",
+        "Vi takker stadig Gud for dere alle, og minnes dere atter og atter i våre bønner: For vår Gud og Fars åsyn kommer vi ihu hvor virksomme dere har vært i troen, hvor utrettelige i deres kjærlighet, hvor utholdende i håpet, alt i vår Herre Jesus Kristus. Brødre, kjære for Gud: Vi vet hvordan dere er blitt utvalgt. For vårt Evangelium ble ikke forkynt for dere med ord alene; det viste seg i kraft, ved Den Hellige Ånd; det fikk utfolde seg helt og fullt.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Dere skal være lys",
+            "som lar livets ord skinne for menneskene."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 22, 15–21"
+        },
+        "På den tid gikk fariseerne bort for å rådslå om hvordan de skulle få Jesus til å si noe de kunne felle ham på.",
+        "De sendte da sine disipler til ham sammen med noen herodianere. «Mester,» fikk de beskjed om å si, «vi vet at du er en rettskaffen mann og klart forkynner hva som er Guds vei, uten persons anseelse og uten å skjele til noen kant. Så si oss nå hva du mener: Er det tillatt å betale skatt til Caesar, eller ikke?»",
+        "Men Jesus gjennomskuet deres falskhet. «Hyklere,» svarte han, «så dere prøver å sette meg fast? Vis meg hva dere betaler skatten med.» De rakte ham en denar.",
+        "Så spurte han dem: «Hvem forestiller dette bildet? Og hvem gjelder innskriften?» De svarte: «Caesar.»",
+        "«Vel,» sier han, «så gi Caesar hva Caesars er, og Gud hva Guds er.»"
+      ]
+    }
+  ],
+  "articles": []
+}
