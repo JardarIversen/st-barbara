@@ -314,3 +314,23 @@ export const MASS_TEXT_QUERY = defineQuery(/* groq */ `
     body
   }
 `);
+
+// Mass occurrences are generated from schedules and left out; /messetider covers them.
+// Announcements are listed only when the board links to their own page.
+export const SITEMAP_QUERY = defineQuery(/* groq */ `
+  {
+    "articles": *[_type == "article" && defined(slug.current)] {
+      "slug": slug.current, pagePath, _updatedAt
+    },
+    "events": *[_type == "event" && defined(slug.current)] {
+      "slug": slug.current, _updatedAt
+    },
+    "announcements": *[
+      _type == "announcement" && defined(slug.current) &&
+      status == "active" && count(relatedEvents) > 0 &&
+      (!defined(appliesUntil) || appliesUntil >= now())
+    ] {
+      "slug": slug.current, _updatedAt
+    }
+  }
+`);

@@ -155,3 +155,11 @@ export type MassText = {
   title: string;
   body: PortableTextBlock[];
 };
+
+type SitemapDocument = { slug: string; _updatedAt: string };
+
+export type SitemapDocuments = {
+  articles: Array<SitemapDocument & { pagePath?: string }>;
+  events: SitemapDocument[];
+  announcements: SitemapDocument[];
+};

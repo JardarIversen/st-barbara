@@ -10,6 +10,10 @@ import {
   priests,
 } from "@/lib/parish";
 import { getParishPlaces } from "@/sanity/data";
+import JsonLd from "@/components/json-ld";
+import { localizedPath } from "@/i18n/config";
+import { absoluteUrl } from "@/lib/site";
+import { parishStructuredData } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
@@ -22,11 +26,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function KontaktPage() {
-  const { t } = await getTranslations();
+  const { locale, t } = await getTranslations();
   const places = await getParishPlaces();
   const [parishPriest, ...otherPriests] = priests;
   return (
     <div className="mx-auto max-w-6xl px-5 py-10 lg:py-14">
+      <JsonLd
+        data={parishStructuredData(places, {
+          url: absoluteUrl(localizedPath("/", locale)),
+          description: t(
+            "St. Barbara katolske menighet i Kongsberg. Messetider for Kongsberg, Notodden, Rjukan og Mo, katekese, sakramenter og menighetsliv.",
+          ),
+        })}
+      />
       <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
         {t("Vi hører gjerne fra deg")}
       </p>

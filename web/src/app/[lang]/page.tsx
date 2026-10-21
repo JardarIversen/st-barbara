@@ -7,6 +7,7 @@ import AnnouncementBoard from "@/components/announcement-board";
 import ArticleCard from "@/components/article-card";
 import AgendaList from "@/components/agenda-list";
 import PlaceText from "@/components/place-text";
+import JsonLd from "@/components/json-ld";
 import {
   addDays,
   buildCalendarItems,
@@ -19,6 +20,9 @@ import {
 } from "@/lib/calendar";
 import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { rankAnnouncements } from "@/lib/announcements";
+import { localizedPath } from "@/i18n/config";
+import { absoluteUrl } from "@/lib/site";
+import { parishStructuredData } from "@/lib/structured-data";
 import {
   getActiveAnnouncements,
   getCalendarData,
@@ -95,6 +99,14 @@ export default async function Home() {
 
   return (
     <>
+      <JsonLd
+        data={parishStructuredData(places, {
+          url: absoluteUrl(localizedPath("/", locale)),
+          description: t(
+            "St. Barbara katolske menighet i Kongsberg. Messetider for Kongsberg, Notodden, Rjukan og Mo, katekese, sakramenter og menighetsliv.",
+          ),
+        })}
+      />
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:py-12">
           <div>
