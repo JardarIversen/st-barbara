@@ -16,3 +16,11 @@ test('only standard minutes titles lose their repeated date', () => {
   assert.equal(articleListTitle({...article, title:'Parish Council minutes – 31 August 2026'}), 'Parish Council minutes');
   assert.equal(articleListTitle({...article, title:'Nytt menighetsråd – veien videre'}), 'Nytt menighetsråd – veien videre');
 });
+
+
+test('manually created Sanity articles without sourceKey are supported', () => {
+  const article = {title:'Dåpsglede i St. Barbara', category:'Dåp'};
+  assert.equal(isCouncilArticle(article), false);
+  assert.equal(articleListTitle(article), article.title);
+  assert.equal(isCouncilArticle({title:'Council update', category:'Menighetsråd'}), true);
+});

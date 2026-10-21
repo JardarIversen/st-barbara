@@ -1,4 +1,4 @@
-type ArticleIdentity = { sourceKey: string; category?: string; title: string };
+type ArticleIdentity = { sourceKey?: string; category?: string; title: string };
 
 // Only destinations implemented by the site may replace an article route.
 export function articlePagePath(article: { pagePath?: string }) {
@@ -11,7 +11,7 @@ export function articleHref(article: { pagePath?: string; slug: string }) {
 
 export function isCouncilArticle(article: ArticleIdentity) {
   return (
-    article.sourceKey.startsWith("article:parish-council:") ||
+    article.sourceKey?.startsWith("article:parish-council:") === true ||
     ["menighetsråd", "parish council"].includes(
       article.category?.toLowerCase() ?? "",
     )
