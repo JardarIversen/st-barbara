@@ -7,7 +7,10 @@ export function catechesisErrors(value) {
   const errors = []
   if (!Array.isArray(value.groups) || !value.groups.length) return ['Katekese mangler aldersgrupper.']
   function contact(item) {
-    if (item && (!item.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item.email ?? ''))) errors.push('Kontaktpersonen må ha navn og gyldig offentlig e-post.')
+    if (!item) return
+    const email = item.email == null || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item.email)
+    const phone = item.phone == null || /^\d(\s?\d){7}$/.test(item.phone)
+    if (!item.name || !(item.email || item.phone) || !email || !phone) errors.push('Kontaktpersonen må ha navn og gyldig offentlig e-post eller telefon.')
   }
   function keys(items) {
     if (items.some(item => !item._key || !item.title) || new Set(items.map(item => item._key)).size !== items.length) errors.push('Grupper og tilbud må ha tittel og unike _key-verdier.')

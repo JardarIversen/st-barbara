@@ -150,17 +150,33 @@
         ],
         "otherOfferings": [
           {
-            "_key": "other-places",
-            "title": "Notodden og Rjukan",
-            "body": "For katekese i Notodden og Rjukan, kontakt pater Trym.",
+            "_key": "notodden",
+            "title": "Notodden",
+            "body": "For katekese på Notodden, kontakt Khai Quang Tran.",
+            "contact": {
+              "name": "Khai Quang Tran",
+              "phone": "932 28 489",
+              "email": "Khaianhnor@yahoo.no"
+            },
+            "translations": {
+              "en": {
+                "title": "Notodden",
+                "body": "For catechesis in Notodden, contact Khai Quang Tran."
+              }
+            }
+          },
+          {
+            "_key": "rjukan",
+            "title": "Rjukan",
+            "body": "For katekese på Rjukan, kontakt pater Trym.",
             "contact": {
               "name": "Pater Trym",
               "email": "Kongsberg@katolsk.no"
             },
             "translations": {
               "en": {
-                "title": "Notodden and Rjukan",
-                "body": "For catechesis in Notodden and Rjukan, contact Fr. Trym."
+                "title": "Rjukan",
+                "body": "For catechesis in Rjukan, contact Fr. Trym."
               }
             }
           },
