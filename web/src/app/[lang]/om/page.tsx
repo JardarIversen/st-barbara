@@ -1,7 +1,12 @@
 import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { municipalities, parishCouncil, priests } from "@/lib/parish";
+import {
+  municipalities,
+  parishCouncil,
+  phoneLabel,
+  priests,
+} from "@/lib/parish";
 import PlaceText from "@/components/place-text";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -183,7 +188,9 @@ export default async function OmPage() {
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                   {t(p.role)}
                 </p>
-                <p className="mt-2 text-sm text-primary">{p.phone}</p>
+                <p className="mt-2 text-sm text-primary">
+                  {phoneLabel(p.phone)}
+                </p>
               </div>
             ))}
           </div>

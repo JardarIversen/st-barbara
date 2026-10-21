@@ -61,8 +61,8 @@ export default async function CalendarDetailPage({
   if (!item) notFound();
 
   const massText =
-    item.kind === "mass" && item.occurrenceDate && item.scheduleKey
-      ? await getMassText(item.occurrenceDate, item.scheduleKey)
+    item.kind === "mass" && item.occurrenceDate && item.scheduleId
+      ? await getMassText(item.occurrenceDate, item.scheduleId)
       : null;
   const announcements = item.announcements?.length ? [] : await getAnnouncementsByBulletins(
     item.sourceBulletins.map((bulletin) => bulletin._id),

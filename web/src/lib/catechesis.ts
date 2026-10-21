@@ -6,7 +6,11 @@ type Copy = {
   body?: PortableTextBlock[];
   originalFields?: string[];
 };
-export type CatechesisContact = { name: string; email: string };
+export type CatechesisContact = {
+  name: string;
+  email?: string;
+  phone?: string;
+};
 export type CatechesisSession = Copy & {
   _key: string;
   startTime: string;

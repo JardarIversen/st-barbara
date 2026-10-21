@@ -65,6 +65,7 @@ export type CalendarItem = {
   links?: Array<{ _key: string; label: string; url: string }>;
   sourceBulletins: Bulletin[];
   scheduleKey?: string;
+  scheduleId?: string;
   occurrenceDate?: string;
   relatedEventSlug?: string;
   parentEvent?: { title: string; slug: string };
@@ -200,8 +201,9 @@ export function localDateTime(date: string, time: string) {
   return `${wallTime}${offset}`;
 }
 
-function occurrenceSlug(scheduleKey: string, occurrenceDate: string) {
-  return `${scheduleKey}-${occurrenceDate}`
+// Imported schedules keep their published URLs; schedules created in Studio use their id.
+function occurrenceSlug(schedule: MassSchedule, occurrenceDate: string) {
+  return `${schedule.sourceKey ?? schedule._id}-${occurrenceDate}`
     .normalize("NFKD")
     .replace(/[æÆ]/g, "ae")
     .replace(/[øØ]/g, "o")
@@ -316,14 +318,14 @@ function massItem(
     : [bulletinForDate(bulletins, occurrenceDate)].filter(
         (bulletin): bulletin is Bulletin => Boolean(bulletin),
       );
-  const slug = occurrenceSlug(schedule.sourceKey, occurrenceDate);
+  const slug = occurrenceSlug(schedule, occurrenceDate);
   const changedTime =
     new Date(startsAt).getTime() !== new Date(originalStartsAt).getTime();
   const changedPlace = place?._id !== schedule.place?._id &&
     placeFilterKey(place) !== placeFilterKey(schedule.place);
 
   return {
-    id: `${schedule.sourceKey}:${occurrenceDate}`,
+    id: `${schedule.sourceKey ?? schedule._id}:${occurrenceDate}`,
     kind: "mass",
     title: exception?.titleOverride ?? schedule.title,
     titleOriginal: exception?.titleOverride
@@ -361,6 +363,7 @@ function massItem(
     details: exception?.details,
     sourceBulletins,
     scheduleKey: schedule.sourceKey,
+    scheduleId: schedule._id,
     occurrenceDate,
     relatedEventSlug: exception?.relatedEventSlug,
     announcements: exception?.announcements,
@@ -417,7 +420,7 @@ export function resolveScheduledMass(
   date: string,
 ): CalendarItem | null {
   const schedule = data.schedules.find(
-    (value) => occurrenceSlug(value.sourceKey, date) === slug,
+    (value) => occurrenceSlug(value, date) === slug,
   );
   if (
     !schedule ||
@@ -426,7 +429,7 @@ export function resolveScheduledMass(
   )
     return null;
   const exceptions = data.exceptions.filter(
-    (value) => value.scheduleKey === schedule.sourceKey,
+    (value) => value.scheduleId === schedule._id,
   );
   if (
     !scheduleDates(schedule, addDays(date, -7), addDays(date, 7)).includes(date)
@@ -456,7 +459,7 @@ export function buildCalendarItems(
         : endDate;
     if (activeFrom > activeUntil) continue;
     const exceptions = (data.exceptions ?? []).filter(
-      (exception) => exception.scheduleKey === schedule.sourceKey,
+      (exception) => exception.scheduleId === schedule._id,
     );
     for (const date of scheduleDates(schedule, activeFrom, activeUntil)) {
       items.push(
@@ -542,7 +545,7 @@ export function calendarPlaceLabel(place?: Place) {
     "place:rjukan-st-johannes": "Rjukan",
     "place:mo-kirke": "Mo",
   };
-  return names[place.sourceKey] ?? place.name;
+  return names[place.sourceKey ?? ""] ?? place.name;
 }
 
 export function calendarTitle(item: CalendarListItem) {

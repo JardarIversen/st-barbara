@@ -146,11 +146,11 @@ export const getAnnouncement = cache(async (slug: string) => {
   return localizeContent(data, await getLocale()) as Announcement | null;
 });
 
-export const getMassText = cache(async (date: string, scheduleKey: string) => {
+export const getMassText = cache(async (date: string, scheduleId: string) => {
   const { data } = await sanityFetch({
     ...published,
     query: MASS_TEXT_QUERY,
-    params: { date, scheduleKey },
+    params: { date, scheduleId },
   });
   return data as MassText | null;
 });

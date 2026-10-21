@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildCalendarItems, calendarDayGroups, calendarHistoryStart, calendarTitle, isDateOnlyRange, localDateTime, resolveScheduledMass, toCalendarListItems } from "../src/lib/calendar.ts";
+import { buildCalendarItems, calendarDayGroups, calendarPlaceLabel, calendarHistoryStart, calendarTitle, isDateOnlyRange, localDateTime, resolveScheduledMass, toCalendarListItems } from "../src/lib/calendar.ts";
 
 const notodden = { _id: "notodden", sourceKey: "place:notodden", name: "Notodden" };
 const heddal = { _id: "heddal", sourceKey: "place:heddal-stavkirke", name: "Heddal stavkirke" };
@@ -9,7 +9,7 @@ const data = { schedules: [schedule], exceptions: [], events: [], bulletins: [] 
 
 test("a programme links its individual appointments and mass without leaking to other Sundays", () => {
   const programme = { title: "Bispevisitas", slug: "bispevisitas-8-11-oktober", links: [{_key: "pdf", label: "Program (PDF)", url: "https://example.org/program.pdf"}] };
-  const exception = { scope: "singleOccurrence", scheduleKey: schedule.sourceKey, occurrenceDate: "2026-10-11", changeType: "changed", announcements: [programme] };
+  const exception = { scope: "singleOccurrence", scheduleId: schedule._id, occurrenceDate: "2026-10-11", changeType: "changed", announcements: [programme] };
   const meeting = { _id: "meeting", title: "Møte med kirkelyden på Notodden", slug: "mote-notodden", eventType: "activity", status: "scheduled", startsAt: "2026-10-11T16:00:00+02:00", announcements: [programme] };
   const items = buildCalendarItems({...data, exceptions: [exception], events: [meeting]}, "2026-10-01", "2026-10-31");
   assert.equal(items.length, 3);
@@ -28,7 +28,7 @@ test("history is one calendar month, including short months and leap years", () 
 });
 
 test("a moved mass keeps its parish filter, shows its actual venue, and stays a single entry", () => {
-  const exception = { scope: "singleOccurrence", scheduleKey: schedule.sourceKey, occurrenceDate: "2026-09-13", changeType: "rescheduled", newPlace: heddal, titleOverride: "Messe i Heddal stavkirke" };
+  const exception = { scope: "singleOccurrence", scheduleId: schedule._id, occurrenceDate: "2026-09-13", changeType: "rescheduled", newPlace: heddal, titleOverride: "Messe i Heddal stavkirke" };
   const items = buildCalendarItems({ ...data, exceptions: [exception] }, "2026-09-01", "2026-09-30");
   const moved = toCalendarListItems(items)[0];
   assert.equal(items.length, 2);
@@ -40,8 +40,8 @@ test("a moved mass keeps its parish filter, shows its actual venue, and stays a 
 });
 
 test("newer bulletin corrections win over old cancellations without losing the regular plan", () => {
-  const old = { scope: "dateRange", scheduleKey: schedule.sourceKey, rangeStart: "2026-09-01", rangeEnd: "2026-09-30", changeType: "cancelled", sourceBulletins: [{issueDate: "2026-08-30"}] };
-  const correction = { scope: "singleOccurrence", scheduleKey: schedule.sourceKey, occurrenceDate: "2026-09-13", changeType: "changed", publicNote: "Messen feires som vanlig.", sourceBulletins: [{issueDate: "2026-09-06"}] };
+  const old = { scope: "dateRange", scheduleId: schedule._id, rangeStart: "2026-09-01", rangeEnd: "2026-09-30", changeType: "cancelled", sourceBulletins: [{issueDate: "2026-08-30"}] };
+  const correction = { scope: "singleOccurrence", scheduleId: schedule._id, occurrenceDate: "2026-09-13", changeType: "changed", publicNote: "Messen feires som vanlig.", sourceBulletins: [{issueDate: "2026-09-06"}] };
   const items = buildCalendarItems({ ...data, exceptions: [old, correction] }, "2026-09-01", "2026-09-30");
   assert.equal(items[0].status, "scheduled");
   assert.equal(items[0].publicNote, correction.publicNote);
@@ -62,7 +62,7 @@ test("Oslo dates handle midnight UTC, DST and overlapping multi-day events", () 
 });
 
 test("a mass moved to a different date keeps a working detail URL", () => {
-  const exception = { scope: "singleOccurrence", scheduleKey: schedule.sourceKey, occurrenceDate: "2026-09-13", changeType: "rescheduled", newStartsAt: "2026-09-14T17:00:00+02:00" };
+  const exception = { scope: "singleOccurrence", scheduleId: schedule._id, occurrenceDate: "2026-09-13", changeType: "rescheduled", newStartsAt: "2026-09-14T17:00:00+02:00" };
   const changed = { ...data, exceptions: [exception] };
   const item = buildCalendarItems(changed, "2026-09-01", "2026-09-30")[0];
   assert.equal(item.dateKey, "2026-09-14");
@@ -83,4 +83,17 @@ test("a bulletin naming Rjukan remains filterable when the precise venue is not 
   assert.deepEqual(item.regionKeys, ["rjukan"]);
   assert.deepEqual(item.places, []);
   assert.equal(calendarTitle(item), event.title);
+});
+
+test("schedules created in Studio without an import key keep separate URLs and exceptions", () => {
+  const chapel = { _id: "chapel", sourceKey: null, name: "Kapellet", locality: "Kongsberg" };
+  const first = { ...schedule, _id: "studio-a", sourceKey: null, place: chapel };
+  const second = { ...first, _id: "studio-b", startTime: "19:00" };
+  const cancelled = { scope: "singleOccurrence", scheduleId: first._id, occurrenceDate: "2026-09-13", changeType: "cancelled" };
+  const studio = { ...data, schedules: [first, second], exceptions: [cancelled] };
+  const items = buildCalendarItems(studio, "2026-09-13", "2026-09-13");
+  assert.deepEqual(items.map(item => [item.slug, item.status]), [["studio-a-2026-09-13", "cancelled"], ["studio-b-2026-09-13", "scheduled"]]);
+  assert.equal(resolveScheduledMass(studio, "studio-b-2026-09-13", "2026-09-13").startsAt, "2026-09-13T19:00:00+02:00");
+  assert.equal(calendarPlaceLabel(chapel), "Kapellet");
+  assert.equal(buildCalendarItems(data, "2026-09-13", "2026-09-13")[0].slug, "schedule-notodden-2026-09-13");
 });

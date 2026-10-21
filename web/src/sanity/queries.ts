@@ -74,7 +74,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
       sourceKey,
     translations,
       scope,
-      "scheduleKey": schedule->sourceKey,
+      "scheduleId": schedule._ref,
       occurrenceDate,
       rangeStart,
       rangeEnd,
@@ -307,7 +307,7 @@ export const MASS_TEXT_QUERY = defineQuery(/* groq */ `
   *[
     _type == "massText" &&
     massDate == $date &&
-    massSchedule->sourceKey == $scheduleKey
+    massSchedule._ref == $scheduleId
   ][0] {
     _id,
     title,

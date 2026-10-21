@@ -17,7 +17,7 @@ import {
   todayInOslo,
   toCalendarListItems,
 } from "@/lib/calendar";
-import { contact } from "@/lib/parish";
+import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { rankAnnouncements } from "@/lib/announcements";
 import {
   getActiveAnnouncements,
@@ -357,10 +357,10 @@ export default async function Home() {
                 </dt>
                 <dd className="mt-1 text-muted-foreground">
                   <a
-                    href={`tel:+47${contact.phone.replace(/\s/g, "")}`}
+                    href={phoneHref(contact.phone)}
                     className="hover:text-primary"
                   >
-                    {contact.phone}
+                    {phoneLabel(contact.phone)}
                   </a>
                   {" · "}
                   <a
@@ -368,6 +368,29 @@ export default async function Home() {
                     className="hover:text-primary"
                   >
                     {contact.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">
+                  <span translate="no" className="notranslate">
+                    {notoddenContact.name}
+                  </span>
+                  , {t("kontaktperson for Notodden")}
+                </dt>
+                <dd className="mt-1 text-muted-foreground">
+                  <a
+                    href={phoneHref(notoddenContact.phone)}
+                    className="hover:text-primary"
+                  >
+                    {phoneLabel(notoddenContact.phone)}
+                  </a>
+                  {" · "}
+                  <a
+                    href={`mailto:${notoddenContact.email}`}
+                    className="hover:text-primary"
+                  >
+                    {notoddenContact.email}
                   </a>
                 </dd>
               </div>

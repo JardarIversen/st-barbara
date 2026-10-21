@@ -1,4 +1,6 @@
-type ArticleIdentity = { sourceKey?: string; category?: string; title: string };
+import type { ArticleCard } from "@/sanity/types";
+
+type ArticleIdentity = Pick<ArticleCard, "sourceKey" | "category" | "title">;
 
 // Only destinations implemented by the site may replace an article route.
 export function articlePagePath(article: { pagePath?: string }) {

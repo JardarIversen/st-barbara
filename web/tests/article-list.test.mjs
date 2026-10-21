@@ -19,7 +19,7 @@ test('only standard minutes titles lose their repeated date', () => {
 
 
 test('manually created Sanity articles without sourceKey are supported', () => {
-  const article = {title:'Dåpsglede i St. Barbara', category:'Dåp'};
+  const article = {sourceKey:null, title:'Dåpsglede i St. Barbara', category:'Dåp'};
   assert.equal(isCouncilArticle(article), false);
   assert.equal(articleListTitle(article), article.title);
   assert.equal(isCouncilArticle({title:'Council update', category:'Menighetsråd'}), true);

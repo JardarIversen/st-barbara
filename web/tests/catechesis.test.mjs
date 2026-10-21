@@ -57,6 +57,17 @@ test('invalid and duplicate dates, impossible times and missing contacts are rej
   assert.equal(catechesisErrors(invalid).length, 2);
 });
 
+test('a contact may have a phone instead of an email, but needs one of them', () => {
+  const notodden = input.otherOfferings.find(item => item._key === 'notodden');
+  assert.deepEqual(notodden.contact, {name: 'Khai Quang Tran', phone: '932 28 489', email: 'Khaianhnor@yahoo.no'});
+  const contactErrors = contact => catechesisErrors({...input, otherOfferings: [{...notodden, contact}]});
+  assert.deepEqual(contactErrors({name: 'Khai Quang Tran', phone: '932 28 489'}), []);
+  assert.deepEqual(contactErrors({name: 'Pater Trym', email: 'Kongsberg@katolsk.no', phone: '944 25 982'}), []);
+  assert.equal(contactErrors({name: 'Khai Quang Tran'}).length, 1);
+  assert.equal(contactErrors({name: 'Khai Quang Tran', phone: '+47 932 28 489'}).length, 1);
+  assert.equal(contactErrors({name: 'Khai Quang Tran', phone: '932 28 489', email: 'not-an-email'}).length, 1);
+});
+
 test('article previews link straight to catechesis without changing unrelated articles', () => {
   assert.equal(articleHref(article), '/katekese');
   assert.equal(articleHref({slug: 'minutes'}), '/innlegg/minutes');

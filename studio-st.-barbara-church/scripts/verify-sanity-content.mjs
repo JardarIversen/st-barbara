@@ -23,12 +23,15 @@ const errors = []
 const warnings = []
 const counts = Object.fromEntries(types.map((type) => [type, 0]))
 const sourceKeys = new Map()
+// Documents created by hand in Studio have no sourceKey; the import cannot reach them.
+let studioDocuments = 0
 
 for (const document of documents) {
-  if (document._type === 'article' && document.catechesis) errors.push(...catechesisErrors(document.catechesis).map(error => `${document.sourceKey}: ${error}`))
+  const label = document.sourceKey ?? `${document._type}/${document._id}`
+  if (document._type === 'article' && document.catechesis) errors.push(...catechesisErrors(document.catechesis).map(error => `${label}: ${error}`))
   counts[document._type] += 1
   if (!document.sourceKey) {
-    warnings.push(`${document._type}/${document._id} mangler sourceKey.`)
+    studioDocuments += 1
   } else {
     const lookup = `${document._type}:${document.sourceKey}`
     if (sourceKeys.has(lookup)) errors.push(`Duplikat sourceKey: ${lookup}`)
@@ -36,18 +39,18 @@ for (const document of documents) {
   }
 
   if (document._type === 'bulletin') {
-    if (!document.pdf?.asset?._ref) errors.push(`${document.sourceKey} mangler PDF.`)
-    if (!document.sourceHash) errors.push(`${document.sourceKey} mangler sourceHash.`)
+    if (!document.pdf?.asset?._ref) errors.push(`${label} mangler PDF.`)
+    if (!document.sourceHash) errors.push(`${label} mangler sourceHash.`)
     if (!document.issueDate || !document.coversFrom || !document.coversUntil) {
-      errors.push(`${document.sourceKey} mangler datodekning.`)
+      errors.push(`${label} mangler datodekning.`)
     }
     if (document.coversUntil < document.coversFrom) {
-      errors.push(`${document.sourceKey} har ugyldig datodekning.`)
+      errors.push(`${label} har ugyldig datodekning.`)
     }
   }
 
   if (document._type === 'event' && document.endsAt && document.endsAt < document.startsAt) {
-    errors.push(`${document.sourceKey} slutter før start.`)
+    errors.push(`${label} slutter før start.`)
   }
 
   if (
@@ -56,16 +59,16 @@ for (const document of documents) {
     document.appliesUntil &&
     document.appliesUntil < document.appliesFrom
   ) {
-    errors.push(`${document.sourceKey} har ugyldig relevansperiode.`)
+    errors.push(`${label} har ugyldig relevansperiode.`)
   }
 
   if (document._type === 'massException') {
-    if (!document.schedule?._ref) errors.push(`${document.sourceKey} mangler messeplan.`)
+    if (!document.schedule?._ref) errors.push(`${label} mangler messeplan.`)
     if (document.scope === 'dateRange' && (!document.rangeStart || !document.rangeEnd)) {
-      errors.push(`${document.sourceKey} mangler datointervall.`)
+      errors.push(`${label} mangler datointervall.`)
     }
     if (document.scope !== 'dateRange' && !document.occurrenceDate) {
-      errors.push(`${document.sourceKey} mangler forekomstdato.`)
+      errors.push(`${label} mangler forekomstdato.`)
     }
   }
 }
@@ -139,6 +142,7 @@ if (manifest) {
 }
 
 console.log('Dokumenttelling:', counts)
+if (studioDocuments) console.log(`Laget i Studio uten importnøkkel: ${studioDocuments}`)
 for (const warning of warnings) console.warn(`ADVARSEL: ${warning}`)
 for (const error of errors) console.error(`FEIL: ${error}`)
 
