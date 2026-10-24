@@ -12,6 +12,7 @@ import SourceBulletins from "@/components/source-bulletins";
 import { formatArticleDate } from "@/lib/calendar";
 import { getArticle } from "@/sanity/data";
 import { isArticlePdf } from "@/lib/article-pdf";
+import { shareMetadata } from "@/lib/share";
 
 // Locale and canonical URLs depend on request headers, as on the other pages.
 // Do not opt this route into static fallback rendering with generateStaticParams.
@@ -21,9 +22,17 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { locale } = await getTranslations();
   const article = await getArticle((await params).slug);
   if (!article) return {};
-  return { title: article.title, description: article.summary };
+  return {
+    title: article.title,
+    description: article.summary,
+    ...shareMetadata(locale, {
+      title: article.title,
+      image: article.mainImage,
+    }),
+  };
 }
 
 export default async function ArticlePage({
