@@ -17,6 +17,7 @@ import {
   LATEST_BULLETINS_QUERY,
   MASS_TEXT_QUERY,
   PARISH_PLACES_QUERY,
+  SITEMAP_QUERY,
 } from "./queries";
 import type {
   Announcement,
@@ -27,6 +28,7 @@ import type {
   MassText,
   ParishEvent,
   Place,
+  SitemapDocuments,
 } from "./types";
 
 // Every query shares one cache tag, so the Sanity webhook can expire all content at once.
@@ -146,11 +148,19 @@ export const getAnnouncement = cache(async (slug: string) => {
   return localizeContent(data, await getLocale()) as Announcement | null;
 });
 
-export const getMassText = cache(async (date: string, scheduleKey: string) => {
+export const getMassText = cache(async (date: string, scheduleId: string) => {
   const { data } = await sanityFetch({
     ...published,
     query: MASS_TEXT_QUERY,
-    params: { date, scheduleKey },
+    params: { date, scheduleId },
   });
   return data as MassText | null;
 });
+
+export async function getSitemapDocuments() {
+  const { data } = await sanityFetch({
+    ...published,
+    query: SITEMAP_QUERY,
+  });
+  return data as SitemapDocuments;
+}

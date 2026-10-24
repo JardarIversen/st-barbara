@@ -14,6 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { phoneHref, phoneLabel } from "@/lib/parish";
 import { cn } from "@/lib/utils";
 
 function Contact({ contact }: { contact?: CatechesisContact }) {
@@ -23,13 +24,23 @@ function Contact({ contact }: { contact?: CatechesisContact }) {
       <span className="notranslate font-medium text-foreground" translate="no">
         {contact.name}
       </span>
-      <a
-        href={`mailto:${contact.email}`}
-        translate="no"
-        className="notranslate focus-ring rounded-sm text-primary underline underline-offset-4 [overflow-wrap:anywhere]"
-      >
-        {contact.email}
-      </a>
+      {contact.phone && (
+        <a
+          href={phoneHref(contact.phone)}
+          className="focus-ring rounded-sm tabular-nums text-primary underline underline-offset-4"
+        >
+          {phoneLabel(contact.phone)}
+        </a>
+      )}
+      {contact.email && (
+        <a
+          href={`mailto:${contact.email}`}
+          translate="no"
+          className="notranslate focus-ring rounded-sm text-primary underline underline-offset-4 [overflow-wrap:anywhere]"
+        >
+          {contact.email}
+        </a>
+      )}
     </address>
   );
 }

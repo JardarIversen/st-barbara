@@ -1,6 +1,6 @@
 import { getTranslations } from "@/i18n/server";
 import Link from "@/i18n/link";
-import { contact } from "@/lib/parish";
+import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { getParishPlaces } from "@/sanity/data";
 import PlaceText from "@/components/place-text";
 
@@ -29,6 +29,14 @@ export default async function Footer() {
                 )}
               </PlaceText>{" "}
             </p>
+            <div className="mt-6 text-sm">
+              <p className="text-background/90">
+                Vipps <span className="font-semibold">{contact.vipps}</span>
+              </p>
+              <p className="mt-1.5 text-xs text-background/50">
+                {t("Konto")} {contact.konto}
+              </p>
+            </div>
           </div>
 
           <div>
@@ -81,32 +89,55 @@ export default async function Footer() {
               {" "}
               {t("Kontakt")}{" "}
             </p>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              <li>{t("St. Barbara kirke, Kongsberg")}</li>
-              <li>
-                <a
-                  href={`tel:+47${contact.phone.replace(/\s/g, "")}`}
-                  className="hover:text-brand-soft"
-                >
-                  {contact.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="hover:text-brand-soft"
-                >
-                  {contact.email}
-                </a>
-              </li>
-              <li className="pt-2 text-background/90">
-                Vipps <span className="font-semibold">{contact.vipps}</span>
-              </li>
-              <li className="text-xs text-background/50">
-                {" "}
-                {t("Konto")} {contact.konto}
-              </li>
-            </ul>
+            <div className="mt-4 text-sm">
+              <p className="text-background/90">
+                {t("St. Barbara kirke, Kongsberg")}
+              </p>
+              <ul className="mt-2 space-y-1.5">
+                <li>
+                  <a
+                    href={phoneHref(contact.phone)}
+                    className="hover:text-brand-soft"
+                  >
+                    {phoneLabel(contact.phone)}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="hover:text-brand-soft"
+                  >
+                    {contact.email}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-6 text-sm">
+              <p translate="no" className="notranslate text-background/90">
+                {notoddenContact.name}
+              </p>
+              <p className="text-xs text-background/50">
+                {t("Kontaktperson for Notodden")}
+              </p>
+              <ul className="mt-2 space-y-1.5">
+                <li>
+                  <a
+                    href={phoneHref(notoddenContact.phone)}
+                    className="hover:text-brand-soft"
+                  >
+                    {phoneLabel(notoddenContact.phone)}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`mailto:${notoddenContact.email}`}
+                    className="hover:text-brand-soft"
+                  >
+                    {notoddenContact.email}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

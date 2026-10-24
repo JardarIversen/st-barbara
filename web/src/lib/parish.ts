@@ -39,5 +39,19 @@ export const parishCouncil = [
   },
 ];
 
+// Numbers are stored as Norwegian national numbers and always shown with +47, never split across lines.
+export const phoneLabel = (phone: string) =>
+  `+47 ${phone}`.replace(/ /g, "\u00a0");
+export const phoneHref = (phone: string) =>
+  `tel:+47${phone.replace(/\s/g, "")}`;
+
+// Everything about Notodden goes through this contact, not the parish priest.
+export const notoddenContact = {
+  name: "Khai Quang Tran",
+  role: "Leder av menighetsrådet",
+  phone: "932 28 489",
+  email: "Khaianhnor@yahoo.no",
+};
+
 export const municipalities =
   "Kongsberg, deler av Øvre Eiker, Modum, Sigdal, Flesberg, Rollag, Nore og Uvdal, Notodden, Hjartdal, Tinn, Vinje, Tokke, Seljord og Kviteseid";

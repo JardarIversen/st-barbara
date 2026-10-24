@@ -74,7 +74,7 @@ export const CALENDAR_DATA_QUERY = defineQuery(/* groq */ `
       sourceKey,
     translations,
       scope,
-      "scheduleKey": schedule->sourceKey,
+      "scheduleId": schedule._ref,
       occurrenceDate,
       rangeStart,
       rangeEnd,
@@ -307,10 +307,30 @@ export const MASS_TEXT_QUERY = defineQuery(/* groq */ `
   *[
     _type == "massText" &&
     massDate == $date &&
-    massSchedule->sourceKey == $scheduleKey
+    massSchedule._ref == $scheduleId
   ][0] {
     _id,
     title,
     body
+  }
+`);
+
+// Mass occurrences are generated from schedules and left out; /messetider covers them.
+// Announcements are listed only when the board links to their own page.
+export const SITEMAP_QUERY = defineQuery(/* groq */ `
+  {
+    "articles": *[_type == "article" && defined(slug.current)] {
+      "slug": slug.current, pagePath, _updatedAt
+    },
+    "events": *[_type == "event" && defined(slug.current)] {
+      "slug": slug.current, _updatedAt
+    },
+    "announcements": *[
+      _type == "announcement" && defined(slug.current) &&
+      status == "active" && count(relatedEvents) > 0 &&
+      (!defined(appliesUntil) || appliesUntil >= now())
+    ] {
+      "slug": slug.current, _updatedAt
+    }
   }
 `);

@@ -10,9 +10,11 @@ export type SanityImageValue = {
   dimensions?: { width: number; height: number; aspectRatio: number };
 };
 
+// sourceKey is the bulletin importer's key, and documents created in Sanity Studio have none.
+// Link documents by _id; use sourceKey only to recognise known imported documents.
 export type Place = {
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   name: string;
   slug: string;
   placeType: string;
@@ -33,7 +35,7 @@ export type Bulletin = {
 export type MassSchedule = {
   originalFields?: string[];
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   title: string;
   status: "active" | "inactive";
   place: Place;
@@ -53,9 +55,9 @@ export type MassException = {
   announcements?: CalendarAnnouncement[];
   originalFields?: string[];
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   scope: "singleOccurrence" | "dateRange";
-  scheduleKey: string;
+  scheduleId: string;
   occurrenceDate?: string;
   rangeStart?: string;
   rangeEnd?: string;
@@ -74,7 +76,7 @@ export type ParishEvent = {
   announcements?: CalendarAnnouncement[];
   originalFields?: string[];
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   title: string;
   slug: string;
   eventType:
@@ -103,7 +105,7 @@ export type Announcement = {
   hasDetailPage?: boolean;
   originalFields?: string[];
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   title: string;
   slug: string;
   status: "active" | "resolved";
@@ -129,7 +131,7 @@ export type ArticleCard = {
   pagePath?: string;
   originalFields?: string[];
   _id: string;
-  sourceKey: string;
+  sourceKey?: string;
   title: string;
   slug: string;
   articleType: string;
@@ -152,4 +154,12 @@ export type MassText = {
   _id: string;
   title: string;
   body: PortableTextBlock[];
+};
+
+type SitemapDocument = { slug: string; _updatedAt: string };
+
+export type SitemapDocuments = {
+  articles: Array<SitemapDocument & { pagePath?: string }>;
+  events: SitemapDocument[];
+  announcements: SitemapDocument[];
 };

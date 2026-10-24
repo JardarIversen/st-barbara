@@ -6,8 +6,10 @@ const contactField = defineField({
   name: 'contact', title: 'Kontaktperson', type: 'object',
   fields: [
     defineField({name: 'name', title: 'Navn', type: 'string', validation: r => r.required()}),
-    defineField({name: 'email', title: 'Offentlig e-post', type: 'string', validation: r => r.required().email()}),
+    defineField({name: 'email', title: 'Offentlig e-post', type: 'string', validation: r => r.email()}),
+    defineField({name: 'phone', title: 'Offentlig telefon', type: 'string', description: 'Norsk nummer med mellomrom, for eksempel 932 28 489.', validation: r => r.regex(/^\d(\s?\d){7}$/, {name: 'norsk telefonnummer'})}),
   ],
+  validation: r => r.custom(value => !value || value.email || value.phone ? true : 'Oppgi offentlig e-post eller telefon.'),
 })
 const copyFields = [
   defineField({name: 'title', title: 'Overskrift', type: 'string', validation: r => r.required()}),

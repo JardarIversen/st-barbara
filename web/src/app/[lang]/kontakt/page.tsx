@@ -2,8 +2,18 @@ import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "@/i18n/link";
-import { contact, priests } from "@/lib/parish";
+import {
+  contact,
+  notoddenContact,
+  phoneHref,
+  phoneLabel,
+  priests,
+} from "@/lib/parish";
 import { getParishPlaces } from "@/sanity/data";
+import JsonLd from "@/components/json-ld";
+import { localizedPath } from "@/i18n/config";
+import { absoluteUrl } from "@/lib/site";
+import { parishStructuredData } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
@@ -16,11 +26,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function KontaktPage() {
-  const { t } = await getTranslations();
+  const { locale, t } = await getTranslations();
   const places = await getParishPlaces();
   const [parishPriest, ...otherPriests] = priests;
   return (
     <div className="mx-auto max-w-6xl px-5 py-10 lg:py-14">
+      <JsonLd
+        data={parishStructuredData(places, {
+          url: absoluteUrl(localizedPath("/", locale)),
+          description: t(
+            "St. Barbara katolske menighet i Kongsberg. Messetider for Kongsberg, Notodden, Rjukan og Mo, katekese, sakramenter og menighetsliv.",
+          ),
+        })}
+      />
       <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
         {t("Vi hører gjerne fra deg")}
       </p>
@@ -56,10 +74,10 @@ export default async function KontaktPage() {
           </div>
           <div className="mt-7 space-y-4 border-t border-border pt-6">
             <a
-              href={`tel:+47${contact.phone.replace(/\s/g, "")}`}
+              href={phoneHref(contact.phone)}
               className="block w-fit text-2xl font-medium tabular-nums text-primary underline-offset-4 hover:underline"
             >
-              {contact.phone}
+              {phoneLabel(contact.phone)}
             </a>
             <a
               href={`mailto:${contact.email}`}
@@ -69,38 +87,70 @@ export default async function KontaktPage() {
             </a>
           </div>
         </section>
-        <section>
-          <h2 className="font-display text-3xl font-medium text-foreground">
-            {t("Sjelesorg på ditt språk")}
-          </h2>
-          <ul className="mt-5 divide-y divide-border border-y border-border">
-            {otherPriests.map((priest) => (
-              <li key={priest.name} className="flex items-start gap-4 py-5">
-                <div className="relative size-12 shrink-0 overflow-hidden rounded-full border border-border">
-                  <Image
-                    src={priest.image}
-                    alt={priest.name}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-medium text-foreground">{priest.name}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    {t(priest.role)}
-                  </p>
-                  <a
-                    href={`tel:+47${priest.phone.replace(/\s/g, "")}`}
-                    className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
-                  >
-                    {priest.phone}
-                  </a>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <div className="flex flex-col gap-10">
+          <section>
+            <h2 className="font-display text-3xl font-medium text-foreground">
+              {t("Sjelesorg på ditt språk")}
+            </h2>
+            <ul className="mt-5 divide-y divide-border border-y border-border">
+              {otherPriests.map((priest) => (
+                <li key={priest.name} className="flex items-start gap-4 py-5">
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-full border border-border">
+                    <Image
+                      src={priest.image}
+                      alt={priest.name}
+                      fill
+                      sizes="48px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-foreground">
+                      {priest.name}
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      {t(priest.role)}
+                    </p>
+                    <a
+                      href={phoneHref(priest.phone)}
+                      className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+                    >
+                      {phoneLabel(priest.phone)}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section>
+            <h2 className="font-display text-3xl font-medium text-foreground">
+              {t("Kontaktperson for Notodden")}
+            </h2>
+            <div className="mt-5 border-y border-border py-5">
+              <h3
+                translate="no"
+                className="notranslate font-medium text-foreground"
+              >
+                {notoddenContact.name}
+              </h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                {t(notoddenContact.role)}
+              </p>
+              <a
+                href={phoneHref(notoddenContact.phone)}
+                className="mt-2 block w-fit text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
+                {phoneLabel(notoddenContact.phone)}
+              </a>
+              <a
+                href={`mailto:${notoddenContact.email}`}
+                className="mt-1 block w-fit break-all text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
+                {notoddenContact.email}
+              </a>
+            </div>
+          </section>
+        </div>
       </div>
 
       <section className="mt-14 border-t border-border pt-8">

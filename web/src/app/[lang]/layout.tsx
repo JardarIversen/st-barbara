@@ -10,6 +10,7 @@ import { headers } from "next/headers";
 import { getSiteLanguage, getTranslations } from "@/i18n/server";
 import { LocaleProvider } from "@/i18n/client";
 import { AutomaticTranslation } from "@/components/language-switcher";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -29,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const path = (await headers()).get("x-site-path") ?? `/${locale}`;
   const automatic = !isLocale(await getSiteLanguage());
   return {
-    metadataBase: new URL("https://kongsberg.katolsk.no"),
+    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: automatic ? localizedPath(path, "en") : path,
       languages: {

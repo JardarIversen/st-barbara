@@ -7,6 +7,7 @@ import AnnouncementBoard from "@/components/announcement-board";
 import ArticleCard from "@/components/article-card";
 import AgendaList from "@/components/agenda-list";
 import PlaceText from "@/components/place-text";
+import JsonLd from "@/components/json-ld";
 import {
   addDays,
   buildCalendarItems,
@@ -17,8 +18,11 @@ import {
   todayInOslo,
   toCalendarListItems,
 } from "@/lib/calendar";
-import { contact } from "@/lib/parish";
+import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { rankAnnouncements } from "@/lib/announcements";
+import { localizedPath } from "@/i18n/config";
+import { absoluteUrl } from "@/lib/site";
+import { parishStructuredData } from "@/lib/structured-data";
 import {
   getActiveAnnouncements,
   getCalendarData,
@@ -95,6 +99,14 @@ export default async function Home() {
 
   return (
     <>
+      <JsonLd
+        data={parishStructuredData(places, {
+          url: absoluteUrl(localizedPath("/", locale)),
+          description: t(
+            "St. Barbara katolske menighet i Kongsberg. Messetider for Kongsberg, Notodden, Rjukan og Mo, katekese, sakramenter og menighetsliv.",
+          ),
+        })}
+      />
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:py-12">
           <div>
@@ -357,10 +369,10 @@ export default async function Home() {
                 </dt>
                 <dd className="mt-1 text-muted-foreground">
                   <a
-                    href={`tel:+47${contact.phone.replace(/\s/g, "")}`}
+                    href={phoneHref(contact.phone)}
                     className="hover:text-primary"
                   >
-                    {contact.phone}
+                    {phoneLabel(contact.phone)}
                   </a>
                   {" · "}
                   <a
@@ -368,6 +380,29 @@ export default async function Home() {
                     className="hover:text-primary"
                   >
                     {contact.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">
+                  <span translate="no" className="notranslate">
+                    {notoddenContact.name}
+                  </span>
+                  , {t("kontaktperson for Notodden")}
+                </dt>
+                <dd className="mt-1 text-muted-foreground">
+                  <a
+                    href={phoneHref(notoddenContact.phone)}
+                    className="hover:text-primary"
+                  >
+                    {phoneLabel(notoddenContact.phone)}
+                  </a>
+                  {" · "}
+                  <a
+                    href={`mailto:${notoddenContact.email}`}
+                    className="hover:text-primary"
+                  >
+                    {notoddenContact.email}
                   </a>
                 </dd>
               </div>

@@ -85,7 +85,8 @@ for (const document of documents) {
     document.appliesUntil ??
     document.status ??
     ''
-  console.log(`- ${document.sourceKey} | ${label}${detail ? ` | ${detail}` : ''}`)
+  const key = document.sourceKey ?? `(laget i Studio) ${document._id}`
+  console.log(`- ${key} | ${label}${detail ? ` | ${detail}` : ''}`)
 }
 
 console.log(`\n${documents.length} dokumenter.`)

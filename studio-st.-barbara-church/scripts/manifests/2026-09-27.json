@@ -812,47 +812,33 @@
         ],
         "otherOfferings": [
           {
-            "_key": "other-places",
-            "body": [
-              {
-                "_key": "45aacebbd079",
-                "_type": "block",
-                "children": [
-                  {
-                    "_key": "5812174786b5",
-                    "_type": "span",
-                    "marks": [],
-                    "text": "For katekese i Notodden og Rjukan, kontakt pater Trym."
-                  }
-                ],
-                "markDefs": [],
-                "style": "normal"
-              }
-            ],
+            "_key": "notodden",
+            "title": "Notodden",
+            "body": "For katekese på Notodden, kontakt Khai Quang Tran.",
             "contact": {
-              "email": "Kongsberg@katolsk.no",
-              "name": "Pater Trym"
+              "name": "Khai Quang Tran",
+              "phone": "932 28 489",
+              "email": "Khaianhnor@yahoo.no"
             },
-            "title": "Notodden og Rjukan",
             "translations": {
               "en": {
-                "body": [
-                  {
-                    "_key": "194d05eb5a98",
-                    "_type": "block",
-                    "children": [
-                      {
-                        "_key": "57a25e5fd0d3",
-                        "_type": "span",
-                        "marks": [],
-                        "text": "For catechesis in Notodden and Rjukan, contact Fr. Trym."
-                      }
-                    ],
-                    "markDefs": [],
-                    "style": "normal"
-                  }
-                ],
-                "title": "Notodden and Rjukan"
+                "title": "Notodden",
+                "body": "For catechesis in Notodden, contact Khai Quang Tran."
+              }
+            }
+          },
+          {
+            "_key": "rjukan",
+            "title": "Rjukan",
+            "body": "For katekese på Rjukan, kontakt pater Trym.",
+            "contact": {
+              "name": "Pater Trym",
+              "email": "Kongsberg@katolsk.no"
+            },
+            "translations": {
+              "en": {
+                "title": "Rjukan",
+                "body": "For catechesis in Rjukan, contact Fr. Trym."
               }
             }
           },

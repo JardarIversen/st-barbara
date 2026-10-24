@@ -7,6 +7,10 @@ import { notFound } from "next/navigation";
 import PortableContent from "@/components/portable-content";
 import SourceBulletins from "@/components/source-bulletins";
 import AnnouncementTags from "@/components/announcement-tags";
+import JsonLd from "@/components/json-ld";
+import { localizedPath } from "@/i18n/config";
+import { absoluteUrl } from "@/lib/site";
+import { eventStructuredData } from "@/lib/structured-data";
 import {
   EVENT_TYPE_LABELS,
   LANGUAGE_LABELS,
@@ -40,14 +44,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { locale } = await getTranslations();
+  const { locale, t } = await getTranslations();
   const item = await resolveItem((await params).slug);
   if (!item) return {};
   return {
     title: item.title,
     description:
       item.summary ??
-      `${calendarDateRange(item, locale)}${isDateOnlyRange(item) ? "" : ` kl. ${formatCalendarTime(item.startsAt, locale)}`}`,
+      `${calendarDateRange(item, locale)}${isDateOnlyRange(item) ? "" : ` ${t("kl.")} ${formatCalendarTime(item.startsAt, locale)}`}`,
+    // Every date of a regular mass has its own page; /messetider is the one to find in search.
+    robots: item.kind === "mass" ? { index: false, follow: true } : undefined,
   };
 }
 
@@ -57,12 +63,13 @@ export default async function CalendarDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { locale, t } = await getTranslations();
-  const item = await resolveItem((await params).slug);
+  const { slug } = await params;
+  const item = await resolveItem(slug);
   if (!item) notFound();
 
   const massText =
-    item.kind === "mass" && item.occurrenceDate && item.scheduleKey
-      ? await getMassText(item.occurrenceDate, item.scheduleKey)
+    item.kind === "mass" && item.occurrenceDate && item.scheduleId
+      ? await getMassText(item.occurrenceDate, item.scheduleId)
       : null;
   const announcements = item.announcements?.length ? [] : await getAnnouncementsByBulletins(
     item.sourceBulletins.map((bulletin) => bulletin._id),
@@ -82,6 +89,12 @@ export default async function CalendarDetailPage({
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
+      <JsonLd
+        data={eventStructuredData(
+          item,
+          absoluteUrl(localizedPath(`/messetider/${slug}`, locale)),
+        )}
+      />
       <Link
         href="/messetider"
         className="text-sm font-medium text-primary underline-offset-2 hover:underline"

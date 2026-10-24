@@ -7,7 +7,12 @@ import {
   languageRedirect,
 } from "./i18n/config";
 
+// The old WordPress site was hacked with casino spam under this path; tell crawlers it is gone.
+const SPAM_PATH = /^\/spill-casino(?:\/|$)/;
+
 export function proxy(request: NextRequest) {
+  if (SPAM_PATH.test(request.nextUrl.pathname))
+    return new NextResponse(null, { status: 410 });
   const redirect = languageRedirect(
     new URL(request.url),
     request.cookies.get(LANGUAGE_COOKIE)?.value,
@@ -30,4 +35,9 @@ export function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/((?!api(?:/|$)|_next(?:/|$)|.*\\..*).*)"] };
+export const config = {
+  matcher: [
+    "/((?!api(?:/|$)|_next(?:/|$)|.*\\..*).*)",
+    "/spill-casino/:path*",
+  ],
+};
