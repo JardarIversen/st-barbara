@@ -7,15 +7,18 @@ import ContentLanguage from "@/components/content-language";
 import PortableContent from "@/components/portable-content";
 import { splitPortableSections } from "@/lib/portable-sections";
 import { getArticleByPagePath } from "@/sanity/data";
+import { shareMetadata } from "@/lib/share";
 import CatechesisProgram from "@/components/catechesis-program";
 import { connection } from "next/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getTranslations();
+  const { locale, t } = await getTranslations();
   const content = await getArticleByPagePath("/katekese");
+  const title = content?.title ?? t("Katekese");
   return {
-    title: content?.title ?? t("Katekese"),
+    title,
     description: content?.summary,
+    ...shareMetadata(locale, { title, image: content?.mainImage }),
   };
 }
 
