@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-10-25",
+      "issueDate": "2026-10-25",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "coversFrom": "2026-10-25",
+      "coversUntil": "2026-11-02",
+      "pdfPath": "../../../.local/bulletin-2026-10-25/source.pdf",
+      "filename": "30. søndag 2026.pdf",
+      "internalNotes": "Sendt av p. Trym på e-post «Søndagsark» 24. oktober 2026 kl. 11.30 norsk tid, med PDF og Word-fil og uten andre instrukser; e-posten sier at bladet ble forsinket av endringer i messen på Rjukan. Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: 30. søndag er 25. oktober (2 Mos 22,20–26; Sal 18; 1 Tess 1,5c–10; Matt 22,34–40). Bladet oppgir første lesning som 2 Mos 22, 21–27 etter norsk versnummerering; henvisningen er gjengitt som i bladet. Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder 28. oktober–2. november. Lesningene gjelder bare norsk kl. 11-messe 25. oktober. Rjukan 1. november: messeplanen fra 14. oktober hadde messe kl. 17.00 med gravvelsignelse etter messen; bladet har gravvelsignelse på Rjukan kirkegård kl. 17.00 og messe i Rjukan kirke kl. 18.00. Nyeste kilde vinner. Familiemessen kl. 13.00 1. november bruker den faste kl. 13-planen uten språkoverstyring, som familiemessen 4. oktober. Utflukten 15. november har ikke klokkeslett, bare «etter høymessen», og er derfor lagt inn som kunngjøring med merknad på kl. 11-messen, ikke som hendelse."
+    }
+  ],
+  "places": [
+    {
+      "sourceKey": "place:rjukan-kirkegard",
+      "name": "Rjukan kirkegård",
+      "placeType": "other",
+      "locality": "Rjukan",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rjukan+kirkeg%C3%A5rd"
+    }
+  ],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:rjukan-mass:2026-11-01",
+      "title": "Messe på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-01T18:00:00+01:00",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "language": "nb",
+      "summary": "Messe på Allehelgensdag i Rjukan kirke. Før messen er det gravvelsignelse på Rjukan kirkegård.",
+      "body": [
+        "Messe søndag 1. november kl. 18.00 i Rjukan kirke, Kirkebakken 1, 3660 Rjukan.",
+        "Før messen, kl. 17.00, er det gravvelsignelse på Rjukan kirkegård."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "title": "Holy Mass in Rjukan",
+          "summary": "Holy Mass on All Saints’ Day at Rjukan Church. Before Mass, the graves at Rjukan kirkegård will be blessed.",
+          "body": [
+            "Holy Mass on Sunday 1 November at 18:00 at Rjukan Church, Kirkebakken 1, 3660 Rjukan.",
+            "Before Mass, at 17:00, there will be a blessing of the graves at Rjukan kirkegård."
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "event:rjukan-grave-blessing:2026-11-01",
+      "title": "Gravvelsignelse på Rjukan kirkegård",
+      "eventType": "other",
+      "status": "scheduled",
+      "startsAt": "2026-11-01T17:00:00+01:00",
+      "placeKeys": [
+        "place:rjukan-kirkegard"
+      ],
+      "summary": "Gravene på Rjukan kirkegård velsignes på Allehelgensdag, før messen i Rjukan kirke.",
+      "body": [
+        "Søndag 1. november kl. 17.00 er det gravvelsignelse på Rjukan kirkegård.",
+        "Etterpå er det messe i Rjukan kirke kl. 18.00."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "title": "Blessing of the graves at Rjukan kirkegård",
+          "summary": "The graves at Rjukan kirkegård will be blessed on All Saints’ Day, before Holy Mass at Rjukan Church.",
+          "body": [
+            "On Sunday 1 November at 17:00 there will be a blessing of the graves at Rjukan kirkegård.",
+            "Afterwards, Holy Mass will be celebrated at Rjukan Church at 18:00."
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-02",
+      "title": "Messe – Alle sjelers dag",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-02T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "På Alle sjelers dag minnes vi alle de avdøde i messen. Etter messen velsigner p. Trym gravene på Kongsberg gravlund.",
+      "body": [
+        "Mandag 2. november minnes vi alle de avdøde i messen kl. 18.00.",
+        "Etter messen velsigner p. Trym gravene på Kongsberg gravlund. De som er til stede på kirkegården, kan be om velsignelse av individuelle graver."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18",
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "title": "Holy Mass – All Souls’ Day",
+          "summary": "On All Souls’ Day we remember all the faithful departed at Holy Mass. After Mass, Fr. Trym will bless the graves at Kongsberg gravlund.",
+          "body": [
+            "On Monday 2 November we remember all the faithful departed at Holy Mass at 18:00.",
+            "After Mass, Fr. Trym will bless the graves at Kongsberg gravlund. Those present at the cemetery may ask for individual graves to be blessed."
+          ]
+        }
+      },
+      "promotionFrom": "2026-10-16T14:12:25+02:00",
+      "promotionUntil": "2026-11-02T18:00:00+01:00"
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:et-hus-bygget-pa-fjell-2026",
+      "title": "Kampanjen «Et hus bygget på fjell»",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "lastMentionedAt": "2026-10-24T11:30:27+02:00",
+      "summary": "Kampanjen «Et hus bygget på fjell» er i gang. Hyrdebrevet som ble lest opp søndag 18. oktober, og videoer om kampanjen ligger på katolsk.no.",
+      "body": [
+        "Kampanjen «Et hus bygget på fjell» er nå i gang. På katolsk.no ligger det videoer om kampanjen, og der kan du også lese hyrdebrevet som ble lest opp søndag 18. oktober.",
+        "Ta gjerne med deg en brosjyre hjem. Tusen takk til alle som bidrar til at vi sammen kan bygge vår Kirke."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [
+        {
+          "label": "katolsk.no",
+          "url": "https://www.katolsk.no"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "The campaign «Et hus bygget på fjell»",
+          "summary": "The campaign «Et hus bygget på fjell» (A House Built on Rock) is under way. The pastoral letter read on Sunday 18 October and videos about the campaign are on katolsk.no.",
+          "body": [
+            "The campaign «Et hus bygget på fjell» (A House Built on Rock) is now under way. Videos about the campaign are available on katolsk.no, where you can also read the pastoral letter that was read on Sunday 18 October.",
+            "Feel free to take a brochure home. Many thanks to everyone who helps us build our Church together."
+          ],
+          "links": [
+            {
+              "label": "katolsk.no",
+              "url": "https://www.katolsk.no"
+            }
+          ]
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18",
+        "bulletin:2026-10-25"
+      ]
+    },
+    {
+      "sourceKey": "announcement:parish-council-input",
+      "title": "Send inn saker til menighetsrådet",
+      "slug": "send-inn-saker-til-menighetsradet",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-01T14:45:14+02:00",
+      "lastMentionedAt": "2026-10-24T11:30:27+02:00",
+      "summary": "Har du en sak menighetsrådet bør ta opp? Send den til p. Trym på kongsberg@katolsk.no, eller snakk med ham i kirken.",
+      "body": "Har du en sak du ønsker at menighetsrådet skal ta opp? Send den til p. Trym på kongsberg@katolsk.no, eller ta kontakt med ham personlig.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Submit matters to the parish council",
+          "summary": "Is there something you would like the parish council to discuss? Email Fr. Trym at kongsberg@katolsk.no or speak to him at church.",
+          "body": "Is there a matter you would like the parish council to discuss? Email Fr. Trym at kongsberg@katolsk.no or speak to him in person."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-04",
+        "bulletin:2026-10-18",
+        "bulletin:2026-10-25"
+      ]
+    },
+    {
+      "sourceKey": "announcement:collection:2026-10-18",
+      "title": "Kollekten 18. oktober",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-10-24T11:30:27+02:00",
+      "appliesUntil": "2026-11-01T23:59:00+01:00",
+      "summary": "Kollekten søndag 18. oktober ble på kr 4181 til sammen, og beløpet er sendt videre til St. Josefs Byggefond. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 18. oktober, var kr 1336 i kontanter og kr 2845 i Vipps, totalt kr 4181. Beløpet er sendt videre til St. Josefs Byggefond. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 18 October",
+          "summary": "The collection on Sunday 18 October came to NOK 4,181 in total and has been passed on to St. Josefs Byggefond. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 18 October came to NOK 1,336 in cash and NOK 2,845 via Vipps, NOK 4,181 in total. The money has been passed on to St. Josefs Byggefond. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ]
+    },
+    {
+      "sourceKey": "announcement:children-trampoline-trip:2026-11-15",
+      "title": "Utflukt for barna til Rush trampolinepark",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-10-24T11:30:27+02:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Alle barn i menigheten er velkommen på tur til Rush trampolinepark i Drammen etter høymessen søndag 15. november. Vi trenger voksne med bil.",
+      "body": "Etter høymessen søndag 15. november arrangerer menigheten en tur til Rush trampolinepark i Drammen. Alle barn i menigheten er velkommen. Vi trenger noen voksne med bil som kan være med, slik at vi har nok biler.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-sunday-nb-2026-11-15"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Children’s outing to Rush trampoline park",
+          "summary": "All children in the parish are welcome on a trip to Rush trampoline park in Drammen after High Mass on Sunday 15 November. We need adults with cars.",
+          "body": "After High Mass on Sunday 15 November, the parish is organising a trip to Rush trampoline park in Drammen. All children in the parish are welcome. We need some adults with cars to come along, so that we have enough cars."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-10-28",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-28",
+      "publicNote": "De hellige apostler Simon og Judas. Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saints Simon and Jude, Apostles. Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-10-29",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-29",
+      "publicNote": "Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-10-30",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-10-30",
+      "publicNote": "Skriftemål fra kl. 17.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Confession from 17:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-11-01",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-01",
+      "publicNote": "Allehelgensdag.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "All Saints’ Day."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-en-2026-11-01",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:en:1300",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-01",
+      "titleOverride": "Familiemesse",
+      "publicNote": "Allehelgensdag. Familiemesse.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "titleOverride": "Family Mass",
+          "publicNote": "All Saints’ Day. Family Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-11-15",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-15",
+      "publicNote": "Etter messen er det tur for barna til Rush trampolinepark i Drammen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "After Mass there is an outing for the children to Rush trampoline park in Drammen."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-10-25:kongsberg:nb:1100",
+      "title": "30. søndag i det alminnelige kirkeår",
+      "massDate": "2026-10-25",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-10-25",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – 2 Mos 22, 21–27"
+        },
+        "Så sier Herren:",
+        "En innflytter må du ikke plage eller fare hardt med; for dere har selv vært innflyttere i Egypt.",
+        "Dere skal ikke plage enker og farløse. Plager du dem, og de roper til meg, vil jeg høre deres rop. Da skal min vrede flamme opp, og jeg skal slå dere i hjel med sverd, så deres hustruer blir enker og deres barn farløse.",
+        "Låner du penger til en landsmann, til en fattig nabo, da skal du ikke være som en pengeutlåner mot ham. Du skal ikke kreve rente av ham. Tar du din landsmanns kappe i pant, skal du la ham få den igjen før solnedgang. For den er det eneste han har å dekke seg med, den skal han ha omkring seg. Hva skal han ellers ligge i? Og når han roper til meg, vil jeg høre; for jeg er barmhjertig.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Herre, jeg har deg hjertelig kjær, du er min styrke og min frelse"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herre, du er min styrke,",
+            "jeg har deg hjertelig kjær.",
+            "Herren er min klippe,",
+            "min borg og min befrier."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren er min Gud, klippen hvor jeg søker ly.",
+            "Han er mitt skjold og mitt vern, til hans frelse setter jeg min lit.",
+            "Lovet være Herren!",
+            "Jeg kalte på ham, og han fridde meg ut."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Herren lever! Lovet være min klippe,",
+            "opphøyet være Gud, min Frelser!",
+            "Stor er hjelpen han gir sin konge,",
+            "han viser godhet og troskap mot sin salvede."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – 1 Tess 1, 5c–10"
+        },
+        "Brødre, dere vet jo selv hvordan vi gikk frem, og hva vi gjorde for dere. Og dere fulgte vårt eksempel, vårt og Herrens eget, og mottok Ordet, tross alle de trengsler det betydde, med den glede som Helligånden gir. Og dermed er dere også selv blitt et eksempel for alle de troende over hele Makedonia og Akaia.",
+        "For fra dere har Herrens ord fått lyde utover, ikke bare over Makedonia og Akaia, men overalt er den tro dere har til Gud, blitt kjent, slik at vi ikke mer behøver å tale om det. For folk kan selv berette om hvordan dere tok imot oss, om hvorledes dere vendte gudebildene ryggen for å tjene den Gud som virkelig lever og er til, og leve i forventningen om hans Sønns komme fra himlene – Jesus, han som han har oppvakt fra de døde, og som skal fri oss fra den kommende vrede.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Om noen elsker meg, akter han mitt ord, sier Herren,",
+            "så vil min Fader elske ham, og vi vil komme og ta bolig hos ham."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 22, 34–40"
+        },
+        "På den tid fikk fariseerne høre at Jesus hadde bragt saddukeerne til taushet. Da samlet de seg om ham, og en av dem, en lovkyndig, spurte for å prøve ham: «Mester, hvilket er det største bud i Loven?»",
+        "Han svarte: «‘Du skal elske Herren, din Gud, av hele ditt hjerte, av hele din sjel og av hele ditt sinn.’ Dette er det første og største bud. Men det annet er det første likt: ‘Du skal elske din neste som deg selv.’ – På disse to budene hviler hele Loven, og Profetene med.»"
+      ]
+    }
+  ],
+  "articles": []
+}
