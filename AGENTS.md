@@ -26,6 +26,7 @@ Gjør hele denne arbeidsflyten uten å endre kode:
 5. Publiser: `npm run bulletin:import -- scripts/manifests/YYYY-MM-DD.json --commit`.
 6. Kontroller: `npm run bulletin:verify -- scripts/manifests/YYYY-MM-DD.json`. Resultatet skal ha 0 feil og 0 advarsler.
 7. Kjør publisering og kontroll én gang til. Dokumentantall og revisjoner skal være uendret. Importen skal bare si `Oppdatert`, aldri `Opprettet`, på andre runde.
+8. Commit manifestet og push til `main` uten å spørre, med meldingen «Publiser søndagsblad D. måned». Legg bare til manifestfilen, siden andre økter kan ha endringer i samme mappe. Manifestet viser hva bladet endret, og trengs for senere kontroll og rettelser.
 
 Hvis skjemaet ikke kan uttrykke informasjonen, ikke endre kode eller press den inn i feil datatype. Stopp og forklar nøyaktig hva som mangler. Spør også ved en reell, vesentlig og uløst motsetning om dato, klokkeslett, sted eller avlysning innenfor den nyeste kilden. Motsetning mot et eldre blad er løst: det nyeste vinner (se Kildekontroll). Små språkfeil kan normaliseres uten spørsmål.
 
