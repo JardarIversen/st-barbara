@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "sourceDocument": {
+    "description": "E-post «Søndagsark» fra p. Trym Hellevig 30. oktober 2026 kl. 16.35: «I kalenderen på nettsiden trengs en endring, messe på Rjukan i desember er flyttet til lørdag 5. desember kl 17». Den eneste Rjukan-messen i desember var julemessen 25. desember kl. 17.00 fra messeplanen 14. oktober (messeplan-2026-11-til-2027-01.json). Den hendelsen er flyttet med samme nøkkel, og merknaden på juledagsmessen i Kongsberg er rettet."
+  },
+  "events": [
+    {
+      "sourceKey": "event:rjukan-christmas-mass:2026-12-25",
+      "title": "Messe på Rjukan",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-05T17:00:00+01:00",
+      "placeKeys": [
+        "place:rjukan-kirke"
+      ],
+      "summary": "Desembermessen i Rjukan kirke. Messen var tidligere satt opp som julemesse på juledag, men er flyttet til denne lørdagen.",
+      "body": [
+        "Messe lørdag 5. desember kl. 17.00 i Rjukan kirke, Kirkebakken 1, 3660 Rjukan.",
+        "Messen var tidligere satt opp som julemesse på juledag 25. desember, men er flyttet til denne dagen."
+      ],
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "title": "Holy Mass in Rjukan",
+          "summary": "The December Mass at Rjukan Church. It was previously planned as a Christmas Mass on Christmas Day, but has been moved to this Saturday.",
+          "body": [
+            "Holy Mass on Saturday 5 December at 17:00 at Rjukan Church, Kirkebakken 1, 3660 Rjukan.",
+            "This Mass was previously planned as a Christmas Mass on Christmas Day, 25 December, but has been moved to this day."
+          ]
+        }
+      }
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-12-25",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "rescheduled",
+      "occurrenceDate": "2026-12-25",
+      "newStartsAt": "2026-12-25T11:00:00+01:00",
+      "titleOverride": "Julemesse",
+      "publicNote": "Juledag.",
+      "sourceBulletinKeys": [],
+      "translations": {
+        "en": {
+          "titleOverride": "Christmas Mass",
+          "publicNote": "Christmas Day."
+        }
+      }
+    }
+  ]
+}
