@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-11-01",
+      "issueDate": "2026-11-01",
+      "publishedAt": "2026-10-30T16:35:23+01:00",
+      "coversFrom": "2026-11-01",
+      "coversUntil": "2026-11-08",
+      "pdfPath": "../../../.local/bulletin-2026-11-01/source.pdf",
+      "filename": "31. søndag 2026.pdf",
+      "internalNotes": "Sendt av p. Trym på e-post «Søndagsark» 30. oktober 2026 kl. 16.35 norsk tid, med PDF og Word-fil. E-posten sier også at messen på Rjukan i desember er flyttet til lørdag 5. desember kl. 17; den endringen står i eget manifest (rjukan-desember-2026.json), fordi den ikke kommer fra bladet. Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: Allehelgensdag er søndag 1. november (Åp 7,2-4.9-14; Sal 23; 1 Joh 3,1-3; Matt 5,1-12a). Bladet har bare omkvedet til responsoriesalmen, uten strofer. Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder 2.–8. november og stemmer med den faste messeplanen. I tabellen står «Allehelgensdag» også ved søndag 8. november; kalenderen har 32. søndag i det alminnelige kirkeår den dagen, så etiketten er tolket som en rest fra forrige blad og ikke lagt inn. Lesningene gjelder bare norsk kl. 11-messe 1. november. Listen for avdøde er lagt inn i hendelsen for Allesjelersdag. Juleverkstedet 5. desember er lagt inn som hendelse fra kl. 12.00, fordi bladet sier at opplegget for dagen starter med messen kl. 12.00."
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-02",
+      "title": "Messe – Alle sjelers dag",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-02T18:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "På Alle sjelers dag minnes vi alle de avdøde i messen. Skriv navnene du vil skal nevnes, på listen bak i kirken. Etter messen velsigner p. Trym gravene på Kongsberg gravlund.",
+      "body": [
+        "Mandag 2. november minnes vi alle de avdøde i messen kl. 18.00.",
+        "På listen bak i kirken kan dere skrive navnene på de avdøde som dere vil skal nevnes i messen. Navnene blir lest opp under forbønnene.",
+        "Etter messen velsigner p. Trym gravene på Kongsberg gravlund. De som er til stede på kirkegården, kan be om velsignelse av individuelle graver."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18",
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "title": "Holy Mass – All Souls’ Day",
+          "summary": "On All Souls’ Day we remember all the faithful departed at Holy Mass. Write the names you would like mentioned on the list at the back of the church. After Mass, Fr. Trym will bless the graves at Kongsberg gravlund.",
+          "body": [
+            "On Monday 2 November we remember all the faithful departed at Holy Mass at 18:00.",
+            "On the list at the back of the church you can write the names of the departed you would like to be mentioned at Mass. The names will be read out during the prayers of the faithful.",
+            "After Mass, Fr. Trym will bless the graves at Kongsberg gravlund. Those present at the cemetery may ask for individual graves to be blessed."
+          ]
+        }
+      },
+      "promotionFrom": "2026-10-16T14:12:25+02:00",
+      "promotionUntil": "2026-11-02T18:00:00+01:00"
+    },
+    {
+      "sourceKey": "event:confirmation-catechesis:2026-11-06",
+      "title": "Konfirmantkatekese",
+      "eventType": "activity",
+      "status": "scheduled",
+      "startsAt": "2026-11-06T17:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Konfirmantene samles til katekese i St. Barbara. Det feires messe i kirken etter katekesen.",
+      "body": "Konfirmantkatekese fredag 6. november kl. 17.00. Messe kl. 18.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "title": "Confirmation catechesis",
+          "summary": "Confirmation candidates gather for catechesis at St. Barbara. Mass follows in the church.",
+          "body": "Confirmation catechesis on Friday 6 November at 17:00. Mass at 18:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:children-christmas-workshop:2026-12-05",
+      "title": "Juleverksted og fest for barna",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-12-05T12:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Barna inviteres til juleverksted med mat og underholdning når vi feirer St. Nikolas og St. Barbara. Det som lages, selges til inntekt for Adventsaksjonen.",
+      "body": [
+        "Lørdag 5. desember feirer vi både St. Nikolas og St. Barbara. Det blir juleverksted for barn, sammen med mat og underholdning. Det som lages på verkstedet, blir solgt til inntekt for Adventsaksjonen.",
+        "Opplegget for dagen starter med messe kl. 12.00.",
+        "Det blir kanskje til og med et overraskelsesbesøk i forbindelse med St. Nikolas’ fest, så ta med barna deres til kirken denne dagen!"
+      ],
+      "promotionFrom": "2026-10-30T16:35:23+01:00",
+      "promotionUntil": "2026-12-05T12:00:00+01:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "title": "Christmas workshop and party for the children",
+          "summary": "Children are invited to a Christmas workshop with food and entertainment as we celebrate St. Nicholas and St. Barbara. What they make will be sold in aid of the Advent campaign Adventsaksjonen.",
+          "body": [
+            "On Saturday 5 December we celebrate both St. Nicholas and St. Barbara. There will be a Christmas workshop for children, with food and entertainment. What is made at the workshop will be sold in aid of the Advent campaign Adventsaksjonen.",
+            "The day begins with Holy Mass at 12:00.",
+            "There may even be a surprise visit in connection with the feast of St. Nicholas, so bring your children to church that day!"
+          ]
+        }
+      }
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:collection:2026-10-25",
+      "title": "Kollekten 25. oktober",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-30T16:35:23+01:00",
+      "lastMentionedAt": "2026-10-30T16:35:23+01:00",
+      "appliesUntil": "2026-11-08T23:59:00+01:00",
+      "summary": "Kollekten søndag 25. oktober ble på kr 3342 til sammen og er sendt videre til Missio Norge. Kollekten for hele oktober ble kr 14 558. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 25. oktober, var kr 1720 i kontanter og kr 1622 i Vipps, totalt kr 3342. Beløpet er sendt videre til Missio Norge. Kollekten for hele oktober ble til sammen kr 14 558. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 25 October",
+          "summary": "The collection on Sunday 25 October came to NOK 3,342 in total and has been passed on to Missio Norge. The collection for all of October came to NOK 14,558. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 25 October came to NOK 1,720 in cash and NOK 1,622 via Vipps, NOK 3,342 in total. The money has been passed on to Missio Norge. The collection for all of October came to NOK 14,558 in total. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ]
+    },
+    {
+      "sourceKey": "announcement:collection:2026-10-18",
+      "title": "Kollekten 18. oktober",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-10-24T11:30:27+02:00",
+      "appliesUntil": "2026-11-01T23:59:00+01:00",
+      "summary": "Kollekten søndag 18. oktober ble på kr 4181 til sammen, og beløpet er sendt videre til St. Josefs Byggefond. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 18. oktober, var kr 1336 i kontanter og kr 2845 i Vipps, totalt kr 4181. Beløpet er sendt videre til St. Josefs Byggefond. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 18 October",
+          "summary": "The collection on Sunday 18 October came to NOK 4,181 in total and has been passed on to St. Josefs Byggefond. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 18 October came to NOK 1,336 in cash and NOK 2,845 via Vipps, NOK 4,181 in total. The money has been passed on to St. Josefs Byggefond. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25"
+      ]
+    },
+    {
+      "sourceKey": "announcement:children-trampoline-trip:2026-11-15",
+      "title": "Utflukt for barna til Rush trampolinepark",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-10-30T16:35:23+01:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Alle barn i menigheten er velkommen på tur til Rush trampolinepark i Drammen etter høymessen søndag 15. november. Vi trenger voksne med bil.",
+      "body": "Etter høymessen søndag 15. november arrangerer menigheten en tur til Rush trampolinepark i Drammen. Alle barn i menigheten er velkommen. Vi trenger noen voksne med bil som kan være med, slik at vi har nok biler.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-sunday-nb-2026-11-15"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Children’s outing to Rush trampoline park",
+          "summary": "All children in the parish are welcome on a trip to Rush trampoline park in Drammen after High Mass on Sunday 15 November. We need adults with cars.",
+          "body": "After High Mass on Sunday 15 November, the parish is organising a trip to Rush trampoline park in Drammen. All children in the parish are welcome. We need some adults with cars to come along, so that we have enough cars."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-01"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-11-01",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-01",
+      "publicNote": "Allehelgensdag.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "All Saints’ Day."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-11-04",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-04",
+      "publicNote": "Den hellige Karl Borromeus. Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Charles Borromeo. Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-11-05",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-05",
+      "publicNote": "Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-12-05",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-12-05",
+      "relatedEventKey": "event:children-christmas-workshop:2026-12-05",
+      "publicNote": "Feiring av St. Nikolas og St. Barbara. Juleverksted og fest for barna etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Celebration of St. Nicholas and St. Barbara. Christmas workshop and party for the children after Mass."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-11-01:kongsberg:nb:1100",
+      "title": "Allehelgensdag",
+      "massDate": "2026-11-01",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-11-01",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Åp 7, 2–4. 9–14"
+        },
+        "Jeg, Johannes, så en annen engel: Han steg frem fra soloppgangen og bar den levende Guds segl, og han ropte med høy røst til de fire engler som hadde fått i sin makt å herje land og hav: «Vent med å røre land og hav og trær, til vi har fått satt segl på alle vår Guds tjeneres panner!» Så hørte jeg tallet på dem som ble merket med seglet: etthundreogfireogførti tusen var det av dem, fra alle Israels stammer.",
+        "Deretter så jeg dette: En uhyre mengde, så stor at den umulig kunne telles, av mennesker fra alle jordens folk og stammer, raser og tungemål; de stod foran tronen og foran Lammet, kledd i hvite klær, med palmegrener i sine hender, og de ropte alle med høy røst: «Frelsen hører vår Gud til, han som sitter på tronen, og Lammet!»",
+        "Hele engleskaren stod i krets om tronen, om presbyterne og de fire levende skikkelser; nå kastet de seg ned for tronen med ansiktet mot jorden i tilbedelse for Gud, idet de sa: «Amen! Lov og pris og visdom, takk og ære, makt og velde tilkommer vår Gud i all evighet. Amen!»",
+        "Da tok en av presbyterne til orde og sa til meg: «Disse som er kledd i hvite kjortler, hvem er de, og hvor kommer de fra?»",
+        "«Herre,» svarte jeg, «du vet det!»",
+        "Da sa han til meg: «Dette er de som kommer fra den store trengsel; de har tvettet sine kjortler og gjort dem hvite i Lammets blod.»",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Dette er den ætt som søker Herren"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – 1 Joh 3, 1–3"
+        },
+        "Se hvilken kjærlighet Faderen har vist oss: Vi får kalles Guds barn – ja, vi er det! Og når verden ikke kjenner oss, er det fordi den aldri har kjent ham.",
+        "Mine kjære! Allerede nå er vi Guds barn, men hva vi skal bli, er ennå ikke åpenbart. Vi bare vet at den dag det blir åpenbart, skal vi bli ham lik, for da skal vi se ham som han er.",
+        "Og enhver som har et slikt håp til ham, renser seg selv – likesom han selv er ren.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Kom til meg, dere som sliter og bærer tunge byrder;",
+            "hos meg skal dere finne hvile."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 5, 1–12a"
+        },
+        "På den tid så Jesus mengden av mennesker og gikk opp i fjellet. Der satte han seg, og disiplene flokket seg om ham. Da tok han til orde for å undervise dem, og sa:",
+        "«Salige er de som vet seg fattige, for himlenes rike tilhører dem.",
+        "Salige er de ydmyke, for de skal ta jorden i eie.",
+        "Salige er de som sørger, for de skal finne trøst.",
+        "Salige er de som hungrer og tørster etter Guds rettferd, for de skal få stillet sin sult.",
+        "Salige er de barmhjertige, for de skal selv finne miskunn.",
+        "Salige er de rene av hjertet, for de skal se Gud.",
+        "Salige er de som skaper fred, for de skal hete Guds barn.",
+        "Salige er de som blir forfulgt for sin rettferds skyld, for himlenes rike tilhører dem.",
+        "Ja, salige er dere, når dere for min skyld blir spottet og forfulgt, og all slags ondskap blir løyet dere på – gled dere og fryd dere da! For en stor lønn venter dere i himlene.»"
+      ]
+    }
+  ],
+  "articles": []
+}
