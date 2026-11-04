@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10.26 0 28.26 48" width="28.26" height="48" role="img" aria-label="Sitt">
+  <title>Sitt</title>
+  <g transform="translate(1.078 -1.914) scale(1.0407)">
+    <path d="M10.90 21.90 L10.90 45.50" fill="none" stroke="#000" stroke-width="3.00" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.50 41.30 L22.10 41.30 L22.10 45.50" fill="none" stroke="#000" stroke-width="3.00" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.80 26.80 A5.2 5.2 0 0 1 25.20 26.80 V38.40 H17.80 A3.0 3.0 0 0 1 14.80 35.40 Z" fill="#000"/>
+    <circle cx="20.00" cy="15.90" r="4.3" fill="#000"/>
+    <path d="M20.00 35.40 L28.80 35.40 L28.80 44.00 L32.40 44.00" fill="none" stroke="#000" stroke-width="6.00" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
