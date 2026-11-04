@@ -125,7 +125,7 @@ section[lang="en"] .kyrie { grid-template-columns: 13em 1fr; }
 section[lang="en"] > .kilde { font-size: 10pt; font-style: italic; color: #333; }
 
 /* Velkommen til messen (baksiden): korte avsnitt med et uthevet innledningsord */
-.velkommen p { font-size: 11pt; margin-bottom: 0.42em; }
+.velkommen p { font-size: 11pt; margin-bottom: 0.34em; }
 .velkommen .inn { color: var(--rod); font-weight: bold; }
 .engelsk { margin-top: 1.2em; }
 .engelsk h2 { margin-top: 0; margin-bottom: 0.8em; }
