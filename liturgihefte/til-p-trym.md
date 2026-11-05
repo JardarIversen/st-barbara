@@ -13,7 +13,8 @@ Han er fornøyd med inndelingen av heftet. Endringene han ba om, er gjort:
   sette seg.
 - Knelingen står etter Agnus Dei, ved «Se Guds lam», slik rubrikkene sier. Slik var det allerede i heftet.
 
-Ikke besvart ennå: om vi skal søke ICEL om tillatelse, og om høyre hånd på venstre skulder er riktig ved velsignelse.
+Høyre hånd på venstre skulder ved velsignelse er riktig (Jardar). Den engelske oversettelsen sa han ikke noe om;
+Jardar sender den nye versjonen og skriver at han håper den er i orden.
 
 Det som følger, er notatet slik det ble sendt.
 
