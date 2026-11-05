@@ -2,6 +2,21 @@
 
 Beslutninger i det nye liturgiheftet for familiemessen som jeg vil høre om du er enig i.
 
+## Svar fra p. Trym (november 2026)
+
+Han er fornøyd med inndelingen av heftet. Endringene han ba om, er gjort:
+
+- Kirkebønnen (side 4) slutter «… evighet til evighet», som slutningsbønnen.
+- Eukaristisk bønn III følger missalet: «… ærerike martyrer (med den hellige N.) og alle hellige …», ikke Barbara. Man
+  kan også nevne dagens helgen, og stedets vernehelgen er ikke obligatorisk. Den engelske har «(with Saint N.)».
+- Kunngjøringene er tatt ut, med sitte-ikonet. De er ikke en del av messens ordning, og presten sier fra når folk kan
+  sette seg.
+- Knelingen står etter Agnus Dei, ved «Se Guds lam», slik rubrikkene sier. Slik var det allerede i heftet.
+
+Ikke besvart ennå: om vi skal søke ICEL om tillatelse, og om høyre hånd på venstre skulder er riktig ved velsignelse.
+
+Det som følger, er notatet slik det ble sendt.
+
 ## Vi sitter under kunngjøringene
 
 Jeg har lagt inn at menigheten sitter under kunngjøringene, og står igjen til velsignelsen og utsendelsen. Det er en

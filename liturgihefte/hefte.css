@@ -74,7 +74,7 @@ h3.tett { margin-top: 0; }
 .omslag img { width: 88%; border: 1.5pt solid #222; }
 h1 { color: var(--bla); font-size: 20pt; margin-top: 22mm; }
 
-/* Ledd i messen uten trykt tekst: salmer og kunngjøringer */
+/* Ledd i messen uten trykt tekst: salmer */
 .ledd { color: var(--rod); font-style: italic; margin: 0.3em 0 0.5em; }
 
 h2.tittel { color: var(--bla); font-size: 15.5pt; text-align: center; margin-bottom: 1.6em; }
