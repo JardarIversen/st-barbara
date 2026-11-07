@@ -39,6 +39,13 @@ export const catechesisGroup = defineType({
   name: 'catechesisGroup', title: 'Aldersgruppe', type: 'object', icon: CalendarIcon,
   fields: [
     ...copyFields,
+    defineField({
+      name: 'isActive',
+      title: 'Vis gruppen på nettsiden',
+      type: 'boolean',
+      description: 'Slå av for å skjule bare denne aldersgruppen uten å slette informasjonen. Felles påmeldingslenke og andre grupper påvirkes ikke.',
+      initialValue: true,
+    }),
     defineField({name: 'sessions', title: 'Undervisningstider', type: 'array', of: [defineArrayMember({type: 'catechesisSession'})], validation: r => r.required().min(1)}),
     defineField({name: 'sessionDates', title: 'Bekreftede samlingsdatoer', type: 'array', description: 'Felles for undervisningsgruppene over. Ikke fyll inn beregnede datoer for fleksibelt oppmøte.', of: [defineArrayMember({type: 'date'})], validation: r => r.unique()}),
     contactField,
