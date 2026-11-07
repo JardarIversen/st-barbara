@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-11-08",
+      "issueDate": "2026-11-08",
+      "publishedAt": "2026-11-07T15:03:04+01:00",
+      "coversFrom": "2026-11-08",
+      "coversUntil": "2026-11-15",
+      "pdfPath": "../../../.local/bulletin-2026-11-08/source.pdf",
+      "filename": "32. søndag 2026.pdf",
+      "internalNotes": "Sendt av p. Trym på e-post «Søndagsark» 7. november 2026 kl. 15.03 norsk tid, med PDF og Word-fil og uten andre instrukser. Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: 32. søndag i det alminnelige kirkeår er 8. november (Visd 6,12-16; Sal 63(62); Matt 25,1-13). Kalenderen oppgir andre lesning som «1 Tess 3,13-18», som må være en trykkfeil; bladet har 1 Tess 4,13-18, og teksten i bladet er 1 Tess 4,13-18. Henvisningen er gjengitt som i bladet. Kalenderen nevner også innsamling av Peterspenger denne søndagen, som stemmer med bladets «Dagens kollekt går til Den Hellige Stol». Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder 9.–15. november og stemmer med den faste messeplanen og den ekstra mandagsmessen 9. november. Evangelieverset har «Så våk daI» i bladet; normalisert til «Så våk da!». Frivillighetsfesten fredag 13. november står uten eget klokkeslett under messen kl. 18.00 og er derfor lagt inn som merknad på fredagsmessen, ikke som egen hendelse. Lesningene gjelder bare norsk kl. 11-messe 8. november."
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:kongsberg-mass:2026-11-09",
+      "title": "Messe – Laterankirkens vigselsfest",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-11-09T18:30:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Ekstra mandagsmesse på Laterankirkens vigselsfest, før menighetsrådsmøtet.",
+      "body": "Messe mandag 9. november kl. 18.30 på Laterankirkens vigselsfest. Menighetsrådsmøte etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "title": "Holy Mass – Dedication of the Lateran Basilica",
+          "summary": "An additional Monday Mass on the feast of the Dedication of the Lateran Basilica, before the parish council meeting.",
+          "body": "Holy Mass on Monday 9 November at 18:30, the feast of the Dedication of the Lateran Basilica. Parish council meeting after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "event:children-christmas-workshop:2026-12-05",
+      "title": "Juleverksted og fest for barna",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-12-05T12:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Barna inviteres til juleverksted med mat og underholdning når vi feirer St. Nikolas og St. Barbara. Det som lages, selges til inntekt for Adventsaksjonen.",
+      "body": [
+        "Lørdag 5. desember feirer vi både St. Nikolas og St. Barbara. Det blir juleverksted for barn, sammen med mat og underholdning. Det som lages på verkstedet, blir solgt til inntekt for Adventsaksjonen.",
+        "Opplegget for dagen starter med messe kl. 12.00.",
+        "Det blir kanskje til og med et overraskelsesbesøk i forbindelse med St. Nikolas’ fest, så ta med barna deres til kirken denne dagen!"
+      ],
+      "promotionFrom": "2026-10-30T16:35:23+01:00",
+      "promotionUntil": "2026-12-05T12:00:00+01:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "title": "Christmas workshop and party for the children",
+          "summary": "Children are invited to a Christmas workshop with food and entertainment as we celebrate St. Nicholas and St. Barbara. What they make will be sold in aid of the Advent campaign Adventsaksjonen.",
+          "body": [
+            "On Saturday 5 December we celebrate both St. Nicholas and St. Barbara. There will be a Christmas workshop for children, with food and entertainment. What is made at the workshop will be sold in aid of the Advent campaign Adventsaksjonen.",
+            "The day begins with Holy Mass at 12:00.",
+            "There may even be a surprise visit in connection with the feast of St. Nicholas, so bring your children to church that day!"
+          ]
+        }
+      }
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:collection:2026-11-01",
+      "title": "Kollekten 1. november",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-11-07T15:03:04+01:00",
+      "lastMentionedAt": "2026-11-07T15:03:04+01:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Kollekten søndag 1. november ble på kr 3980 til sammen. Kollekten søndag 8. november går til Den hellige stol. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 1. november, var kr 771 i kontanter og kr 3209 i Vipps, totalt kr 3980. Kollekten søndag 8. november går til Den hellige stol. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 1 November",
+          "summary": "The collection on Sunday 1 November came to NOK 3,980 in total. The collection on Sunday 8 November goes to the Holy See. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 1 November came to NOK 771 in cash and NOK 3,209 via Vipps, NOK 3,980 in total. The collection on Sunday 8 November goes to the Holy See. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ]
+    },
+    {
+      "sourceKey": "announcement:collection:2026-10-25",
+      "title": "Kollekten 25. oktober",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-10-30T16:35:23+01:00",
+      "lastMentionedAt": "2026-10-30T16:35:23+01:00",
+      "appliesUntil": "2026-11-08T23:59:00+01:00",
+      "summary": "Kollekten søndag 25. oktober ble på kr 3342 til sammen og er sendt videre til Missio Norge. Kollekten for hele oktober ble kr 14 558. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 25. oktober, var kr 1720 i kontanter og kr 1622 i Vipps, totalt kr 3342. Beløpet er sendt videre til Missio Norge. Kollekten for hele oktober ble til sammen kr 14 558. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 25 October",
+          "summary": "The collection on Sunday 25 October came to NOK 3,342 in total and has been passed on to Missio Norge. The collection for all of October came to NOK 14,558. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 25 October came to NOK 1,720 in cash and NOK 1,622 via Vipps, NOK 3,342 in total. The money has been passed on to Missio Norge. The collection for all of October came to NOK 14,558 in total. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01"
+      ]
+    },
+    {
+      "sourceKey": "announcement:children-trampoline-trip:2026-11-15",
+      "title": "Utflukt for barna til Rush trampolinepark",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-11-07T15:03:04+01:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Alle barn i menigheten er velkommen på tur til Rush trampolinepark i Drammen etter høymessen søndag 15. november. Vi trenger voksne med bil.",
+      "body": "Etter høymessen søndag 15. november arrangerer menigheten en tur til Rush trampolinepark i Drammen. Alle barn i menigheten er velkommen. Vi trenger noen voksne med bil som kan være med, slik at vi har nok biler.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-sunday-nb-2026-11-15"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Children’s outing to Rush trampoline park",
+          "summary": "All children in the parish are welcome on a trip to Rush trampoline park in Drammen after High Mass on Sunday 15 November. We need adults with cars.",
+          "body": "After High Mass on Sunday 15 November, the parish is organising a trip to Rush trampoline park in Drammen. All children in the parish are welcome. We need some adults with cars to come along, so that we have enough cars."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08"
+      ]
+    },
+    {
+      "sourceKey": "announcement:et-hus-bygget-pa-fjell-2026",
+      "title": "Kampanjen «Et hus bygget på fjell»",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "lastMentionedAt": "2026-11-07T15:03:04+01:00",
+      "summary": "Kampanjen «Et hus bygget på fjell» er i gang. Hyrdebrevet som ble lest opp søndag 18. oktober, og videoer om kampanjen ligger på katolsk.no.",
+      "body": [
+        "Kampanjen «Et hus bygget på fjell» er nå i gang. På katolsk.no ligger det videoer om kampanjen, og der kan du også lese hyrdebrevet som ble lest opp søndag 18. oktober.",
+        "Ta gjerne med deg en brosjyre hjem. Tusen takk til alle som bidrar til at vi sammen kan bygge vår Kirke."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [
+        {
+          "label": "katolsk.no",
+          "url": "https://www.katolsk.no"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "The campaign «Et hus bygget på fjell»",
+          "summary": "The campaign «Et hus bygget på fjell» (A House Built on Rock) is under way. The pastoral letter read on Sunday 18 October and videos about the campaign are on katolsk.no.",
+          "body": [
+            "The campaign «Et hus bygget på fjell» (A House Built on Rock) is now under way. Videos about the campaign are available on katolsk.no, where you can also read the pastoral letter that was read on Sunday 18 October.",
+            "Feel free to take a brochure home. Many thanks to everyone who helps us build our Church together."
+          ],
+          "links": [
+            {
+              "label": "katolsk.no",
+              "url": "https://www.katolsk.no"
+            }
+          ]
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18",
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-08"
+      ]
+    },
+    {
+      "sourceKey": "announcement:bishop-visitation-thanks-2026",
+      "title": "Takk for bispevisitasen",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-10-16T14:12:25+02:00",
+      "lastMentionedAt": "2026-10-16T14:12:25+02:00",
+      "appliesUntil": "2026-10-25T23:59:00+01:00",
+      "summary": "Takk til alle som hjalp til under bispevisitasen, med små og store bidrag, slik at biskopen ble godt tatt imot.",
+      "body": "Vi hadde fire veldig flotte dager under bispevisitasen. Tusen takk til alle som hjalp til, både med små og store bidrag, og som gjorde at biskopen ble vel tatt imot og gjorde dagene så fine.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Thank you for the bishop’s visitation",
+          "summary": "Thank you to everyone who helped during the bishop’s visitation, with small and large contributions, so that the bishop was warmly welcomed.",
+          "body": "We had four wonderful days during the bishop’s visitation. Many thanks to everyone who helped, with both small and large contributions, and who made sure the bishop was warmly welcomed and the days were so special."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-18"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-11-11",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-11",
+      "publicNote": "Den hellige Martin av Tours. Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Martin of Tours. Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-11-12",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-12",
+      "publicNote": "Den hellige Josafat. Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Saint Josaphat. Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-11-13",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-13",
+      "publicNote": "Skriftemål fra kl. 17.00. Frivillighetsfest.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Confession from 17:00. Volunteers’ party."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-11-15",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-15",
+      "publicNote": "Etter messen er det tur for barna til Rush trampolinepark i Drammen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "After Mass there is an outing for the children to Rush trampoline park in Drammen."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-12-05",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-12-05",
+      "relatedEventKey": "event:children-christmas-workshop:2026-12-05",
+      "publicNote": "Feiring av St. Nikolas og St. Barbara. Juleverksted og fest for barna etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Celebration of St. Nicholas and St. Barbara. Christmas workshop and party for the children after Mass."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-11-08:kongsberg:nb:1100",
+      "title": "32. søndag i det alminnelige kirkeår",
+      "massDate": "2026-11-08",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-11-08",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Visd 6, 12–16"
+        },
+        "Visdommen er som et strålende lys, den forgår aldri. De som elsker den, får lett øye på den, de som søker den, finner den. Den iler dem i møte som vil lære den å kjenne.",
+        "Står noen tidlig opp for å møte den, er det ikke spilt møye: Han finner at visdommen sitter rede ved hans dør. Å vie sine tanker til visdommen er fullkommen klokskap. Den som våker for visdommens skyld, blir snart kvitt sine sorger.",
+        "For den går selv omkring og søker dem som er den verd. Den møter dem på veien og åpenbarer seg vennlig for dem; den kommer dem i møte i alt de tenker.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Min sjel tørster etter den levende Gud, når kan jeg tre frem for hans åsyn?"
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Gud, du min Gud, deg søker jeg,",
+            "min sjel tørster etter deg.",
+            "Mitt kjød lengter etter deg",
+            "som den uttørrede jord etter regn."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Vis deg i din helligdom,",
+            "at jeg kan se din makt og ære.",
+            "For din miskunn er bedre enn livet,",
+            "min munn skal synge din pris."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Slik vil jeg love deg hele mitt liv,",
+            "løfte mine hender og prise ditt navn.",
+            "Min sjel mettes som av utsøkte retter,",
+            "når tungen jubler din pris."
+          ]
+        },
+        {
+          "type": "verse",
+          "lines": [
+            "Jeg kommer deg ihu på mitt leie,",
+            "tenker på deg hver nattevakt.",
+            "For du er min hjelp.",
+            "Jeg jubler i skyggen av dine vinger."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – 1 Tess 4, 13–18"
+        },
+        "Brødre, vi vil ikke at dere skal være uvitende om de hensovedes skjebne, for at dere ikke skal sørge slik som de andre, de som ikke har noe håp. For like visst som vi tror at Jesus er død og oppstanden, så skal også Gud føre dem som er sovnet inn i troen på Jesus, sammen med ham. Dette har vi da å si dere som Herrens ord: Vi som lever, som ennå er blitt tilbake når vår Herre kommer, vi skal slett ikke ha noe fortrinn fremfor de hensovede.",
+        "For når befalingen lyder, når erkeengelens røst og Guds basun gir signalet, da skal Herren selv stige ned fra himmelen, og de som er døde i samfunn med Kristus, skal først oppstå; derpå skal vi som ennå lever på jorden, sammen med dem bli båret bort på skyer for å komme Herren i møte der oppe. Og siden skal vi alltid være med Herren. Med disse tanker skal dere oppmuntre hverandre.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Så våk da!",
+            "For Menneskesønnen kan komme i den time dere minst venter det."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 25, 1–13"
+        },
+        "På den tid fortalte Jesus disiplene denne lignelsen:",
+        "«Himlenes rike kan lignes med ti terner, som kom for å gå brudgommen i møte; og alle hadde sine lamper med. Men fem av dem var uforstandige, og bare fem av dem var kloke. For de uforstandige tok nok lampene, men hadde ikke olje med; de forstandige derimot tok både lampene sine og kanner med olje. Men da brudgommen lot vente på seg, falt de etter hvert i søvn og sov til sist alle.",
+        "Da, midt på natten, hørtes et rop: ‘Brudgommen kommer! Ut og gå ham i møte!’ Alle ternene våknet og gjorde lampene sine i stand. Men de uforstandige måtte si til de kloke: ‘La oss få litt olje av dere, for lampene våre slukner.’ Da svarte de som hadde vist seg forstandige: ‘Nei, det blir ikke nok både til oss og til dere; dere må gå til kjøpmannen og hente noe selv.’",
+        "Men mens de var borte for å kjøpe, kom brudgommen, og de som var rede, gikk sammen med ham inn til bryllupsfesten. Så ble døren lukket. Senere kom også de andre ternene og ropte: ‘Herre, herre, lukk opp for oss!’ Men han svarte: ‘Jeg har bare dette å si dere: Jeg vet ikke hvem dere er.’ Våk derfor – for dere kjenner hverken dagen eller timen.»"
+      ]
+    }
+  ],
+  "articles": []
+}
