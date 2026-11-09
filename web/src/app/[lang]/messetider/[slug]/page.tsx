@@ -249,7 +249,7 @@ export default async function CalendarDetailPage({
       ) : null}
 
       {massText && (
-        <section className="mt-12 border-t border-border pt-8">
+        <section id="lesninger" className="mt-12 scroll-mt-24 border-t border-border pt-8">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
             {t("Dagens lesninger")}
           </p>

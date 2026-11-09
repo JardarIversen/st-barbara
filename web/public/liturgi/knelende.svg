@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="11.01 0 26.61 48" width="26.61" height="48" role="img" aria-label="Knel">
+  <title>Knel</title>
+  <g transform="translate(-1.293 -1.914) scale(1.0407)">
+    <path d="M24.00 35.20 L24.00 44.00 L15.40 44.00" fill="none" stroke="#000" stroke-width="6.00" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.29 32.82 L25.05 26.66" fill="none" stroke="#000" stroke-width="10.40" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26.38" cy="15.85" r="4.3" fill="#000"/>
+    <path d="M25.84 26.76 L26.23 34.15 L33.61 29.36 L34.61 26.74" fill="none" stroke="#000" stroke-width="4.40" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

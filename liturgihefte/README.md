@@ -18,8 +18,10 @@ Heftet som deles ut ved familiemessen: A5-hefter, stiftet i ryggen.
   oppdaterer seg når filene lagres.
 - `ubrukte-bonner.html` har bønnene som sto i 28-siders-utgaven, men ikke er med i dag. Lim inn herfra ved behov.
 - `til-p-trym.md` samler spørsmål og beslutninger p. Trym skal se på.
-- QR-koden (`bilder/qr-nettside.svg`) peker til <https://kongsberg.katolsk.no/messen/i-dag>. Siden finnes ikke ennå.
-  Planen: den viser messens ordning fra dette heftet og dagens lesninger når de er registrert; uten lesninger sender
-  den videre til `/messen` med et banner om at det ikke er registrert lesninger for dagens messe. Siden, eller i det
-  minste en midlertidig omdirigering, må være på plass før heftet trykkes. Lag QR-koden på nytt med
+- Nettsiden viser messens ordning fra heftet på `/messen`, og med dagens lesninger på `/messen/i-dag`, der
+  QR-koden (`bilder/qr-nettside.svg`) peker. `til-nettsiden.py` henter teksten ut av `familiemesse.html` til
+  `web/src/content/messens-ordning.json` og kopierer ikonene til `web/public/liturgi/`; `bygg.sh` kjører det, og en test
+  i `web/tests/order-of-mass.test.mjs` feiler hvis heftet er endret uten at det er gjort. Lesningene kommer fra
+  søndagsbladet og settes inn der heftet har «Slik lyder Herrens ord», «(omkved)», «Halleluja» og «(...)». Lag
+  QR-koden på nytt med
   `uv run --no-project --with segno==1.6.6 python -c "import segno; segno.make('https://kongsberg.katolsk.no/messen/i-dag', error='q').save('bilder/qr-nettside.svg', kind='svg', scale=1, border=0, omitsize=True, xmldecl=False)"`.

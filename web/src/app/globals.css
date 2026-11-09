@@ -138,3 +138,146 @@ font[style] {
   background: transparent !important;
   box-shadow: none !important;
 }
+
+/* Messens ordning fra liturgiheftet (/messen og /messen/i-dag): heftets oppsett i nettsidens
+   farger. Ikonene for kroppsstilling henger i venstre marg, som i heftet. */
+@layer components {
+  .liturgi {
+    padding-left: 2.25rem;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--foreground);
+  }
+  .liturgi h2,
+  .liturgi h3,
+  .liturgi p {
+    position: relative;
+  }
+  .liturgi h2,
+  .liturgi h3 {
+    scroll-margin-top: 9rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+  .liturgi h2 {
+    margin: 3.5rem 0 0.75rem;
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+  .liturgi > section:first-child h2 {
+    margin-top: 0;
+  }
+  .liturgi h3 {
+    margin: 1.75rem 0 0.35rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--primary);
+  }
+  .liturgi b {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .liturgi .luft {
+    margin-bottom: 0.6rem;
+  }
+  .liturgi .luft-stor {
+    margin-bottom: 1.2rem;
+  }
+  .liturgi .tom-over {
+    margin-top: 1.25rem;
+  }
+  .liturgi .tom-under {
+    margin-bottom: 1.25rem;
+  }
+  .liturgi .ledd,
+  .liturgi .valg-navn,
+  .liturgi .eller {
+    font-style: italic;
+    color: var(--primary);
+  }
+  .liturgi .ledd {
+    margin: 0.75rem 0;
+  }
+  .liturgi .rubrikk {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--muted-foreground);
+  }
+  .liturgi .boy {
+    font-style: italic;
+    color: var(--muted-foreground);
+  }
+  .liturgi .kors {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .liturgi .innstiftelse {
+    margin: 0.75rem 0;
+    text-align: center;
+    font-weight: 500;
+  }
+  .liturgi .kyrie {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.25rem;
+  }
+  /* Et ledd som bare gjelder i noen messer, med innrykk som i heftet */
+  .liturgi .valg {
+    margin: 0.25rem 0 1rem 1.25rem;
+  }
+  .liturgi .eller {
+    margin-top: 1.75rem;
+  }
+  .liturgi .eller + h3 {
+    margin-top: 0.25rem;
+  }
+  .liturgi .strofe {
+    margin-bottom: 0.6rem;
+  }
+  .liturgi .stilling {
+    position: absolute;
+    right: 100%;
+    top: 0.2em;
+    display: flex;
+    gap: 0.15rem;
+    margin-right: 0.6rem;
+    line-height: 0;
+  }
+  .liturgi h2 .stilling {
+    top: 0.35em;
+  }
+  /* Dagens lesninger fra søndagsbladet, satt inn i Ordets liturgi */
+  .liturgi .lesning {
+    margin: 0.5rem 0 1rem;
+  }
+  .liturgi .henvisning,
+  .liturgi .lesning-merknad {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+  }
+  .liturgi .lesning-merknad {
+    margin: 0 0 1.25rem;
+  }
+
+  /* Ikonene tegnes i tekstfargen med SVG-filene fra heftet som maske */
+  .ikon {
+    display: inline-block;
+    height: 1.3rem;
+    background: currentColor;
+    mask: var(--ikon) center / contain no-repeat;
+  }
+  .ikon-staende {
+    --ikon: url("/liturgi/staende.svg");
+    width: calc(1.3rem * 18.09 / 48);
+  }
+  .ikon-sittende {
+    --ikon: url("/liturgi/sittende.svg");
+    width: calc(1.3rem * 28.26 / 48);
+  }
+  .ikon-knelende {
+    --ikon: url("/liturgi/knelende.svg");
+    width: calc(1.3rem * 26.61 / 48);
+  }
+}

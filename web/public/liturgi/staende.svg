@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16.47 0 18.09 48" width="18.09" height="48" role="img" aria-label="Stå">
+  <title>Stå</title>
+  <g transform="translate(-2.493 -1.914) scale(1.0407)">
+    <path d="M24.00 26.60 L24.00 35.40 L24.00 44.00 L27.60 44.00" fill="none" stroke="#000" stroke-width="6.00" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.00 24.20 L24.00 18.00" fill="none" stroke="#000" stroke-width="10.40" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="24.00" cy="7.10" r="4.3" fill="#000"/>
+    <path d="M24.80 18.00 L26.08 25.29 L32.83 19.63 L32.83 16.83" fill="none" stroke="#000" stroke-width="4.40" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
