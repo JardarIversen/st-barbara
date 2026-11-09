@@ -3,8 +3,8 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
-  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { ChevronDownIcon } from "lucide-react";
@@ -18,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
 import {
   PRAYERS,
   defaultPrayer,
@@ -39,7 +40,7 @@ type LiturgyContextValue = LiturgyState & {
   setExplain: (explain: boolean) => void;
   season: Season;
   language: LiturgyLanguage;
-  /** What the page would choose by itself, so links only carry real choices. */
+  /** What the page chooses by itself. */
   defaults: { mode: MassMode; prayer: EucharisticPrayer };
 };
 
@@ -51,14 +52,21 @@ function useLiturgy() {
   return value;
 }
 
-const EXPLAIN_KEY = "messen-forklaringer";
-const noSubscription = () => () => {};
-function storedExplain() {
-  try {
-    return window.localStorage.getItem(EXPLAIN_KEY) === "1";
-  } catch {
-    return false;
-  }
+/**
+ * The reader's choices as a query string, so the page can be saved or shared as it is. What the
+ * page chooses by itself is left out, so the plain address keeps following the day.
+ */
+function choiceQuery(
+  state: LiturgyState,
+  defaultMode: MassMode,
+  base: URLSearchParams,
+) {
+  const query = new URLSearchParams(base);
+  for (const key of ["modus", "eb", "forklaringer"]) query.delete(key);
+  if (state.mode !== defaultMode) query.set("modus", state.mode);
+  if (state.prayer !== defaultPrayer(state.mode)) query.set("eb", state.prayer);
+  if (state.explain) query.set("forklaringer", "1");
+  return query;
 }
 
 /**
@@ -79,20 +87,21 @@ export function LiturgyView({
   language: LiturgyLanguage;
   children: ReactNode;
 }) {
-  const [state, setState] = useState({ mode: initial.mode, prayer: initial.prayer });
+  const [state, setState] = useState(initial);
   const [prayerChosen, setPrayerChosen] = useState(
     initial.prayer !== defaultPrayer(initial.mode),
   );
-  // Someone who wants the explanations keeps them on the next time they scan the code.
-  const stored = useSyncExternalStore(noSubscription, storedExplain, () => false);
-  const [explainChoice, setExplainChoice] = useState<boolean | null>(
-    initial.explain ? true : null,
-  );
-  const explain = explainChoice ?? stored;
+
+  // Keep the address in step with the choices, without reloading the page.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    url.search = choiceQuery(state, defaults.mode, url.searchParams).toString();
+    if (url.href !== window.location.href)
+      window.history.replaceState(window.history.state, "", url);
+  }, [state, defaults.mode]);
 
   const value: LiturgyContextValue = {
     ...state,
-    explain,
     season,
     language,
     defaults,
@@ -109,13 +118,7 @@ export function LiturgyView({
       setPrayerChosen(true);
       setState((value) => ({ ...value, prayer }));
     },
-    setExplain: (on) => {
-      try {
-        if (on) window.localStorage.setItem(EXPLAIN_KEY, "1");
-        else window.localStorage.removeItem(EXPLAIN_KEY);
-      } catch {}
-      setExplainChoice(on);
-    },
+    setExplain: (explain) => setState((value) => ({ ...value, explain })),
   };
 
   return (
@@ -124,7 +127,7 @@ export function LiturgyView({
         className="liturgi-visning"
         data-modus={state.mode}
         data-eb={state.prayer}
-        data-forklaringer={explain ? "pa" : "av"}
+        data-forklaringer={state.explain ? "pa" : "av"}
       >
         {children}
       </div>
@@ -132,14 +135,18 @@ export function LiturgyView({
   );
 }
 
-/** Sunday or weekday Mass, and the explanations for beginners. */
+/** Sunday or weekday Mass (one of two), and the explanations for beginners (on or off). */
 export function MassSettings({ automatic }: { automatic?: string }) {
   const { t } = useTranslations();
   const { mode, setMode, explain, setExplain, defaults } = useLiturgy();
   return (
-    <div className="mt-7 space-y-3">
-      <div className="flex flex-wrap items-center gap-2">
-        <div role="group" aria-label={t("Hva slags messe")} className="flex gap-1">
+    <div className="mt-7 space-y-2">
+      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+        <div
+          role="radiogroup"
+          aria-label={t("Hva slags messe")}
+          className="inline-flex gap-0.5 rounded-sm border border-border bg-background p-0.5"
+        >
           {(
             [
               ["hoymesse", t("Høymesse")],
@@ -149,22 +156,19 @@ export function MassSettings({ automatic }: { automatic?: string }) {
             <Button
               key={value}
               size="sm"
-              variant={mode === value ? "default" : "outline"}
-              aria-pressed={mode === value}
+              variant={mode === value ? "default" : "ghost"}
+              role="radio"
+              aria-checked={mode === value}
               onClick={() => setMode(value)}
             >
               {label}
             </Button>
           ))}
         </div>
-        <Button
-          size="sm"
-          variant={explain ? "default" : "outline"}
-          aria-pressed={explain}
-          onClick={() => setExplain(!explain)}
-        >
-          {t("Forklaringer")}
-        </Button>
+        <label className="flex cursor-pointer items-center gap-2.5 text-sm font-medium text-foreground">
+          <Switch checked={explain} onCheckedChange={(on) => setExplain(on)} />
+          {t("Vis forklaringer")}
+        </label>
       </div>
       {automatic && mode === defaults.mode && (
         <p className="text-sm text-muted-foreground">{automatic}</p>
@@ -176,13 +180,12 @@ export function MassSettings({ automatic }: { automatic?: string }) {
 /** Switches the liturgy between Norwegian and English, keeping the reader's choices. */
 export function LanguageToggle({ path }: { path: string }) {
   const { t } = useTranslations();
-  const { language, mode, prayer, defaults } = useLiturgy();
+  const { language, mode, prayer, explain, defaults } = useLiturgy();
   const names: Record<LiturgyLanguage, string> = { nb: "Norsk", en: "English" };
   const href = (target: LiturgyLanguage) => {
-    const query = new URLSearchParams({ liturgi: target });
-    if (mode !== defaults.mode) query.set("modus", mode);
-    if (prayer !== defaults.prayer && PRAYERS[target].includes(prayer))
-      query.set("eb", prayer);
+    const query = choiceQuery({ mode, prayer, explain }, defaults.mode, new URLSearchParams());
+    query.set("liturgi", target);
+    if (!PRAYERS[target].includes(prayer)) query.delete("eb");
     return `${path}?${query}`;
   };
   return (
