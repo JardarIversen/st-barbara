@@ -1,13 +1,9 @@
-import Link from "@/i18n/link";
+import { LanguageToggle } from "@/components/liturgy-view";
 import { getTranslations } from "@/i18n/server";
 import { LITURGY_NAV, type LiturgyLanguage } from "@/lib/order-of-mass";
 
-const LANGUAGE_NAMES: Record<LiturgyLanguage, string> = {
-  nb: "Norsk",
-  en: "English",
-};
-
-/** Jumps between the parts of the Mass, and switches the liturgy between Norwegian and English. */
+/** Jumps between the parts of the Mass, and switches the liturgy between Norwegian and English.
+    Must be inside <LiturgyView>. */
 export default async function LiturgyBar({
   language,
   path,
@@ -35,34 +31,7 @@ export default async function LiturgyBar({
             </a>
           ))}
         </nav>
-        <div
-          role="group"
-          aria-label={t("Språk i messens tekst")}
-          translate="no"
-          className="notranslate flex shrink-0 gap-1 text-sm"
-        >
-          {(["nb", "en"] as const).map((value) =>
-            value === language ? (
-              <span
-                key={value}
-                lang={value}
-                aria-current="true"
-                className="rounded-sm bg-primary px-2 py-1 font-medium text-primary-foreground"
-              >
-                {LANGUAGE_NAMES[value]}
-              </span>
-            ) : (
-              <Link
-                key={value}
-                href={`${path}?liturgi=${value}`}
-                lang={value}
-                className="focus-ring rounded-sm px-2 py-1 font-medium text-primary hover:underline"
-              >
-                {LANGUAGE_NAMES[value]}
-              </Link>
-            ),
-          )}
-        </div>
+        <LanguageToggle path={path} />
       </div>
     </div>
   );

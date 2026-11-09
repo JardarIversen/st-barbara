@@ -261,6 +261,75 @@ font[style] {
     margin: 0 0 1.25rem;
   }
 
+  /* Høymesse eller hverdagsmesse, og eukaristisk bønn I–IV: teksten lages én gang på serveren,
+     og <LiturgyView> viser det som gjelder med data-attributtene sine. */
+  .liturgi-visning[data-modus="hverdag"] .kun-hoymesse,
+  .liturgi-visning[data-modus="hoymesse"] .kun-hverdag,
+  .liturgi-visning .eb,
+  .liturgi-visning[data-eb="4"] .eb-ikke-4,
+  .liturgi-visning:not([data-forklaringer="pa"]) .forklaring {
+    display: none;
+  }
+  .liturgi-visning[data-eb="1"] .eb[data-eb="1"],
+  .liturgi-visning[data-eb="2"] .eb[data-eb="2"],
+  .liturgi-visning[data-eb="3"] .eb[data-eb="3"],
+  .liturgi-visning[data-eb="4"] .eb[data-eb="4"] {
+    display: block;
+  }
+  /* Messens art avgjør nå om Gloria synges, så rubrikken i overskriften trengs ikke */
+  .liturgi .del-gloria h3 .rubrikk {
+    display: none;
+  }
+  /* På hverdager bes bønnene ved frembæringen høyt, som hovedtekst */
+  .liturgi-visning[data-modus="hverdag"] .liturgi .valg {
+    margin-left: 0;
+  }
+  .liturgi-visning[data-modus="hverdag"] .liturgi .valg-navn {
+    display: none;
+  }
+  .liturgi .del-lukket {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    text-align: left;
+    color: var(--muted-foreground);
+  }
+  .liturgi .del-lukket:hover {
+    border-color: var(--primary);
+  }
+  .liturgi .del-tittel {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .liturgi .del-grunn {
+    font-size: 0.9rem;
+  }
+  .liturgi .eb-valg {
+    margin: 1.75rem 0 0.5rem;
+  }
+  .liturgi .eb-hint {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+  }
+  /* Forklaringer for nybegynnere */
+  .liturgi .forklaring {
+    margin: 0.4rem 0 1rem;
+    padding: 0.6rem 0.9rem;
+    border-left: 2px solid var(--brand);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
   /* Ikonene tegnes i tekstfargen med SVG-filene fra heftet som maske */
   .ikon {
     display: inline-block;

@@ -254,5 +254,16 @@
   "Tilbake": "Back",
   "Kalender": "Calendar",
   "Alle messer og arrangementer, dag for dag, også tidligere måneder.": "Every Mass and event, day by day, including past months.",
-  "Alle messer og arrangementer i St. Barbara menighet, dag for dag.": "Every Mass and event in St. Barbara parish, day by day."
+  "Alle messer og arrangementer i St. Barbara menighet, dag for dag.": "Every Mass and event in St. Barbara parish, day by day.",
+  "Hva slags messe": "Kind of Mass",
+  "Høymesse": "Sunday Mass",
+  "Hverdagsmesse": "Weekday Mass",
+  "Forklaringer": "Explanations",
+  "Valgt ut fra dagens messe. Du kan endre det.": "Chosen for today's Mass. You can change it.",
+  "Velg eukaristisk bønn": "Choose the Eucharistic Prayer",
+  "Presten velger bønnen. Du kjenner den igjen på de første ordene etter «Hellig, hellig, hellig».": "The priest chooses the prayer. You can recognize it by its first words after the “Holy, Holy, Holy”.",
+  "når det ikke synges": "when there is no singing",
+  "vanligvis ikke på hverdager": "usually not on weekdays",
+  "ikke i advent": "not in Advent",
+  "ikke i fastetiden": "not in Lent"
 }

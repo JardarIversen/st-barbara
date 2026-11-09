@@ -3,6 +3,7 @@ import { connection } from "next/server";
 import Link from "@/i18n/link";
 import { getTranslations } from "@/i18n/server";
 import LiturgyBar from "@/components/liturgy-bar";
+import { LiturgyView, MassSettings } from "@/components/liturgy-view";
 import OrderOfMass, {
   type OrderOfMassReadings,
 } from "@/components/order-of-mass";
@@ -19,7 +20,12 @@ import {
 import {
   READINGS_SCHEDULE_KEY,
   chooseTodaysMass,
+  defaultMode,
+  defaultPrayer,
+  eucharisticPrayer,
+  liturgicalSeason,
   liturgyLanguage,
+  massMode,
   readingCandidates,
   splitReadings,
 } from "@/lib/order-of-mass";
@@ -52,7 +58,13 @@ async function findReadings(mass: CalendarItem, items: CalendarItem[]) {
 export default async function TodaysMassPage({
   searchParams,
 }: {
-  searchParams: Promise<{ liturgi?: string | string[]; tid?: string }>;
+  searchParams: Promise<{
+    liturgi?: string | string[];
+    modus?: string | string[];
+    eb?: string | string[];
+    forklaringer?: string;
+    tid?: string;
+  }>;
 }) {
   const { locale, t } = await getTranslations();
   await connection();
@@ -89,6 +101,10 @@ export default async function TodaysMassPage({
     liturgyLanguage(query.liturgi) ??
     liturgyLanguage(mass?.language) ??
     locale;
+  // Opinionated: a Mass with the newsletter's readings, or any Sunday Mass, is the Sunday Mass.
+  const defaultKind = found ? "hoymesse" : defaultMode(mass?.dateKey ?? today);
+  const defaults = { mode: defaultKind, prayer: defaultPrayer(defaultKind) };
+  const mode = massMode(query.modus) ?? defaults.mode;
   const fromOtherMass = found && found.from !== mass;
   const readings: OrderOfMassReadings | null = found
     ? {
@@ -178,11 +194,23 @@ export default async function TodaysMassPage({
         </div>
       )}
 
-      <PostureLegend />
-      <LiturgyBar language={language} path="/messen/i-dag" />
-      <div className="mt-10">
-        <OrderOfMass language={language} readings={readings} />
-      </div>
+      <LiturgyView
+        initial={{
+          mode,
+          prayer: eucharisticPrayer(query.eb, language) ?? defaultPrayer(mode),
+          explain: query.forklaringer === "1",
+        }}
+        defaults={defaults}
+        season={liturgicalSeason(today)}
+        language={language}
+      >
+        <MassSettings automatic={t("Valgt ut fra dagens messe. Du kan endre det.")} />
+        <PostureLegend />
+        <LiturgyBar language={language} path="/messen/i-dag" />
+        <div className="mt-10">
+          <OrderOfMass language={language} readings={readings} />
+        </div>
+      </LiturgyView>
     </article>
   );
 }

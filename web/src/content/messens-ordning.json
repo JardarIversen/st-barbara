@@ -1,7 +1,7 @@
 {
  "source": {
   "file": "liturgihefte/familiemesse.html",
-  "sha256": "0717647a568df0499d7d9d32390e9b812b440e35732ea92093996f833a4ab412"
+  "sha256": "555c881506dc1e084e9b64ff41a3fe8a8025f7b7cc7a93d907df3a413c84f35d"
  },
  "liturgies": {
   "nb": {
@@ -11,10 +11,11 @@
      "title": "Innledende riter",
      "blocks": [
       {
-       "html": "<h2 id=\"innledende-riter\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Innledende riter</h2>"
+       "html": "<h2 id=\"innledende-riter\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Innledende riter</h2>",
+       "part": "introductory-rites"
       },
       {
-       "html": "<p class=\"ledd\">Inngangssalme (eller Angelus i hverdagsmesser)</p>"
+       "html": "<p class=\"ledd kun-hoymesse\">Inngangssalme</p><p class=\"ledd kun-hverdag\">Angelus <a href=\"#angelus\">↓</a></p>"
       },
       {
        "html": "<p><b>Prest:</b> I Faderens og Sønnens og Den Hellige Ånds navn.</p>"
@@ -41,22 +42,28 @@
        "html": "<p><b>Alle:</b> <em>Amen.</em></p>"
       },
       {
-       "html": "<h3>Kyrie</h3>"
+       "html": "<h3>Kyrie</h3>",
+       "part": "kyrie"
       },
       {
        "html": "<div class=\"kyrie\">\n  <p><b>Prest:</b> Kyrie eleison</p><p><b>Alle:</b> <em>Kyrie eleison, Kyrie eleison</em></p>\n  <p><b>Prest:</b> Christe eleison</p><p><b>Alle:</b> <em>Christe eleison, Christe eleison</em></p>\n  <p><b>Prest:</b> Kyrie eleison</p><p><b>Alle:</b> <em>Kyrie eleison, Kyrie eleison</em></p>\n</div>"
       },
       {
-       "html": "<h3>Gloria <span class=\"rubrikk\">(ikke i fastetid og advent)</span></h3>"
+       "html": "<h3>Gloria <span class=\"rubrikk\">(ikke i fastetid og advent)</span></h3>",
+       "part": "gloria",
+       "group": "gloria"
       },
       {
-       "html": "<p><b>Prest:</b> Ære være Gud i det høyeste.</p>"
+       "html": "<p><b>Prest:</b> Ære være Gud i det høyeste.</p>",
+       "group": "gloria"
       },
       {
-       "html": "<p><b>Alle:</b> Og fred på jorden for mennesker av god vilje.<br>\nVi priser deg. Vi velsigner deg. Vi tilber deg. Vi forherliger deg.<br>\nVi takker deg for din store herlighet.<br>\nHerre vår Gud, himlenes konge, Gud allmektige Fader.<br>\nHerre, du enbårne Sønn, Jesus Kristus.<br>\nHerre, vår Gud. Guds lam, Faderens Sønn.<br>\nDu som tar bort verdens synder, miskunn deg over oss.<br>\nDu som tar bort verdens synder, hør vår bønn.<br>\nDu som sitter ved Faderens høyre hånd, miskunn deg over oss.<br>\nFor du alene er hellig, du alene er Herren.<br>\nDu alene er den høyeste, Jesus Kristus, med den Hellige Ånd i Gud Faderens herlighet. Amen.</p>"
+       "html": "<p><b>Alle:</b> Og fred på jorden for mennesker av god vilje.<br>\nVi priser deg. Vi velsigner deg. Vi tilber deg. Vi forherliger deg.<br>\nVi takker deg for din store herlighet.<br>\nHerre vår Gud, himlenes konge, Gud allmektige Fader.<br>\nHerre, du enbårne Sønn, Jesus Kristus.<br>\nHerre, vår Gud. Guds lam, Faderens Sønn.<br>\nDu som tar bort verdens synder, miskunn deg over oss.<br>\nDu som tar bort verdens synder, hør vår bønn.<br>\nDu som sitter ved Faderens høyre hånd, miskunn deg over oss.<br>\nFor du alene er hellig, du alene er Herren.<br>\nDu alene er den høyeste, Jesus Kristus, med den Hellige Ånd i Gud Faderens herlighet. Amen.</p>",
+       "group": "gloria"
       },
       {
-       "html": "<h3>Kirkebønn</h3>"
+       "html": "<h3>Kirkebønn</h3>",
+       "part": "collect"
       },
       {
        "html": "<p><b>Prest:</b> La oss be: ... evighet til evighet.</p>"
@@ -71,7 +78,8 @@
      "title": "Ordets liturgi",
      "blocks": [
       {
-       "html": "<h2 id=\"ordets-liturgi\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Ordets liturgi</h2>"
+       "html": "<h2 id=\"ordets-liturgi\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Ordets liturgi</h2>",
+       "part": "word"
       },
       {
        "html": "<p>Slik lyder Herrens ord.</p>",
@@ -83,7 +91,8 @@
       },
       {
        "html": "<h3>Responsoriesalme</h3>",
-       "role": "psalm-heading"
+       "role": "psalm-heading",
+       "part": "psalm"
       },
       {
        "html": "<p><b>Alle:</b> <em>(omkved)</em></p>",
@@ -91,7 +100,8 @@
       },
       {
        "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Evangelievers</h3>",
-       "role": "acclamation-heading"
+       "role": "acclamation-heading",
+       "part": "acclamation"
       },
       {
        "html": "<p>Halleluja.</p>",
@@ -99,7 +109,8 @@
       },
       {
        "html": "<h3>Evangelium</h3>",
-       "role": "gospel-heading"
+       "role": "gospel-heading",
+       "part": "gospel"
       },
       {
        "html": "<p><b>Prest:</b> Herren være med dere.</p>"
@@ -122,25 +133,33 @@
        "html": "<p><b>Alle:</b> <em>Lovet være du, Kristus.</em></p>"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Preken</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Preken</h3>",
+       "part": "homily"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Credo</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Credo</h3>",
+       "part": "creed",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"luft\">Jeg tror på én Gud, den allmektige Fader,<br>\nsom har skapt himmel og jord, alle synlige og usynlige ting.<br>\nJeg tror på én Herre, Jesus Kristus, Guds enbårne Sønn,<br>\nfødt av Faderen fra evighet.<br>\nGud av Gud, lys av lys, sann Gud av den sanne Gud,<br>\nfødt, ikke skapt, av samme vesen som Faderen.<br>\nVed ham er alt blitt skapt. For oss mennesker og for vår frelses skyld steg han ned fra himmelen.</p>"
+       "html": "<p class=\"luft\">Jeg tror på én Gud, den allmektige Fader,<br>\nsom har skapt himmel og jord, alle synlige og usynlige ting.<br>\nJeg tror på én Herre, Jesus Kristus, Guds enbårne Sønn,<br>\nfødt av Faderen fra evighet.<br>\nGud av Gud, lys av lys, sann Gud av den sanne Gud,<br>\nfødt, ikke skapt, av samme vesen som Faderen.<br>\nVed ham er alt blitt skapt. For oss mennesker og for vår frelses skyld steg han ned fra himmelen.</p>",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"boy\">Mens alle bøyer seg:</p>"
+       "html": "<p class=\"boy\">Mens alle bøyer seg:</p>",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"luft\"><em>Han er blitt kjød ved den Hellige Ånd av Jomfru Maria, og er blitt menneske.</em></p>"
+       "html": "<p class=\"luft\"><em>Han er blitt kjød ved den Hellige Ånd av Jomfru Maria, og er blitt menneske.</em></p>",
+       "group": "creed"
       },
       {
-       "html": "<p>Han ble korsfestet for oss, pint under Pontius Pilatus og gravlagt.<br>\nHan oppstod den tredje dag, etter Skriften,<br>\nfór opp til himmelen, og sitter ved Faderens høyre hånd.<br>\nHan skal komme igjen med herlighet og dømme levende og døde,<br>\nog på hans rike skal det ikke være ende.<br>\nJeg tror på den Hellige Ånd, Herre og livgiver,<br>\nsom utgår fra Faderen og Sønnen,<br>\nsom med Faderen og Sønnen tilbes og forherliges,<br>\nog som har talt ved profetene.<br>\nJeg tror på én, hellig, katolsk og apostolisk Kirke.<br>\nJeg bekjenner én dåp til syndenes forlatelse.<br>\nJeg venter de dødes oppstandelse og det evige liv. Amen.</p>"
+       "html": "<p>Han ble korsfestet for oss, pint under Pontius Pilatus og gravlagt.<br>\nHan oppstod den tredje dag, etter Skriften,<br>\nfór opp til himmelen, og sitter ved Faderens høyre hånd.<br>\nHan skal komme igjen med herlighet og dømme levende og døde,<br>\nog på hans rike skal det ikke være ende.<br>\nJeg tror på den Hellige Ånd, Herre og livgiver,<br>\nsom utgår fra Faderen og Sønnen,<br>\nsom med Faderen og Sønnen tilbes og forherliges,<br>\nog som har talt ved profetene.<br>\nJeg tror på én, hellig, katolsk og apostolisk Kirke.<br>\nJeg bekjenner én dåp til syndenes forlatelse.<br>\nJeg venter de dødes oppstandelse og det evige liv. Amen.</p>",
+       "group": "creed"
       },
       {
-       "html": "<h3>Forbønner</h3>"
+       "html": "<h3><span class=\"stilling kun-hverdag\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Forbønner</h3>",
+       "part": "intercessions"
       },
       {
        "html": "<p><b>Alle:</b> <em>Herre, hør vår bønn</em>.</p>"
@@ -152,13 +171,15 @@
      "title": "Nattverdens liturgi",
      "blocks": [
       {
-       "html": "<h2 id=\"nattverdens-liturgi\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Nattverdens liturgi</h2>"
+       "html": "<h2 id=\"nattverdens-liturgi\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span></span>Nattverdens liturgi</h2>",
+       "part": "eucharist"
       },
       {
-       "html": "<p class=\"ledd\">Offertoriesang</p>"
+       "html": "<p class=\"kun-hoymesse ledd\">Offertoriesang</p>"
       },
       {
-       "html": "<div class=\"valg\">\n  <p class=\"valg-navn\">Uten sang</p>\n  <p><b>Prest:</b> Velsignet er du, Herre, all skapnings Gud. Av din rikdom har vi mottatt det brød som vi bærer frem for deg, en frukt av jorden og av menneskers arbeid, som for oss blir livets brød.</p>\n  <p class=\"luft\"><b>Alle:</b> <em>Velsignet være Gud i evighet.</em></p>\n  <p><b>Prest:</b> Velsignet er du, Herre, all skapnings Gud. Av din rikdom har vi mottatt den vin som vi bærer frem for deg, en frukt av vintreet og av menneskers arbeid, som for oss blir frelsens kalk.</p>\n  <p><b>Alle:</b> <em>Velsignet være Gud i evighet.</em></p>\n</div>"
+       "html": "<div class=\"valg\">\n  <p class=\"valg-navn\">Uten sang</p>\n  <p><b>Prest:</b> Velsignet er du, Herre, all skapnings Gud. Av din rikdom har vi mottatt det brød som vi bærer frem for deg, en frukt av jorden og av menneskers arbeid, som for oss blir livets brød.</p>\n  <p class=\"luft\"><b>Alle:</b> <em>Velsignet være Gud i evighet.</em></p>\n  <p><b>Prest:</b> Velsignet er du, Herre, all skapnings Gud. Av din rikdom har vi mottatt den vin som vi bærer frem for deg, en frukt av vintreet og av menneskers arbeid, som for oss blir frelsens kalk.</p>\n  <p><b>Alle:</b> <em>Velsignet være Gud i evighet.</em></p>\n</div>",
+       "group": "offertory-prayers"
       },
       {
        "html": "<p><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span><b>Prest:</b> La oss be til Gud, den allmektige, at han vil motta sin Kirkes offer av våre hender.</p>"
@@ -176,7 +197,8 @@
        "html": "<p><b>Alle:</b> <em>Amen.</em></p>"
       },
       {
-       "html": "<h3>Den eukaristiske bønn</h3>"
+       "html": "<h3>Den eukaristiske bønn</h3>",
+       "part": "eucharistic-prayer"
       },
       {
        "html": "<p><b>Prest:</b> Herren være med dere.</p>"
@@ -197,130 +219,343 @@
        "html": "<p><b>Alle:</b> <em>Det er verdig og rett.</em></p>"
       },
       {
-       "html": "<h3>Prefasjon</h3>"
+       "html": "<h3>Prefasjon</h3>",
+       "part": "preface"
       },
       {
-       "html": "<p><b>Prest:</b> I sannhet (...) idet vi jublende istemmer:</p>"
+       "html": "<p><b>Prest:</b> I sannhet (...) idet vi jublende istemmer:</p>",
+       "epExcept": "4"
+      },
+      {
+       "html": "<p><b>Prest:</b> I sannhet, verdig er det å takke deg, i sannhet, rett er det å lovprise deg, hellige Fader, for du er den ene, den sanne og levende Gud. Før tidenes opphav er du, og til evig tid bor du i det lys som intet menneske kan fatte. Du, godhets Gud og livets kilde, skapte verden, for at all skapningen skulle krones med din velsignelse og de mange finne glede i din klarhet. Talløse engler skarer seg om deg, tjener deg dag og natt, og aldri opphører deres lovsang ved synet av ditt ansikts herlighet. Også vi tar del i deres jubel, og alt som er skapt under himmelen, lovpriser gjennom vår munn ditt navn, idet vi istemmer:</p>",
+       "ep": "4"
       },
       {
        "html": "<p><b>Alle:</b> <em>Hellig, hellig, hellig er Herren, Hærskarenes Gud.<br>\nHimlene og jorden er fulle av din herlighet. Hosanna i det høye!<br>\nVelsignet være han som kommer i Herrens navn. Hosanna i det høye!</em></p>"
       },
       {
-       "html": "<h3 id=\"eukaristisk-bonn-2\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn II</h3>"
+       "html": "<h3 id=\"eukaristisk-bonn-1\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn I</h3>",
+       "ep": "1",
+       "part": "eucharistic-prayer-1"
       },
       {
-       "html": "<p>I sannhet, hellig er du Herre, all hellighets kilde.</p>"
+       "html": "<p>Mildeste Fader, i ydmykhet bønnfaller vi deg ved Jesus Kristus, din Sønn, vår Herre, at du nådig vil motta og velsigne <span class=\"kors\">☩</span> disse gaver, dette hellige og rene offer, som vi bringer deg fremfor alt for din hellige katolske Kirke.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Derfor står vi for ditt åsyn, og sammen med hele din Kirke feirer vi ukens første dag, den dag da Kristus stod opp fra de døde.</p>"
+       "html": "<p>Skjenk den din fred, vern, samle og styr den over hele jorden i enhet med din tjener, vår pave Leo og vår biskop Fredrik, og med alle som trofast bekjenner og våker over den katolske og apostoliske tro.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Ved ham som du har opphøyet til din høyre hånd, ber vi deg:</p>"
+       "html": "<p>Herre, kom ihu dine tjenere N. og N. og alle som her er samlet. Du kjenner deres tro og deres hengivenhet. De frembærer dette lovoffer for seg og alle sine til sjelens gjenløsning, i håp om frelse og velferd. Til deg bringer de lov og ære, du evige, sanne og levende Gud.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Helliggjør disse gaver ved din Ånds livgivende kraft, så de må bli for oss vår Herres Jesu Kristi legeme og blod.</p>"
+       "html": "<p><span class=\"kun-hoymesse\">Sammen med hele din Kirke feirer vi ukens første dag, den dag da Kristus stod opp fra de døde. Vi minnes dine hellige, og vi hedrer fremfor alt minnet</span><span class=\"kun-hverdag\">Sammen med hele din Kirke hedrer vi fremfor alt minnet</span> om den ærerike, alltid rene Jomfru Maria, vår Guds og Herres Jesu Kristi mor, den salige Josef, hennes ekteviede, dine salige apostler og martyrer Peter og Paulus, Andreas, (Jakob, Johannes, Thomas, Jakob, Filip, Bartolomeus, Matteus, Simon og Taddeus, Linus, Kletus, Klemens, Sixtus, Kornelius, Kyprian, Laurentius, Krysogonus, Johannes og Paulus, Kosmas og Damian) og alle dine hellige. Gi oss ved deres fortjenester og bønner alltid og overalt å styrkes ved din hjelp og ditt vern. (Ved Kristus, vår Herre. Amen.)</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Da han frivillig overga seg til sin lidelse, tok han brødet, takket, brøt brødet, gav det til sine disipler og sa:</p>"
+       "html": "<p>Herre, ta nådig imot denne offergave fra oss, dine tjenere, og hele ditt folk. Styr våre dager i din fred, frels oss fra evig fordømmelse, og tell oss med blant dine utvalgte. (Ved Kristus, vår Herre. Amen.)</p>",
+       "ep": "1"
       },
       {
-       "html": "<p class=\"innstiftelse\">TA OG ET ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>"
+       "html": "<p>Vi ber deg, Gud: Velsign denne gave, gjør den til et fullgyldig offer, frembåret i ånd og sannhet, deg til behag, så den må bli for oss din elskede Sønns, vår Herres Jesu Kristi legeme og blod.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Likeså tok han etter måltidet kalken, takket atter, gav den til sine disipler og sa:</p>"
+       "html": "<p>Dagen før han led, tok han brødet i sine hellige og ærverdige hender, løftet sine øyne mot himmelen til deg, Gud, sin allmektige Fader, takket og velsignet, brøt brødet, gav det til sine disipler og sa:</p>",
+       "ep": "1"
       },
       {
-       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYDES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>"
+       "html": "<p class=\"innstiftelse\">TA OG ÉT ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p><b>Prest:</b> Troens mysterium.</p>"
+       "html": "<p>Likeså tok han etter måltidet denne dyrebare kalk i sine hellige og ærverdige hender, takket og velsignet atter, rakte kalken til sine disipler og sa:</p>",
+       "ep": "1"
       },
       {
-       "html": "<p class=\"luft\"><b>Alle:</b> <em>Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</em></p>"
+       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYTES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Derfor minnes vi hans død og oppstandelse, og vi bringer deg, Herre, livets brød og frelsens kalk og takker for at du holdt oss verdige til å stå for ditt åsyn og tjene deg.</p>"
+       "html": "<p><b>Prest:</b> Troens mysterium.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>I ydmykhet bønnfaller vi deg, at vi som får del i Kristi legeme og blod, må samles til ett av den Hellige Ånd.</p>"
+       "html": "<p class=\"luft\"><b>Alle:</b> <em>Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</em></p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Kom i hu, Herre, din kirke over hele jorden, så du kan gjøre den fullkommen i kjærlighet, i enhet med vår pave Leo og vår biskop Fredrik og med hele ditt presteskap.</p>"
+       "html": "<p>Derfor minnes vi, Herre, vi, dine tjenere, og hele ditt hellige folk Kristi, din Sønns og vår Herres salige lidelse, hans oppstandelse fra de døde og hans herlige himmelferd, og vi frembærer for din majestet et rent, hellig og fullkomment offer, det evige livs hellige brød og den evige frelses kalk.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Kom også i hu våre brødre og søstre som sov inn i håpet om oppstandelsen, og alle som har forlatt denne verden. Ta dem inn i lyset fra ditt åsyn.</p>"
+       "html": "<p>Se mildt og nådig ned til dette offer, og motta det, slik du mottok din rettferdige tjener Abels gaver, og vår far Abrahams offer, og det hellige og uplettede offer som din yppersteprest Melkisedek frembar for deg.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Forbarm deg over oss alle, så vi får del i det evige liv sammen med Guds mor, den salige jomfru Maria, den salige Josef, hennes ekteviede, de salige apostler og alle hellige som gjennom alle tider levet i ditt vennskap.</p>"
+       "html": "<p>Vi bønnfaller deg, allmektige Gud: La din hellige engel bære dette offer frem til ditt alter i himmelen for din guddommelige majestet, så alle vi som her ved ditt alter mottar din Sønns hellige legeme og blod, må bli fylt med all himmelsk velsignelse og nåde. (Ved Kristus, vår Herre. Amen.)</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Gi du oss å prise og forherlige deg ved din Sønn, Jesus Kristus.</p>"
+       "html": "<p>Herre, kom også ihu dine tjenere N. og N., som er gått forut for oss med troens segl og sover fredens søvn. Vi ber deg, Herre, gi dem og alle som hviler i Kristus, svalhetens, lysets og fredens bolig. (Ved Kristus, vår Herre. Amen.)</p>",
+       "ep": "1"
       },
       {
-       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>"
+       "html": "<p>Vi syndere, dine tjenere, som håper på fylden av din barmhjertighet, ber at også vi må få samfunn med dine hellige apostler og martyrer: med Johannes, Stefan, Mattias og Barnabas, (Ignatius, Aleksander, Marcellinus, Peter, Felicitas, Perpetua, Agathe, Lucia, Agnes, Cecilia, Anastasia) og alle dine helgener. Gi oss del i deres samfunn, du som ikke dømmer etter fortjenester, men rikelig skjenker oss tilgivelse. Ved Kristus, vår Herre.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p><b>Alle:</b> <em>Amen.</em></p>"
+       "html": "<p>Ved ham skaper, helliggjør, levendegjør, velsigner og tildeler du oss alltid alle disse goder.</p>",
+       "ep": "1"
       },
       {
-       "html": "<p class=\"rubrikk eller\">Eller</p>"
+       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>",
+       "ep": "1"
       },
       {
-       "html": "<h3 id=\"eukaristisk-bonn-3\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn III</h3>"
+       "html": "<p class=\"luft-stor\"><b>Alle:</b> <em>Amen.</em></p>",
+       "ep": "1"
       },
       {
-       "html": "<p>I sannhet hellig er du, Herre, og med rette lovprises du av all skapningen. For du levendegjør og helliggjør alle ting ved din Sønn, vår Herre Jesus Kristus, gjennom Den Hellige Ånds kraft.</p>"
+       "html": "<h3 id=\"eukaristisk-bonn-2\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn II</h3>",
+       "ep": "2",
+       "part": "eucharistic-prayer-2"
       },
       {
-       "html": "<p>Uopphørlig samler du ditt folk, så dette rene offer kan frembæres for ditt navn over hele jordens krets.</p>"
+       "html": "<p>I sannhet hellig er du, Herre, all hellighets kilde.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Derfor står vi for ditt åsyn, og sammen med hele din Kirke feirer vi ukens første dag, den dag da Kristus stod opp fra de døde. Ved ham som du har opphøyet til din høyre hånd, bønnfaller vi deg, Herre:</p>"
+       "html": "<p class=\"kun-hoymesse\">Derfor står vi for ditt åsyn, og sammen med hele din Kirke feirer vi ukens første dag, den dag da Kristus stod opp fra de døde.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Helliggjør ved din ånd disse gaver som vi bærer frem for deg, så de må bli din Sønns, vår Herres Jesu Kristi legeme <span class=\"kors\">☩</span> og blod, han som bød oss å feire disse mysterier.</p>"
+       "html": "<p class=\"kun-hoymesse\">Ved ham som du har opphøyet til din høyre hånd, ber vi deg:</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>For i den natt da han ble forrådt, tok han brødet, takket deg og velsignet, brøt brødet, gav det til sine disipler og sa:</p>"
+       "html": "<p>Helliggjør disse gaver ved din Ånds livgivende kraft, så de må bli for oss vår Herres Jesu Kristi legeme og blod.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"innstiftelse\">TA OG ET ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>"
+       "html": "<p>Da han frivillig overgav seg til sin lidelse, tok han brødet, takket, brøt brødet, gav det til sine disipler og sa:</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Likeså tok han etter måltidet kalken, takket atter, gav den til sine disipler og sa:</p>"
+       "html": "<p class=\"innstiftelse\">TA OG ÉT ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYDES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>"
+       "html": "<p>Likeså tok han etter måltidet kalken, takket atter, gav den til sine disipler og sa:</p>",
+       "ep": "2"
       },
       {
-       "html": "<p><b>Prest:</b> Troens mysterium.</p>"
+       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYTES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"luft\"><b>Alle:</b> Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</p>"
+       "html": "<p><b>Prest:</b> Troens mysterium.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"luft\">Derfor minnes vi, Herre, din Sønns frelsende lidelse, hans underfulle oppstandelse og himmelferd, og mens vi venter på hans gjenkomst, bærer vi med takksigelse frem for deg dette levende og hellige offer.</p>"
+       "html": "<p class=\"luft\"><b>Alle:</b> <em>Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</em></p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Se i nåde til din Kirkes offergave. Den er for deg det samme offerlam, som etter din vilje ble til vår soning. Gi at vi, styrket med din Sønns legeme og blod, og fylt av hans Hellige Ånd, må bli ett legeme og én ånd i Kristus.</p>"
+       "html": "<p>Derfor minnes vi hans død og oppstandelse, og vi bringer deg, Herre, livets brød og frelsens kalk, og takker for at du holdt oss verdige til å stå for ditt åsyn og tjene deg.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Måtte han gjøre oss til en evig gave for deg, så vi kan dele arvelodd med dine utvalgte, fremfor alt med den salige Jomfru, Guds Mor Maria, den salige Josef, hennes ekteviede, dine salige apostler og ærerike martyrer (med den hellige N.) og alle hellige, som uten opphør kommer oss til hjelp med sin forbønn hos deg.</p>"
+       "html": "<p>I ydmykhet bønnfaller vi deg at vi som får del i Kristi legeme og blod, må samles til ett av Den Hellige Ånd.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Vi ber deg, Herre: La dette offer, som forsoner oss med deg, gi hele verden fred og frelse. Styrk din kirke i tro og kjærlighet under dens ferd på jorden. Våk over din tjener, vår pave Leo og vår biskop Fredrik, over alle biskoper og prester i hele verden og over det folk du har gjort til ditt. Lytt i nåde til alle bønner fra dem du har villet samle om ditt alter. Barmhjertige Fader, forén med deg alle dine barn som er spredt over hele jorden.</p>"
+       "html": "<p>Kom ihu, Herre, din Kirke over hele jorden, så du kan gjøre den fullkommen i kjærlighet, i enhet med vår pave Leo og vår biskop Fredrik og med hele ditt presteskap.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Vi ber også for våre avdøde, og for alle dem som har forlatt denne verden i ditt vennskap, at du i kjærlighet må ta dem inn i ditt rike, hvor også vi håper å komme, så vi sammen kan mettes av din herlighet til evig tid, ved Kristus, vår Herre, han som er alle gavers giver.</p>"
+       "html": "<p>Kom også ihu våre brødre og søstre som sov inn i håpet om oppstandelsen, og alle som har forlatt denne verden. Ta dem inn i lyset fra ditt åsyn.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>"
+       "html": "<p>Forbarm deg over oss alle, så vi får del i det evige liv sammen med Guds mor, den salige Jomfru Maria, den salige Josef, hennes ekteviede, de salige apostler og alle hellige som gjennom alle tider levet i ditt vennskap.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"luft-stor\"><b>Alle:</b> <em>Amen.</em></p>"
+       "html": "<p>Gi du oss å prise og forherlige deg ved din Sønn, Jesus Kristus.</p>",
+       "ep": "2"
       },
       {
-       "html": "<h3 id=\"kommunionsritus\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Kommunionsritus</h3>"
+       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>",
+       "ep": "2"
+      },
+      {
+       "html": "<p><b>Alle:</b> <em>Amen.</em></p>",
+       "ep": "2"
+      },
+      {
+       "html": "<p class=\"rubrikk eller\">Eller</p>",
+       "role": "ep-or"
+      },
+      {
+       "html": "<h3 id=\"eukaristisk-bonn-3\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn III</h3>",
+       "ep": "3",
+       "part": "eucharistic-prayer-3"
+      },
+      {
+       "html": "<p>I sannhet, hellig er du, Herre, og med rette lovprises du av all skapningen. For du levendegjør og helliggjør alle ting ved din Sønn, vår Herre Jesus Kristus, gjennom Den Hellige Ånds kraft.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Uopphørlig samler du ditt folk, så dette rene offer kan frembæres for ditt navn over hele jordens krets.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"kun-hoymesse\">Derfor står vi for ditt åsyn, og sammen med hele din Kirke feirer vi ukens første dag, den dag da Kristus stod opp fra de døde. Ved ham som du har opphøyet til din høyre hånd, bønnfaller vi deg, Herre:</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"kun-hverdag\">Derfor bønnfaller vi deg, Herre:</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Helliggjør ved din Ånd disse gaver som vi bærer frem for deg, så de må bli din Sønns vår Herres Jesu Kristi legeme <span class=\"kors\">☩</span> og blod, han som bød oss å feire disse mysterier.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>For i den natt da han ble forrådt, tok han brødet, takket deg og velsignet, brøt brødet, gav det til sine disipler og sa:</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"innstiftelse\">TA OG ÉT ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Likeså tok han etter måltidet kalken, takket deg og velsignet, gav den til sine disipler og sa:</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYTES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p><b>Prest:</b> Troens mysterium.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"luft\"><b>Alle:</b> Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"luft\">Derfor minnes vi, Herre, din Sønns frelsende lidelse, hans underfulle oppstandelse og himmelferd, og mens vi venter på hans gjenkomst, bærer vi med takksigelse frem for deg dette levende og hellige offer.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Se i nåde til din Kirkes offergave. Den er for deg det samme Offerlam som etter din vilje ble til vår soning. Gi at vi, styrket med din Sønns legeme og blod og fylt av hans Hellige Ånd, må bli ett legeme og én ånd i Kristus.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Måtte han gjøre oss til en evig gave for deg, så vi kan dele arvelodd med dine utvalgte, fremfor alt med den salige Jomfru, Guds Mor Maria, den salige Josef, hennes ekteviede, dine salige apostler og ærerike martyrer (med den hellige N.) og alle hellige, som uten opphør kommer oss til hjelp med sin forbønn hos deg.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Vi ber deg, Herre: La dette offer, som forsoner oss med deg, gi hele verden fred og frelse. Styrk din Kirke i tro og kjærlighet under dens ferd på jorden. Våk over din tjener, vår pave Leo og vår biskop Fredrik, over alle biskoper og prester i hele verden og over det folk du har gjort til ditt. Lytt i nåde til alle bønner fra dem du har villet samle om ditt alter. Barmhjertige Fader, forén med deg alle dine barn som er spredt over hele jorden.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Vi ber også for våre avdøde og for alle dem som har forlatt denne verden i ditt vennskap, at du i kjærlighet må ta dem inn i ditt rike, hvor også vi håper å komme, så vi sammen kan mettes av din herlighet til evig tid, ved Kristus, vår Herre, han som er alle gavers giver.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>",
+       "ep": "3"
+      },
+      {
+       "html": "<p class=\"luft-stor\"><b>Alle:</b> <em>Amen.</em></p>",
+       "ep": "3"
+      },
+      {
+       "html": "<h3 id=\"eukaristisk-bonn-4\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Eukaristisk bønn IV</h3>",
+       "ep": "4",
+       "part": "eucharistic-prayer-4"
+      },
+      {
+       "html": "<p>Vi lovpriser deg, hellige Fader, for mektig er du, og alt har du skapt i visdom og kjærlighet.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Mennesket formet du i ditt bilde. Du gav ham verden i varetekt, for at han, som en tjener for deg, sin Skaper, skulle herske over all skapningen.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Da vi tapte ditt vennskap ved å vende oss fra deg, overgav du oss ikke i dødens vold. I din godhet kom du alle mennesker til hjelp, så de kunne søke deg og finne deg. Flere ganger sluttet du din pakt med dem, og ved profetene oppdro du dem i håpet om frelsen.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Hellige Fader, så høyt har du elsket verden at du i tidens fylde gav din enbårne Sønn som vår Frelser. Han ble unnfanget ved Den Hellige Ånd, født av Jomfru Maria, og i alt delte han menneskets kår, dog ikke i synd. For de fattige forkynte han frelse, for de fangne frihet, for de sorgfulle glede. Han overgav seg selv til døden for å fullbyrde ditt frelsesverk, og ved sin oppstandelse fra de døde gjorde han døden til intet og fornyet vårt liv.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Og for at vi ikke mere skal leve for oss selv, men for ham som døde og oppstod for oss, sendte han fra deg, Fader, Den Hellige Ånd som den første gave til de troende, han som fullbyrder din Sønns verk i verden og fullender all helliggjørelse.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Så ber vi deg, Herre: La denne din Hellige Ånd vigsle disse offergaver, så de må bli din Sønns, vår Herres Jesu Kristi legeme <span class=\"kors\">☩</span> og blod, for at vi kan feire det store mysterium han selv har etterlatt oss som en evig pakt.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Timen var kommet da du, hellige Fader, ville herliggjøre ham, og likesom han hadde elsket sine egne som var i verden, således elsket han dem inntil enden. Da de satt ved aftensmåltidet, tok han brødet, velsignet og brøt det, gav det til sine disipler og sa:</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p class=\"innstiftelse\">TA OG ÉT ALLE DERAV:<br>\nFOR DETTE ER MITT LEGEME,<br>\nSOM SKAL GIS FOR DERE.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Likeså tok han kalken med vintreets frukt, takket, gav den til sine disipler og sa:</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p class=\"innstiftelse\">TA OG DRIKK ALLE DERAV:<br>\nFOR DETTE ER MITT BLODS KALK,<br>\nDEN NYE OG EVIGE PAKTS BLOD,<br>\nSOM SKAL UTGYTES FOR DERE<br>\nOG FOR DE MANGE<br>\nTIL SYNDENES FORLATELSE.<br>\nGJØR DETTE TIL MINNE OM MEG.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p><b>Prest:</b> Troens mysterium.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p class=\"luft\"><b>Alle:</b> <em>Din død forkynner vi, Herre, og din oppstandelse lovpriser vi, inntil du kommer.</em></p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Derfor feirer vi nå, Herre, minnet om vår frelse. Vi gjenkaller Jesu Kristi død, hans nedferd til dødsriket, og forkynner hans oppstandelse og hans himmelferd til din høyre side. Mens vi venter på hans gjenkomst i herlighet, bærer vi frem for deg hans legeme og blod, det offer som er deg til behag, og som frelser verden.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Herre, se ned til den offergave du selv har beredt for din Kirke, og gi alle som får del i dette ene brød og denne ene kalk, å samles til ett legeme av Den Hellige Ånd, så de kan fullkommengjøres som et levende offer i Kristus til din herlighets pris.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Herre, kom derfor ihu alle for hvem vi bærer frem dette offer, især din tjener, vår pave Leo, vår biskop Fredrik, biskopene over hele jorden, presteskapet, de som frembærer offeret, og de som står samlet omkring, hele ditt folk og alle som søker deg med et oppriktig hjerte. Kom også dem ihu som er gått bort i Kristi fred, og alle de døde, hvis tro du alene kjenner.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Barmhjertige Fader, gi oss, dine barn, del i det evige livs arv i ditt rike sammen med Jomfru Maria, Guds salige mor, den salige Josef, hennes ekteviede, apostlene og alle dine hellige. Der skal vi sammen med all skapningen, forløst fra synden og døden, forherlige deg ved Kristus, vår Herre, han som er alle gavers giver.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p>Ved ham og med ham og i ham tilkommer deg, Gud, allmektige Fader, i Den Hellige Ånds enhet all ære og herlighet fra evighet til evighet.</p>",
+       "ep": "4"
+      },
+      {
+       "html": "<p class=\"luft-stor\"><b>Alle:</b> <em>Amen.</em></p>",
+       "ep": "4"
+      },
+      {
+       "html": "<h3 id=\"kommunionsritus\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Kommunionsritus</h3>",
+       "part": "communion-rite"
       },
       {
        "html": "<p><b>Prest:</b> På Herrens bud og veiledet av hans hellige ord våger vi å si:</p>"
@@ -356,7 +591,8 @@
        "html": "<p class=\"tom-over\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span><b>Prest:</b> Se Guds lam, se ham som tar bort verdens synder.<br>\nSalige er de som er kalt til Lammets bord.</p>"
       },
       {
-       "html": "<p><b>Alle:</b> <em>Herre, jeg er ikke verdig at du går inn under mitt tak,<br>\nmen si bare ett ord, så blir min sjel helbredet.</em></p>"
+       "html": "<p><b>Alle:</b> <em>Herre, jeg er ikke verdig at du går inn under mitt tak,<br>\nmen si bare ett ord, så blir min sjel helbredet.</em></p>",
+       "part": "communion"
       },
       {
        "html": "<p class=\"tom-over\"><b>Prest:</b> Kristi legeme.</p>"
@@ -368,7 +604,8 @@
        "html": "<p class=\"ledd tom-over\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sitt\"></span><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Knel\"></span></span>Sang ved kommunionen</p>"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Slutningsbønn</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stå\"></span></span>Slutningsbønn</h3>",
+       "part": "prayer-after-communion"
       },
       {
        "html": "<p><b>Prest:</b> La oss be: ... evighet til evighet.</p>"
@@ -383,7 +620,8 @@
      "title": "Avsluttende ritus",
      "blocks": [
       {
-       "html": "<h2 id=\"avsluttende-ritus\">Avsluttende ritus</h2>"
+       "html": "<h2 id=\"avsluttende-ritus\">Avsluttende ritus</h2>",
+       "part": "concluding-rites"
       },
       {
        "html": "<p><b>Prest:</b> Herren være med dere.</p>"
@@ -404,7 +642,7 @@
        "html": "<p><b>Alle:</b> <em>Gud være lovet.</em></p>"
       },
       {
-       "html": "<p class=\"ledd tom-over\">Angelus og utgangssalme</p>"
+       "html": "<p class=\"kun-hoymesse ledd tom-over\">Angelus og utgangssalme</p>"
       }
      ]
     },
@@ -413,7 +651,8 @@
      "title": "Angelus",
      "blocks": [
       {
-       "html": "<h2 id=\"angelus\">Angelus</h2>"
+       "html": "<h2 id=\"angelus\">Angelus</h2>",
+       "part": "angelus"
       },
       {
        "html": "<p><b>Prest:</b> Herrens engel brakte Maria det glade budskap.</p>"
@@ -468,10 +707,11 @@
      "title": "Introductory Rites",
      "blocks": [
       {
-       "html": "<h2 id=\"introductory-rites\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Introductory Rites</h2>"
+       "html": "<h2 id=\"introductory-rites\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Introductory Rites</h2>",
+       "part": "introductory-rites"
       },
       {
-       "html": "<p class=\"ledd\">Entrance Chant (or the Angelus at weekday Masses)</p>"
+       "html": "<p class=\"ledd kun-hoymesse\">Entrance Chant</p><p class=\"ledd kun-hverdag\">Angelus <a href=\"#angelus\">↓</a></p>"
       },
       {
        "html": "<p><b>Priest:</b> In the name of the Father, and of the Son, and of the Holy Spirit.</p>"
@@ -498,22 +738,28 @@
        "html": "<p><b>All:</b> <em>Amen.</em></p>"
       },
       {
-       "html": "<h3>Kyrie</h3>"
+       "html": "<h3>Kyrie</h3>",
+       "part": "kyrie"
       },
       {
        "html": "<div class=\"kyrie\">\n  <p><b>Priest:</b> Lord, have mercy.</p><p><b>All:</b> <em>Lord, have mercy.</em></p>\n  <p><b>Priest:</b> Christ, have mercy.</p><p><b>All:</b> <em>Christ, have mercy.</em></p>\n  <p><b>Priest:</b> Lord, have mercy.</p><p><b>All:</b> <em>Lord, have mercy.</em></p>\n</div>"
       },
       {
-       "html": "<h3>Gloria <span class=\"rubrikk\">(not during Advent and Lent)</span></h3>"
+       "html": "<h3>Gloria <span class=\"rubrikk\">(not during Advent and Lent)</span></h3>",
+       "part": "gloria",
+       "group": "gloria"
       },
       {
-       "html": "<p><b>Priest:</b> Glory to God in the highest,</p>"
+       "html": "<p><b>Priest:</b> Glory to God in the highest,</p>",
+       "group": "gloria"
       },
       {
-       "html": "<p><b>All:</b> and on earth peace to people of good will.<br>\nWe praise you, we bless you, we adore you, we glorify you,<br>\nwe give you thanks for your great glory,<br>\nLord God, heavenly King, O God, almighty Father.<br>\nLord Jesus Christ, Only Begotten Son,<br>\nLord God, Lamb of God, Son of the Father,<br>\nyou take away the sins of the world, have mercy on us;<br>\nyou take away the sins of the world, receive our prayer;<br>\nyou are seated at the right hand of the Father, have mercy on us.<br>\nFor you alone are the Holy One, you alone are the Lord,<br>\nyou alone are the Most High, Jesus Christ,<br>\nwith the Holy Spirit, in the glory of God the Father. Amen.</p>"
+       "html": "<p><b>All:</b> and on earth peace to people of good will.<br>\nWe praise you, we bless you, we adore you, we glorify you,<br>\nwe give you thanks for your great glory,<br>\nLord God, heavenly King, O God, almighty Father.<br>\nLord Jesus Christ, Only Begotten Son,<br>\nLord God, Lamb of God, Son of the Father,<br>\nyou take away the sins of the world, have mercy on us;<br>\nyou take away the sins of the world, receive our prayer;<br>\nyou are seated at the right hand of the Father, have mercy on us.<br>\nFor you alone are the Holy One, you alone are the Lord,<br>\nyou alone are the Most High, Jesus Christ,<br>\nwith the Holy Spirit, in the glory of God the Father. Amen.</p>",
+       "group": "gloria"
       },
       {
-       "html": "<h3>Collect</h3>"
+       "html": "<h3>Collect</h3>",
+       "part": "collect"
       },
       {
        "html": "<p><b>Priest:</b> Let us pray. (...) for ever and ever.</p>"
@@ -528,7 +774,8 @@
      "title": "Liturgy of the Word",
      "blocks": [
       {
-       "html": "<h2 id=\"liturgy-of-the-word\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Liturgy of the Word</h2>"
+       "html": "<h2 id=\"liturgy-of-the-word\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Liturgy of the Word</h2>",
+       "part": "word"
       },
       {
        "html": "<p>The word of the Lord.</p>",
@@ -540,7 +787,8 @@
       },
       {
        "html": "<h3>Responsorial Psalm</h3>",
-       "role": "psalm-heading"
+       "role": "psalm-heading",
+       "part": "psalm"
       },
       {
        "html": "<p><b>All:</b> <em>(response)</em></p>",
@@ -548,7 +796,8 @@
       },
       {
        "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Gospel Acclamation</h3>",
-       "role": "acclamation-heading"
+       "role": "acclamation-heading",
+       "part": "acclamation"
       },
       {
        "html": "<p>Alleluia.</p>",
@@ -556,7 +805,8 @@
       },
       {
        "html": "<h3>Gospel</h3>",
-       "role": "gospel-heading"
+       "role": "gospel-heading",
+       "part": "gospel"
       },
       {
        "html": "<p><b>Priest:</b> The Lord be with you.</p>"
@@ -579,25 +829,33 @@
        "html": "<p><b>All:</b> <em>Praise to you, Lord Jesus Christ.</em></p>"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Homily</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Homily</h3>",
+       "part": "homily"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Creed</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Creed</h3>",
+       "part": "creed",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"luft\">I believe in one God, the Father almighty,<br>\nmaker of heaven and earth, of all things visible and invisible.<br>\nI believe in one Lord Jesus Christ, the Only Begotten Son of God,<br>\nborn of the Father before all ages.<br>\nGod from God, Light from Light, true God from true God,<br>\nbegotten, not made, consubstantial with the Father;<br>\nthrough him all things were made. For us men and for our salvation he came down from heaven,</p>"
+       "html": "<p class=\"luft\">I believe in one God, the Father almighty,<br>\nmaker of heaven and earth, of all things visible and invisible.<br>\nI believe in one Lord Jesus Christ, the Only Begotten Son of God,<br>\nborn of the Father before all ages.<br>\nGod from God, Light from Light, true God from true God,<br>\nbegotten, not made, consubstantial with the Father;<br>\nthrough him all things were made. For us men and for our salvation he came down from heaven,</p>",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"boy\">All bow:</p>"
+       "html": "<p class=\"boy\">All bow:</p>",
+       "group": "creed"
       },
       {
-       "html": "<p class=\"luft\"><em>and by the Holy Spirit was incarnate of the Virgin Mary, and became man.</em></p>"
+       "html": "<p class=\"luft\"><em>and by the Holy Spirit was incarnate of the Virgin Mary, and became man.</em></p>",
+       "group": "creed"
       },
       {
-       "html": "<p>For our sake he was crucified under Pontius Pilate, he suffered death and was buried,<br>\nand rose again on the third day in accordance with the Scriptures.<br>\nHe ascended into heaven and is seated at the right hand of the Father.<br>\nHe will come again in glory to judge the living and the dead<br>\nand his kingdom will have no end.<br>\nI believe in the Holy Spirit, the Lord, the giver of life,<br>\nwho proceeds from the Father and the Son,<br>\nwho with the Father and the Son is adored and glorified,<br>\nwho has spoken through the prophets.<br>\nI believe in one, holy, catholic and apostolic Church.<br>\nI confess one Baptism for the forgiveness of sins<br>\nand I look forward to the resurrection of the dead and the life of the world to come. Amen.</p>"
+       "html": "<p>For our sake he was crucified under Pontius Pilate, he suffered death and was buried,<br>\nand rose again on the third day in accordance with the Scriptures.<br>\nHe ascended into heaven and is seated at the right hand of the Father.<br>\nHe will come again in glory to judge the living and the dead<br>\nand his kingdom will have no end.<br>\nI believe in the Holy Spirit, the Lord, the giver of life,<br>\nwho proceeds from the Father and the Son,<br>\nwho with the Father and the Son is adored and glorified,<br>\nwho has spoken through the prophets.<br>\nI believe in one, holy, catholic and apostolic Church.<br>\nI confess one Baptism for the forgiveness of sins<br>\nand I look forward to the resurrection of the dead and the life of the world to come. Amen.</p>",
+       "group": "creed"
       },
       {
-       "html": "<h3>Universal Prayer</h3>"
+       "html": "<h3><span class=\"stilling kun-hverdag\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Universal Prayer</h3>",
+       "part": "intercessions"
       },
       {
        "html": "<p><b>All:</b> <em>Lord, hear our prayer</em>.</p>"
@@ -609,13 +867,15 @@
      "title": "Liturgy of the Eucharist",
      "blocks": [
       {
-       "html": "<h2 id=\"liturgy-of-the-eucharist\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Liturgy of the Eucharist</h2>"
+       "html": "<h2 id=\"liturgy-of-the-eucharist\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span></span>Liturgy of the Eucharist</h2>",
+       "part": "eucharist"
       },
       {
-       "html": "<p class=\"ledd\">Offertory Chant</p>"
+       "html": "<p class=\"kun-hoymesse ledd\">Offertory Chant</p>"
       },
       {
-       "html": "<div class=\"valg\">\n  <p class=\"valg-navn\">Without singing</p>\n  <p><b>Priest:</b> Blessed are you, Lord God of all creation, for through your goodness we have received the bread we offer you: fruit of the earth and work of human hands, it will become for us the bread of life.</p>\n  <p class=\"luft\"><b>All:</b> <em>Blessed be God for ever.</em></p>\n  <p><b>Priest:</b> Blessed are you, Lord God of all creation, for through your goodness we have received the wine we offer you: fruit of the vine and work of human hands, it will become our spiritual drink.</p>\n  <p><b>All:</b> <em>Blessed be God for ever.</em></p>\n</div>"
+       "html": "<div class=\"valg\">\n  <p class=\"valg-navn\">Without singing</p>\n  <p><b>Priest:</b> Blessed are you, Lord God of all creation, for through your goodness we have received the bread we offer you: fruit of the earth and work of human hands, it will become for us the bread of life.</p>\n  <p class=\"luft\"><b>All:</b> <em>Blessed be God for ever.</em></p>\n  <p><b>Priest:</b> Blessed are you, Lord God of all creation, for through your goodness we have received the wine we offer you: fruit of the vine and work of human hands, it will become our spiritual drink.</p>\n  <p><b>All:</b> <em>Blessed be God for ever.</em></p>\n</div>",
+       "group": "offertory-prayers"
       },
       {
        "html": "<p><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span><b>Priest:</b> Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father.</p>"
@@ -633,7 +893,8 @@
        "html": "<p><b>All:</b> <em>Amen.</em></p>"
       },
       {
-       "html": "<h3>The Eucharistic Prayer</h3>"
+       "html": "<h3>The Eucharistic Prayer</h3>",
+       "part": "eucharistic-prayer"
       },
       {
        "html": "<p><b>Priest:</b> The Lord be with you.</p>"
@@ -654,7 +915,8 @@
        "html": "<p><b>All:</b> <em>It is right and just.</em></p>"
       },
       {
-       "html": "<h3>Preface</h3>"
+       "html": "<h3>Preface</h3>",
+       "part": "preface"
       },
       {
        "html": "<p><b>Priest:</b> It is truly right and just (...) as with one voice we acclaim:</p>"
@@ -663,97 +925,130 @@
        "html": "<p><b>All:</b> <em>Holy, Holy, Holy Lord God of hosts.<br>\nHeaven and earth are full of your glory. Hosanna in the highest.<br>\nBlessed is he who comes in the name of the Lord. Hosanna in the highest.</em></p>"
       },
       {
-       "html": "<h3 id=\"eucharistic-prayer-2\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Kneel\"></span></span>Eucharistic Prayer II</h3>"
+       "html": "<h3 id=\"eucharistic-prayer-2\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Kneel\"></span></span>Eucharistic Prayer II</h3>",
+       "ep": "2",
+       "part": "eucharistic-prayer-2"
       },
       {
-       "html": "<p>You are indeed Holy, O Lord, the fount of all holiness. Make holy, therefore, these gifts, we pray, by sending down your Spirit upon them like the dewfall, so that they may become for us the Body and Blood of our Lord Jesus Christ.</p>"
+       "html": "<p>You are indeed Holy, O Lord, the fount of all holiness. Make holy, therefore, these gifts, we pray, by sending down your Spirit upon them like the dewfall, so that they may become for us the Body and Blood of our Lord Jesus Christ.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>At the time he was betrayed and entered willingly into his Passion, he took bread and, giving thanks, broke it, and gave it to his disciples, saying:</p>"
+       "html": "<p>At the time he was betrayed and entered willingly into his Passion, he took bread and, giving thanks, broke it, and gave it to his disciples, saying:</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>\nFOR THIS IS MY BODY,<br>\nWHICH WILL BE GIVEN UP FOR YOU.</p>"
+       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>\nFOR THIS IS MY BODY,<br>\nWHICH WILL BE GIVEN UP FOR YOU.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>In a similar way, when supper was ended, he took the chalice and, once more giving thanks, he gave it to his disciples, saying:</p>"
+       "html": "<p>In a similar way, when supper was ended, he took the chalice and, once more giving thanks, he gave it to his disciples, saying:</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>\nFOR THIS IS THE CHALICE OF MY BLOOD,<br>\nTHE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>\nWHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>\nFOR THE FORGIVENESS OF SINS.<br>\nDO THIS IN MEMORY OF ME.</p>"
+       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>\nFOR THIS IS THE CHALICE OF MY BLOOD,<br>\nTHE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>\nWHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>\nFOR THE FORGIVENESS OF SINS.<br>\nDO THIS IN MEMORY OF ME.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p><b>Priest:</b> The mystery of faith.</p>"
+       "html": "<p><b>Priest:</b> The mystery of faith.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"luft\"><b>All:</b> <em>We proclaim your Death, O Lord, and profess your Resurrection until you come again.</em></p>"
+       "html": "<p class=\"luft\"><b>All:</b> <em>We proclaim your Death, O Lord, and profess your Resurrection until you come again.</em></p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Therefore, as we celebrate the memorial of his Death and Resurrection, we offer you, Lord, the Bread of life and the Chalice of salvation, giving thanks that you have held us worthy to be in your presence and minister to you. Humbly we pray that, partaking of the Body and Blood of Christ, we may be gathered into one by the Holy Spirit.</p>"
+       "html": "<p>Therefore, as we celebrate the memorial of his Death and Resurrection, we offer you, Lord, the Bread of life and the Chalice of salvation, giving thanks that you have held us worthy to be in your presence and minister to you. Humbly we pray that, partaking of the Body and Blood of Christ, we may be gathered into one by the Holy Spirit.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Remember, Lord, your Church, spread throughout the world, and bring her to the fullness of charity, together with Leo our Pope and Fredrik our Bishop and all the clergy. Remember also our brothers and sisters who have fallen asleep in the hope of the resurrection, and all who have died in your mercy: welcome them into the light of your face. Have mercy on us all, we pray, that with the blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with the blessed Apostles, and all the Saints who have pleased you throughout the ages, we may merit to be co-heirs to eternal life, and may praise and glorify you through your Son, Jesus Christ.</p>"
+       "html": "<p>Remember, Lord, your Church, spread throughout the world, and bring her to the fullness of charity, together with Leo our Pope and Fredrik our Bishop and all the clergy. Remember also our brothers and sisters who have fallen asleep in the hope of the resurrection, and all who have died in your mercy: welcome them into the light of your face. Have mercy on us all, we pray, that with the blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with the blessed Apostles, and all the Saints who have pleased you throughout the ages, we may merit to be co-heirs to eternal life, and may praise and glorify you through your Son, Jesus Christ.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</p>"
+       "html": "<p>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</p>",
+       "ep": "2"
       },
       {
-       "html": "<p><b>All:</b> <em>Amen.</em></p>"
+       "html": "<p><b>All:</b> <em>Amen.</em></p>",
+       "ep": "2"
       },
       {
-       "html": "<p class=\"rubrikk eller\">Or</p>"
+       "html": "<p class=\"rubrikk eller\">Or</p>",
+       "role": "ep-or"
       },
       {
-       "html": "<h3 id=\"eucharistic-prayer-3\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Kneel\"></span></span>Eucharistic Prayer III</h3>"
+       "html": "<h3 id=\"eucharistic-prayer-3\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Kneel\"></span></span>Eucharistic Prayer III</h3>",
+       "ep": "3",
+       "part": "eucharistic-prayer-3"
       },
       {
-       "html": "<p>You are indeed Holy, O Lord, and all you have created rightly gives you praise, for through your Son our Lord Jesus Christ, by the power and working of the Holy Spirit, you give life to all things and make them holy, and you never cease to gather a people to yourself, so that from the rising of the sun to its setting a pure sacrifice may be offered to your name.</p>"
+       "html": "<p>You are indeed Holy, O Lord, and all you have created rightly gives you praise, for through your Son our Lord Jesus Christ, by the power and working of the Holy Spirit, you give life to all things and make them holy, and you never cease to gather a people to yourself, so that from the rising of the sun to its setting a pure sacrifice may be offered to your name.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>Therefore, O Lord, we humbly implore you: by the same Spirit graciously make holy these gifts we have brought to you for consecration, that they may become the Body and <span class=\"kors\">☩</span> Blood of your Son our Lord Jesus Christ, at whose command we celebrate these mysteries.</p>"
+       "html": "<p>Therefore, O Lord, we humbly implore you: by the same Spirit graciously make holy these gifts we have brought to you for consecration, that they may become the Body and <span class=\"kors\">☩</span> Blood of your Son our Lord Jesus Christ, at whose command we celebrate these mysteries.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>For on the night he was betrayed he himself took bread, and, giving you thanks, he said the blessing, broke the bread and gave it to his disciples, saying:</p>"
+       "html": "<p>For on the night he was betrayed he himself took bread, and, giving you thanks, he said the blessing, broke the bread and gave it to his disciples, saying:</p>",
+       "ep": "3"
       },
       {
-       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>\nFOR THIS IS MY BODY,<br>\nWHICH WILL BE GIVEN UP FOR YOU.</p>"
+       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>\nFOR THIS IS MY BODY,<br>\nWHICH WILL BE GIVEN UP FOR YOU.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>In a similar way, when supper was ended, he took the chalice, and, giving you thanks, he said the blessing, and gave the chalice to his disciples, saying:</p>"
+       "html": "<p>In a similar way, when supper was ended, he took the chalice, and, giving you thanks, he said the blessing, and gave the chalice to his disciples, saying:</p>",
+       "ep": "3"
       },
       {
-       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>\nFOR THIS IS THE CHALICE OF MY BLOOD,<br>\nTHE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>\nWHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>\nFOR THE FORGIVENESS OF SINS.<br>\nDO THIS IN MEMORY OF ME.</p>"
+       "html": "<p class=\"innstiftelse\">TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>\nFOR THIS IS THE CHALICE OF MY BLOOD,<br>\nTHE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>\nWHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>\nFOR THE FORGIVENESS OF SINS.<br>\nDO THIS IN MEMORY OF ME.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p><b>Priest:</b> The mystery of faith.</p>"
+       "html": "<p><b>Priest:</b> The mystery of faith.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p class=\"luft\"><b>All:</b> <em>We proclaim your Death, O Lord, and profess your Resurrection until you come again.</em></p>"
+       "html": "<p class=\"luft\"><b>All:</b> <em>We proclaim your Death, O Lord, and profess your Resurrection until you come again.</em></p>",
+       "ep": "3"
       },
       {
-       "html": "<p class=\"luft\">Therefore, O Lord, as we celebrate the memorial of the saving Passion of your Son, his wondrous Resurrection and Ascension into heaven, and as we look forward to his second coming, we offer you in thanksgiving this holy and living sacrifice.</p>"
+       "html": "<p class=\"luft\">Therefore, O Lord, as we celebrate the memorial of the saving Passion of your Son, his wondrous Resurrection and Ascension into heaven, and as we look forward to his second coming, we offer you in thanksgiving this holy and living sacrifice.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>Look, we pray, upon the oblation of your Church and, recognizing the sacrificial Victim by whose death you willed to reconcile us to yourself, grant that we, who are nourished by the Body and Blood of your Son and filled with his Holy Spirit, may become one body, one spirit in Christ.</p>"
+       "html": "<p>Look, we pray, upon the oblation of your Church and, recognizing the sacrificial Victim by whose death you willed to reconcile us to yourself, grant that we, who are nourished by the Body and Blood of your Son and filled with his Holy Spirit, may become one body, one spirit in Christ.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>May he make of us an eternal offering to you, so that we may obtain an inheritance with your elect, especially with the most blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with your blessed Apostles and glorious Martyrs (with Saint N.) and with all the Saints, on whose constant intercession in your presence we rely for unfailing help.</p>"
+       "html": "<p>May he make of us an eternal offering to you, so that we may obtain an inheritance with your elect, especially with the most blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with your blessed Apostles and glorious Martyrs (with Saint N.) and with all the Saints, on whose constant intercession in your presence we rely for unfailing help.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>May this Sacrifice of our reconciliation, we pray, O Lord, advance the peace and salvation of all the world. Be pleased to confirm in faith and charity your pilgrim Church on earth, with your servant Leo our Pope and Fredrik our Bishop, the Order of Bishops, all the clergy, and the entire people you have gained for your own.</p>"
+       "html": "<p>May this Sacrifice of our reconciliation, we pray, O Lord, advance the peace and salvation of all the world. Be pleased to confirm in faith and charity your pilgrim Church on earth, with your servant Leo our Pope and Fredrik our Bishop, the Order of Bishops, all the clergy, and the entire people you have gained for your own.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>Listen graciously to the prayers of this family, whom you have summoned before you: in your compassion, O merciful Father, gather to yourself all your children scattered throughout the world.</p>"
+       "html": "<p>Listen graciously to the prayers of this family, whom you have summoned before you: in your compassion, O merciful Father, gather to yourself all your children scattered throughout the world.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>To our departed brothers and sisters and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory, when you will wipe away every tear from our eyes. For seeing you, our God, as you are, we shall be like you for all the ages and praise you without end, through Christ our Lord, through whom you bestow on the world all that is good.</p>"
+       "html": "<p>To our departed brothers and sisters and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory, when you will wipe away every tear from our eyes. For seeing you, our God, as you are, we shall be like you for all the ages and praise you without end, through Christ our Lord, through whom you bestow on the world all that is good.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</p>"
+       "html": "<p>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</p>",
+       "ep": "3"
       },
       {
-       "html": "<p class=\"luft-stor\"><b>All:</b> <em>Amen.</em></p>"
+       "html": "<p class=\"luft-stor\"><b>All:</b> <em>Amen.</em></p>",
+       "ep": "3"
       },
       {
-       "html": "<h3 id=\"communion-rite\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Communion Rite</h3>"
+       "html": "<h3 id=\"communion-rite\"><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Communion Rite</h3>",
+       "part": "communion-rite"
       },
       {
        "html": "<p><b>Priest:</b> At the Savior's command and formed by divine teaching, we dare to say:</p>"
@@ -789,7 +1084,8 @@
        "html": "<p class=\"tom-over\"><span class=\"stilling\"><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"Kneel\"></span></span><b>Priest:</b> Behold the Lamb of God,<br>\nbehold him who takes away the sins of the world.<br>\nBlessed are those called to the supper of the Lamb.</p>"
       },
       {
-       "html": "<p><b>All:</b> <em>Lord, I am not worthy<br>\nthat you should enter under my roof,<br>\nbut only say the word<br>\nand my soul shall be healed.</em></p>"
+       "html": "<p><b>All:</b> <em>Lord, I am not worthy<br>\nthat you should enter under my roof,<br>\nbut only say the word<br>\nand my soul shall be healed.</em></p>",
+       "part": "communion"
       },
       {
        "html": "<p class=\"tom-over\"><b>Priest:</b> The Body of Christ.</p>"
@@ -801,7 +1097,8 @@
        "html": "<p class=\"ledd tom-over\"><span class=\"stilling\"><span class=\"ikon ikon-sittende\" role=\"img\" aria-label=\"Sit\"></span><span class=\"ikon ikon-knelende\" role=\"img\" aria-label=\"or kneel\"></span></span>Communion Chant</p>"
       },
       {
-       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Prayer after Communion</h3>"
+       "html": "<h3><span class=\"stilling\"><span class=\"ikon ikon-staende\" role=\"img\" aria-label=\"Stand\"></span></span>Prayer after Communion</h3>",
+       "part": "prayer-after-communion"
       },
       {
        "html": "<p><b>Priest:</b> Let us pray. (...) Through Christ our Lord.</p>"
@@ -816,7 +1113,8 @@
      "title": "Concluding Rites",
      "blocks": [
       {
-       "html": "<h2 id=\"concluding-rites\">Concluding Rites</h2>"
+       "html": "<h2 id=\"concluding-rites\">Concluding Rites</h2>",
+       "part": "concluding-rites"
       },
       {
        "html": "<p><b>Priest:</b> The Lord be with you.</p>"
@@ -837,7 +1135,7 @@
        "html": "<p><b>All:</b> <em>Thanks be to God.</em></p>"
       },
       {
-       "html": "<p class=\"ledd tom-over\">Angelus and Recessional Hymn</p>"
+       "html": "<p class=\"kun-hoymesse ledd tom-over\">Angelus and Recessional Hymn</p>"
       }
      ]
     },
@@ -846,7 +1144,8 @@
      "title": "Angelus",
      "blocks": [
       {
-       "html": "<h2 id=\"angelus\">Angelus</h2>"
+       "html": "<h2 id=\"angelus\">Angelus</h2>",
+       "part": "angelus"
       },
       {
        "html": "<p><b>Priest:</b> The Angel of the Lord declared unto Mary,</p>"

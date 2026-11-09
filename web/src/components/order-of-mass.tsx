@@ -1,8 +1,13 @@
 import type { ReactNode } from "react";
 import type { PortableTextBlock } from "next-sanity";
 import PortableContent from "@/components/portable-content";
+import { OptionalPart, PrayerSelect } from "@/components/liturgy-view";
+import { MASS_EXPLANATIONS } from "@/content/mass-explanations";
 import {
   ORDER_OF_MASS,
+  PRAYERS,
+  PRAYER_OPENINGS,
+  type LiturgyBlock,
   type LiturgyLanguage,
   type LiturgySection,
   type MassReadings,
@@ -17,7 +22,8 @@ export type OrderOfMassReadings = {
   note?: ReactNode;
 };
 
-type Piece = { html: string } | { node: ReactNode };
+/** A booklet block, or something placed between them, such as a reading. */
+type Item = LiturgyBlock | { node: ReactNode };
 
 function Reading({ part, withHeading }: { part: ReadingPart; withHeading: boolean }) {
   return (
@@ -33,82 +39,154 @@ function Reading({ part, withHeading }: { part: ReadingPart; withHeading: boolea
 }
 
 // Puts each reading in its place, and repeats «Slik lyder Herrens ord» after the second reading.
-function wordWithReadings(
-  section: LiturgySection,
-  readings: OrderOfMassReadings,
-): Piece[] {
+function withReadings(section: LiturgySection, readings: OrderOfMassReadings): Item[] {
   const { parts } = readings;
-  const pieces: Piece[] = [];
+  const note = readings.note ? [{ node: <div className="lesning-merknad">{readings.note}</div> }] : [];
   if (!parts) {
     // Readings that don't follow the usual order are shown together, before the responses.
     const [heading, ...rest] = section.blocks;
     return [
-      { html: heading.html },
-      ...(readings.note ? [{ node: <div className="lesning-merknad">{readings.note}</div> }] : []),
+      heading,
+      ...note,
       { node: <div lang="nb" className="lesning [&_p]:text-foreground"><PortableContent value={readings.body} /></div> },
-      ...rest.map((block) => ({ html: block.html })),
+      ...rest,
     ];
   }
-  const response: string[] = [];
+  const items: Item[] = [];
+  const response: LiturgyBlock[] = [];
   for (const [index, block] of section.blocks.entries()) {
     switch (block.role) {
       case "reading-response-priest":
-        pieces.push({ node: <Reading part={parts.firstReading} withHeading /> });
-        pieces.push({ html: block.html });
-        response.push(block.html);
+        items.push({ node: <Reading part={parts.firstReading} withHeading /> }, block);
+        response.push({ html: block.html });
         break;
       case "reading-response-all":
-        pieces.push({ html: block.html });
-        response.push(block.html);
+        items.push(block);
+        response.push({ html: block.html });
         break;
       case "psalm-placeholder":
-        pieces.push({ node: <Reading part={parts.psalm} withHeading={false} /> });
-        if (parts.secondReading) {
-          pieces.push({ node: <Reading part={parts.secondReading} withHeading /> });
-          pieces.push(...response.map((html) => ({ html })));
-        }
+        items.push({ node: <Reading part={parts.psalm} withHeading={false} /> });
+        if (parts.secondReading)
+          items.push({ node: <Reading part={parts.secondReading} withHeading /> }, ...response);
         break;
       case "acclamation-placeholder":
-        pieces.push(
+        items.push(
           parts.acclamation
             ? { node: <Reading part={parts.acclamation} withHeading={false} /> }
-            : { html: block.html },
+            : block,
         );
         break;
       case "gospel-placeholder":
-        pieces.push({ node: <Reading part={parts.gospel} withHeading={false} /> });
-        pieces.push({ html: block.readingHtml ?? block.html });
+        items.push(
+          { node: <Reading part={parts.gospel} withHeading={false} /> },
+          { ...block, html: block.readingHtml ?? block.html },
+        );
         break;
       default:
-        pieces.push({ html: block.html });
-        if (index === 0 && readings.note)
-          pieces.push({ node: <div className="lesning-merknad">{readings.note}</div> });
+        items.push(block);
+        if (index === 0) items.push(...note);
     }
   }
-  return pieces;
+  return items;
 }
 
-function render(pieces: Piece[]) {
+const isBlock = (item: Item): item is LiturgyBlock => "html" in item;
+const plainText = (html: string) =>
+  html
+    .replace(/<span class="(?:stilling|rubrikk)[^"]*">.*?<\/span>(?:<\/span>)?/g, "")
+    .replace(/<[^>]+>/g, "")
+    .trim();
+
+function Explanation({ part, language }: { part?: string; language: LiturgyLanguage }) {
+  const text = part ? MASS_EXPLANATIONS[part]?.[language] : undefined;
+  return text ? <aside className="forklaring">{text}</aside> : null;
+}
+
+function render(items: Item[], language: LiturgyLanguage): ReactNode[] {
+  const out: ReactNode[] = [];
+  let html = "";
   // Consecutive booklet blocks stay together, so rules such as «.eller + h3» still apply.
-  const runs: Piece[] = [];
-  for (const piece of pieces) {
-    const last = runs.at(-1);
-    if ("html" in piece && last && "html" in last) last.html += piece.html;
-    else runs.push("html" in piece ? { ...piece } : piece);
-  }
-  return runs.map((run, index) =>
-    "html" in run ? (
+  const flush = () => {
+    if (html)
       // The booklet is our own committed source, generated by liturgihefte/til-nettsiden.py.
-      <div key={index} className="contents" dangerouslySetInnerHTML={{ __html: run.html }} />
-    ) : (
-      <div key={index} className="contents">
-        {run.node}
-      </div>
-    ),
-  );
+      out.push(<div key={out.length} className="contents" dangerouslySetInnerHTML={{ __html: html }} />);
+    html = "";
+  };
+  const push = (node: ReactNode) => {
+    flush();
+    out.push(<div key={out.length} className="contents">{node}</div>);
+  };
+  let choiceShown = false;
+
+  for (let i = 0; i < items.length; ) {
+    const item = items[i];
+    if (!isBlock(item)) {
+      push(item.node);
+      i++;
+      continue;
+    }
+    // Gloria, Creed and the offertory prayers, which some Masses leave out
+    if (item.group) {
+      let j = i;
+      while (j < items.length && isBlock(items[j]) && (items[j] as LiturgyBlock).group === item.group) j++;
+      const group = (items.slice(i, j) as LiturgyBlock[]).map((block) => ({ ...block, group: undefined }));
+      const title =
+        item.group === "offertory-prayers"
+          ? plainText(item.html.match(/<p class="valg-navn">(.*?)<\/p>/)?.[1] ?? "")
+          : plainText(item.html);
+      push(
+        <OptionalPart part={item.group} title={title}>
+          {render(group, language)}
+        </OptionalPart>,
+      );
+      i = j;
+      continue;
+    }
+    // The Eucharistic Prayers: one is shown at a time, chosen in the list above them
+    if (item.ep) {
+      if (!choiceShown && item.part?.startsWith("eucharistic-prayer-")) {
+        choiceShown = true;
+        push(
+          <PrayerSelect
+            options={PRAYERS[language].flatMap((value) => {
+              const prayer = PRAYER_OPENINGS[language][value];
+              return prayer ? [{ value, ...prayer }] : [];
+            })}
+          />,
+        );
+      }
+      let j = i;
+      while (j < items.length && isBlock(items[j]) && (items[j] as LiturgyBlock).ep === item.ep) j++;
+      const prayer = (items.slice(i, j) as LiturgyBlock[]).map((block) => ({
+        ...block,
+        ep: undefined,
+        part: undefined,
+      }));
+      push(<div className="eb" data-eb={item.ep}>{render(prayer, language)}</div>);
+      i = j;
+      continue;
+    }
+    if (item.role === "ep-or") {
+      i++;
+      continue;
+    }
+    if (item.epExcept) {
+      push(<div className="eb-ikke-4" dangerouslySetInnerHTML={{ __html: item.html }} />);
+      i++;
+      continue;
+    }
+    html += item.html;
+    if (item.part && MASS_EXPLANATIONS[item.part]) push(<Explanation part={item.part} language={language} />);
+    i++;
+  }
+  flush();
+  return out;
 }
 
-/** The order of Mass from the parish booklet, with today's readings in place when there are any. */
+/**
+ * The order of Mass from the parish booklet, with today's readings in place when there are any.
+ * Must be inside <LiturgyView>, which chooses the kind of Mass and the Eucharistic Prayer.
+ */
 export default function OrderOfMass({
   language,
   readings,
@@ -123,9 +201,8 @@ export default function OrderOfMass({
       {ORDER_OF_MASS[language].map((section) => (
         <section key={section.id}>
           {render(
-            readings && section.id === word
-              ? wordWithReadings(section, readings)
-              : section.blocks.map((block) => ({ html: block.html })),
+            readings && section.id === word ? withReadings(section, readings) : section.blocks,
+            language,
           )}
         </section>
       ))}

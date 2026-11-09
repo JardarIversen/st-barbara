@@ -6,7 +6,14 @@ import {
   ORDER_OF_MASS,
   ORDER_OF_MASS_SOURCE,
   READINGS_SCHEDULE_KEY,
+  PRAYERS,
+  PRAYER_OPENINGS,
   chooseTodaysMass,
+  defaultMode,
+  defaultPrayer,
+  easterSunday,
+  eucharisticPrayer,
+  liturgicalSeason,
   liturgyLanguage,
   readingCandidates,
   splitReadings,
@@ -33,7 +40,7 @@ test("both languages mark every place a reading goes", () => {
     const roles = ORDER_OF_MASS[language]
       .flatMap((section) => section.blocks)
       .map((block) => block.role)
-      .filter(Boolean);
+      .filter((role) => role && role !== "ep-or");
     assert.deepEqual(roles, [
       "reading-response-priest",
       "reading-response-all",
@@ -152,4 +159,65 @@ test("today's Mass is the one going on now, or the next one in Kongsberg", () =>
     chooseTodaysMass([cancelled, english], "2026-11-08", new Date("2026-11-08T08:00:00+01:00")).mass,
     english,
   );
+});
+
+const blocks = (language) => ORDER_OF_MASS[language].flatMap((section) => section.blocks);
+const text = (html) => html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+
+test("every Eucharistic Prayer is there once, and its first words name it in the list", () => {
+  for (const language of ["nb", "en"]) {
+    for (const prayer of PRAYERS[language]) {
+      const own = blocks(language).filter((block) => block.ep === prayer);
+      assert.equal(
+        own.filter((block) => block.part === `eucharistic-prayer-${prayer}`).length,
+        1,
+        `${language} ${prayer}`,
+      );
+      const opening = PRAYER_OPENINGS[language][prayer].opening
+        .replace(/[«»“”…]/g, "")
+        .trim();
+      assert.ok(
+        own.some((block) => text(block.html).startsWith(opening)),
+        `${language} ${prayer}: ${opening}`,
+      );
+    }
+  }
+  // Prayer IV brings its own Preface, so the usual one gives way.
+  assert.equal(blocks("nb").filter((block) => block.epExcept === "4").length, 1);
+  assert.equal(eucharisticPrayer("4", "en"), null);
+  assert.equal(eucharisticPrayer(["1"], "nb"), "1");
+});
+
+test("the Sunday sentence of Prayers II and III gives way to the weekday form", () => {
+  const nb = blocks("nb");
+  const sunday = nb.filter((block) => block.html.includes('class="kun-hoymesse"'));
+  assert.deepEqual(
+    sunday.map((block) => block.ep),
+    ["1", "2", "2", "3"],
+    "the Sunday Communicantes in I, two sentences in II, one in III",
+  );
+  const weekday = nb.find((block) => block.ep === "3" && block.html.includes("kun-hverdag"));
+  assert.equal(text(weekday.html), "Derfor bønnfaller vi deg, Herre:");
+  for (const language of ["nb", "en"]) {
+    const groups = new Set(blocks(language).map((block) => block.group).filter(Boolean));
+    assert.deepEqual([...groups], ["gloria", "creed", "offertory-prayers"]);
+  }
+});
+
+test("Sunday or weekday, and the seasons without the Gloria", () => {
+  assert.equal(defaultMode("2026-11-08"), "hoymesse");
+  assert.equal(defaultMode("2026-11-09"), "hverdag");
+  assert.equal(defaultPrayer("hoymesse"), "3");
+  assert.equal(defaultPrayer("hverdag"), "2");
+  assert.equal(easterSunday(2026), "2026-04-05");
+  assert.equal(easterSunday(2027), "2027-03-28");
+  assert.equal(liturgicalSeason("2026-02-17"), null); // the day before Ash Wednesday
+  assert.equal(liturgicalSeason("2026-02-18"), "lent"); // Ash Wednesday
+  assert.equal(liturgicalSeason("2026-04-01"), "lent"); // Wednesday of Holy Week
+  assert.equal(liturgicalSeason("2026-04-02"), null); // Holy Thursday has the Gloria
+  assert.equal(liturgicalSeason("2026-11-28"), null);
+  assert.equal(liturgicalSeason("2026-11-29"), "advent"); // the first Sunday of Advent
+  assert.equal(liturgicalSeason("2026-12-24"), "advent");
+  assert.equal(liturgicalSeason("2026-12-25"), null);
+  assert.equal(liturgicalSeason("2022-11-27"), "advent"); // Christmas on a Sunday
 });

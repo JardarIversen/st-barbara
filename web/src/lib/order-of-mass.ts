@@ -3,13 +3,50 @@ import type { CalendarItem } from "./calendar";
 // Generated from liturgihefte/familiemesse.html by liturgihefte/til-nettsiden.py; never edit by hand.
 import booklet from "../content/messens-ordning.json" with { type: "json" };
 
-export type LiturgyLanguage = "nb" | "en";
-export type LiturgyBlock = { html: string; role?: string; readingHtml?: string };
+import type { EucharisticPrayer, LiturgyLanguage } from "./liturgy-options.ts";
+export * from "./liturgy-options.ts";
+
+export type LiturgyBlock = {
+  html: string;
+  /** A place in the Liturgy of the Word that today's readings fill in. */
+  role?: string;
+  readingHtml?: string;
+  /** Gloria, Creed and the offertory prayers, which depend on the kind of Mass. */
+  group?: string;
+  /** Which Eucharistic Prayer the block belongs to. */
+  ep?: EucharisticPrayer;
+  /** Shown for every prayer except this one (Prayer IV has its own Preface). */
+  epExcept?: EucharisticPrayer;
+  /** The part of the Mass a heading begins, for the explanations. */
+  part?: string;
+};
 export type LiturgySection = { id: string; title: string; blocks: LiturgyBlock[] };
 
+// The generated JSON is checked against the booklet by tests/order-of-mass.test.mjs.
+const liturgies = booklet.liturgies as unknown as Record<
+  LiturgyLanguage,
+  { sections: LiturgySection[] }
+>;
 export const ORDER_OF_MASS: Record<LiturgyLanguage, LiturgySection[]> = {
-  nb: booklet.liturgies.nb.sections,
-  en: booklet.liturgies.en.sections,
+  nb: liturgies.nb.sections,
+  en: liturgies.en.sections,
+};
+
+// How people recognise the prayer the priest has begun: its first words after the Sanctus.
+export const PRAYER_OPENINGS: Record<
+  LiturgyLanguage,
+  Partial<Record<EucharisticPrayer, { name: string; opening: string }>>
+> = {
+  nb: {
+    "1": { name: "Eukaristisk bønn I", opening: "«Mildeste Fader, i ydmykhet bønnfaller vi deg …»" },
+    "2": { name: "Eukaristisk bønn II", opening: "«I sannhet hellig er du, Herre, all hellighets kilde.»" },
+    "3": { name: "Eukaristisk bønn III", opening: "«I sannhet, hellig er du, Herre, og med rette lovprises du …»" },
+    "4": { name: "Eukaristisk bønn IV", opening: "«Vi lovpriser deg, hellige Fader …»" },
+  },
+  en: {
+    "2": { name: "Eucharistic Prayer II", opening: "“You are indeed Holy, O Lord, the fount of all holiness.”" },
+    "3": { name: "Eucharistic Prayer III", opening: "“You are indeed Holy, O Lord, and all you have created …”" },
+  },
 };
 export const ORDER_OF_MASS_SOURCE = booklet.source;
 

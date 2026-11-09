@@ -166,6 +166,140 @@ def parse(kilde):
     return tre.rot
 
 
+def med_klasse(html_, klasse):
+    """Legger en klasse til det ytterste elementet i en blokk."""
+    if re.match(r"<\w+ [^>]*class=\"", html_):
+        return re.sub(r'class="', f'class="{klasse} ', html_, count=1)
+    return re.sub(r"^<(\w+)", rf'<\1 class="{klasse}"', html_, count=1)
+
+
+def blokktekst(blokk):
+    return ren(tekst(parse(blokk["html"])))
+
+
+# Ledd som får forklaring for nybegynnere (web/src/content/mass-explanations.ts), funnet på overskriften
+DELER = {
+    "Innledende riter": "introductory-rites", "Introductory Rites": "introductory-rites",
+    "Kyrie": "kyrie",
+    "Gloria": "gloria",
+    "Kirkebønn": "collect", "Collect": "collect",
+    "Ordets liturgi": "word", "Liturgy of the Word": "word",
+    "Responsoriesalme": "psalm", "Responsorial Psalm": "psalm",
+    "Evangelievers": "acclamation", "Gospel Acclamation": "acclamation",
+    "Evangelium": "gospel", "Gospel": "gospel",
+    "Preken": "homily", "Homily": "homily",
+    "Credo": "creed", "Creed": "creed",
+    "Forbønner": "intercessions", "Universal Prayer": "intercessions",
+    "Nattverdens liturgi": "eucharist", "Liturgy of the Eucharist": "eucharist",
+    "Den eukaristiske bønn": "eucharistic-prayer", "The Eucharistic Prayer": "eucharistic-prayer",
+    "Prefasjon": "preface", "Preface": "preface",
+    "Kommunionsritus": "communion-rite", "Communion Rite": "communion-rite",
+    "Slutningsbønn": "prayer-after-communion", "Prayer after Communion": "prayer-after-communion",
+    "Avsluttende ritus": "concluding-rites", "Concluding Rites": "concluding-rites",
+    "Angelus": "angelus",
+}
+
+NAVN = {
+    "nb": {"eukaristi": "nattverdens-liturgi", "stå": "Stå", "kommunion": "Alle: Herre, jeg er ikke verdig",
+           "prefasjon": "Prest: I sannhet (...)", "eb": "eukaristisk-bonn-", "etter-eb": "kommunionsritus"},
+    "en": {"eukaristi": "liturgy-of-the-eucharist", "stå": "Stand", "kommunion": "All: Lord, I am not worthy",
+           "prefasjon": "Priest: It is truly right and just (...)", "eb": "eucharistic-prayer-",
+           "etter-eb": "communion-rite"},
+}
+
+
+def nett_bonner(sprak):
+    """Eukaristisk bønn I og IV fra nett/, som ikke står i det trykte heftet."""
+    fil = HER / "nett" / f"eukaristiske-bonner.{sprak}.html"
+    if not fil.exists():
+        return {}, []
+    bonner, prefasjon = {}, []
+    for div in elementer(parse(fil.read_text(encoding="utf-8"))):
+        eb = div.attrs["data-eb"]
+        blokker = [{"html": som_html(n).strip(), "ep": eb} for n in elementer(div)]
+        if div.attrs.get("data-del") == "prefasjon":
+            prefasjon += blokker
+        else:
+            bonner.setdefault(eb, []).extend(blokker)
+    return bonner, prefasjon
+
+
+def berik(sprak, deler_):
+    """Merker det nettsiden viser ulikt i høymesse og hverdagsmesse, de fire eukaristiske bønnene og
+    stedene forklaringene står."""
+    navn = NAVN[sprak]
+
+    def finn(blokker, test, hva):
+        treff = [i for i, b in enumerate(blokker) if test(b)]
+        if len(treff) != 1:
+            sys.exit(f"Fant {len(treff)} treff for {hva} ({sprak}); forventet ett.")
+        return treff[0]
+
+    for del_ in deler_:
+        blokker = del_["blocks"]
+        gruppe = None
+        for blokk in blokker:
+            t = blokktekst(blokk)
+            if blokk["html"].startswith(("<h2", "<h3")):
+                gruppe = {"Gloria": "gloria", "Credo": "creed", "Creed": "creed"}.get(
+                    re.sub(r"\s*\(.*\)$", "", t))
+                if t.split(" (")[0] in DELER:
+                    blokk["part"] = DELER[t.split(" (")[0]]
+            if gruppe:
+                blokk["group"] = gruppe
+            if t.startswith(navn["kommunion"]):
+                blokk["part"] = "communion"
+            if blokk["html"].startswith('<p class="ledd'):
+                if " (" in t:  # «Inngangssalme (eller Angelus i hverdagsmesser)»
+                    hoy = html.escape(t.split(" (")[0])
+                    blokk["html"] = (f'<p class="ledd kun-hoymesse">{hoy}</p>'
+                                     '<p class="ledd kun-hverdag">Angelus <a href="#angelus">↓</a></p>')
+                elif t.startswith(("Offertoriesang", "Offertory Chant", "Angelus og", "Angelus and")):
+                    blokk["html"] = med_klasse(blokk["html"], "kun-hoymesse")
+            if blokk["html"].startswith('<div class="valg'):
+                blokk["group"] = "offertory-prayers"
+            if t in ("Forbønner", "Universal Prayer"):
+                # Uten Credo reiser man seg til forbønnene
+                blokk["html"] = blokk["html"].replace(
+                    "<h3>", f'<h3><span class="stilling kun-hverdag"><span class="ikon ikon-staende" role="img" '
+                    f'aria-label="{navn["stå"]}"></span></span>', 1)
+
+    eukaristi = next(d for d in deler_ if d["id"] == navn["eukaristi"])
+    blokker = eukaristi["blocks"]
+    start2 = finn(blokker, lambda b: f'id="{navn["eb"]}2"' in b["html"], "bønn II")
+    eller = finn(blokker, lambda b: 'class="rubrikk eller"' in b["html"], "«Eller»")
+    start3 = finn(blokker, lambda b: f'id="{navn["eb"]}3"' in b["html"], "bønn III")
+    slutt = finn(blokker, lambda b: f'id="{navn["etter-eb"]}"' in b["html"], "kommunionsritus")
+    for i in range(start2, eller):
+        blokker[i]["ep"] = "2"
+    blokker[eller]["role"] = "ep-or"
+    for i in range(start3, slutt):
+        blokker[i]["ep"] = "3"
+
+    if sprak == "nb":
+        # Norsk Missale har en egen søndagssetning i bønn II og III; på hverdager faller den bort
+        for i in range(start2, slutt):
+            t = blokktekst(blokker[i])
+            if t.startswith("Derfor står vi for ditt åsyn") or t == "Ved ham som du har opphøyet til din høyre hånd, ber vi deg:":
+                blokker[i]["html"] = med_klasse(blokker[i]["html"], "kun-hoymesse")
+        sondag3 = finn(blokker, lambda b: b.get("ep") == "3" and blokktekst(b).startswith("Derfor står vi"),
+                       "søndagssetningen i bønn III")
+        # Hverdagsformen i Messeboken 2011 (Norsk Missale 1982)
+        blokker.insert(sondag3 + 1, {"html": '<p class="kun-hverdag">Derfor bønnfaller vi deg, Herre:</p>', "ep": "3"})
+        slutt += 1
+
+    bonner, prefasjon = nett_bonner(sprak)
+    blokker[slutt:slutt] = bonner.get("4", [])
+    blokker[start2:start2] = bonner.get("1", [])
+    if prefasjon:
+        p = finn(blokker, lambda b: blokktekst(b).startswith(navn["prefasjon"]), "prefasjonen")
+        blokker[p]["epExcept"] = "4"
+        blokker[p + 1:p + 1] = prefasjon
+    for i, blokk in enumerate(blokker):
+        if blokk.get("ep") and re.match(r"<h3", blokk["html"]):
+            blokk["part"] = "eucharistic-prayer-" + blokk["ep"]
+
+
 def lag():
     kilde = KILDE.read_text(encoding="utf-8")
     body = next(n for n in elementer(parse(kilde)) if n.tag == "html")
@@ -186,6 +320,8 @@ def lag():
 
     merk_roller("nb", next(d for d in norsk if d["id"] == ROLLER["nb"]["ordet"]))
     merk_roller("en", next(d for d in english if d["id"] == ROLLER["en"]["ordet"]))
+    berik("nb", norsk)
+    berik("en", english)
 
     return {
         "source": {
