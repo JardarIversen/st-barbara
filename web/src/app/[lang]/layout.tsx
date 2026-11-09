@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { EB_Garamond, Inter } from "next/font/google";
 import Header from "@/components/header";
+import { NavigationHistory } from "@/components/navigation-history";
 import Footer from "@/components/footer";
 import { SanityLive } from "@/sanity/live";
 import { notFound } from "next/navigation";
@@ -14,8 +15,8 @@ import { SITE_URL } from "@/lib/site";
 import { shareMetadata } from "@/lib/share";
 import "../globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const garamond = EB_Garamond({
+  variable: "--font-garamond",
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -66,11 +67,12 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      className={`${garamond.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         <LocaleProvider locale={locale} language={lang}>
           <AutomaticTranslation />
+          <NavigationHistory />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

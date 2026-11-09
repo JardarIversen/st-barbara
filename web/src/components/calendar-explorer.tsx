@@ -10,19 +10,14 @@ import {
   SelectValue,
 } from "./ui/select";
 
+import { cameBackRecently } from "./navigation-history";
 import { useTranslations } from "@/i18n/client";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { calendarDayGroups, type CalendarListItem } from "@/lib/calendar";
 import AgendaList from "./agenda-list";
-
-const FILTERS = [
-  ["all", "Alle steder"],
-  ["kongsberg", "Kongsberg"],
-  ["notodden", "Notodden"],
-  ["rjukan", "Rjukan"],
-  ["mo", "Mo"],
-] as const;
+import PlaceFilter, { STICKY_TOOLBAR } from "./place-filter";
+import { placeFilterLabel, type PlaceFilterValue } from "@/lib/mass-times";
 function monthLabel(key: string, locale: "nb" | "en") {
   const label = new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "nb-NO", {
     timeZone: "Europe/Oslo",
@@ -78,13 +73,16 @@ export default function CalendarExplorer({
   items,
   today,
   startDate,
+  place,
+  onPlaceChange,
 }: {
   items: CalendarListItem[];
   today: string;
   startDate: string;
+  place: PlaceFilterValue;
+  onPlaceChange: (value: PlaceFilterValue) => void;
 }) {
   const { locale, t } = useTranslations();
-  const [place, setPlace] = useState("all");
   const [activeMonth, setActiveMonth] = useState(today.slice(0, 7));
   const [extraMonth, setExtraMonth] = useState<string | null>(null);
   const toolbar = useRef<HTMLDivElement>(null);
@@ -137,6 +135,8 @@ export default function CalendarExplorer({
 
   useLayoutEffect(() => {
     // Anchor once, after Next's route positioning. Never rerun on a filter change.
+    // Coming back from a detail page keeps the position the visitor left.
+    if (cameBackRecently()) return;
     let second = 0;
     const first = requestAnimationFrame(() => {
       second = requestAnimationFrame(() => {
@@ -222,7 +222,7 @@ export default function CalendarExplorer({
     };
   }, [visibleMonths, today]);
 
-  function changePlace(value: string) {
+  function changePlace(value: PlaceFilterValue) {
     if (value === place) return;
     const marker = topOffset(toolbar.current);
     const days = [
@@ -239,7 +239,7 @@ export default function CalendarExplorer({
       offset: visible ? visible.getBoundingClientRect().top - marker : 0,
     };
     setExtraMonth(pendingAnchor.current.date.slice(0, 7));
-    setPlace(value);
+    onPlaceChange(value);
   }
 
   function changeMonth(value: string) {
@@ -255,34 +255,9 @@ export default function CalendarExplorer({
 
   return (
     <div ref={root}>
-      <div
-        ref={toolbar}
-        className="sticky top-16 z-30 -mx-5 border-y border-border bg-background/95 px-5 py-3 backdrop-blur lg:top-[4.7rem]"
-      >
+      <div ref={toolbar} className={STICKY_TOOLBAR}>
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
-          <div
-            role="group"
-            aria-label={t("Velg sted")}
-            className="flex flex-wrap gap-1.5"
-          >
-            {FILTERS.map(([value, label]) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={place === value}
-                onClick={() => changePlace(value)}
-                className={`rounded-full px-3 py-2.5 text-sm font-medium transition-colors ${place === value ? "bg-primary text-background" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
-              >
-                {value === "all" ? (
-                  t(label)
-                ) : (
-                  <span translate="no" className="notranslate">
-                    {label}
-                  </span>
-                )}
-              </button>
-            ))}
-          </div>
+          <PlaceFilter value={place} onChange={changePlace} />
           <div className="flex w-full items-center gap-2 border-t border-border pt-3 sm:w-auto sm:border-0 sm:pt-0">
             <div className="min-w-0 flex-1 sm:w-48">
               <Select
@@ -331,7 +306,7 @@ export default function CalendarExplorer({
       </div>
       <p className="sr-only" role="status">
         {filtered.length} {t("messer og arrangementer for")}{" "}
-        {t(FILTERS.find(([key]) => key === place)?.[1] ?? "").toLowerCase()}.
+        {t(placeFilterLabel(place)).toLowerCase()}.
       </p>
       <div className="space-y-10 py-6">
         {visibleMonths.map((key) => (

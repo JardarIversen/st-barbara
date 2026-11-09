@@ -6,12 +6,15 @@ import { buttonVariants } from "@/components/ui/button";
 import AnnouncementBoard from "@/components/announcement-board";
 import ArticleCard from "@/components/article-card";
 import AgendaList from "@/components/agenda-list";
+import { CalendarChanges } from "@/components/mass-times";
 import PlaceText from "@/components/place-text";
 import JsonLd from "@/components/json-ld";
 import {
   addDays,
+  comingSunday,
   buildCalendarItems,
   formatArticleDate,
+  isCalendarChange,
   formatCalendarDate,
   formatCalendarTime,
   placeFilterKey,
@@ -51,6 +54,9 @@ const SACRAMENTS = [
   },
 ];
 
+/** Changes this close get a box of their own; later ones wait in «Senere». */
+const URGENT_CHANGE_DAYS = 14;
+
 export default async function Home() {
   const { locale, t } = await getTranslations();
   await connection();
@@ -66,10 +72,26 @@ export default async function Home() {
       getParishPlaces(),
     ]);
   const allItems = buildCalendarItems(calendarData, today, endDate);
-  const lastPreviewDate = allItems[5]?.dateKey;
+  // This week runs to the coming Sunday, so the week's main Mass is always on the page.
+  const sunday = comingSunday(today);
+  const upcoming = allItems.filter(
+    (item) => new Date(item.endsAt ?? item.startsAt) >= now,
+  );
   const calendarItems = toCalendarListItems(
-    allItems.filter(
-      (item) => !lastPreviewDate || item.dateKey <= lastPreviewDate,
+    upcoming.filter((item) => item.dateKey <= sunday),
+  );
+  // After that, only what the regular schedule does not already say: feasts, events, changes.
+  const laterItems = toCalendarListItems(
+    upcoming
+      .filter((item) => item.dateKey > sunday && !item.routine)
+      .slice(0, 5),
+  );
+  // Only urgent changes get the box; later ones are listed under «Senere».
+  const changes = toCalendarListItems(
+    upcoming.filter(
+      (item) =>
+        isCalendarChange(item) &&
+        item.dateKey <= addDays(today, URGENT_CHANGE_DAYS),
     ),
   );
   const nextKongsbergMass = allItems.find(
@@ -173,29 +195,74 @@ export default async function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-10 lg:grid-cols-[minmax(0,1.85fr)_minmax(0,1fr)] lg:gap-14 lg:py-14">
         <div>
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-            {t("De neste dagene")}
+            {t("Messer og arrangementer")}
           </p>
           <h2 className="font-display text-4xl font-medium text-foreground">
-            {t("Messer og arrangementer")}
+            {t("Denne uken")}
           </h2>
+          <CalendarChanges
+            items={changes}
+            today={today}
+            hideWhenEmpty
+            className="mt-7"
+          />
           <div className="mt-7">
-            <AgendaList items={calendarItems} today={today} from={today} />
+            <AgendaList
+              items={calendarItems}
+              today={today}
+              from={today}
+              place="Kongsberg"
+              compact
+            />
           </div>
           {!calendarItems.length && (
             <p className="py-8 text-muted-foreground">
               {t("Nye messetider kommer snart.")}
             </p>
           )}
-          <Link
-            href="/messetider"
-            className={buttonVariants({
-              variant: "outline",
-              size: "lg",
-              className: "mt-6",
-            })}
-          >
-            {t("Se hele oversikten")} <span aria-hidden>→</span>
-          </Link>
+          {laterItems.length > 0 && (
+            <>
+              <div className="mt-10 mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h3 className="font-display text-2xl font-medium text-foreground">
+                  {t("Senere")}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("Et utvalg av arrangementer, høytider og endringer")}
+                </p>
+              </div>
+              <AgendaList
+                items={laterItems}
+                today={today}
+                place="Kongsberg"
+                compact
+              />
+            </>
+          )}
+          <p className="mt-4 text-sm text-muted-foreground">
+            {t(
+              "Messene er i St. Barbara kirke i Kongsberg når ikke annet står.",
+            )}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <Link
+              href="/messetider"
+              className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              {t("Alle messetider og steder")} <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/messetider#faste-messetider"
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              {t("Faste messetider")}
+            </Link>
+            <Link
+              href="/messetider/kalender"
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              {t("Hele kalenderen")}
+            </Link>
+          </div>
         </div>
         <aside className="border-t border-border pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8">
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
@@ -211,9 +278,9 @@ export default async function Home() {
           />
           <Link
             href="/kunngjoringer"
-            className="mt-6 inline-flex items-center gap-6 text-sm font-medium text-primary underline-offset-4 hover:underline"
+            className="mt-6 inline-block text-sm font-semibold text-primary underline-offset-4 hover:underline"
           >
-            {t("Se mer")} <span aria-hidden>→</span>
+            {t("Alle kunngjøringer")} <span aria-hidden>→</span>
           </Link>
         </aside>
       </section>

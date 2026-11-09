@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "@/i18n/link";
+import { BackLink } from "@/components/navigation-history";
 import { getTranslations } from "@/i18n/server";
 import { getAnnouncement } from "@/sanity/data";
 import ContentLanguage from "@/components/content-language";
@@ -21,9 +21,9 @@ export default async function AnnouncementPage({ params }: Props) {
   if (!item) notFound();
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
-      <Link href="/kunngjoringer" className="text-sm font-medium text-primary underline-offset-2 hover:underline">
+      <BackLink href="/kunngjoringer" className="text-sm font-medium text-primary underline-offset-2 hover:underline">
         ← {t("Kunngjøringer")}
-      </Link>
+      </BackLink>
       <h1 className="mt-8 font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
         <ContentLanguage original={item.originalFields?.includes("title")}>{item.title}</ContentLanguage>
       </h1>

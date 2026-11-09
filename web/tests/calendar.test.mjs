@@ -97,3 +97,46 @@ test("schedules created in Studio without an import key keep separate URLs and e
   assert.equal(calendarPlaceLabel(chapel), "Kapellet");
   assert.equal(buildCalendarItems(data, "2026-09-13", "2026-09-13")[0].slug, "schedule-notodden-2026-09-13");
 });
+
+test("only untouched occurrences of the regular schedule count as routine", async () => {
+  const { isCalendarChange } = await import("../src/lib/calendar.ts");
+  const kongsberg = { _id: "kongsberg", sourceKey: "place:kongsberg-st-barbara", name: "St. Barbara kirke" };
+  const weekday = { ...schedule, _id: "friday", sourceKey: "schedule:friday", place: kongsberg, anchorWeekday: "friday", recurrenceType: "weekly", weeksOfMonth: undefined, startTime: "18:00" };
+  const sunday = { ...weekday, _id: "sunday", sourceKey: "schedule:sunday", anchorWeekday: "sunday", startTime: "11:00" };
+  const exceptions = [
+    { scope: "singleOccurrence", scheduleId: "friday", occurrenceDate: "2026-11-13", changeType: "changed", publicNote: "Skriftemål fra kl. 17.00." },
+    { scope: "singleOccurrence", scheduleId: "friday", occurrenceDate: "2026-11-20", changeType: "changed", titleOverride: "Høymesse – St. Barbara" },
+    { scope: "singleOccurrence", scheduleId: "friday", occurrenceDate: "2026-11-27", changeType: "cancelled" },
+  ];
+  const items = buildCalendarItems({ ...data, schedules: [weekday, sunday, schedule], exceptions }, "2026-11-09", "2026-11-30");
+  const byDate = Object.fromEntries(items.filter((item) => item.scheduleId === "friday").map((item) => [item.dateKey, item]));
+  assert.equal(byDate["2026-11-13"].routine, true, "a note alone keeps a weekday Mass routine");
+  assert.equal(byDate["2026-11-20"].routine, false, "a feast title is worth showing");
+  assert.equal(byDate["2026-11-27"].routine, false, "a cancellation is never folded away");
+  assert.ok(items.filter((item) => item.scheduleId !== "friday").every((item) => item.routine), "untouched Sundays and monthly Masses follow the regular schedule too");
+  assert.equal(isCalendarChange(byDate["2026-11-13"]), false);
+  assert.equal(isCalendarChange(byDate["2026-11-27"]), true);
+  assert.equal(toCalendarListItems(items)[0].routine, items[0].routine);
+});
+
+test("the regular plan reads in plain words and points to the next real occurrence", async () => {
+  const { buildScheduleOverview, describeScheduleRule, isoWeekNumber, weekStart } = await import("../src/lib/calendar.ts");
+  assert.equal(describeScheduleRule({ anchorWeekday: "sunday", recurrenceType: "weekly", dayOffset: 0 }), "Hver søndag");
+  assert.equal(describeScheduleRule({ anchorWeekday: "sunday", recurrenceType: "monthlyWeeks", weeksOfMonth: [4, 1, 2], dayOffset: 0 }), "1., 2. og 4. søndag i måneden");
+  assert.equal(describeScheduleRule({ anchorWeekday: "sunday", recurrenceType: "monthlyWeeks", weeksOfMonth: [3], dayOffset: -1 }), "Lørdag før 3. søndag i måneden");
+  assert.equal(describeScheduleRule({ anchorWeekday: "sunday", recurrenceType: "monthlyWeeks", weeksOfMonth: [3], dayOffset: -1 }, "en"), "Saturday before the 3rd Sunday of the month");
+  assert.equal(weekStart("2026-11-15"), "2026-11-09");
+  assert.equal(isoWeekNumber("2026-11-09"), 46);
+  assert.equal(isoWeekNumber("2027-01-01"), 53);
+
+  const cancelled = { scope: "singleOccurrence", scheduleId: schedule._id, occurrenceDate: "2026-11-08", changeType: "cancelled", publicNote: "Messen utgår." };
+  const withChange = { ...data, exceptions: [cancelled] };
+  const now = new Date("2026-11-02T12:00:00+01:00");
+  const items = buildCalendarItems(withChange, "2026-11-02", "2027-01-31");
+  const [, notoddenGroup, rjukan] = buildScheduleOverview(withChange, items, now, "2026-11-02");
+  assert.equal(notoddenGroup.rows.length, 1);
+  assert.equal(notoddenGroup.rows[0].rule, "2. og 4. søndag i måneden");
+  assert.equal(notoddenGroup.rows[0].next.startsAt, "2026-11-22T17:00:00+01:00", "the cancelled 8 November is skipped");
+  assert.deepEqual(notoddenGroup.rows[0].changes.map((change) => change.status), ["cancelled"]);
+  assert.equal(rjukan.rows.length, 0);
+});

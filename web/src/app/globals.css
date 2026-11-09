@@ -67,7 +67,7 @@
   --color-inverse-foreground: var(--inverse-foreground);
 
   --font-sans: var(--font-inter);
-  --font-display: var(--font-cormorant);
+  --font-display: var(--font-garamond);
   --font-heading: var(--font-display);
 
   --radius-xs: calc(var(--radius) / 2);

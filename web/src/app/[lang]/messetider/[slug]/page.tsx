@@ -1,6 +1,7 @@
 import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Link from "@/i18n/link";
+import { BackLink } from "@/components/navigation-history";
 import { buttonVariants } from "@/components/ui/button";
 import ContentLanguage from "@/components/content-language";
 import { notFound } from "next/navigation";
@@ -95,12 +96,12 @@ export default async function CalendarDetailPage({
           absoluteUrl(localizedPath(`/messetider/${slug}`, locale)),
         )}
       />
-      <Link
+      <BackLink
         href="/messetider"
         className="text-sm font-medium text-primary underline-offset-2 hover:underline"
       >
         {t("← Messetider og arrangementer")}
-      </Link>
+      </BackLink>
       <p className="mt-8 text-xs font-medium uppercase tracking-[0.22em] text-primary">
         {t(EVENT_TYPE_LABELS[item.eventType])}
       </p>

@@ -73,6 +73,8 @@ export type CalendarItem = {
   noteOriginal?: boolean;
   bodyOriginal?: boolean;
   detailsOriginal?: boolean;
+  /** An ordinary weekday occurrence of a weekly Mass that nothing has changed. */
+  routine?: boolean;
 };
 
 export type CalendarListItem = Pick<
@@ -97,6 +99,7 @@ export type CalendarListItem = Pick<
   | "titleOriginal"
   | "noteOriginal"
   | "announcements"
+  | "routine"
 >;
 
 export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
@@ -122,6 +125,7 @@ export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
       titleOriginal,
       noteOriginal,
       announcements,
+      routine,
     }) => ({
       id,
       kind,
@@ -143,6 +147,7 @@ export function toCalendarListItems(items: CalendarItem[]): CalendarListItem[] {
       titleOriginal,
       noteOriginal,
       announcements,
+      routine,
     }),
   );
 }
@@ -323,6 +328,14 @@ function massItem(
     new Date(startsAt).getTime() !== new Date(originalStartsAt).getTime();
   const changedPlace = place?._id !== schedule.place?._id &&
     placeFilterKey(place) !== placeFilterKey(schedule.place);
+  // Exactly what the regular schedule promises: the page lists it there, not again under «Senere».
+  const routine =
+    !changedTime &&
+    !changedPlace &&
+    !exception?.titleOverride &&
+    !exception?.relatedEventSlug &&
+    !exception?.announcements?.length &&
+    (!exception || exception.changeType === "changed");
 
   return {
     id: `${schedule.sourceKey ?? schedule._id}:${occurrenceDate}`,
@@ -367,6 +380,7 @@ function massItem(
     occurrenceDate,
     relatedEventSlug: exception?.relatedEventSlug,
     announcements: exception?.announcements,
+    routine,
   };
 }
 
@@ -614,4 +628,249 @@ export function isDateOnlyRange(
     formatCalendarTime(item.startsAt) === "00.00" &&
     formatCalendarTime(item.endsAt!) === "23.59"
   );
+}
+
+/** Cancellations, postponements and moved times or places: what a visitor must not miss. */
+export function isCalendarChange(
+  item: Pick<CalendarItem, "status" | "changeType" | "changeLabel">,
+) {
+  return (
+    item.status !== "scheduled" ||
+    item.changeType === "cancelled" ||
+    item.changeType === "rescheduled" ||
+    Boolean(item.changeLabel)
+  );
+}
+
+/** Monday of the (Norwegian) week that contains the date. */
+/** The Sunday that closes «this week»: the coming one, or next week's when today is Sunday. */
+export function comingSunday(today: string) {
+  return addDays(today, 7 - parseDateOnly(today).getUTCDay());
+}
+
+export function weekStart(date: string) {
+  const day = parseDateOnly(date).getUTCDay();
+  return addDays(date, -((day + 6) % 7));
+}
+
+export function isoWeekNumber(date: string) {
+  const value = parseDateOnly(date);
+  value.setUTCDate(value.getUTCDate() + 3 - ((value.getUTCDay() + 6) % 7));
+  const firstThursday = new Date(Date.UTC(value.getUTCFullYear(), 0, 4));
+  return (
+    1 +
+    Math.round(
+      ((value.getTime() - firstThursday.getTime()) / 86_400_000 -
+        3 +
+        ((firstThursday.getUTCDay() + 6) % 7)) /
+        7,
+    )
+  );
+}
+
+export function formatDayMonthRange(
+  from: string,
+  to: string,
+  locale: "nb" | "en" = "nb",
+) {
+  const format = (date: string, options: Intl.DateTimeFormatOptions) =>
+    new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "nb-NO", {
+      timeZone: "UTC",
+      ...options,
+    }).format(parseDateOnly(date));
+  const sameMonth = from.slice(0, 7) === to.slice(0, 7);
+  if (locale === "en")
+    return sameMonth
+      ? `${format(from, { day: "numeric" })}–${format(to, { day: "numeric", month: "long" })}`
+      : `${format(from, { day: "numeric", month: "long" })} – ${format(to, { day: "numeric", month: "long" })}`;
+  return sameMonth
+    ? `${format(from, { day: "numeric" })}–${format(to, { day: "numeric", month: "long" })}`
+    : `${format(from, { day: "numeric", month: "long" })} – ${format(to, { day: "numeric", month: "long" })}`;
+}
+
+export function formatShortDate(iso: string, locale: "nb" | "en" = "nb") {
+  const value = new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "nb-NO", {
+    timeZone: TIME_ZONE,
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+  }).format(new Date(iso));
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+const WEEKDAY_NAMES = {
+  nb: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
+  en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+};
+
+function ordinal(week: number, locale: "nb" | "en") {
+  if (locale === "nb") return week === -1 ? "siste" : `${week}.`;
+  if (week === -1) return "last";
+  return `${week}${week === 1 ? "st" : week === 2 ? "nd" : week === 3 ? "rd" : "th"}`;
+}
+
+function joinList(values: string[], locale: "nb" | "en") {
+  if (values.length < 2) return values.join("");
+  return `${values.slice(0, -1).join(", ")} ${locale === "en" ? "and" : "og"} ${values.at(-1)}`;
+}
+
+/** Plain-language rule, such as «Hver søndag» or «Lørdag før 3. søndag i måneden». */
+export function describeScheduleRule(
+  schedule: Pick<
+    MassSchedule,
+    "anchorWeekday" | "recurrenceType" | "weeksOfMonth" | "dayOffset"
+  >,
+  locale: "nb" | "en" = "nb",
+) {
+  const anchor = WEEKDAY_INDEX[schedule.anchorWeekday];
+  const offset = schedule.dayOffset ?? 0;
+  const names = WEEKDAY_NAMES[locale];
+  const capitalize = (value: string) =>
+    value.charAt(0).toLocaleUpperCase(locale) + value.slice(1);
+  if (schedule.recurrenceType === "weekly") {
+    const day = names[(((anchor + offset) % 7) + 7) % 7];
+    return locale === "en" ? `Every ${day}` : `Hver ${day}`;
+  }
+  const weeks = joinList(
+    (schedule.weeksOfMonth ?? []).toSorted((a, b) =>
+      a === -1 ? 1 : b === -1 ? -1 : a - b,
+    ).map((week) => ordinal(week, locale)),
+    locale,
+  );
+  const anchorName = names[anchor];
+  if (offset === 0)
+    return locale === "en"
+      ? `${weeks} ${anchorName} of the month`
+      : capitalize(`${weeks} ${anchorName} i måneden`);
+  const day = names[(((anchor + offset) % 7) + 7) % 7];
+  const relation =
+    offset === -1
+      ? locale === "en" ? "before" : "før"
+      : offset === 1
+        ? locale === "en" ? "after" : "etter"
+        : "";
+  if (!relation) return capitalize(`${day}`);
+  return locale === "en"
+    ? `${capitalize(day)} ${relation} the ${weeks} ${anchorName} of the month`
+    : capitalize(`${day} ${relation} ${weeks} ${anchorName} i måneden`);
+}
+
+export type ScheduleOccurrence = Pick<
+  CalendarListItem,
+  "href" | "startsAt" | "status" | "changeLabel" | "publicNote" | "noteOriginal" | "title"
+>;
+
+export type ScheduleOverviewRow = {
+  id: string;
+  rule: string;
+  /** Weekday name, used under a «Hver uke» heading instead of repeating the rule. */
+  weekday: string;
+  time: string;
+  language: MassSchedule["language"];
+  notes?: string;
+  weekly: boolean;
+  next?: ScheduleOccurrence;
+  /** Upcoming cancellations or moves of this Mass, so the plan never misleads. */
+  changes: ScheduleOccurrence[];
+};
+
+export type ScheduleOverviewGroup = {
+  key: string;
+  label: string;
+  place?: Place;
+  rows: ScheduleOverviewRow[];
+  /** Places without a regular plan still point to their next Mass. */
+  nextMass?: ScheduleOccurrence;
+};
+
+export const PARISH_REGIONS = ["kongsberg", "notodden", "rjukan", "mo"] as const;
+const REGION_LABELS: Record<string, string> = {
+  kongsberg: "Kongsberg",
+  notodden: "Notodden",
+  rjukan: "Rjukan",
+  mo: "Mo",
+};
+
+function occurrence(item: CalendarItem): ScheduleOccurrence {
+  return {
+    href: item.href,
+    startsAt: item.startsAt,
+    status: item.status,
+    changeLabel: item.changeLabel,
+    publicNote: item.publicNote,
+    noteOriginal: item.noteOriginal,
+    title: item.title,
+  };
+}
+
+function capitalizedWeekday(schedule: MassSchedule, locale: "nb" | "en") {
+  const index =
+    (((WEEKDAY_INDEX[schedule.anchorWeekday] + (schedule.dayOffset ?? 0)) % 7) + 7) % 7;
+  const name = WEEKDAY_NAMES[locale][index];
+  return name.charAt(0).toLocaleUpperCase(locale) + name.slice(1);
+}
+
+function ruleSortKey(schedule: MassSchedule) {
+  const weekday =
+    (((WEEKDAY_INDEX[schedule.anchorWeekday] + (schedule.dayOffset ?? 0)) % 7) + 7) % 7;
+  const firstWeek = Math.min(...(schedule.weeksOfMonth ?? [0]));
+  return `${weekday}-${schedule.startTime}-${String(firstWeek + 1).padStart(2, "0")}`;
+}
+
+/** The regular plan per place, with the next real occurrence of each Mass. */
+export function buildScheduleOverview(
+  data: CalendarData,
+  items: CalendarItem[],
+  now: Date,
+  today: string,
+  locale: "nb" | "en" = "nb",
+  changeHorizonDays = 56,
+): ScheduleOverviewGroup[] {
+  const upcoming = items.filter(
+    (item) => new Date(item.endsAt ?? item.startsAt) >= now,
+  );
+  const horizon = addDays(today, changeHorizonDays);
+  const active = (data.schedules ?? []).filter(
+    (schedule) =>
+      schedule.status !== "inactive" &&
+      schedule.validFrom <= horizon &&
+      (!schedule.validUntil || schedule.validUntil >= today),
+  );
+  return PARISH_REGIONS.map((key) => {
+    const schedules = active
+      .filter((schedule) => placeFilterKey(schedule.place) === key)
+      .toSorted((a, b) => ruleSortKey(a).localeCompare(ruleSortKey(b)));
+    const rows = schedules.map((schedule): ScheduleOverviewRow => {
+      const own = upcoming.filter((item) => item.scheduleId === schedule._id);
+      return {
+        id: schedule._id,
+        rule: describeScheduleRule(schedule, locale),
+        weekday: capitalizedWeekday(schedule, locale),
+        time: formatCalendarTime(localDateTime(today, schedule.startTime), locale),
+        language: schedule.language,
+        notes: schedule.notes,
+        weekly: schedule.recurrenceType === "weekly",
+        next: own.find((item) => item.status === "scheduled")
+          ? occurrence(own.find((item) => item.status === "scheduled")!)
+          : undefined,
+        changes: own
+          .filter((item) => item.dateKey <= horizon && isCalendarChange(item))
+          .slice(0, 3)
+          .map(occurrence),
+      };
+    });
+    const nextMass = upcoming.find(
+      (item) =>
+        item.eventType === "mass" &&
+        item.status === "scheduled" &&
+        item.regionKeys.includes(key),
+    );
+    return {
+      key,
+      label: REGION_LABELS[key],
+      place: schedules[0]?.place ?? nextMass?.place,
+      rows,
+      nextMass: nextMass ? occurrence(nextMass) : undefined,
+    };
+  });
 }

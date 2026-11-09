@@ -7,6 +7,7 @@ import { getSitemapDocuments } from "@/sanity/data";
 const PAGES = [
   "/",
   "/messetider",
+  "/messetider/kalender",
   "/messen",
   "/kunngjoringer",
   "/innlegg",

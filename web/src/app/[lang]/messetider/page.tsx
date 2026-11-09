@@ -1,11 +1,14 @@
 import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import { connection } from "next/server";
-import CalendarExplorer from "@/components/calendar-explorer";
+import { redirect } from "next/navigation";
+import { localizedPath } from "@/i18n/config";
+import MassTimes from "@/components/mass-times";
+import { isPlaceFilter, massTimesView } from "@/lib/mass-times";
 import {
   addDays,
   buildCalendarItems,
-  calendarHistoryStart,
+  buildScheduleOverview,
   toCalendarListItems,
   todayInOslo,
 } from "@/lib/calendar";
@@ -26,15 +29,46 @@ const OUTLOOK_HTML =
 const OUTLOOK_ICS =
   "https://outlook.office365.com/owa/calendar/d53e47e29da744b1925504238b6848d5@katolsk.no/cf733c95055f4a20b759f774b07ac78f11540496787710115790/calendar.ics";
 
-export default async function MessetiderPage() {
-  const { t } = await getTranslations();
+export default async function MessetiderPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ lang: string }>;
+  searchParams: Promise<{
+    visning?: string | string[];
+    sted?: string | string[];
+  }>;
+}) {
+  const [{ locale, t }, { lang }, query] = await Promise.all([
+    getTranslations(),
+    params,
+    searchParams,
+  ]);
+  const view = massTimesView(query.visning);
+  const place = isPlaceFilter(query.sted) ? query.sted : "all";
+  // The full calendar used to be a mode of this page; it is its own page now.
+  if (view === "kalender")
+    redirect(
+      localizedPath(
+        `/messetider/kalender${place === "all" ? "" : `?sted=${place}`}`,
+        lang,
+      ),
+    );
   await connection();
-  const today = todayInOslo();
-  const startDate = calendarHistoryStart(today);
-  const endDate = addDays(today, 365);
+  const now = new Date();
+  const today = todayInOslo(now);
+  // Far enough for «Senere», the next monthly Mass and the plan's exceptions.
+  const startDate = today;
+  const endDate = addDays(today, 120);
   const data = await getCalendarData(startDate, endDate);
-  const items = toCalendarListItems(
-    buildCalendarItems(data, startDate, endDate),
+  const calendarItems = buildCalendarItems(data, startDate, endDate);
+  const items = toCalendarListItems(calendarItems);
+  const overview = buildScheduleOverview(
+    data,
+    calendarItems,
+    now,
+    today,
+    locale,
   );
 
   return (
@@ -50,7 +84,14 @@ export default async function MessetiderPage() {
         {t("Finn din neste messe, eller se hva som skjer i menigheten.")}{" "}
       </p>
       <div className="mt-7">
-        <CalendarExplorer items={items} today={today} startDate={startDate} />
+        <MassTimes
+          items={items}
+          today={today}
+          now={now.toISOString()}
+          overview={overview}
+          initialView={view}
+          initialPlace={place}
+        />
       </div>
 
       <section className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">

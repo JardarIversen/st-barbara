@@ -9,16 +9,19 @@ import type { CalendarAnnouncement } from "@/sanity/types";
 export default function AnnouncementTags({ items }: { items?: CalendarAnnouncement[] }) {
   if (!items?.length) return null;
   return (
-    <div className="relative z-10 flex flex-wrap items-center gap-1.5">
+    <div className="relative z-10 flex max-w-full flex-wrap items-center gap-1.5">
       {items.map((item) => (
         <Link
           key={item.slug}
           href={`/kunngjoringer/${item.slug}`}
-          className={cn(buttonVariants({ variant: "tag", size: "xs" }))}
+          className={cn(buttonVariants({ variant: "tag", size: "xs" }), "max-w-full")}
+          title={item.title}
         >
-          <ContentLanguage original={item.originalFields?.includes("title")}>
-            {item.title}
-          </ContentLanguage>
+          <span className="truncate">
+            <ContentLanguage original={item.originalFields?.includes("title")}>
+              {item.title}
+            </ContentLanguage>
+          </span>
         </Link>
       ))}
     </div>
