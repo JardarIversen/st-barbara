@@ -146,7 +146,7 @@ export default async function Image({
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  height: 94,
+                  height: 86,
                   borderTop: index ? `2px solid ${RULE}` : "none",
                 }}
               >
@@ -190,6 +190,22 @@ export default async function Image({
               </div>
             );
           })}
+          {/* A shared preview is kept for weeks; the line says where the times are current. */}
+          <div
+            style={{
+              display: "flex",
+              marginTop: 14,
+              paddingTop: 14,
+              borderTop: `2px solid ${RULE}`,
+              fontSize: 23,
+              color: MUTED,
+            }}
+          >
+            {t("Se oppdaterte tider på")}
+            <span style={{ marginLeft: 7, fontWeight: 600, color: RED }}>
+              kongsberg.katolsk.no
+            </span>
+          </div>
         </div>
       </div>
     ),
