@@ -135,7 +135,9 @@ export default function MassTimes({
         className="mt-16 scroll-mt-36"
       >
         <SectionHeading id="faste-messetider-heading">
-          {t("Faste messetider")}
+          <Link href="/messetider/faste" className="underline-offset-4 hover:underline">
+            {t("Faste messetider")} <span aria-hidden>→</span>
+          </Link>
         </SectionHeading>
         <PlanView
           groups={overview.filter(
@@ -477,7 +479,7 @@ function Later({
     (item) => item.dateKey >= from && item.dateKey <= until && !item.routine,
   );
   return (
-    <section aria-labelledby="later" className="mt-16">
+    <section aria-labelledby="later" className="mt-8">
       <SectionHeading
         id="later"
         aside={t("Arrangementer, høytider og endringer")}
@@ -522,7 +524,7 @@ function ChangeBadge({
 }
 
 /** The regular pattern, so nobody has to work out «the Saturday before the third Sunday». */
-function PlanView({ groups }: { groups: ScheduleOverviewGroup[] }) {
+export function PlanView({ groups }: { groups: ScheduleOverviewGroup[] }) {
   const { locale, t } = useTranslations();
   return (
     <div className="space-y-10">
