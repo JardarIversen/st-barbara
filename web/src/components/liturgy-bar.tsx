@@ -7,9 +7,11 @@ import { LITURGY_NAV, type LiturgyLanguage } from "@/lib/order-of-mass";
 export default async function LiturgyBar({
   language,
   path,
+  anchor,
 }: {
   language: LiturgyLanguage;
   path: string;
+  anchor?: string;
 }) {
   const { t } = await getTranslations();
   return (
@@ -31,7 +33,7 @@ export default async function LiturgyBar({
             </a>
           ))}
         </nav>
-        <LanguageToggle path={path} />
+        <LanguageToggle path={path} anchor={anchor} />
       </div>
     </div>
   );

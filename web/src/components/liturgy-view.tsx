@@ -178,7 +178,14 @@ export function MassSettings({ automatic }: { automatic?: string }) {
 }
 
 /** Switches the liturgy between Norwegian and English, keeping the reader's choices. */
-export function LanguageToggle({ path }: { path: string }) {
+export function LanguageToggle({
+  path,
+  anchor,
+}: {
+  path: string;
+  /** Where on the page the liturgy starts, when it is not the whole page. */
+  anchor?: string;
+}) {
   const { t } = useTranslations();
   const { language, mode, prayer, explain, defaults } = useLiturgy();
   const names: Record<LiturgyLanguage, string> = { nb: "Norsk", en: "English" };
@@ -186,7 +193,7 @@ export function LanguageToggle({ path }: { path: string }) {
     const query = choiceQuery({ mode, prayer, explain }, defaults.mode, new URLSearchParams());
     query.set("liturgi", target);
     if (!PRAYERS[target].includes(prayer)) query.delete("eb");
-    return `${path}?${query}`;
+    return `${path}?${query}${anchor ? `#${anchor}` : ""}`;
   };
   return (
     <div

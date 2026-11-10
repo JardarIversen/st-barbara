@@ -13,6 +13,21 @@ import { localizedPath } from "@/i18n/config";
 import { absoluteUrl } from "@/lib/site";
 import { eventStructuredData } from "@/lib/structured-data";
 import { shareMetadata } from "@/lib/share";
+import LiturgyBar from "@/components/liturgy-bar";
+import { LiturgyView, MassSettings } from "@/components/liturgy-view";
+import OrderOfMass, {
+  type OrderOfMassReadings,
+} from "@/components/order-of-mass";
+import PostureLegend from "@/components/posture-legend";
+import {
+  defaultMode,
+  defaultPrayer,
+  eucharisticPrayer,
+  liturgicalSeason,
+  liturgyLanguage,
+  massMode,
+  splitReadings,
+} from "@/lib/order-of-mass";
 import {
   EVENT_TYPE_LABELS,
   LANGUAGE_LABELS,
@@ -63,11 +78,19 @@ export async function generateMetadata({
 
 export default async function CalendarDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    liturgi?: string | string[];
+    modus?: string | string[];
+    eb?: string | string[];
+    forklaringer?: string;
+  }>;
 }) {
   const { locale, t } = await getTranslations();
   const { slug } = await params;
+  const query = await searchParams;
   const item = await resolveItem(slug);
   if (!item) notFound();
 
@@ -90,6 +113,38 @@ export default async function CalendarDetailPage({
     item.kind === "mass" &&
     item.scheduleKey === "mass-schedule:kongsberg:sunday:nb:1100" &&
     !cancelled;
+
+  // A Mass in Norwegian or English is followed with the order of Mass from the booklet, with
+  // its own readings in place when the newsletter has them. Other languages have no booklet.
+  const massLanguage = liturgyLanguage(item.language);
+  const showLiturgy =
+    item.eventType === "mass" && !cancelled && massLanguage !== null;
+  const language = liturgyLanguage(query.liturgi) ?? massLanguage ?? locale;
+  const defaultKind = massText?.body?.length
+    ? "hoymesse"
+    : defaultMode(item.dateKey);
+  const defaults = { mode: defaultKind, prayer: defaultPrayer(defaultKind) };
+  const mode = massMode(query.modus) ?? defaults.mode;
+  const readings: OrderOfMassReadings | null = massText?.body?.length
+    ? {
+        body: massText.body,
+        parts: splitReadings(massText.body),
+        note:
+          language === "en" ? (
+            <>
+              {t("Lesningene er på norsk.")}{" "}
+              <a
+                href="https://universalis.com/mass.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring rounded-sm font-medium text-primary underline-offset-2 hover:underline"
+              >
+                {t("Engelske lesninger hos Universalis ↗")}
+              </a>
+            </>
+          ) : undefined,
+      }
+    : null;
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
@@ -252,7 +307,7 @@ export default async function CalendarDetailPage({
         </div>
       ) : null}
 
-      {massText && (
+      {massText && !showLiturgy && (
         <section id="lesninger" className="mt-12 scroll-mt-24 border-t border-border pt-8">
           <p className="mb-3 text-sm font-semibold text-primary">
             {t("Dagens lesninger")}
@@ -273,7 +328,7 @@ export default async function CalendarDetailPage({
         </section>
       )}
 
-      {expectsMassText && !massText && (
+      {expectsMassText && !massText && !showLiturgy && (
         <section className="mt-12 border-t border-border pt-8">
           <h2 className="font-display text-3xl font-semibold text-foreground">
             {t("Lesninger")}
@@ -315,6 +370,56 @@ export default async function CalendarDetailPage({
       ) : null}
 
       <SourceBulletins bulletins={item.sourceBulletins} />
+
+      {showLiturgy && (
+        <section
+          id="lesninger"
+          className="mt-12 scroll-mt-24 border-t border-border pt-8"
+        >
+          <h2 className="font-display text-3xl font-semibold text-foreground">
+            {t("Messens ordning")}
+          </h2>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            {readings ? (
+              <>
+                {t("Med lesningene for denne messen, fra søndagsbladet:")}{" "}
+                <span translate="no" lang="nb" className="notranslate">
+                  {massText!.title}
+                </span>
+                .
+              </>
+            ) : expectsMassText ? (
+              t(
+                "Lesningene legges til når søndagsbladet for denne messen er tilgjengelig.",
+              )
+            ) : (
+              t("Messens faste ledd, slik de står i liturgiheftet i kirken.")
+            )}
+          </p>
+          <LiturgyView
+            initial={{
+              mode,
+              prayer:
+                eucharisticPrayer(query.eb, language) ?? defaultPrayer(mode),
+              explain: query.forklaringer === "1",
+            }}
+            defaults={defaults}
+            season={liturgicalSeason(item.dateKey)}
+            language={language}
+          >
+            <MassSettings />
+            <PostureLegend />
+            <LiturgyBar
+              language={language}
+              path={`/messetider/${slug}`}
+              anchor="lesninger"
+            />
+            <div className="mt-10">
+              <OrderOfMass language={language} readings={readings} />
+            </div>
+          </LiturgyView>
+        </section>
+      )}
     </article>
   );
 }
