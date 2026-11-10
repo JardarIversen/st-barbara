@@ -68,7 +68,7 @@ export default async function ArticlePage({
       )}
       {locale === "en" &&
         ["pastoralLetter", "letter"].includes(article.articleType) && (
-          <p className="mt-5 border-l-2 border-brand pl-4 text-sm text-muted-foreground">
+          <p className="mt-5 border-l-2 border-primary pl-4 text-sm text-muted-foreground">
             English translation of the Norwegian original.{" "}
             <a
               className="text-primary underline underline-offset-2"

@@ -152,7 +152,7 @@ export default async function TodaysMassPage({
 
   return (
     <article className="mx-auto max-w-2xl px-5 py-10 lg:py-14">
-      <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+      <p className="mb-3 text-sm font-semibold text-primary">
         {t("Dagens messe")}
       </p>
       <h1 className="font-display text-4xl font-medium leading-tight text-foreground sm:text-5xl">

@@ -245,7 +245,7 @@ export default function LanguageSwitcher() {
         render={<Button variant="outline" size="sm" />}
         translate="no"
         lang={locale}
-        className="notranslate"
+        className="notranslate max-sm:px-2.5"
         aria-label={`${t("Velg språk")}: ${selected?.native ?? lang}`}
         title={selected?.native}
       >
@@ -255,11 +255,14 @@ export default function LanguageSwitcher() {
         >
           <Flag code={lang} className="size-full" />
         </span>
-        <span>{lang.split("-")[0].toUpperCase()}</span>
+        {/* On a phone the flag alone is the control; the code and arrow would crowd the name. */}
+        <span className="hidden sm:inline">
+          {lang.split("-")[0].toUpperCase()}
+        </span>
         <ChevronDownIcon
           aria-hidden="true"
           data-icon="inline-end"
-          className={cn(open && "rotate-180")}
+          className={cn("hidden sm:block", open && "rotate-180")}
         />
       </PopoverTrigger>
       <PopoverContent

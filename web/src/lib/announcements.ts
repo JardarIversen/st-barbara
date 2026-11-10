@@ -10,8 +10,24 @@ export function rankAnnouncements(items: Announcement[], now = new Date()) {
     const daysRemaining = item.appliesUntil
       ? (new Date(item.appliesUntil).getTime() - nowMs) / 86_400_000
       : Number.POSITIVE_INFINITY;
-    const deadline = daysRemaining <= 7 ? 20 : daysRemaining <= 30 ? 10 : 0;
-    return recency + deadline;
+    // An end date only counts as a deadline when there is something to do before it:
+    // a report, such as last Sunday's collection, also ends but asks nothing of the reader.
+    const actionable = Boolean(
+      item.eventStartsAt ||
+        item.registrationDeadline ||
+        item.relatedEvents?.length ||
+        item.links?.length,
+    );
+    const deadline = !actionable
+      ? 0
+      : daysRemaining <= 7
+        ? 20
+        : daysRemaining <= 30
+          ? 10
+          : 0;
+    const priority =
+      item.priority === "urgent" ? 40 : item.priority === "important" ? 20 : 0;
+    return recency + deadline + priority + (actionable ? 10 : 0);
   }
 
   return items.toSorted((a, b) => {

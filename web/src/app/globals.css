@@ -4,17 +4,16 @@
 
 /* One parish palette for page layouts and shadcn primitives. */
 :root {
-  --background: #faf7f1;
-  --foreground: #23201b;
-  --muted: #f2ecdf;
-  --muted-foreground: #756e60;
-  --border: #e4dbc8;
-  --primary: #6e2233;
-  --primary-hover: #561a28;
+  /* Paper, ink and rubric red, as in the missal. No second accent colour. */
+  --background: #f8f7f4;
+  --foreground: #1b1a18;
+  --muted: #eeede8;
+  --muted-foreground: #5c5953;
+  --border: #dad8d1;
+  --primary: #8f1d24;
+  --primary-hover: #70141a;
   --primary-foreground: var(--background);
-  --brand: #a6884f;
-  --brand-soft: #c8ae7c;
-  --inverse: #1f1b16;
+  --inverse: #1b1a18;
   --inverse-foreground: var(--background);
 
   --card: var(--background);
@@ -61,12 +60,10 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-overlay: var(--overlay);
-  --color-brand: var(--brand);
-  --color-brand-soft: var(--brand-soft);
   --color-inverse: var(--inverse);
   --color-inverse-foreground: var(--inverse-foreground);
 
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-body);
   --font-display: var(--font-garamond);
   --font-heading: var(--font-display);
 
@@ -106,6 +103,8 @@
   }
   html {
     @apply font-sans;
+    /* The body face runs small; 17px keeps the times and notes easy to read. */
+    font-size: 106.25%;
     scroll-behavior: auto;
   }
   body {
@@ -323,7 +322,7 @@ font[style] {
   .liturgi .forklaring {
     margin: 0.4rem 0 1rem;
     padding: 0.6rem 0.9rem;
-    border-left: 2px solid var(--brand);
+    border-left: 2px solid var(--primary);
     border-radius: 0 var(--radius) var(--radius) 0;
     background: var(--muted);
     font-size: 0.95rem;

@@ -214,7 +214,7 @@ function NextMasses({
     <section aria-labelledby="next-mass" className="mt-7">
       <h2
         id="next-mass"
-        className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary"
+        className="mb-3 text-sm font-semibold text-primary"
       >
         {place === "all" ? t("Neste messe") : t("Neste messer")}
       </h2>

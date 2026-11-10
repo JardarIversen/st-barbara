@@ -221,3 +221,46 @@ test("Sunday or weekday, and the seasons without the Gloria", () => {
   assert.equal(liturgicalSeason("2026-12-25"), null);
   assert.equal(liturgicalSeason("2022-11-27"), "advent"); // Christmas on a Sunday
 });
+
+test("the Gospel verse is taken from the acclamation without its responses", async () => {
+  const { acclamationVerse } = await import("../src/lib/order-of-mass.ts");
+  const heading = (text) => ({
+    _type: "block",
+    style: "h2",
+    children: [{ _type: "span", text }],
+  });
+  const paragraph = (text) => ({
+    _type: "block",
+    style: "normal",
+    children: [{ _type: "span", text }],
+  });
+  const span = (text) => ({ _type: "span", text });
+  const body = [
+    heading("1. lesning – Visd 6,12–16"),
+    paragraph("Lesning"),
+    heading("Responsoriesalme – Sal 63"),
+    paragraph("Salme"),
+    heading("Evangelievers – Matt 24,42a.44"),
+    {
+      _type: "block",
+      style: "acclamation",
+      children: [
+        span("℟"),
+        span(" Halleluja. "),
+        span("℣"),
+        span(" Så våk da!\nFor Menneskesønnen kan komme."),
+        span(" "),
+        span("℟"),
+        span(" Halleluja."),
+      ],
+    },
+    heading("Evangelium – Matt 25,1–13"),
+    paragraph("Evangelium"),
+  ];
+  assert.deepEqual(acclamationVerse(body), {
+    lines: ["Så våk da!", "For Menneskesønnen kan komme."],
+    reference: "Matt 24,42a.44",
+  });
+  assert.equal(acclamationVerse(body.slice(0, 4)), null);
+  assert.equal(acclamationVerse(null), null);
+});

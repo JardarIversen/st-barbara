@@ -2,7 +2,8 @@ import { getTranslations } from "@/i18n/server";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { toPlainText } from "next-sanity";
+import { toPlainText, type PortableTextBlock } from "next-sanity";
+import { buttonVariants } from "@/components/ui/button";
 import ContentLanguage from "@/components/content-language";
 import PortableContent from "@/components/portable-content";
 import { splitPortableSections } from "@/lib/portable-sections";
@@ -22,6 +23,32 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+/**
+ * A paragraph that is nothing but a link, such as the sign-up forms, is the page's main
+ * action and is shown as a button instead of a line of underlined text.
+ */
+function actionLink(block: PortableTextBlock) {
+  if (block._type !== "block" || block.style !== "normal") return null;
+  const spans = (block.children ?? []).filter(
+    (child) => "text" in child && String(child.text).trim(),
+  );
+  if (spans.length !== 1) return null;
+  const span = spans[0] as { text: string; marks?: string[] };
+  const link = (
+    block.markDefs as
+      | Array<{ _key: string; _type: string; href?: string; blank?: boolean }>
+      | undefined
+  )?.find((def) => def._type === "link" && span.marks?.includes(def._key));
+  return link?.href
+    ? {
+        key: block._key ?? link._key,
+        label: span.text.trim(),
+        href: link.href,
+        blank: link.blank,
+      }
+    : null;
+}
+
 export default async function KatekesePage() {
   await connection();
   const { t } = await getTranslations();
@@ -29,6 +56,7 @@ export default async function KatekesePage() {
   if (!content) notFound();
   const { introduction, sections } = splitPortableSections(content.body);
   const originalBody = content.originalFields?.includes("body");
+  const actions = introduction.flatMap((block) => actionLink(block) ?? []);
 
   return (
     <>
@@ -39,8 +67,29 @@ export default async function KatekesePage() {
           </ContentLanguage>
         </h1>
         <div className="mt-4 max-w-2xl">
-          <PortableContent value={introduction} original={originalBody} />
+          <PortableContent
+            value={introduction.filter((block) => !actionLink(block))}
+            original={originalBody}
+          />
         </div>
+        {actions.length > 0 && (
+          <div className="mt-6 flex flex-wrap gap-3">
+            {actions.map((action) => (
+              <a
+                key={action.key}
+                href={action.href}
+                target={action.blank ? "_blank" : undefined}
+                rel={action.blank ? "noopener noreferrer" : undefined}
+                className={buttonVariants({
+                  size: "lg",
+                  className: "h-auto min-h-control-lg py-2 whitespace-normal",
+                })}
+              >
+                {action.label}
+              </a>
+            ))}
+          </div>
+        )}
 
         {content.catechesis ? (
           <CatechesisProgram program={content.catechesis} />

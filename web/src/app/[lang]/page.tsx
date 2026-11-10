@@ -5,7 +5,7 @@ import Link from "@/i18n/link";
 import { buttonVariants } from "@/components/ui/button";
 import AnnouncementBoard from "@/components/announcement-board";
 import ArticleCard from "@/components/article-card";
-import AgendaList from "@/components/agenda-list";
+import AgendaList, { LanguageBadge } from "@/components/agenda-list";
 import { CalendarChanges } from "@/components/mass-times";
 import PlaceText from "@/components/place-text";
 import JsonLd from "@/components/json-ld";
@@ -23,6 +23,7 @@ import {
 } from "@/lib/calendar";
 import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { rankAnnouncements } from "@/lib/announcements";
+import { READINGS_SCHEDULE_KEY, acclamationVerse } from "@/lib/order-of-mass";
 import { localizedPath } from "@/i18n/config";
 import { absoluteUrl } from "@/lib/site";
 import { parishStructuredData } from "@/lib/structured-data";
@@ -31,8 +32,17 @@ import {
   getCalendarData,
   getLatestArticles,
   getLatestBulletins,
+  getMassText,
   getParishPlaces,
 } from "@/sanity/data";
+
+/** The picture across the top of the front page. Swap the file here when a better one is taken. */
+const HERO = {
+  src: "/images/kirkevigsel-menighet-rett.webp",
+  alt: "Menigheten samlet i kirken under vigslingsmessen",
+  // Which part of the picture stays in view when the frame is wider or narrower than the photo.
+  position: "center 42%",
+};
 
 const SACRAMENTS = [
   {
@@ -101,6 +111,51 @@ export default async function Home() {
       new Date(item.startsAt) >= now &&
       item.regionKeys.includes("kongsberg"),
   );
+  // The Sunday Mass is the one thing on the page that is set large.
+  const sundayMass = allItems.find(
+    (item) =>
+      item.scheduleKey === READINGS_SCHEDULE_KEY && item.dateKey === sunday,
+  );
+  const sundayAhead =
+    sundayMass?.status === "scheduled" && new Date(sundayMass.startsAt) >= now
+      ? sundayMass
+      : undefined;
+  const mainMass = sundayAhead ?? nextKongsbergMass;
+  const soonerMass =
+    nextKongsbergMass && nextKongsbergMass !== mainMass
+      ? nextKongsbergMass
+      : undefined;
+  // The Gospel verse comes from the newsletter: this Sunday's when it has arrived, otherwise
+  // last Sunday's, shown under its own date.
+  const verse = await (async () => {
+    if (!sundayMass?.occurrenceDate || !sundayMass.scheduleId) return null;
+    for (const date of [
+      sundayMass.occurrenceDate,
+      addDays(sundayMass.occurrenceDate, -7),
+    ]) {
+      const text = await getMassText(date, sundayMass.scheduleId);
+      const found = acclamationVerse(text?.body);
+      if (found) return { ...found, date };
+    }
+    return null;
+  })();
+  // An event that is already in the list beside it is not repeated as a notice.
+  const listedEvents = new Set(
+    upcoming
+      .filter(
+        (item) =>
+          item.dateKey <= sunday ||
+          laterItems.some((later) => later.id === item.id),
+      )
+      .map((item) => item.slug),
+  );
+  const notices = rankAnnouncements(announcements).filter(
+    (item) => !item.eventSlug || !listedEvents.has(item.eventSlug),
+  );
+  const massAddress = (mass: typeof mainMass) =>
+    [mass?.place?.name, mass?.place?.streetAddress, mass?.place?.locality]
+      .filter(Boolean)
+      .join(", ");
   const mainPlace = places.find(
     (place) => placeFilterKey(place) === "kongsberg",
   );
@@ -112,12 +167,6 @@ export default async function Home() {
         .filter(Boolean)
         .join(", ")
     : "Kongsberg";
-  const nextMassAddress = [
-    nextKongsbergMass?.place?.streetAddress,
-    nextKongsbergMass?.place?.locality,
-  ]
-    .filter(Boolean)
-    .join(", ");
 
   return (
     <>
@@ -129,74 +178,99 @@ export default async function Home() {
           ),
         })}
       />
-      <section className="border-b border-border">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:py-12">
-          <div>
-            <h1 className="font-display text-5xl font-medium leading-[1.05] text-foreground lg:text-6xl">
-              {t("Den katolske kirke i Kongsberg")}
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {" "}
-              <PlaceText>
-                {t(
-                  "St. Barbara menighet feirer messe i Kongsberg, Notodden, Rjukan og Mo. Velkommen til messe, katekese og fellesskap.",
-                )}
-              </PlaceText>{" "}
-            </p>
-            <div className="mt-7">
-              <Link
-                href="/messetider"
-                className={buttonVariants({ size: "lg" })}
-              >
-                {t("Se messetider")}
-              </Link>
-            </div>
-            {nextKongsbergMass && (
-              <p className="mt-9 border-t border-border pt-5 text-sm text-muted-foreground">
-                <span className="font-medium text-foreground">
-                  {t("Neste messe i Kongsberg:")}{" "}
-                  {formatCalendarDate(
-                    nextKongsbergMass.startsAt,
-                    false,
-                    locale,
-                  )}{" "}
-                  {t("kl.")}{" "}
-                  {formatCalendarTime(nextKongsbergMass.startsAt, locale)}
-                </span>
-                {nextKongsbergMass.place && (
-                  <span translate="no" className="notranslate block">
-                    {nextKongsbergMass.place.name}
-                    {nextMassAddress && `, ${nextMassAddress}`}
-                  </span>
-                )}
+      <section>
+        <div className="relative h-[44vh] max-h-[40rem] min-h-[16rem] overflow-hidden bg-inverse lg:h-[58vh]">
+          <Image
+            src={HERO.src}
+            alt={t(HERO.alt)}
+            fill
+            preload
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: HERO.position }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-inverse/90 via-inverse/30 to-transparent"
+          />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-6xl px-5 pb-6 lg:pb-9">
+              <h1 className="font-display text-4xl font-medium leading-[1.05] text-background sm:text-5xl lg:text-6xl">
+                {t("Den katolske kirke i Kongsberg")}
+              </h1>
+              <p className="mt-3 hidden max-w-xl text-lg leading-relaxed text-background/85 sm:block">
+                <PlaceText>
+                  {t(
+                    "St. Barbara menighet feirer messe i Kongsberg, Notodden, Rjukan og Mo. Velkommen til messe, katekese og fellesskap.",
+                  )}
+                </PlaceText>
               </p>
-            )}
+            </div>
           </div>
-          <figure className="relative mx-auto w-full max-w-[15rem] sm:max-w-xs lg:max-w-sm">
-            <div className="overflow-hidden rounded-t-full border border-border bg-muted p-2.5 pb-0">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-t-full">
-                <Image
-                  src="/images/kirken-eksterior.jpg"
-                  alt={t("St. Barbara kirke i Kongsberg")}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 400px, 80vw"
-                  className="object-cover object-[35%_center]"
-                />
+        </div>
+        {mainMass && (
+          <div className="border-b border-border">
+            <div className="mx-auto grid max-w-6xl gap-x-12 gap-y-6 px-5 py-7 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:py-9">
+              <div>
+                <p className="text-sm font-semibold text-primary">
+                  {sundayAhead ? t("Søndagens messe") : t("Neste messe")}
+                </p>
+                <p className="mt-1 font-display text-4xl font-medium leading-[1.1] text-foreground sm:text-5xl">
+                  <Link
+                    href={mainMass.href}
+                    className="focus-ring rounded-sm underline-offset-[6px] hover:underline"
+                  >
+                    {formatCalendarDate(mainMass.startsAt, false, locale)}{" "}
+                    <span className="whitespace-nowrap">
+                      {t("kl.")} {formatCalendarTime(mainMass.startsAt, locale)}
+                    </span>
+                  </Link>
+                </p>
+                <p
+                  translate="no"
+                  className="notranslate mt-2 text-muted-foreground"
+                >
+                  {massAddress(mainMass)}
+                </p>
+              </div>
+              <div className="lg:border-l lg:border-border lg:pl-12">
+                {soonerMass && (
+                  <>
+                    <p className="text-sm font-semibold text-primary">
+                      {t("Neste messe")}
+                    </p>
+                    <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 font-display text-2xl font-medium text-foreground">
+                      <Link
+                        href={soonerMass.href}
+                        className="focus-ring rounded-sm underline-offset-4 hover:underline"
+                      >
+                        {formatCalendarDate(soonerMass.startsAt, false, locale)}{" "}
+                        {t("kl.")}{" "}
+                        {formatCalendarTime(soonerMass.startsAt, locale)}
+                      </Link>
+                      {soonerMass.language &&
+                        (soonerMass.language !== "nb" || locale === "en") && (
+                          <LanguageBadge language={soonerMass.language} />
+                        )}
+                    </p>
+                  </>
+                )}
+                <Link
+                  href="/messetider"
+                  className={buttonVariants({
+                    className: soonerMass ? "mt-5" : "lg:mt-6",
+                  })}
+                >
+                  {t("Alle messetider og steder")}
+                </Link>
               </div>
             </div>
-            <figcaption className="mt-3 text-center text-xs tracking-wide text-muted-foreground">
-              {t("St. Barbara kirke, Rogstadbakken")}
-            </figcaption>
-          </figure>
-        </div>
+          </div>
+        )}
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-10 lg:grid-cols-[minmax(0,1.85fr)_minmax(0,1fr)] lg:gap-14 lg:py-14">
         <div>
-          <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-            {t("Messer og arrangementer")}
-          </p>
           <h2 className="font-display text-4xl font-medium text-foreground">
             {t("Denne uken")}
           </h2>
@@ -245,12 +319,6 @@ export default async function Home() {
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
-              href="/messetider"
-              className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
-            >
-              {t("Alle messetider og steder")} <span aria-hidden>→</span>
-            </Link>
-            <Link
               href="/messetider#faste-messetider"
               className="text-sm font-medium text-primary underline-offset-4 hover:underline"
             >
@@ -265,14 +333,11 @@ export default async function Home() {
           </div>
         </div>
         <aside className="border-t border-border pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8">
-          <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-            {t("Fra menigheten")}
-          </p>
           <h2 className="mb-7 font-display text-4xl font-medium text-foreground">
             {t("Kunngjøringer")}
           </h2>
           <AnnouncementBoard
-            items={rankAnnouncements(announcements)}
+            items={notices}
             limit={4}
             layout="list"
           />
@@ -298,28 +363,48 @@ export default async function Home() {
               {t("Alle innlegg →")}
             </Link>
           </div>
-          <div className="mt-7 grid items-start gap-x-10 gap-y-7 md:grid-cols-2">
-            {articles.map((article) => (
-              <ArticleCard key={article._id} article={article} />
-            ))}
+          <div className="mt-7 grid items-start gap-x-12 gap-y-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+            {articles[0] && <ArticleCard article={articles[0]} lead />}
+            <div className="space-y-6">
+              {articles.slice(1).map((article) => (
+                <ArticleCard key={article._id} article={article} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-border bg-primary-hover">
-        <div className="mx-auto max-w-4xl px-6 py-12 text-center sm:py-14">
-          <blockquote className="font-display text-3xl font-medium italic leading-snug text-background sm:text-4xl">
-            {t(
-              "«Det finnes ikke frykt i kjærligheten. Den fullkomne kjærlighet driver frykten ut.»",
+      {verse && (
+        <section className="border-t border-border" lang="nb">
+          <div className="mx-auto max-w-3xl px-5 py-14 text-center sm:py-16">
+            <p className="text-sm font-semibold text-primary">
+              {t("Evangelievers")} ·{" "}
+              {formatCalendarDate(`${verse.date}T12:00:00Z`, false, locale)}
+            </p>
+            <blockquote
+              translate="no"
+              className="notranslate mt-4 font-display text-3xl italic leading-snug text-foreground sm:text-4xl"
+            >
+              <span aria-hidden className="mr-2 not-italic text-primary">
+                ℣
+              </span>
+              {verse.lines.join(" ")}
+            </blockquote>
+            {sundayMass && verse.date === sundayMass.occurrenceDate && (
+              <p className="mt-6">
+                <Link
+                  href={sundayMass.href}
+                  className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+                >
+{t("Søndagens lesninger →")}
+                </Link>
+              </p>
             )}
-          </blockquote>
-          <p className="mt-5 text-[0.65rem] uppercase tracking-[0.22em] text-brand-soft">
-            {t("1. Johannes 4,18")}
-          </p>
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
-      <section className="border-b border-border">
+      <section className="border-y border-border">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
@@ -393,7 +478,7 @@ export default async function Home() {
                         locale,
                       )}
                     </span>
-                    <span className="shrink-0 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                    <span className="shrink-0 text-xs text-muted-foreground">
                       PDF
                     </span>
                   </a>

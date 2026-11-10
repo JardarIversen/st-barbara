@@ -29,7 +29,7 @@
   "Åpne PDF i ny fane": "Open PDF in a new tab",
   "Hvis PDF-en ikke vises i nettleseren din, bruk knappen over for å åpne den i en ny fane.": "If your browser cannot display the PDF, use the button above to open it in a new tab.",
   "Alle": "All",
-  "Menighetsråd": "Parish Council",
+  "Menighetsråd": "Parish council",
   "Øvrige innlegg": "Other articles",
   "Filtrer innlegg": "Filter articles",
   "Ingen innlegg her ennå.": "No articles here yet.",
@@ -155,7 +155,6 @@
   "Ukrainsk": "Ukrainian",
   "Annet språk": "Other language",
   "Messe": "Holy Mass",
-  "Menighetsråd": "Parish council",
   "Pilegrimstur": "Pilgrimage",
   "Aktivitet": "Activity",
   "Sosialt arrangement": "Social event",
@@ -265,5 +264,8 @@
   "når det ikke synges": "when there is no singing",
   "vanligvis ikke på hverdager": "usually not on weekdays",
   "ikke i advent": "not in Advent",
-  "ikke i fastetiden": "not in Lent"
+  "ikke i fastetiden": "not in Lent",
+  "Søndagens messe": "Sunday Mass",
+  "Evangelievers": "Gospel verse",
+  "Kirkebygget i Rogstadbakken ble reist i 1887, en hvit trekirke med spir og rosevindu. St. Barbara menighet ble opprettet 15. august 2021 som egen menighet i Oslo katolske bispedømme. Den 23. september 2023 vigslet biskopen kirken og alteret til den hellige Barbara, med relikvier i alteret og full kirke.": "The church building in Rogstadbakken was raised in 1887, a white wooden church with a spire and a rose window. St. Barbara was established as a parish in the Catholic Diocese of Oslo on 15 August 2021. On 23 September 2023 the bishop consecrated the church and the altar to Saint Barbara, with relics in the altar and a full church."
 }

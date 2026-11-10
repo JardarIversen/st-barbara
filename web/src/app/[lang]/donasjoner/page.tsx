@@ -27,45 +27,38 @@ export default async function DonasjonerPage() {
         )}{" "}
       </p>
 
-      <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border lg:grid-cols-3">
-        <div className="bg-background p-9">
-          <h2 className="font-display text-2xl font-semibold text-foreground">
-            Vipps
-          </h2>
-          <p className="mt-6 font-display text-6xl font-medium text-primary">
-            {contact.vipps}
-          </p>
-          <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            {" "}
-            {t(
-              "Søk opp «St. Barbara menighet» eller bruk nummeret direkte. Gaver over 500 kr i året gir rett til skattefradrag – husk å registrere fødselsnummer i Vipps.",
-            )}{" "}
-          </p>
-        </div>
+      {/* Vipps is how nearly everyone gives, so the number stands alone. */}
+      <section className="mt-12 border-t border-border pt-8">
+        <h2 className="text-sm font-semibold text-primary">Vipps</h2>
+        <p className="mt-1 font-display text-8xl font-medium leading-none tabular-nums text-foreground sm:text-9xl">
+          {contact.vipps}
+        </p>
+        <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">
+          {t(
+            "Søk opp «St. Barbara menighet» eller bruk nummeret direkte. Gaver over 500 kr i året gir rett til skattefradrag – husk å registrere fødselsnummer i Vipps.",
+          )}
+        </p>
+      </section>
 
-        <div className="bg-background p-9">
+      <div className="mt-12 grid gap-x-12 gap-y-10 border-t border-border pt-8 sm:grid-cols-2">
+        <section>
           <h2 className="font-display text-2xl font-semibold text-foreground">
-            {" "}
-            {t("Bankoverføring")}{" "}
+            {t("Bankoverføring")}
           </h2>
-          <p className="mt-6 font-display text-3xl font-medium tracking-wide text-primary">
+          <p className="mt-2 text-xl font-medium tabular-nums text-foreground">
             {contact.konto}
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            {" "}
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             {t(
               "Merk gjerne overføringen med hva gaven gjelder – for eksempel «kirkens drift» eller «Caritas».",
-            )}{" "}
+            )}
           </p>
-        </div>
-
-        <div className="bg-background p-9">
+        </section>
+        <section>
           <h2 className="font-display text-2xl font-semibold text-foreground">
-            {" "}
-            {t("Fast givertjeneste")}{" "}
+            {t("Fast givertjeneste")}
           </h2>
-          <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            {" "}
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             {t(
               "Et fast månedlig beløp gir menigheten forutsigbarhet. Opprett AvtaleGiro i nettbanken din til kontoen over, eller via",
             )}{" "}
@@ -73,13 +66,13 @@ export default async function DonasjonerPage() {
               href="https://www.avtalegiro.no"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline-offset-2 hover:underline"
+              className="text-primary underline underline-offset-2"
             >
               avtalegiro.no
             </a>
             .
           </p>
-        </div>
+        </section>
       </div>
 
       <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">

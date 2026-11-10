@@ -140,6 +140,31 @@ export function splitReadings(
   return parts as MassReadings;
 }
 
+/**
+ * The verse of the Gospel acclamation, without the response before and after it.
+ * Null when the newsletter's text has no acclamation in the usual form.
+ */
+export function acclamationVerse(
+  body: PortableTextBlock[] | null | undefined,
+): { lines: string[]; reference: string } | null {
+  const part = splitReadings(body)?.acclamation;
+  const block = part?.blocks.find((item) => item.style === "acclamation");
+  if (!part || !block) return null;
+  const spans = (block.children ?? []).map((child) =>
+    "text" in child ? String(child.text) : "",
+  );
+  const start = spans.findIndex((text) => text.trim() === "℣");
+  if (start < 0) return null;
+  const rest = spans.slice(start + 1);
+  const end = rest.findIndex((text) => text.trim() === "℟");
+  const lines = (end < 0 ? rest : rest.slice(0, end))
+    .join("")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  return lines.length ? { lines, reference: part.reference } : null;
+}
+
 // The newsletter's readings belong to this Mass; see AGENTS.md.
 export const READINGS_SCHEDULE_KEY = "mass-schedule:kongsberg:sunday:nb:1100";
 // A Mass stays "today's Mass" for a while after it ends, for anyone reading on afterwards.

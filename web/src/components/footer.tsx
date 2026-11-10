@@ -3,6 +3,7 @@ import Link from "@/i18n/link";
 import { contact, notoddenContact, phoneHref, phoneLabel } from "@/lib/parish";
 import { getParishPlaces } from "@/sanity/data";
 import PlaceText from "@/components/place-text";
+import TowerMark from "@/components/tower-mark";
 
 export default async function Footer() {
   const { t } = await getTranslations();
@@ -14,12 +15,10 @@ export default async function Footer() {
           <div>
             <p
               translate="no"
-              className="notranslate flex items-center gap-2 font-display text-2xl font-semibold text-background"
+              className="notranslate flex items-center gap-2.5 font-display text-2xl font-semibold text-background"
             >
-              <span aria-hidden className="text-brand">
-                ✠
-              </span>{" "}
-              {t("St. Barbara menighet")}{" "}
+              <TowerMark className="h-7 w-5 shrink-0" />
+              {t("St. Barbara menighet")}
             </p>
             <p className="mt-3 text-sm leading-relaxed">
               {" "}
@@ -40,7 +39,7 @@ export default async function Footer() {
           </div>
 
           <div>
-            <p className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-brand">
+            <p className="text-sm font-semibold text-background">
               {" "}
               {t("Snarveier")}{" "}
             </p>
@@ -56,7 +55,7 @@ export default async function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="transition-colors hover:text-brand-soft"
+                    className="transition-colors hover:text-background"
                   >
                     {t(label)}
                   </Link>
@@ -66,7 +65,7 @@ export default async function Footer() {
           </div>
 
           <div>
-            <p className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-brand">
+            <p className="text-sm font-semibold text-background">
               {" "}
               {t("Messesteder")}{" "}
             </p>
@@ -74,7 +73,7 @@ export default async function Footer() {
               {places.map((place) => (
                 <li key={place._id} translate="no" className="notranslate">
                   <span className="text-background/90">{place.name}</span>
-                  {place.locality && (
+                  {place.locality && place.locality !== place.name && (
                     <span className="block text-xs text-background/50">
                       {place.locality}
                     </span>
@@ -85,7 +84,7 @@ export default async function Footer() {
           </div>
 
           <div>
-            <p className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-brand">
+            <p className="text-sm font-semibold text-background">
               {" "}
               {t("Kontakt")}{" "}
             </p>
@@ -97,7 +96,7 @@ export default async function Footer() {
                 <li>
                   <a
                     href={phoneHref(contact.phone)}
-                    className="hover:text-brand-soft"
+                    className="hover:text-background"
                   >
                     {phoneLabel(contact.phone)}
                   </a>
@@ -105,7 +104,7 @@ export default async function Footer() {
                 <li>
                   <a
                     href={`mailto:${contact.email}`}
-                    className="hover:text-brand-soft"
+                    className="hover:text-background"
                   >
                     {contact.email}
                   </a>
@@ -123,7 +122,7 @@ export default async function Footer() {
                 <li>
                   <a
                     href={phoneHref(notoddenContact.phone)}
-                    className="hover:text-brand-soft"
+                    className="hover:text-background"
                   >
                     {phoneLabel(notoddenContact.phone)}
                   </a>
@@ -131,7 +130,7 @@ export default async function Footer() {
                 <li>
                   <a
                     href={`mailto:${notoddenContact.email}`}
-                    className="hover:text-brand-soft"
+                    className="hover:text-background"
                   >
                     {notoddenContact.email}
                   </a>

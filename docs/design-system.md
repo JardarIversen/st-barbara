@@ -5,12 +5,14 @@ Den eksisterende menighetsprofilen er utgangspunktet, ikke shadcns standardtema.
 
 ## Tokens
 
-- Farger: `background`/`foreground`, `muted`/`muted-foreground`, `border`, `primary`/`primary-foreground`, `primary-hover`, `brand` og `inverse`/`inverse-foreground`.
+- Farger: `background`/`foreground`, `muted`/`muted-foreground`, `border`, `primary`/`primary-foreground`, `primary-hover` og `inverse`/`inverse-foreground`. Paletten er papir, blekk og rubrikkrødt, som i messeboken. Det finnes ingen egen aksentfarge: gull er tatt ut.
+- Etiketter over overskrifter skrives med vanlig setningsform i `text-sm font-semibold text-primary`, og bare når de sier noe overskriften ikke sier. Ikke bruk sperrede versaler.
+- Menighetens merke er Barbaras tårn med tre vinduer (`TowerMark`). Buede bilderammer brukes ikke.
 - Komponentroller som `popover`, `card`, `input`, `accent` og `ring` peker til denne paletten. Ikke opprett en parallell palett eller bruk rå fargeverdier i komponenter. Flagg beholder sine faktiske flaggfarger.
-- `--radius` er 4 px. Kontroller, menyer og dialoger bruker `rounded-sm`; mindre innvendige detaljer bruker `rounded-xs`. Bildebuer, portretter og filterbrikker kan fortsatt ha bevisst rund form.
+- `--radius` er 4 px. Kontroller, menyer og dialoger bruker `rounded-sm`; mindre innvendige detaljer bruker `rounded-xs`. Portretter og filterbrikker kan fortsatt ha bevisst rund form.
 - Kontrollhøyder: `control-xs` 28 px, `control-sm` 36 px, `control` 40 px, `control-lg` 44 px.
 - `focus-ring` og `focus-within-ring` deler fokusfarge, bredde og avstand. Sammensatte felt viser én fokusmarkering rundt hele gruppen.
-- `shadow-popover` er felles skygge for flytende paneler. Brødtekst bruker `font-sans`; redaksjonelle overskrifter bruker `font-display`.
+- `shadow-popover` er felles skygge for flytende paneler. Brødtekst bruker `font-sans` (Source Sans 3); redaksjonelle overskrifter bruker `font-display` (EB Garamond).
 
 ## Primitiver
 

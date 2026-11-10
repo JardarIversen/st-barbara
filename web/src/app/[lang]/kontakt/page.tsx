@@ -39,9 +39,6 @@ export default async function KontaktPage() {
           ),
         })}
       />
-      <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-        {t("Vi hører gjerne fra deg")}
-      </p>
       <h1 className="font-display text-5xl font-medium leading-tight text-foreground">
         {t("Kontakt menigheten")}
       </h1>
@@ -51,7 +48,7 @@ export default async function KontaktPage() {
         )}
       </p>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <section className="rounded-sm border border-border bg-muted/65 p-6 sm:p-8">
           <div className="flex items-center gap-5">
             <div className="relative size-20 shrink-0 overflow-hidden rounded-full border border-border">

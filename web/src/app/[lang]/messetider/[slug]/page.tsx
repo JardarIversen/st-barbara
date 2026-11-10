@@ -102,7 +102,7 @@ export default async function CalendarDetailPage({
       >
         {t("← Messetider og arrangementer")}
       </BackLink>
-      <p className="mt-8 text-xs font-medium uppercase tracking-[0.22em] text-primary">
+      <p className="mt-8 text-sm font-semibold text-primary">
         {t(EVENT_TYPE_LABELS[item.eventType])}
       </p>
       <h1
@@ -130,7 +130,7 @@ export default async function CalendarDetailPage({
 
       <dl className="mt-9 grid gap-5 rounded-sm border border-border bg-muted p-6 sm:grid-cols-2">
         <div>
-          <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          <dt className="text-sm font-medium text-muted-foreground">
             {t("Tid")}
           </dt>
           <dd
@@ -150,7 +150,7 @@ export default async function CalendarDetailPage({
           </dd>
         </div>
         <div>
-          <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          <dt className="text-sm font-medium text-muted-foreground">
             {t("Sted")}
           </dt>
           <dd className="mt-1 text-sm text-foreground">
@@ -186,7 +186,7 @@ export default async function CalendarDetailPage({
         </div>
         {item.language && (
           <div>
-            <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            <dt className="text-sm font-medium text-muted-foreground">
               {t("Språk")}
             </dt>
             <dd className="mt-1 text-sm text-foreground">
@@ -196,7 +196,7 @@ export default async function CalendarDetailPage({
         )}
         {item.registrationDeadline && (
           <div>
-            <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            <dt className="text-sm font-medium text-muted-foreground">
               {t("Påmeldingsfrist")}
             </dt>
             <dd className="mt-1 text-sm text-foreground">
@@ -251,7 +251,7 @@ export default async function CalendarDetailPage({
 
       {massText && (
         <section id="lesninger" className="mt-12 scroll-mt-24 border-t border-border pt-8">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          <p className="mb-3 text-sm font-semibold text-primary">
             {t("Dagens lesninger")}
           </p>
           <h2 className="font-display text-3xl font-semibold text-foreground">

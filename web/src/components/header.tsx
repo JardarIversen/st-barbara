@@ -7,6 +7,7 @@ import Link from "@/i18n/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import LanguageSwitcher from "./language-switcher";
+import TowerMark from "./tower-mark";
 import { Button, buttonVariants } from "./ui/button";
 
 const NAV = [
@@ -29,23 +30,20 @@ export default function Header() {
           href="/"
           className="group flex min-w-0 items-center gap-2 lg:gap-3"
         >
-          <span
-            aria-hidden
-            className="font-display text-3xl leading-none text-brand transition-colors group-hover:text-primary"
-          >
-            ✠
-          </span>
-          <span>
+          <TowerMark className="h-8 w-6 shrink-0 text-primary lg:h-9 lg:w-7" />
+          <span className="min-w-0">
             <span
               translate="no"
-              className="notranslate block font-display text-lg leading-tight font-semibold tracking-wide text-foreground sm:text-[1.45rem]"
+              className="notranslate block font-display text-xl leading-tight font-semibold text-foreground sm:text-2xl"
             >
-              {" "}
-              {t("St. Barbara menighet")}{" "}
+              {t("St. Barbara menighet")}
             </span>
-            <span className="hidden text-[0.6rem] font-medium uppercase tracking-[0.28em] text-muted-foreground sm:block">
-              {" "}
-              {t("Den katolske kirke i Kongsberg")}{" "}
+            {/* The four places, not the tagline: the front page already says that in its heading. */}
+            <span
+              translate="no"
+              className="notranslate hidden text-xs leading-tight text-muted-foreground sm:block"
+            >
+              Kongsberg · Notodden · Rjukan · Mo
             </span>
           </span>
         </Link>

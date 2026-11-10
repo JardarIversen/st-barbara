@@ -39,7 +39,7 @@ export function StatusBadge({
 export function LanguageBadge({ language }: { language: string }) {
   const { t } = useTranslations();
   return (
-    <span className="inline-flex items-center rounded-xs border border-border px-1.5 py-px text-[0.7rem] font-medium text-muted-foreground">
+    <span className="inline-flex items-center rounded-xs border border-border px-1.5 py-px font-sans text-xs font-medium text-muted-foreground">
       {t(LANGUAGE_LABELS[language] ?? "Annet språk")}
     </span>
   );
@@ -68,9 +68,12 @@ export default function AgendaList({
         const title = calendarTitle(item);
         const multipleDays =
           todayInOslo(new Date(item.endsAt ?? item.startsAt)) !== item.dateKey;
-        const note =
+        const fullNote =
           item.publicNote ||
           (item.eventType !== "mass" ? item.summary : undefined);
+        // Front page: the notice tag already says it, and the notice itself is beside the list.
+        const note =
+          compact && item.announcements?.length ? undefined : fullNote;
         const places = item.places.map(calendarPlaceLabel).filter(
           (name) =>
             // «Messe på Rjukan» already says «Rjukan kirke».
@@ -155,7 +158,7 @@ export default function AgendaList({
                   </p>
                 )}
                 {note && note !== item.title && (
-                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                  <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
                     <ContentLanguage original={item.noteOriginal}>
                       {note}
                     </ContentLanguage>
@@ -187,6 +190,10 @@ export default function AgendaList({
             locale === "en" ? "en-GB" : "nb-NO",
             { timeZone: "UTC", weekday: "long" },
           ).format(day);
+          const shortWeekday = new Intl.DateTimeFormat(
+            locale === "en" ? "en-GB" : "nb-NO",
+            { timeZone: "UTC", weekday: "short" },
+          ).format(day);
           const dayMonth = new Intl.DateTimeFormat(
             locale === "en" ? "en-GB" : "nb-NO",
             { timeZone: "UTC", day: "numeric", month: "short" },
@@ -209,7 +216,7 @@ export default function AgendaList({
                 locale,
               )}
               className={cn(
-                "grid grid-cols-[4.5rem_minmax(0,1fr)] gap-x-2 border-t border-border sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-x-4",
+                "grid grid-cols-[5.25rem_minmax(0,1fr)] gap-x-2 border-t border-border sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-x-4",
                 sunday &&
                   "-mx-3 rounded-sm border-transparent bg-muted/70 px-3 [&+section]:border-transparent",
               )}
@@ -226,9 +233,9 @@ export default function AgendaList({
                   >
                     {label}
                   </span>
-                  <span className="text-muted-foreground">
+                  <span className="whitespace-nowrap text-muted-foreground">
                     {date === today || date === addDays(today, 1)
-                      ? `${weekday} ${dayMonth}`
+                      ? `${shortWeekday} ${dayMonth}`
                       : dayMonth}
                   </span>
                 </time>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Inter } from "next/font/google";
+import { EB_Garamond, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/header";
 import { NavigationHistory } from "@/components/navigation-history";
 import Footer from "@/components/footer";
@@ -22,8 +22,8 @@ const garamond = EB_Garamond({
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const body = Source_Sans_3({
+  variable: "--font-body",
   subsets: ["latin", "latin-ext"],
 });
 
@@ -67,7 +67,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${garamond.variable} ${inter.variable} h-full antialiased`}
+      className={`${garamond.variable} ${body.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         <LocaleProvider locale={locale} language={lang}>

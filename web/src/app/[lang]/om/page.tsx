@@ -4,6 +4,7 @@ import Image from "next/image";
 import {
   municipalities,
   parishCouncil,
+  phoneHref,
   phoneLabel,
   priests,
 } from "@/lib/parish";
@@ -18,21 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
     ),
   };
 }
-
-const TIMELINE = [
-  {
-    year: "1887",
-    text: "Kirkebygget i Rogstadbakken reises – en hvit trekirke med spir og rosevindu.",
-  },
-  {
-    year: "2021",
-    text: "St. Barbara menighet opprettes 15. august som egen menighet i Oslo katolske bispedømme.",
-  },
-  {
-    year: "2023",
-    text: "Kirken vigsles til St. Barbara 23. september, med relikvier i alteret og full kirke.",
-  },
-];
 
 export default async function OmPage() {
   const { t } = await getTranslations();
@@ -67,7 +53,7 @@ export default async function OmPage() {
             </div>
           </div>
           <figure className="relative mx-auto w-full max-w-sm">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-t-full border border-border">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
               <Image
                 src="/images/prest-morgen.jpg"
                 alt={t("På vei til St. Barbara kirke en tidlig morgen")}
@@ -76,7 +62,7 @@ export default async function OmPage() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-center text-xs tracking-wide text-muted-foreground">
+            <figcaption className="mt-2 text-xs text-muted-foreground">
               {" "}
               {t("På vei til kirken")}{" "}
             </figcaption>
@@ -84,38 +70,16 @@ export default async function OmPage() {
         </div>
       </div>
 
-      {/* Timeline */}
-      <section className="bg-muted">
+      {/* History, told with the pictures from the consecration */}
+      <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <h2 className="font-display text-4xl font-medium text-foreground">
-            {" "}
-            {t("Historien")}{" "}
+            {t("Historien")}
           </h2>
-          <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-3">
-            {TIMELINE.map((item) => (
-              <div key={item.year} className="bg-background p-8">
-                <p className="font-display text-5xl font-medium text-primary">
-                  {item.year}
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  {t(item.text)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Consecration photos */}
-      <section>
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="font-display text-4xl font-medium text-foreground">
-            {" "}
-            {t("Kirkevigselen")}{" "}
-          </h2>
-          <p className="mt-3 max-w-2xl text-muted-foreground">
-            {" "}
-            {t("23. september 2023 vigslet biskopen kirken og alteret.")}{" "}
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground/85">
+            {t(
+              "Kirkebygget i Rogstadbakken ble reist i 1887, en hvit trekirke med spir og rosevindu. St. Barbara menighet ble opprettet 15. august 2021 som egen menighet i Oslo katolske bispedømme. Den 23. september 2023 vigslet biskopen kirken og alteret til den hellige Barbara, med relikvier i alteret og full kirke.",
+            )}
           </p>
           <div className="mt-8 grid items-start gap-5 sm:grid-cols-[1.15fr_1fr]">
             <div className="space-y-5">
@@ -134,10 +98,10 @@ export default async function OmPage() {
               </figure>
               <figure>
                 <Image
-                  src="/images/kirkevigsel-menighet.webp"
+                  src="/images/kirkevigsel-menighet-rett.webp"
                   alt={t("Menigheten samlet i kirken under vigslingsmessen")}
-                  width={2200}
-                  height={1467}
+                  width={2180}
+                  height={1440}
                   sizes="(min-width: 640px) 65vw, 100vw"
                   className="h-auto w-full rounded-sm"
                 />
@@ -166,44 +130,49 @@ export default async function OmPage() {
       {/* Priests */}
       <section className="border-t border-border bg-muted">
         <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="text-center font-display text-4xl font-medium text-foreground">
-            {" "}
-            {t("Våre prester")}{" "}
+          <h2 className="font-display text-4xl font-medium text-foreground">
+            {t("Våre prester")}
           </h2>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-3">
+          <ul className="mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {priests.map((p) => (
-              <div key={p.name} className="text-center">
-                <div className="relative mx-auto aspect-[3/4] w-44 overflow-hidden rounded-t-full border border-border sm:w-full">
+              <li key={p.name} className="flex items-start gap-4">
+                {/* Small on purpose: the portraits are passport-sized and do not bear enlarging. */}
+                <div className="relative aspect-[3/4] w-24 shrink-0 overflow-hidden rounded-sm">
                   <Image
                     src={p.image}
                     alt={`${t("Portrett av")} ${p.name}`}
                     fill
-                    sizes="200px"
+                    sizes="96px"
                     className="object-cover"
                   />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  {t(p.role)}
-                </p>
-                <p className="mt-2 text-sm text-primary">
-                  {phoneLabel(p.phone)}
-                </p>
-              </div>
+                <div className="min-w-0">
+                  <h3 className="font-display text-2xl font-semibold leading-snug text-foreground">
+                    {p.name}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {t(p.role)}
+                  </p>
+                  <a
+                    href={phoneHref(p.phone)}
+                    className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+                  >
+                    {phoneLabel(p.phone)}
+                  </a>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       {/* Parish council */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="text-center font-display text-4xl font-medium text-foreground">
+          <h2 className="font-display text-4xl font-medium text-foreground">
             {t("Menighetsrådet")}
           </h2>
-          <dl className="mx-auto mt-10 max-w-xl divide-y divide-border border-y border-border">
+          <dl className="mt-8 max-w-xl divide-y divide-border border-y border-border">
             {parishCouncil.map((member) => (
               <div
                 key={member.role}

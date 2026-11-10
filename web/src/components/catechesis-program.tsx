@@ -108,7 +108,7 @@ export default async function CatechesisProgram({
                   {group.sessions.map((session) => (
                     <div
                       key={session._key}
-                      className="min-w-0 border-l-2 border-brand pl-4"
+                      className="min-w-0 border-l-2 border-border pl-4"
                     >
                       <h3 className="font-display text-xl font-semibold text-foreground sm:text-2xl">
                         <ContentLanguage
