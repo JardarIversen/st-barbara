@@ -8,6 +8,7 @@ const PAGES = [
   "/",
   "/messetider",
   "/messetider/kalender",
+  "/messetider/faste",
   "/messen",
   "/kunngjoringer",
   "/innlegg",
