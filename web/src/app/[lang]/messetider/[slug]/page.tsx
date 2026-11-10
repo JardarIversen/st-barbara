@@ -12,6 +12,7 @@ import JsonLd from "@/components/json-ld";
 import { localizedPath } from "@/i18n/config";
 import { absoluteUrl } from "@/lib/site";
 import { eventStructuredData } from "@/lib/structured-data";
+import { shareMetadata } from "@/lib/share";
 import {
   EVENT_TYPE_LABELS,
   LANGUAGE_LABELS,
@@ -55,6 +56,8 @@ export async function generateMetadata({
       `${calendarDateRange(item, locale)}${isDateOnlyRange(item) ? "" : ` ${t("kl.")} ${formatCalendarTime(item.startsAt, locale)}`}`,
     // Every date of a regular mass has its own page; /messetider is the one to find in search.
     robots: item.kind === "mass" ? { index: false, follow: true } : undefined,
+    // One Mass or event is shared with the parish picture, not the overview's list of next Masses.
+    ...shareMetadata(locale, { title: item.title }),
   };
 }
 

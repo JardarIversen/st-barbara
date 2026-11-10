@@ -63,6 +63,7 @@ export function parishStructuredData(
         telephone: telephone(contact.phone),
         image: absoluteUrl("/parish-share.png"),
         logo: absoluteUrl("/apple-icon.png"),
+        sameAs: [contact.facebook],
         parentOrganization: {
           "@type": "Organization",
           name: "Oslo katolske bispedømme",

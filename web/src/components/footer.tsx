@@ -61,6 +61,16 @@ export default async function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={contact.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-background"
+                >
+                  Facebook <span aria-hidden>↗</span>
+                </a>
+              </li>
             </ul>
           </div>
 

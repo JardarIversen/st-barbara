@@ -5,6 +5,7 @@ export const contact = {
   email: "kongsberg@katolsk.no",
   vipps: "703819",
   konto: "3000 52 26089",
+  facebook: "https://www.facebook.com/groups/catholics.kongsberg",
 };
 
 export const priests = [
