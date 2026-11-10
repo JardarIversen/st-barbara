@@ -130,7 +130,7 @@ export default async function Home() {
         })}
       />
       <section className="border-b border-border">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:py-12">
+        <div className="mx-auto grid max-w-6xl items-center gap-6 px-5 py-6 lg:grid-cols-[1.4fr_0.6fr] lg:py-8">
           <div>
             <h1 className="font-display text-5xl font-medium leading-[1.05] text-foreground lg:text-6xl">
               {t("Den katolske kirke i Kongsberg")}
@@ -143,16 +143,22 @@ export default async function Home() {
                 )}
               </PlaceText>{" "}
             </p>
-            <div className="mt-7">
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
               <Link
-                href="/messetider"
-                className={buttonVariants({ size: "lg" })}
+                href="/messetider/kalender"
+                className={buttonVariants({ variant: "link" })}
               >
-                {t("Se messetider")}
+                {t("Se hele kalenderen")}
+              </Link>
+              <Link href="/messetider/faste" className={buttonVariants({ variant: "link" })}>
+                {t("Se faste messetider")}
+              </Link>
+              <Link href="/kunngjoringer" className={buttonVariants({ variant: "link" })}>
+                {t("Se kunngjøringer")}
               </Link>
             </div>
-            {nextKongsbergMass && (
-              <p className="mt-9 border-t border-border pt-5 text-sm text-muted-foreground">
+            {nextKongsbergMass && !calendarItems.some((item) => item.id === nextKongsbergMass.id) && (
+              <p className="mt-4 border-t border-border pt-3 text-sm text-muted-foreground">
                 <span className="font-medium text-foreground">
                   {t("Neste messe i Kongsberg:")}{" "}
                   {formatCalendarDate(
@@ -172,7 +178,7 @@ export default async function Home() {
               </p>
             )}
           </div>
-          <figure className="relative mx-auto w-full max-w-[15rem] sm:max-w-xs lg:max-w-sm">
+          <figure className="relative mx-auto w-full max-w-[10rem] sm:max-w-[12rem] lg:max-w-[13rem]">
             <div className="overflow-hidden rounded-t-full border border-border bg-muted p-2.5 pb-0">
               <div className="relative aspect-[3/4] overflow-hidden rounded-t-full">
                 <Image
@@ -192,7 +198,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-10 lg:grid-cols-[minmax(0,1.85fr)_minmax(0,1fr)] lg:gap-14 lg:py-14">
+      <section className="mx-auto grid max-w-6xl gap-6 px-5 py-6 lg:grid-cols-[minmax(0,1.85fr)_minmax(0,1fr)] lg:gap-8 lg:py-8">
         <div>
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
             {t("Messer og arrangementer")}
@@ -251,7 +257,7 @@ export default async function Home() {
               {t("Alle messetider og steder")} <span aria-hidden>→</span>
             </Link>
             <Link
-              href="/messetider#faste-messetider"
+              href="/messetider/faste"
               className="text-sm font-medium text-primary underline-offset-4 hover:underline"
             >
               {t("Faste messetider")}
@@ -268,7 +274,7 @@ export default async function Home() {
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
             {t("Fra menigheten")}
           </p>
-          <h2 className="mb-7 font-display text-4xl font-medium text-foreground">
+          <h2 className="mb-4 font-display text-4xl font-medium text-foreground">
             {t("Kunngjøringer")}
           </h2>
           <AnnouncementBoard
