@@ -29,7 +29,7 @@
   "Åpne PDF i ny fane": "Open PDF in a new tab",
   "Hvis PDF-en ikke vises i nettleseren din, bruk knappen over for å åpne den i en ny fane.": "If your browser cannot display the PDF, use the button above to open it in a new tab.",
   "Alle": "All",
-  "Menighetsråd": "Parish Council",
+  "Menighetsråd": "Parish council",
   "Øvrige innlegg": "Other articles",
   "Filtrer innlegg": "Filter articles",
   "Ingen innlegg her ennå.": "No articles here yet.",
@@ -155,7 +155,6 @@
   "Ukrainsk": "Ukrainian",
   "Annet språk": "Other language",
   "Messe": "Holy Mass",
-  "Menighetsråd": "Parish council",
   "Pilegrimstur": "Pilgrimage",
   "Aktivitet": "Activity",
   "Sosialt arrangement": "Social event",
@@ -265,5 +264,9 @@
   "når det ikke synges": "when there is no singing",
   "vanligvis ikke på hverdager": "usually not on weekdays",
   "ikke i advent": "not in Advent",
-  "ikke i fastetiden": "not in Lent"
+  "ikke i fastetiden": "not in Lent",
+  "Se hele kalenderen": "View the full calendar",
+  "Se faste messetider": "View regular Mass times",
+  "Se kunngjøringer": "View announcements",
+  "Vanlige messetider for Kongsberg, Notodden, Rjukan og Mo. Se kalenderen for endringer.": "Regular Mass times for Kongsberg, Notodden, Rjukan and Mo. Check the calendar for changes."
 }
