@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { EB_Garamond, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/header";
 import { NavigationHistory } from "@/components/navigation-history";
@@ -26,6 +26,9 @@ const body = Source_Sans_3({
   variable: "--font-body",
   subsets: ["latin", "latin-ext"],
 });
+
+// The browser frame on a phone takes the page's paper colour.
+export const viewport: Viewport = { themeColor: "#f8f7f4" };
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t, locale } = await getTranslations();

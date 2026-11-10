@@ -13,6 +13,10 @@ import { formatArticleDate } from "@/lib/calendar";
 import { getArticle } from "@/sanity/data";
 import { isArticlePdf } from "@/lib/article-pdf";
 import { shareMetadata } from "@/lib/share";
+import JsonLd from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/site";
+import { articleStructuredData } from "@/lib/structured-data";
+import { urlForImage } from "@/sanity/image";
 
 // Locale and canonical URLs depend on request headers, as on the other pages.
 // Do not opt this route into static fallback rendering with generateStaticParams.
@@ -31,6 +35,7 @@ export async function generateMetadata({
     ...shareMetadata(locale, {
       title: article.title,
       image: article.mainImage,
+      publishedAt: article.publishedAt,
     }),
   };
 }
@@ -48,6 +53,15 @@ export default async function ArticlePage({
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
+      <JsonLd
+        data={articleStructuredData(article, {
+          url: absoluteUrl(localizedPath(`/innlegg/${article.slug}`, locale)),
+          locale,
+          image: article.mainImage?.assetRef
+            ? urlForImage(article.mainImage).width(1200).auto("format").url()
+            : undefined,
+        })}
+      />
       <p className="text-sm text-muted-foreground/80">
         {article.category ?? t("Fra menigheten")} ·{" "}
         {formatArticleDate(article.publishedAt, locale)}

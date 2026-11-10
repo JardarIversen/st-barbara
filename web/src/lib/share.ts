@@ -17,7 +17,16 @@ export const parishShareImage = {
 // whole object here. Pages with a main image share that image rather than the parish default.
 export function shareMetadata(
   locale: string,
-  { title, image }: { title?: string; image?: SanityImageValue } = {},
+  {
+    title,
+    image,
+    publishedAt,
+  }: {
+    title?: string;
+    image?: SanityImageValue;
+    /** Set on articles: link previews and search engines then treat the page as an article. */
+    publishedAt?: string;
+  } = {},
 ): Pick<Metadata, "openGraph" | "twitter"> {
   const shared = image?.assetRef
     ? {
@@ -29,12 +38,16 @@ export function shareMetadata(
           .url(),
         width,
         height,
-        alt: image.alt,
+        alt: image.alt ?? parishShareImage.alt,
       }
     : parishShareImage;
   return {
     openGraph: {
+      siteName: locale === "en" ? "St. Barbara Parish" : "St. Barbara menighet",
       locale: locale === "en" ? "en_GB" : "nb_NO",
+      ...(publishedAt
+        ? { type: "article" as const, publishedTime: publishedAt }
+        : { type: "website" as const }),
       ...(title && { title }),
       images: [shared],
     },

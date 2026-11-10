@@ -17,9 +17,10 @@ import { getCalendarData } from "@/sanity/data";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
   return {
-    title: t("Messetider og arrangementer"),
+    // What people search for: «katolsk messe Kongsberg». The heading on the page stays as it is.
+    title: t("Katolske messetider i Kongsberg"),
     description: t(
-      "Oppdatert kalender for St. Barbara menighet i Kongsberg, Notodden, Rjukan og Mo.",
+      "Tider for katolsk messe i Kongsberg, Notodden, Rjukan og Mo: ukens messer, faste messetider, skriftemål og arrangementer i St. Barbara menighet.",
     ),
   };
 }

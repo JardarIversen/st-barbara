@@ -62,12 +62,22 @@ export function parishStructuredData(
         email: contact.email,
         telephone: telephone(contact.phone),
         image: absoluteUrl("/parish-share.png"),
+        logo: absoluteUrl("/apple-icon.png"),
         parentOrganization: {
           "@type": "Organization",
           name: "Oslo katolske bispedømme",
           url: "https://www.katolsk.no",
         },
         location: places.map(placeData),
+      },
+      // Tells search engines what to call the site in results.
+      {
+        "@type": "WebSite",
+        "@id": absoluteUrl("/#website"),
+        name: contact.name,
+        alternateName: contact.tagline,
+        url: absoluteUrl("/"),
+        publisher: { "@id": PARISH_ID },
       },
     ],
   };
@@ -104,5 +114,24 @@ export function eventStructuredData(item: CalendarItem, url: string) {
     },
     organizer: { "@id": PARISH_ID, "@type": "Organization", name: contact.name },
     url,
+  };
+}
+
+/** An article on its own page. Dates and picture are only what the page itself shows. */
+export function articleStructuredData(
+  article: { title: string; summary?: string; publishedAt: string },
+  { url, locale, image }: { url: string; locale: string; image?: string },
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.summary ?? undefined,
+    datePublished: article.publishedAt,
+    inLanguage: locale,
+    image: image ?? undefined,
+    mainEntityOfPage: url,
+    author: { "@id": PARISH_ID, "@type": "Organization", name: contact.name },
+    publisher: { "@id": PARISH_ID, "@type": "Organization", name: contact.name },
   };
 }
