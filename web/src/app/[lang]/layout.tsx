@@ -37,6 +37,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const automatic = !isLocale(await getSiteLanguage());
   return {
     metadataBase: new URL(SITE_URL),
+    verification: {
+      google: "-SHvkcNckv77Lco_eN0ctcSYbTQi8jZdMrhOc256OPc",
+    },
     alternates: {
       canonical: automatic ? localizedPath(path, "en") : path,
       languages: {
