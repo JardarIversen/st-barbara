@@ -37,7 +37,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!api(?:/|$)|_next(?:/|$)|.*\\..*).*)",
+    "/((?!api(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|.*\\..*).*)",
     "/spill-casino/:path*",
   ],
 };

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { EB_Garamond, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/header";
 import { NavigationHistory } from "@/components/navigation-history";
@@ -81,6 +82,8 @@ export default async function RootLayout({
           <Footer />
           <SanityLive includeDrafts={false} />
         </LocaleProvider>
+        {/* Vercel Web Analytics: no cookies and no personal data, so no consent banner is needed. */}
+        <Analytics />
       </body>
     </html>
   );
