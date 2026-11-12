@@ -21,6 +21,7 @@ export type CatechesisSession = Copy & {
 };
 export type CatechesisGroup = Copy & {
   _key: string;
+  isActive?: boolean;
   sessions: CatechesisSession[];
   sessionDates?: string[];
   contact?: CatechesisContact;
@@ -31,6 +32,11 @@ export type CatechesisProgram = {
   groups: CatechesisGroup[];
   otherOfferings?: Array<Copy & { _key: string; contact?: CatechesisContact }>;
 };
+
+// Existing groups without an explicit flag remain visible.
+export function visibleCatechesisGroups(groups: CatechesisGroup[]) {
+  return groups.filter((group) => group.isActive !== false);
+}
 
 // Date-only values are shared across languages. No dates are inferred from prose.
 export function catechesisDates(dates: string[] = [], today: string) {

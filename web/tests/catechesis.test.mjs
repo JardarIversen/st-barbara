@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {catechesisDates} from '../src/lib/catechesis.ts';
+import {catechesisDates, visibleCatechesisGroups} from '../src/lib/catechesis.ts';
 import {localizeContent} from '../src/i18n/content.ts';
 import {prepareCatechesis} from '../../studio-st.-barbara-church/scripts/lib/catechesis.mjs';
 import {catechesisErrors} from '../../studio-st.-barbara-church/scripts/lib/catechesis-validation.mjs';
@@ -74,4 +74,11 @@ test('article previews link straight to catechesis without changing unrelated ar
   for (const pagePath of ['https://other.example', '//other.example', '/en/katekese', '/innlegg/a']) {
     assert.equal(articlePagePath({pagePath}), undefined);
   }
+});
+
+
+test('only explicitly disabled catechesis groups are hidden; shared registration remains untouched', () => {
+  const groups = [{_key:'3-7', isActive:false}, {_key:'7-12'}, {_key:'other', isActive:true}];
+  assert.deepEqual(visibleCatechesisGroups(groups).map(group => group._key), ['7-12', 'other']);
+  assert.deepEqual(visibleCatechesisGroups(groups.map(({isActive, ...rest}) => rest)).map(group => group._key), ['3-7', '7-12', 'other']);
 });

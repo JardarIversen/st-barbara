@@ -2,6 +2,7 @@ import { getTranslations } from "@/i18n/server";
 import { intlLocale } from "@/i18n/config";
 import {
   catechesisDates,
+  visibleCatechesisGroups,
   type CatechesisContact,
   type CatechesisProgram as Program,
 } from "@/lib/catechesis";
@@ -74,7 +75,7 @@ export default async function CatechesisProgram({
         </p>
       )}
       <div className="mt-10 flex flex-col gap-10">
-        {program.groups.map((group) => {
+        {visibleCatechesisGroups(program.groups).map((group) => {
           const { next, months } = catechesisDates(group.sessionDates, today);
           return (
             <section
