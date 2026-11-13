@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "bulletins": [
+    {
+      "sourceKey": "bulletin:2026-11-15",
+      "issueDate": "2026-11-15",
+      "publishedAt": "2026-11-13T14:07:22+01:00",
+      "coversFrom": "2026-11-15",
+      "coversUntil": "2026-11-22",
+      "pdfPath": "../../../.local/bulletin-2026-11-15/source.pdf",
+      "filename": "33. søndag 2026.pdf",
+      "internalNotes": "Mottatt fra Jardar i økten 13. november 2026, uten e-post eller andre instrukser; publishedAt er PDF-ens opprettelsestidspunkt (fredag 13. november kl. 14.07). Lesningsdato kontrollert mot Liturgisk kalender 2026, https://www.katolsk.no/tro/tema/liturgi/2026: 33. søndag i det alminnelige kirkeår er 15. november (Ordsp 31,10-13.19-20.30-31; Sal 128(127); 1 Tess 5,1-6; Matt 25,14-30). Bladet skriver «Prov» og «I Tess»; normalisert til «Ordsp» og «1 Tess». Responsoriesalmen har bare omkvedet i bladet, uten strofer; bare omkvedet er lagt inn. Alle fire PDF-sider er visuelt kontrollert. Messetabellen gjelder onsdag 18.–søndag 22. november og stemmer med den faste messeplanen: lørdag 21. november er tredje lørdag, så polsk messe kl. 18.00 hører hjemme der, og den engelske lørdagsmessen kl. 16.00 som ellers ville vært der, er avlyst ifølge kunngjøringen (p. Johan har ferie). Mandagsmessen 16. november fra messeplanen ligger utenfor tabellens periode og er ikke endret. Kalenderens «Peters og Paulus’ basilikaer» er brukt for bladets «Peter og Paulus’». Lørdagens minnedag er lagt på norsk messe kl. 12.00, ikke på polsk kveldsmesse. Roratemessene har ikke oppgitt sted eller språk; de er lagt i St. Barbara kirke uten messespråk, og fredagsmessene kl. 18.00 er ikke endret. Julemarkedet på Nytorget har verken klokkeslett eller beskrevet rolle for menigheten, og er derfor bare en kunngjøring. Lesningene gjelder bare norsk kl. 11-messe 15. november."
+    }
+  ],
+  "places": [],
+  "massSchedules": [],
+  "events": [
+    {
+      "sourceKey": "event:rorate-mass:2026-12-11",
+      "title": "Roratemesse",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-11T06:30:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Messe med levende lys før morgengry i adventstiden, en god tradisjon i Kirken. Enkel frokost etter messen.",
+      "body": [
+        "Roratemesse med levende lys før morgengry i adventstiden. Etter messen blir det enkel frokost.",
+        "Vi trenger frivillige til å hjelpe med å lage frokost."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "title": "Rorate Mass",
+          "summary": "Holy Mass by candlelight before dawn in Advent, a fine tradition in the Church. A simple breakfast after Mass.",
+          "body": [
+            "Rorate Mass by candlelight before dawn in Advent. There will be a simple breakfast after Mass.",
+            "We need volunteers to help make the breakfast."
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "event:rorate-mass:2026-12-18",
+      "title": "Roratemesse",
+      "eventType": "mass",
+      "status": "scheduled",
+      "startsAt": "2026-12-18T06:30:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Messe med levende lys før morgengry i adventstiden, en god tradisjon i Kirken. Enkel frokost etter messen.",
+      "body": [
+        "Roratemesse med levende lys før morgengry i adventstiden. Etter messen blir det enkel frokost.",
+        "Vi trenger frivillige til å hjelpe med å lage frokost."
+      ],
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "title": "Rorate Mass",
+          "summary": "Holy Mass by candlelight before dawn in Advent, a fine tradition in the Church. A simple breakfast after Mass.",
+          "body": [
+            "Rorate Mass by candlelight before dawn in Advent. There will be a simple breakfast after Mass.",
+            "We need volunteers to help make the breakfast."
+          ]
+        }
+      }
+    },
+    {
+      "sourceKey": "event:children-christmas-workshop:2026-12-05",
+      "title": "Juleverksted og fest for barna",
+      "eventType": "social",
+      "status": "scheduled",
+      "startsAt": "2026-12-05T12:00:00+01:00",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "summary": "Barna inviteres til juleverksted med mat og underholdning når vi feirer St. Nikolas og St. Barbara. Det som lages, selges til inntekt for Adventsaksjonen.",
+      "body": [
+        "Lørdag 5. desember feirer vi både St. Nikolas og St. Barbara. Det blir juleverksted for barn, sammen med mat og underholdning. Det som lages på verkstedet, blir solgt til inntekt for Adventsaksjonen.",
+        "Opplegget for dagen starter med messe kl. 12.00.",
+        "Det blir kanskje til og med et overraskelsesbesøk i forbindelse med St. Nikolas’ fest, så ta med barna deres til kirken denne dagen!"
+      ],
+      "promotionFrom": "2026-10-30T16:35:23+01:00",
+      "promotionUntil": "2026-12-05T12:00:00+01:00",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08",
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "title": "Christmas workshop and party for the children",
+          "summary": "Children are invited to a Christmas workshop with food and entertainment as we celebrate St. Nicholas and St. Barbara. What they make will be sold in aid of the Advent campaign Adventsaksjonen.",
+          "body": [
+            "On Saturday 5 December we celebrate both St. Nicholas and St. Barbara. There will be a Christmas workshop for children, with food and entertainment. What is made at the workshop will be sold in aid of the Advent campaign Adventsaksjonen.",
+            "The day begins with Holy Mass at 12:00.",
+            "There may even be a surprise visit in connection with the feast of St. Nicholas, so bring your children to church that day!"
+          ]
+        }
+      }
+    }
+  ],
+  "announcements": [
+    {
+      "sourceKey": "announcement:english-mass-cancelled:2026-11-21",
+      "title": "Engelsk messe 21. november utgår",
+      "status": "active",
+      "priority": "important",
+      "publishedAt": "2026-11-13T14:07:22+01:00",
+      "lastMentionedAt": "2026-11-13T14:07:22+01:00",
+      "appliesUntil": "2026-11-21T17:00:00+01:00",
+      "summary": "Den engelske lørdagsmessen kl. 16.00 lørdag 21. november utgår, fordi p. Johan har ferie og ikke kan komme.",
+      "body": "På grunn av ferieavvikling kan ikke p. Johan komme hit lørdag 21. november. Messen på engelsk utgår derfor denne dagen.",
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-saturday-en-2026-11-21"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "No English Mass on 21 November",
+          "summary": "The English Saturday Mass at 16:00 on Saturday 21 November is cancelled, because Fr Johan is on holiday and cannot come.",
+          "body": "Because of holidays, Fr Johan cannot come on Saturday 21 November. The Holy Mass in English is therefore cancelled that day."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ]
+    },
+    {
+      "sourceKey": "announcement:children-trampoline-trip:2026-11-15",
+      "title": "Utflukt for barna til Rush trampolinepark",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-10-24T11:30:27+02:00",
+      "lastMentionedAt": "2026-11-13T14:07:22+01:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Alle barn i menigheten er velkommen på tur til Rush trampolinepark i Drammen etter høymessen søndag 15. november. Vi trenger voksne med bil.",
+      "body": "Etter høymessen søndag 15. november arrangerer menigheten en tur til Rush trampolinepark i Drammen. Alle barn i menigheten er velkommen. Vi trenger noen voksne med bil som kan være med, slik at vi har nok biler.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "relatedMassExceptionKeys": [
+        "mass-exception:kongsberg-sunday-nb-2026-11-15"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Children’s outing to Rush trampoline park",
+          "summary": "All children in the parish are welcome on a trip to Rush trampoline park in Drammen after High Mass on Sunday 15 November. We need adults with cars.",
+          "body": "After High Mass on Sunday 15 November, the parish is organising a trip to Rush trampoline park in Drammen. All children in the parish are welcome. We need some adults with cars to come along, so that we have enough cars."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08",
+        "bulletin:2026-11-15"
+      ]
+    },
+    {
+      "sourceKey": "announcement:collection:2026-11-08",
+      "title": "Kollekten 8. november",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-11-13T14:07:22+01:00",
+      "lastMentionedAt": "2026-11-13T14:07:22+01:00",
+      "appliesUntil": "2026-11-22T23:59:00+01:00",
+      "summary": "Kollekten søndag 8. november var Peterspengene til Den hellige stol og ble på kr 3966 til sammen. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 8. november, var kr 1776 i kontanter og kr 2190 i Vipps, totalt kr 3966. Denne kollekten var Peterspengene, som gikk til Den hellige stol. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 8 November",
+          "summary": "The collection on Sunday 8 November was Peter’s Pence for the Holy See and came to NOK 3,966 in total. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 8 November came to NOK 1,776 in cash and NOK 2,190 via Vipps, NOK 3,966 in total. This collection was Peter’s Pence, which went to the Holy See. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ]
+    },
+    {
+      "sourceKey": "announcement:collection:2026-11-01",
+      "title": "Kollekten 1. november",
+      "status": "resolved",
+      "priority": "normal",
+      "publishedAt": "2026-11-07T15:03:04+01:00",
+      "lastMentionedAt": "2026-11-07T15:03:04+01:00",
+      "appliesUntil": "2026-11-15T23:59:00+01:00",
+      "summary": "Kollekten søndag 1. november ble på kr 3980 til sammen. Kollekten søndag 8. november går til Den hellige stol. Takk for alle bidrag!",
+      "body": "Kollekten som ble samlet inn søndag 1. november, var kr 771 i kontanter og kr 3209 i Vipps, totalt kr 3980. Kollekten søndag 8. november går til Den hellige stol. Tusen takk for alle bidrag!",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "The collection on 1 November",
+          "summary": "The collection on Sunday 1 November came to NOK 3,980 in total. The collection on Sunday 8 November goes to the Holy See. Thank you for all your gifts!",
+          "body": "The collection taken on Sunday 1 November came to NOK 771 in cash and NOK 3,209 via Vipps, NOK 3,980 in total. The collection on Sunday 8 November goes to the Holy See. Many thanks for all your gifts!"
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-08"
+      ]
+    },
+    {
+      "sourceKey": "announcement:christmas-market-nytorget:2026-12-03",
+      "title": "Julemarked på Nytorget",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-11-13T14:07:22+01:00",
+      "lastMentionedAt": "2026-11-13T14:07:22+01:00",
+      "appliesUntil": "2026-12-06T23:59:00+01:00",
+      "summary": "Det blir julemarked på Nytorget 3.–6. desember. Se plakatene bak i kirken for mer informasjon.",
+      "body": "Det arrangeres julemarked på Nytorget 3.–6. desember. Se plakatene bak i kirken for mer informasjon.",
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Christmas market at Nytorget",
+          "summary": "There will be a Christmas market at Nytorget on 3–6 December. See the posters at the back of the church for more information.",
+          "body": "A Christmas market is being held at Nytorget on 3–6 December. See the posters at the back of the church for more information."
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ]
+    },
+    {
+      "sourceKey": "announcement:rorate-masses:2026-12",
+      "title": "Roratemesser i advent",
+      "status": "active",
+      "priority": "normal",
+      "publishedAt": "2026-11-13T14:07:22+01:00",
+      "lastMentionedAt": "2026-11-13T14:07:22+01:00",
+      "appliesUntil": "2026-12-18T07:30:00+01:00",
+      "summary": "Roratemesse med levende lys før morgengry fredag 11. og 18. desember kl. 06.30, med enkel frokost etterpå. Vi trenger frivillige til frokosten.",
+      "body": [
+        "En god tradisjon i Kirken er å ha messe med levende lys før morgengry i adventstiden. Vi vil ha roratemesse fredag 11. desember og fredag 18. desember kl. 06.30.",
+        "Etter messen blir det enkel frokost. Vi trenger frivillige til å hjelpe med å lage frokost."
+      ],
+      "placeKeys": [
+        "place:kongsberg-st-barbara"
+      ],
+      "relatedEventKeys": [
+        "event:rorate-mass:2026-12-11",
+        "event:rorate-mass:2026-12-18"
+      ],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Rorate Masses in Advent",
+          "summary": "Rorate Mass by candlelight before dawn on Friday 11 and 18 December at 06:30, with a simple breakfast afterwards. We need volunteers for the breakfast.",
+          "body": [
+            "It is a fine tradition in the Church to celebrate Holy Mass by candlelight before dawn during Advent. We will have a Rorate Mass on Friday 11 December and Friday 18 December at 06:30.",
+            "There will be a simple breakfast after Mass. We need volunteers to help make the breakfast."
+          ]
+        }
+      },
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ]
+    }
+  ],
+  "massExceptions": [
+    {
+      "sourceKey": "mass-exception:kongsberg-wednesday-en-2026-11-18",
+      "scheduleKey": "mass-schedule:kongsberg:wednesday:en:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-18",
+      "publicNote": "Vigselsfesten for Peters og Paulus’ basilikaer. Rosenkrans etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Dedication of the Basilicas of Saints Peter and Paul. Rosary after Mass."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-thursday-nb-2026-11-19",
+      "scheduleKey": "mass-schedule:kongsberg:thursday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-19",
+      "publicNote": "Tilbedelse og skriftemål fra kl. 17.15.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Adoration and confession from 17:15."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-friday-nb-2026-11-20",
+      "scheduleKey": "mass-schedule:kongsberg:friday:nb:1800",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-20",
+      "publicNote": "Skriftemål fra kl. 17.00.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Confession from 17:00."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-11-21",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-21",
+      "publicNote": "Jomfru Marias fremstilling i templet.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The Presentation of the Blessed Virgin Mary."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-en-2026-11-21",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:en:1600",
+      "scope": "singleOccurrence",
+      "changeType": "cancelled",
+      "occurrenceDate": "2026-11-21",
+      "publicNote": "Messen på engelsk utgår fordi p. Johan har ferie.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "The Holy Mass in English is cancelled because Fr Johan is on holiday."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-sunday-nb-2026-11-15",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-11-15",
+      "publicNote": "Etter messen er det tur for barna til Rush trampolinepark i Drammen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-10-25",
+        "bulletin:2026-11-08",
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "After Mass there is an outing for the children to Rush trampoline park in Drammen."
+        }
+      }
+    },
+    {
+      "sourceKey": "mass-exception:kongsberg-saturday-nb-2026-12-05",
+      "scheduleKey": "mass-schedule:kongsberg:saturday:nb:1200",
+      "scope": "singleOccurrence",
+      "changeType": "changed",
+      "occurrenceDate": "2026-12-05",
+      "relatedEventKey": "event:children-christmas-workshop:2026-12-05",
+      "publicNote": "Feiring av St. Nikolas og St. Barbara. Juleverksted og fest for barna etter messen.",
+      "sourceBulletinKeys": [
+        "bulletin:2026-11-01",
+        "bulletin:2026-11-08",
+        "bulletin:2026-11-15"
+      ],
+      "translations": {
+        "en": {
+          "publicNote": "Celebration of St. Nicholas and St. Barbara. Christmas workshop and party for the children after Mass."
+        }
+      }
+    }
+  ],
+  "massTexts": [
+    {
+      "sourceKey": "mass-text:2026-11-15:kongsberg:nb:1100",
+      "title": "33. søndag i det alminnelige kirkeår",
+      "massDate": "2026-11-15",
+      "scheduleKey": "mass-schedule:kongsberg:sunday:nb:1100",
+      "bulletinKey": "bulletin:2026-11-15",
+      "body": [
+        {
+          "style": "h2",
+          "text": "1. lesning – Ordsp 31, 10–13. 19–20. 30–31"
+        },
+        "En dyktig kvinne, hvem finner vel henne? Mer enn perler er hun verd. Mannen har full tillit til henne, og det skorter ikke på vinning. Hun gjør bare godt imot ham, aldri noe ondt, så lenge hun lever. Hun sørger både for ull og lin, hennes hender arbeider med liv og lyst.",
+        "Hun legger hendene på rokken, og fingrene griper om tenen. Hun åpner hånden for dem som lider nød, rekker armene ut til fattigfolk.",
+        "Ynde svikter, og skjønnhet forgår; en kvinne som frykter Herren, skal prises. La henne nyte frukten av sitt arbeide; der mennesker møtes, får hun ros for sine gjerninger.",
+        {
+          "style": "h2",
+          "text": "Responsoriesalme"
+        },
+        {
+          "type": "refrain",
+          "text": "Salig den som frykter Herren, som vandrer på hans veier"
+        },
+        {
+          "style": "h2",
+          "text": "2. lesning – 1 Tess 5, 1–6"
+        },
+        "Hva tid og stund angår, brødre, så trenges det ikke at jeg skriver til dere om det. Dere vet jo selv utmerket godt at Herrens dag kommer som en tyv om natten.",
+        "Når folk sier: «Fred og ingen fare,» – da med ett slag står de overfor sin undergang, like plutselig som veene rammer en kvinne som skal føde, og like lite skal de slippe unna. Men dere, brødre, dere lever jo ikke i mørket, så Dagen kan komme overraskende på dere, som en tyv. Alle er dere barn av lyset, barn av dagen. Vi hører ikke natten eller mørket til.",
+        "Så la oss ikke sove som de andre, men la oss være våkne og ved full bevissthet.",
+        {
+          "style": "h2",
+          "text": "Evangelievers"
+        },
+        {
+          "type": "acclamation",
+          "response": "Allelúia.",
+          "lines": [
+            "Bli i meg som jeg i dere, sier Herren.",
+            "Den som blir i meg, han bærer frukt i mengde."
+          ]
+        },
+        {
+          "style": "h2",
+          "text": "Evangelium – Matt 25, 14–30"
+        },
+        "På den tid fortalte Jesus denne lignelsen:",
+        "«Det er som en mann som ville dra utenlands; han kalte sammen sine tjenere og overlot alt han eide i deres varetekt. En gav han fem talenter, en annen to, og en tredje én talent – hver enkelt etter hva han dugde til; og så reiste han. Straks tok han som hadde fått fem talenter og satte dem i omløp, og tjente fem talenter til. Det samme gjorde han som hadde fått to talenter, og tjente to til. Men han som hadde fått den ene talenten, han gikk hen og gravde et hull i jorden og gjemte sin herres penger der.",
+        "Lang tid etter kommer så disse tjenernes herre tilbake og krever regnskap av dem.",
+        "Han som hadde fått fem talenter, la da frem fem talenter til og sa: ‘Herre, du overlot meg fem talenter; se, her har jeg tjent fem talenter til.’ Og hans herre svarte: ‘Det er bra, en god og tro tjener er du! Og siden du har vist deg tro i de små ting, har jeg nå store ting å betro deg; kom inn til gleden hos din herre.’",
+        "Så kom den annen, han med de to talenter, og sa: ‘Herre, to talenter var det du overlot meg, se, her har jeg tjent to talenter til.’ Og hans herre svarte: ‘Det er bra, en god og tro tjener er du! Og siden du har vist deg tro i de små ting, har jeg nå store ting å betro deg; kom inn til gleden hos din herre.’",
+        "Til sist kom han som hadde fått én talent; og han sa: ‘Herre, jeg visste at du er en hard mann, – at du høster også der hvor du ikke har sådd, og samler inn også der hvor du ikke har lagt noe ut. Derfor ble jeg redd og gikk og gjemte talenten din i jorden. Vær så god, her har du ditt tilbake.’",
+        "Da svarte hans herre ham: ‘Usle og late tjener! Så du mente at jeg høster også der hvor jeg ingenting har sådd, og samler inn også der hvor jeg ingenting har lagt ut? Men da skulle du satt pengene mine i en bank, så jeg hadde fått dem igjen med renter når jeg kom tilbake. – Ta nå fra ham talenten og gi den til ham som har de ti! For enhver som har, skal stadig få mer, så han til sist har overflod; men den som ikke har, han skal bli fratatt alt. Og kast så denne unyttige tjeneren ut i mørket utenfor, der de skal gråte og hulke bittert!’»"
+      ]
+    }
+  ],
+  "articles": []
+}
