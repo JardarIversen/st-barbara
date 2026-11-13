@@ -215,8 +215,14 @@ export const LATEST_BULLETINS_QUERY = defineQuery(/* groq */ `
   *[_type == "bulletin"] | order(issueDate desc)[0...3] ${bulletinProjection}
 `);
 
+// The sacrament pages are reference pages reached from the menu, not posts.
+const listedArticle = /* groq */ `
+  _type == "article" && defined(slug.current) &&
+  !string::startsWith(coalesce(pagePath, ""), "/sakramenter/")
+`;
+
 export const LATEST_ARTICLES_QUERY = defineQuery(/* groq */ `
-  *[_type == "article" && defined(slug.current)]
+  *[${listedArticle}]
   | order(publishedAt desc)[0...4] {
     _id,
     pagePath,
@@ -233,7 +239,7 @@ export const LATEST_ARTICLES_QUERY = defineQuery(/* groq */ `
 `);
 
 export const ALL_ARTICLES_QUERY = defineQuery(/* groq */ `
-  *[_type == "article" && defined(slug.current)] | order(publishedAt desc) {
+  *[${listedArticle}] | order(publishedAt desc) {
     _id,
     pagePath,
     sourceKey,
@@ -274,6 +280,12 @@ const articleProjection = /* groq */ `{
 
 export const ARTICLE_QUERY = defineQuery(/* groq */ `
   *[_type == "article" && slug.current == $slug][0] ${articleProjection}
+`);
+
+export const SACRAMENT_ARTICLES_QUERY = defineQuery(/* groq */ `
+  *[_type == "article" && pagePath in $pagePaths] {
+    _id, pagePath, translations, title, summary
+  }
 `);
 
 export const ARTICLE_BY_PAGE_PATH_QUERY = defineQuery(/* groq */ `

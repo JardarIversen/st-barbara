@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales, localizedPath } from "@/i18n/config";
 import { articlePagePath } from "@/lib/article-list";
+import { SACRAMENTS_PATH, SACRAMENT_PATHS } from "@/lib/sacraments";
 import { absoluteUrl } from "@/lib/site";
 import { getSitemapDocuments } from "@/sanity/data";
 
@@ -8,6 +9,8 @@ const PAGES = [
   "/",
   "/messetider",
   "/messetider/kalender",
+  SACRAMENTS_PATH,
+  ...SACRAMENT_PATHS,
   "/messen",
   "/kunngjoringer",
   "/innlegg",
@@ -35,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { articles, events, announcements } = await getSitemapDocuments();
   return [
     ...PAGES.flatMap((path) => bothLanguages(path)),
-    // Articles with their own page, such as catechesis, are already listed above.
+    // Articles with their own page, such as catechesis and the sacraments, are already listed above.
     ...articles
       .filter((article) => !articlePagePath(article))
       .flatMap((article) =>

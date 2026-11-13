@@ -1,10 +1,13 @@
 import type { ArticleCard } from "@/sanity/types";
+import { isSacramentPath } from "./sacraments.ts";
 
 type ArticleIdentity = Pick<ArticleCard, "sourceKey" | "category" | "title">;
 
 // Only destinations implemented by the site may replace an article route.
 export function articlePagePath(article: { pagePath?: string }) {
-  return article.pagePath === "/katekese" ? article.pagePath : undefined;
+  return article.pagePath === "/katekese" || isSacramentPath(article.pagePath)
+    ? article.pagePath
+    : undefined;
 }
 
 export function articleHref(article: { pagePath?: string; slug: string }) {

@@ -24,3 +24,24 @@ test('manually created Sanity articles without sourceKey are supported', () => {
   assert.equal(articleListTitle(article), article.title);
   assert.equal(isCouncilArticle({title:'Council update', category:'Menighetsråd'}), true);
 });
+
+test('sacrament pages replace the article route, other paths do not', async () => {
+  const { articlePagePath, articleHref } = await import('../src/lib/article-list.ts');
+  const { SACRAMENT_PATHS } = await import('../src/lib/sacraments.ts');
+  const { articlePagePaths } = await import('../../studio-st.-barbara-church/scripts/lib/manifest-utils.mjs');
+  assert.equal(SACRAMENT_PATHS.length, 8);
+  assert.deepEqual(articlePagePaths, ['/katekese', ...SACRAMENT_PATHS]);
+  assert.equal(articleHref({pagePath:'/sakramenter/dap', slug:'sakramenter-dap'}), '/sakramenter/dap');
+  assert.equal(articlePagePath({pagePath:'/sakramenter/ukjent'}), undefined);
+  assert.equal(articleHref({slug:'nyhet'}), '/innlegg/nyhet');
+});
+
+test('manifest list items become Portable Text bullets without changing other block keys', async () => {
+  const { toPortableText } = await import('../../studio-st.-barbara-church/scripts/lib/manifest-utils.mjs');
+  const [paragraph, bullet] = toPortableText(['Tekst', {listItem:'bullet', text:'Punkt'}], 'test');
+  assert.equal(paragraph.listItem, undefined);
+  assert.equal(paragraph._key, toPortableText(['Tekst'], 'test')[0]._key);
+  assert.equal(bullet.listItem, 'bullet');
+  assert.equal(bullet.level, 1);
+  assert.throws(() => toPortableText([{listItem:'dash', text:'x'}], 'test'), /listItem/);
+});

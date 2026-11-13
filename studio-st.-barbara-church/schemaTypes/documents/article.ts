@@ -10,6 +10,18 @@ const articleTypeLabels: Record<string, string> = {
   other: 'Artikkel',
 }
 
+// Same order and addresses as web/src/lib/sacraments.ts.
+const sacramentPages = [
+  ['dap', 'Dåp'],
+  ['konfirmasjon', 'Konfirmasjon'],
+  ['nattverd', 'Nattverd (Eukaristi)'],
+  ['skriftemal', 'Skriftemål'],
+  ['sykesalving', 'Sykesalving'],
+  ['ordinasjon', 'Ordinasjon'],
+  ['ektevielse', 'Ektevielse'],
+  ['begravelse', 'Begravelse'],
+] as const
+
 export const article = defineType({
   name: 'article',
   title: 'Artikkel',
@@ -20,7 +32,12 @@ export const article = defineType({
     defineField({
       name: 'pagePath', title: 'Vis på egen side', type: 'string',
       description: 'Når innlegget har en egen informasjonsside, lenker alle oversikter direkte dit.',
-      options: {list: [{title: 'Katekese', value: '/katekese'}]},
+      options: {
+        list: [
+          {title: 'Katekese', value: '/katekese'},
+          ...sacramentPages.map(([slug, title]) => ({title: `Sakramenter: ${title}`, value: `/sakramenter/${slug}`})),
+        ],
+      },
     }),
     defineField({name: 'catechesis', title: 'Katekese', type: 'catechesisProgram', hidden: ({document}) => document?.pagePath !== '/katekese'}),
     defineField({

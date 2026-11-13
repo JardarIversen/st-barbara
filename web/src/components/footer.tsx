@@ -46,6 +46,7 @@ export default async function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
                 ["Messetider", "/messetider"],
+                ["Sakramenter", "/sakramenter"],
                 ["Katekese", "/katekese"],
                 ["Innlegg", "/innlegg"],
                 ["Om menigheten", "/om"],

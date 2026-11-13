@@ -48,6 +48,7 @@ const SACRAMENTS = [
   {
     title: "Dåp",
     text: "Ta kontakt med menigheten for å avtale dåp av barn eller voksne.",
+    href: "/sakramenter/dap",
   },
   {
     title: "Første kommunion",
@@ -57,10 +58,12 @@ const SACRAMENTS = [
   {
     title: "Konfirmasjon",
     text: "Ungdom følger konfirmantundervisningen over to år før fermingen.",
+    href: "/sakramenter/konfirmasjon",
   },
   {
     title: "Ekteskap",
     text: "Par som ønsker å gifte seg i kirken, avtaler tid for samtale med presten i god tid.",
+    href: "/sakramenter/ektevielse",
   },
 ];
 
@@ -416,7 +419,13 @@ export default async function Home() {
                   "Kirken følger mennesket gjennom livet, fra dåpen til den siste velsignelsen. Ta kontakt med p. Trym for en samtale – om dåp, vielse, sykebesøk eller gravferd.",
                 )}
               </p>
-              <p className="mt-6">
+              <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                <Link
+                  href="/sakramenter"
+                  className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  {t("Om sakramentene")}
+                </Link>
                 <Link
                   href="/kontakt"
                   className="text-sm font-medium text-primary underline-offset-4 hover:underline"

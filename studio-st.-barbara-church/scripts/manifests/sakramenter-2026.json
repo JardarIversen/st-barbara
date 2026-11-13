@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "sourceKey": "article:sacrament:dap",
+      "pagePath": "/sakramenter/dap",
+      "title": "Dåp",
+      "slug": "sakramenter-dap",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "For foreldre som vil døpe barnet sitt: hva dåpen innebærer, hvem som kan være fadder, nøddåp, og hvordan dere avtaler dåpen med presten.",
+      "body": [
+        "I Den katolske kirke blir de fleste døpt som barn. Foreldre og faddere lover å dele troen med barnet. Barnets nye identitet som Guds barn understrekes gjerne ved at det får et navn som tidligere er båret av en helgen. Foreldrene velger én eller flere faddere som selv er døpt og konfirmert katolikk.",
+        "Er den nyfødte i livsfare, kan enhver foreta «nøddåp» med vann og med ordene: NN, jeg døper deg i Faderens og Sønnens og den Hellige Ånds navn.",
+        "I vår menighet døper vi som oftest på lørdager eller søndager under en av messene. Andre tidspunkt kan eventuelt avtales med presten.",
+        "Katolikker som bor langt fra kirken, kan avtale med presten om å få sine barn døpt på bostedet. Foreldrene kan avtale tidspunktet med presten, og forberede dåpen med ham. Det fylles ut en dåpsmelding som fås på sognekontoret, eller som kan bli tilsendt.",
+        "Dåpen er gratis, men det er vanlig å gi en gave til Kirken for å dekke utgiftene menigheten har i form av bl.a. dåpslyset. Dette kan gjøres gjennom Vipps #703819 under kategorien «Dåpslys og annet salg». Anbefalt bidrag: kr 400,-"
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Baptism",
+          "category": "Sacraments",
+          "summary": "For parents who would like their child baptised: what baptism means, who can be a godparent, emergency baptism, and how to arrange the baptism with the priest.",
+          "body": [
+            "In the Catholic Church, most people are baptised as children. Parents and godparents promise to share the faith with the child. The child's new identity as a child of God is often emphasised by giving the child a name previously borne by a saint. The parents choose one or more godparents who are themselves baptised and confirmed Catholics.",
+            "If a newborn child is in danger of death, anyone may perform an “emergency baptism” with water and the words: N., I baptise you in the name of the Father, and of the Son, and of the Holy Spirit.",
+            "In our parish, baptisms usually take place on Saturdays or Sundays during one of the Masses. Other times can be arranged with the priest.",
+            "Catholics who live far from the church can arrange with the priest for their children to be baptised where they live. The parents can agree on the time with the priest and prepare for the baptism with him. A baptism form must be filled in; it is available from the parish office or can be sent to you.",
+            "Baptism is free of charge, but it is customary to give a gift to the Church to cover the parish's expenses, such as the baptismal candle. You can do this through Vipps #703819 under the category «Dåpslys og annet salg» (baptismal candles and other sales). Suggested contribution: NOK 400."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:konfirmasjon",
+      "pagePath": "/sakramenter/konfirmasjon",
+      "title": "Konfirmasjon",
+      "slug": "sakramenter-konfirmasjon",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "Om fermingens sakrament for ungdom og voksne: vanlig alder, når det kan mottas tidligere eller senere, og tilpasset forberedelse for konfirmanter med spesielle behov.",
+      "body": [
+        "Konfirmasjonen (fermingens sakrament) meddeles normalt her i landet av biskopen til ungdom i 15-årsalderen, dvs. 9. klasse. Ved konfirmasjonen bekrefter Gud hva han gav i dåpen, og fornyer sitt kall til konfirmanten, som nå selv kan svare «ja» til Gud og til å være aktiv i kirken.",
+        "15 år er den vanlige alderen å motta sakramentet på, men ikke et absolutt krav. Individuell modenhet og hvor klar man er til å motta konfirmasjon kan variere fra person til person. Derfor er det fullt mulig å motta det senere hvis man ønsker, og det kan også i visse tilfeller mottas i en tidligere alder, med tillatelse fra biskopen og sognepresten. Konfirmanter med spesielle behov som trenger tilpasset undervisning, bes kontakte sognepresten for å få et individuelt tilpasset program.",
+        "Konfirmasjonens sakrament meddeles også i seremonien når en voksen tas opp i Den katolske kirke."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Confirmation",
+          "category": "Sacraments",
+          "summary": "About the sacrament of Confirmation for young people and adults: the usual age, when it can be received earlier or later, and adapted preparation for candidates with special needs.",
+          "body": [
+            "In Norway, Confirmation is normally conferred by the bishop on young people around the age of 15, that is, in Year 9 (ninth grade). In Confirmation, God confirms what he gave in baptism and renews his call to the person being confirmed, who can now answer “yes” to God and to being active in the Church.",
+            "Fifteen is the usual age for receiving the sacrament, but it is not an absolute requirement. Individual maturity and readiness to receive Confirmation vary from person to person. It is therefore entirely possible to receive it later if you wish, and in certain cases it can also be received at a younger age, with permission from the bishop and the parish priest. Candidates with special needs who require adapted teaching are asked to contact the parish priest for an individually tailored programme.",
+            "The sacrament of Confirmation is also conferred in the ceremony in which an adult is received into the Catholic Church."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:nattverd",
+      "pagePath": "/sakramenter/nattverd",
+      "title": "Nattverd (Eukaristi)",
+      "slug": "sakramenter-nattverd",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "Om eukaristien, Kirkens mest sentrale sakrament: hvorfor ikke-katolikker går frem for å motta velsignelse, og hvordan du kan be presten ofre messen for en bestemt intensjon.",
+      "body": [
+        "Nattverden eller eukaristien er det mest sentrale sakrament i Den katolske kirke. «Gjør dette til minne om meg», ba Jesus apostlene sine ved det siste måltid, kvelden før han ble korsfestet. Hver søndag – Herrens dag – pleier katolske kristne å samles i kirken for å minnes Jesu Kristi liv, hans død og hans oppstandelse. Det er i nattverdens sakrament Jesus gir seg selv til oss. Ved å spise Kristi legeme (nattverdsbrødet) blir vi sterkere knyttet til Kristi legeme (Kirken). Det er derfor Den katolske kirke fremdeles ikke har interkommunion eller et åpent nattverdsbord for ikke-katolske kristne. De som forbereder seg på å bli katolikker, eller andre som ikke er katolikker, kan gå frem til alteret sammen med de andre ved kommunionen. De holder høyre hånd på venstre skulder for å vise at de ønsker å motta velsignelse.",
+        {"style": "h2", "text": "Messeintensjoner"},
+        "For katolske kristne er det også mulig, ved bestemte behov som sykdom, minnedag for døde familiemedlemmer etc., å be presten ofre messen for dette formålet. Man legger om man ønsker et beløp (messestipend) i en konvolutt og gir til presten før messen. Husk å skrive navnet til den som det skal bes for, på konvolutten."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Holy Communion (Eucharist)",
+          "category": "Sacraments",
+          "summary": "About the Eucharist, the most central sacrament of the Church: why those who are not Catholic come forward for a blessing, and how to ask the priest to offer Mass for a particular intention.",
+          "body": [
+            "Holy Communion, or the Eucharist, is the most central sacrament of the Catholic Church. “Do this in remembrance of me,” Jesus asked his apostles at the Last Supper, the evening before he was crucified. Every Sunday – the Lord's Day – Catholic Christians gather in church to remember the life, death and resurrection of Jesus Christ. In the sacrament of the Eucharist, Jesus gives himself to us. By eating the Body of Christ (the consecrated bread), we are joined more closely to the Body of Christ (the Church). This is why the Catholic Church still does not practise intercommunion or an open Communion table for Christians who are not Catholic. Those preparing to become Catholics, and others who are not Catholic, may come forward to the altar with everyone else at Communion. They place their right hand on their left shoulder to show that they wish to receive a blessing.",
+            {"style": "h2", "text": "Mass intentions"},
+            "Catholic Christians can also ask the priest to offer Holy Mass for a particular need, such as illness or the anniversary of a family member's death. If you wish, you may put an offering (a Mass stipend) in an envelope and give it to the priest before Mass. Remember to write the name of the person to be prayed for on the envelope."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:skriftemal",
+      "pagePath": "/sakramenter/skriftemal",
+      "title": "Skriftemål",
+      "slug": "sakramenter-skriftemal",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "Om botens og forsoningens sakrament, og hvordan du kan gå til skrifte i St. Barbara menighet: på den faste skriftetiden eller etter avtale med en av prestene.",
+      "body": [
+        "Botens og forsoningens sakrament inneholder alltid et skriftemål. Det er Gud, vår barmhjertige Far, som gir oss – gjennom sin Kirkes tjeneste – tilgivelse og forsoning, så sant vi er villige til å angre våre synder. I alle katolske kirker finner du skriftestoler. Skriftemålet, og særlig en skriftesamtale, er ikke nødvendigvis knyttet til en skriftestol. Det kan foregå for eksempel i sakristiet (som er å anbefale for de tunghørte), på prestens kontor eller andre steder i kirken enn i skriftestolen. Skriftestolen i våre kirker minner oss om at det å tilgi synder er en av Kirkens viktigste oppgaver, og som Jesus betrodde disiplene første gang han viste seg for dem etter oppstandelsen: «Fred være med dere. Som Faderen har sendt meg, sender jeg dere.» Som han sa dette, åndet han på dem og la til: «Motta Den Hellige Ånd. Om dere tilgir noen deres synder, er de tilgitt …» (Joh 20,21ff).",
+        "I St. Barbara menighet kan man enten kontakte prestene individuelt og avtale skriftemål og hvor skriftemålet skal finne sted, eller man kan gå til skrifte på den fast oppsatte skriftetiden, som er torsdag og fredag før 18-messen."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Confession",
+          "category": "Sacraments",
+          "summary": "About the sacrament of Penance and Reconciliation, and how to go to confession in St. Barbara Parish: at the regular time for confession or by arrangement with one of the priests.",
+          "body": [
+            "The sacrament of Penance and Reconciliation always includes confession. It is God, our merciful Father, who gives us forgiveness and reconciliation through the ministry of his Church, provided we are willing to repent of our sins. You will find confessionals in every Catholic church. Confession, and especially a longer conversation in confession, is not necessarily tied to a confessional. It can take place, for example, in the sacristy (which is recommended for those who are hard of hearing), in the priest's office or elsewhere in the church. The confessional in our churches reminds us that forgiving sins is one of the Church's most important tasks, entrusted by Jesus to his disciples the first time he appeared to them after the resurrection: “Peace be with you. As the Father has sent me, even so I send you.” And when he had said this, he breathed on them and said: “Receive the Holy Spirit. If you forgive the sins of any, they are forgiven …” (John 20:21ff).",
+            "In St. Barbara Parish, you can either contact one of the priests to arrange confession and agree where it will take place, or go to confession at the regular time for confession, which is on Thursdays and Fridays before the 6 pm Mass."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:sykesalving",
+      "pagePath": "/sakramenter/sykesalving",
+      "title": "Sykesalving",
+      "slug": "sakramenter-sykesalving",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "For syke og eldre og deres pårørende: om sykesalvingens sakrament, og om sykekommunion for dem som ikke kan komme til kirken. Kontakt presten for å avtale besøk.",
+      "body": [
+        "Ved sykesalvingens sakrament viser Gud gjennom Kirkens salving sin omsorg og støtte til syke og eldre mennesker. Det er først og fremst et helbredelsessakrament. I den siste livsfasen får de troende et sakrament som lindrer og styrker dem til å kunne ta avskjed med denne verden.",
+        "De som ønsker å motta sykesalvingen – eller deres pårørende – bes kontakte presten. Hans telefonnummer kan gjerne gis til vakten på sykehuset eller sykehjemmet, med beskjed om å varsle presten hvis nødvendig.",
+        {"style": "h2", "text": "Sykekommunion"},
+        "Enhver som ikke kan komme til nattverd i kirken grunnet sykdom, alderdom eller lignende, kan få motta Den hellige kommunion hjemme hos seg, på aldershjem eller sykehus. Kontakt en av prestene (sognepresten eller nasjonalsjelesørgerne)."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Anointing of the Sick",
+          "category": "Sacraments",
+          "summary": "For the sick and elderly and their families: about the sacrament of the Anointing of the Sick, and Holy Communion for those who cannot come to church. Contact the priest to arrange a visit.",
+          "body": [
+            "In the sacrament of the Anointing of the Sick, God shows his care and support for the sick and the elderly through the Church's anointing. It is first and foremost a sacrament of healing. In the last stage of life, the faithful receive a sacrament that comforts and strengthens them to take leave of this world.",
+            "Those who wish to receive the Anointing of the Sick – or their families – are asked to contact the priest. You are welcome to give his phone number to the staff on duty at the hospital or nursing home, asking them to call the priest if necessary.",
+            {"style": "h2", "text": "Holy Communion for the sick"},
+            "Anyone who cannot come to Communion in church because of illness, old age or similar reasons can receive Holy Communion at home, in a care home or in hospital. Contact one of the priests (the parish priest or the national chaplains)."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:ordinasjon",
+      "pagePath": "/sakramenter/ordinasjon",
+      "title": "Ordinasjon",
+      "slug": "sakramenter-ordinasjon",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "For deg som går med tanker om å bli prest, diakon, ordenssøster eller ordensbror: snakk om kallet ditt med din åndelige veileder. Menigheten ber for kallene.",
+      "body": [
+        "Til dem som måtte gå med tanker om å bli prest, diakon eller ordenssøster/ordensbror: Kirken trenger dere!",
+        "Det mest naturlige er at du snakker om ditt kall med din åndelige veileder. Dessuten skal du vite at vår menighet ber for preste-, diakon- og ordenskall, både for dem som forbereder seg, og for dem som allerede er i tjeneste."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Holy Orders",
+          "category": "Sacraments",
+          "summary": "For anyone thinking about becoming a priest, a deacon, or a religious sister or brother: talk about your vocation with your spiritual director. The parish prays for vocations.",
+          "body": [
+            "To those who may be thinking about becoming a priest, a deacon, or a religious sister or brother: the Church needs you!",
+            "The most natural step is to talk about your vocation with your spiritual director. You should also know that our parish prays for vocations to the priesthood, the diaconate and religious life, both for those who are preparing and for those already serving."
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:ektevielse",
+      "pagePath": "/sakramenter/ektevielse",
+      "title": "Ektevielse",
+      "slug": "sakramenter-ektevielse",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "For katolikker som skal gifte seg, også borgerlig, i et annet kirkesamfunn eller i utlandet: kontakt med sognepresten, obligatorisk ekteskapskurs, dispensasjoner og kirkelig anerkjennelse av et borgerlig ekteskap.",
+      "body": [
+        {"style": "h2", "text": "Skal du gifte deg?"},
+        "Visste du at katolikker skal kontakte sin katolske sogneprest før de inngår ekteskap, også dersom de planlegger å gifte seg borgerlig, i et annet kirkesamfunn eller i utlandet? Dette gjelder også dersom din kommende ektefelle ikke er katolikk, eller ikke ønsker en katolsk vielse.",
+        "Kirken ønsker å hjelpe dere med ekteskapsforberedelsene og sørge for at ekteskapet blir gyldig inngått etter Kirkens ordning. I enkelte tilfeller kan det gis dispensasjon slik at dere kan gifte dere borgerlig.",
+        "Alle som ønsker å gifte seg katolsk, må gå gjennom et forberedende kurs. I St. Barbara tilbyr vi ekteskapskurs for dem som ønsker å gifte seg. Ekteskapsforberedende kurs er obligatorisk for alle som skal gifte seg katolsk. Undervisningen avtales med presten.",
+        {"style": "h2", "text": "Er du allerede borgerlig gift uten å ha vært i kontakt med Kirken?"},
+        "Da er du også velkommen til å kontakte sognepresten for en fortrolig samtale om mulighetene for å få ekteskapet gyldig anerkjent av Kirken. Om man er gift borgerlig og ønsker å få oppvurdert ekteskapet sitt til et sakrament, må man fremlegge en borgerlig vielsesattest.",
+        {"style": "h2", "text": "Før vielsen"},
+        "Ved ekteskap mellom en katolikk og en ikke-katolikk ønsker Kirken å sikre at den katolske part skal ha frihet til å leve sin tro og oppdra eventuelle barn som katolske kristne. Før ekteskapet inngås, erklærer katolikken at han/hun vil gjøre sitt beste for å dele sin tro med barna. Den ikke-katolske part erklærer at han/hun er gjort kjent med dette løftet, og respekterer det.",
+        "Brudeparet må erklære overfor presten:",
+        {"listItem": "bullet", "text": "at de gifter seg med hverandre frivillig og uten tvang"},
+        {"listItem": "bullet", "text": "at de vil være gift med hverandre livet ut"},
+        {"listItem": "bullet", "text": "at de vil ta imot barn – hvis Gud vil gi dem noen – og oppdra disse i Kristi ånd."},
+        "Under brudevielsen gjentar de denne erklæringen før de gir hverandre løftene om troskap.",
+        "Dispensasjon må innhentes:",
+        {"listItem": "bullet", "text": "fra sognepresten for å inngå ekteskap med en ikke-katolsk døpt kristen (mixta religionis)"},
+        {"listItem": "bullet", "text": "fra biskopen gjennom presten for å inngå ekteskap med en udøpt (disparitas cultus)"},
+        {"listItem": "bullet", "text": "fra biskopen gjennom presten for å inngå ekteskap i nærvær av en annen enn en katolsk prest eller diakon, f.eks. en luthersk prest (forma canonica)."}
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Marriage",
+          "category": "Sacraments",
+          "summary": "For Catholics planning to marry, including in a civil ceremony, in another church or abroad: contacting the parish priest, the required marriage preparation course, dispensations, and Church recognition of a civil marriage.",
+          "body": [
+            {"style": "h2", "text": "Are you getting married?"},
+            "Did you know that Catholics should contact their Catholic parish priest before getting married, even if they plan a civil wedding, a wedding in another church or a wedding abroad? This also applies if your future spouse is not Catholic or does not want a Catholic wedding.",
+            "The Church wants to help you prepare for marriage and to make sure that the marriage is validly contracted according to the Church's order. In some cases a dispensation can be granted so that you can marry in a civil ceremony.",
+            "Everyone who wishes to marry in the Catholic Church must take a preparation course. In St. Barbara Parish we offer a marriage course for those who wish to marry. The marriage preparation course is compulsory for everyone marrying in the Catholic Church. The teaching is arranged with the priest.",
+            {"style": "h2", "text": "Are you already married in a civil ceremony without having been in contact with the Church?"},
+            "You too are welcome to contact the parish priest for a confidential conversation about how your marriage can be validly recognised by the Church. If you are married in a civil ceremony and would like your marriage to become a sacrament, you must present a civil marriage certificate.",
+            {"style": "h2", "text": "Before the wedding"},
+            "In a marriage between a Catholic and someone who is not Catholic, the Church wants to make sure that the Catholic party is free to live their faith and to bring up any children as Catholic Christians. Before the marriage is contracted, the Catholic declares that he or she will do his or her best to share the faith with the children. The non-Catholic party declares that he or she has been made aware of this promise and respects it.",
+            "The bride and groom must declare to the priest:",
+            {"listItem": "bullet", "text": "that they are marrying each other freely and without coercion"},
+            {"listItem": "bullet", "text": "that they intend to stay married to each other for life"},
+            {"listItem": "bullet", "text": "that they will accept children – if God gives them any – and bring them up in the spirit of Christ."},
+            "During the wedding they repeat this declaration before making their vows of fidelity to each other.",
+            "A dispensation must be obtained:",
+            {"listItem": "bullet", "text": "from the parish priest, to marry a baptised Christian who is not Catholic (mixta religionis)"},
+            {"listItem": "bullet", "text": "from the bishop through the priest, to marry someone who is not baptised (disparitas cultus)"},
+            {"listItem": "bullet", "text": "from the bishop through the priest, to marry in the presence of someone other than a Catholic priest or deacon, for example a Lutheran pastor (forma canonica)."}
+          ],
+          "links": []
+        }
+      }
+    },
+    {
+      "sourceKey": "article:sacrament:begravelse",
+      "pagePath": "/sakramenter/begravelse",
+      "title": "Begravelse",
+      "slug": "sakramenter-begravelse",
+      "articleType": "reference",
+      "category": "Sakramenter",
+      "publishedAt": "2026-11-13T12:00:00+01:00",
+      "summary": "For familier som har mistet en av sine: hvordan begravelse eller bisettelse avtales med presten og begravelsesbyrået, rekviemmessen i St. Barbara kirke, og valg av gravplass.",
+      "body": [
+        "Når det er et dødsfall i familien, skal man kontakte en av prestene i menigheten for å fastsette tidspunkt for begravelse/bisettelse. Dette skjer i samarbeid med et begravelsesbyrå.",
+        "Begravelsen foregår fra St. Barbara kirke, hvor det feires rekviemmesse. Derfra drar man til kirkegården. St. Barbara menighet har ingen egen gravplass. Hvis familien ikke har eget gravsted, bruker man den kirkegården som ligger nærmest den avdødes tidligere bosted.",
+        "St. Barbara menighet har spansk, polsk og filippinsk sjelesorg. Ønsker man begravelsen/bisettelsen på et av disse språkene, eller ønsker å hente inn en annen prest, må dere selv kontakte presten og avtale med ham."
+      ],
+      "placeKeys": [],
+      "relatedEventKeys": [],
+      "sourceBulletinKeys": [],
+      "links": [],
+      "translations": {
+        "en": {
+          "title": "Funerals",
+          "category": "Sacraments",
+          "summary": "For families who have lost a loved one: how to arrange a funeral with the priest and the funeral director, the Requiem Mass in St. Barbara Church, and the choice of cemetery.",
+          "body": [
+            "When someone in your family dies, contact one of the parish priests to set a time for the funeral, whether a burial or a cremation. This is done together with a funeral director.",
+            "The funeral takes place from St. Barbara Church, where a Requiem Mass is celebrated. From there the funeral procession goes to the cemetery. St. Barbara Parish has no cemetery of its own. If the family does not have its own grave, the cemetery closest to where the deceased lived is used.",
+            "St. Barbara Parish has Spanish, Polish and Filipino chaplaincies. If you would like the funeral in one of these languages, or would like to bring in another priest, you must contact that priest yourselves and make the arrangements with him."
+          ],
+          "links": []
+        }
+      }
+    }
+  ]
+}

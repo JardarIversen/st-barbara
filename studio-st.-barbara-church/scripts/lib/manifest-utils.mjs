@@ -156,7 +156,9 @@ export function validateManifest(manifest, baseDirectory) {
 
   for (const article of manifest.articles ?? []) {
     errors.push(...catechesisErrors(article.catechesis).map(error => `${article.sourceKey}: ${error}`))
-    if (article.pagePath != null && article.pagePath !== '/katekese') errors.push('pagePath må være /katekese eller utelatt.')
+    if (article.pagePath != null && !articlePagePaths.includes(article.pagePath)) {
+      errors.push(`pagePath må være en av ${articlePagePaths.join(', ')} eller utelatt.`)
+    }
     if (!article.title || !article.publishedAt || !article.body) {
       errors.push(`Artikkelen ${article.sourceKey} mangler tittel, publiseringsdato eller innhold.`)
     }
@@ -199,6 +201,14 @@ export function slugify(value) {
     .slice(0, 96)
 }
 
+// The pages the website shows an article on instead of /innlegg. Keep in step with the
+// pagePath options in schemaTypes/documents/article.ts and web/src/lib/sacraments.ts.
+export const articlePagePaths = [
+  '/katekese',
+  ...['dap', 'konfirmasjon', 'nattverd', 'skriftemal', 'sykesalving', 'ordinasjon', 'ektevielse', 'begravelse']
+    .map((slug) => `/sakramenter/${slug}`),
+]
+
 export function toPortableText(value, sourceKey) {
   if (value === null) return null
   if (!value) return undefined
@@ -226,11 +236,16 @@ export function toPortableText(value, sourceKey) {
 
     const text = typeof item === 'string' ? item : String(item.text ?? '')
     const style = typeof item === 'object' && item.style ? item.style : 'normal'
+    const listItem = typeof item === 'object' && item.listItem ? item.listItem : undefined
+    if (listItem && !['bullet', 'number'].includes(listItem)) {
+      throw new Error(`${sourceKey}: listItem må være bullet eller number, ikke «${listItem}».`)
+    }
 
     return {
       _type: 'block',
-      _key: stableKey(sourceKey, index, style, text),
+      _key: stableKey(sourceKey, index, style, text, listItem),
       style,
+      ...(listItem ? {listItem, level: 1} : {}),
       markDefs: [],
       children: [
         {

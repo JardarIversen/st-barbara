@@ -17,6 +17,7 @@ import {
   LATEST_BULLETINS_QUERY,
   MASS_TEXT_QUERY,
   PARISH_PLACES_QUERY,
+  SACRAMENT_ARTICLES_QUERY,
   SITEMAP_QUERY,
 } from "./queries";
 import type {
@@ -129,6 +130,17 @@ export const getArticleByPagePath = cache(async (pagePath: string) => {
   });
   return localizeContent(data, await getLocale()) as Article | null;
 });
+
+export async function getSacramentArticles(pagePaths: string[]) {
+  const { data } = await sanityFetch({
+    ...published,
+    query: SACRAMENT_ARTICLES_QUERY,
+    params: { pagePaths },
+  });
+  return localizeContent(data, await getLocale()) as Array<
+    Pick<Article, "_id" | "pagePath" | "title" | "summary" | "originalFields">
+  >;
+}
 
 export const getEvent = cache(async (slug: string) => {
   const { data } = await sanityFetch({
